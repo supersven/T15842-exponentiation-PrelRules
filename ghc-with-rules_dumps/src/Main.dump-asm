@@ -1,0 +1,2864 @@
+
+==================== Asm code ====================
+2019-11-05 16:48:15.951254127 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	12884901909
+	.quad	0
+	.long	14
+	.long	GHC.Integer.Type.timesInteger_closure-($wg1_r8HH_info)+0
+$wg1_r8HH_info:
+_c8L1:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jae _c8KT
+_c8L2:
+	movl $$wg1_r8HH_closure,%ebx
+	jmp *-8(%r13)
+.align 8
+	.quad	130
+	.long	30
+	.long	GHC.Integer.Type.timesInteger_closure-(block_c8Li_info)+0
+block_c8Li_info:
+_c8Li:
+	movq 8(%rbp),%rax
+	movq 16(%rbp),%rcx
+	addq $24,%rbp
+_n8LL:
+	movq %rax,%rdi
+	movq %rcx,%rsi
+	movq %rbx,%r14
+	jmp _c8KT
+.align 8
+	.quad	130
+	.long	30
+	.long	GHC.Integer.Type.timesInteger_closure-(block_c8Ly_info)+0
+block_c8Ly_info:
+_c8Ly:
+	movq 8(%rbp),%rax
+	movq 16(%rbp),%rcx
+	addq $24,%rbp
+_n8LK:
+	movq %rax,%rdi
+	movq %rcx,%rsi
+	movq %rbx,%r14
+_c8KT:
+	testb $1,%sil
+	jne _c8KZ
+_c8L0:
+	movq $block_c8Ly_info,-24(%rbp)
+	movq %rsi,%rax
+	movq %r14,%rsi
+	movq %rdi,-16(%rbp)
+	shrq $1,%rax
+	movq %rax,-8(%rbp)
+	addq $-24,%rbp
+	jmp GHC.Integer.Type.timesInteger_info
+_c8KZ:
+	cmpq $1,%rsi
+	je _c8Lq
+_c8Lk:
+	movq $block_c8Lb_info,-24(%rbp)
+	movq %rsi,%rax
+	movq %rdi,%rsi
+	movq %r14,%rbx
+	movq %rbx,-16(%rbp)
+	movq %rax,-8(%rbp)
+	addq $-24,%rbp
+	jmp GHC.Integer.Type.timesInteger_info
+_c8Lq:
+	movq %rdi,%rsi
+	jmp GHC.Integer.Type.timesInteger_info
+.align 8
+	.quad	130
+	.long	30
+	.long	GHC.Integer.Type.timesInteger_closure-(block_c8Lb_info)+0
+block_c8Lb_info:
+_c8Lb:
+	movq $block_c8Li_info,(%rbp)
+	movq 8(%rbp),%rax
+	movq %rax,%rsi
+	movq %rax,%r14
+	movq %rbx,8(%rbp)
+	movq 16(%rbp),%rax
+	shrq $1,%rax
+	movq %rax,16(%rbp)
+	jmp GHC.Integer.Type.timesInteger_info
+	.size $wg1_r8HH_info, .-$wg1_r8HH_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.951747202 UTC
+
+.section .data
+.align 8
+.align 1
+$wg1_r8HH_closure:
+	.quad	$wg1_r8HH_info
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.953331376 UTC
+
+.section .data
+.align 8
+.align 1
+_u8Mw_srt:
+	.quad	stg_SRT_2_info
+	.quad	GHC.Integer.Type.timesInteger_closure
+	.quad	$wg1_r8HH_closure
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.953811353 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	8589934606
+	.quad	0
+	.long	14
+	.long	_u8Mw_srt-(Main.$wf_info)+0
+.globl Main.$wf_info
+.type Main.$wf_info, @function
+Main.$wf_info:
+_c8LX:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jae _c8LP
+_c8LY:
+	movl $Main.$wf_closure,%ebx
+	jmp *-8(%r13)
+.align 8
+	.quad	65
+	.long	30
+	.long	_u8Mw_srt-(block_c8Mp_info)+0
+block_c8Mp_info:
+_c8Mp:
+	movq 8(%rbp),%rax
+	addq $16,%rbp
+_n8MD:
+	movq %rax,%rsi
+	movq %rbx,%r14
+_c8LP:
+	testb $1,%sil
+	jne _c8LV
+_c8LW:
+	movq $block_c8Mp_info,-16(%rbp)
+	movq %rsi,%rax
+	movq %r14,%rsi
+	shrq $1,%rax
+	movq %rax,-8(%rbp)
+	addq $-16,%rbp
+	jmp GHC.Integer.Type.timesInteger_info
+_c8LV:
+	cmpq $1,%rsi
+	jne _c8Mc
+_c8Mh:
+	movq %r14,%rbx
+	andq $-8,%rbx
+	jmp *(%rbx)
+_c8Mc:
+	movq $block_c8Ma_info,-24(%rbp)
+	movq %rsi,%rax
+	movq %r14,%rsi
+	movq %r14,%rbx
+	movq %rbx,-16(%rbp)
+	shrq $1,%rax
+	movq %rax,-8(%rbp)
+	addq $-24,%rbp
+	jmp GHC.Integer.Type.timesInteger_info
+.align 8
+	.quad	130
+	.long	30
+	.long	$wg1_r8HH_closure-(block_c8Ma_info)+0
+block_c8Ma_info:
+_c8Ma:
+	movq 8(%rbp),%rdi
+	movq 16(%rbp),%rsi
+	movq %rbx,%r14
+	addq $24,%rbp
+	jmp $wg1_r8HH_info
+	.size Main.$wf_info, .-Main.$wf_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.954139176 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.$wf_closure
+.type Main.$wf_closure, @object
+Main.$wf_closure:
+	.quad	Main.$wf_info
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.955603645 UTC
+
+.section .text
+.align 8
+$wg2_r8HI_slow:
+_c8MH:
+	movsd 16(%rbp),%xmm2
+	movq 8(%rbp),%r14
+	movsd (%rbp),%xmm1
+	addq $24,%rbp
+	jmp $wg2_r8HI_info
+	.size $wg2_r8HI_slow, .-$wg2_r8HI_slow
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.956032333 UTC
+
+.section .text
+.align 8
+.align 8
+	.long	$wg2_r8HI_slow-($wg2_r8HI_info)+0
+	.long	0
+	.quad	451
+	.quad	12884901888
+	.quad	0
+	.long	14
+	.long	0
+$wg2_r8HI_info:
+_c8MQ:
+	jmp _c8MI
+_c8MP:
+	shrq $1,%r14
+	movsd %xmm1,%xmm0
+	mulsd %xmm0,%xmm1
+_c8MI:
+	testb $1,%r14b
+	je _c8MP
+_c8MO:
+	cmpq $1,%r14
+	je _c8N4
+_c8N0:
+	movsd %xmm1,%xmm0
+	mulsd %xmm2,%xmm0
+	shrq $1,%r14
+	movsd %xmm1,%xmm2
+	mulsd %xmm2,%xmm1
+_n8Ns:
+	movsd %xmm0,%xmm2
+	jmp _c8MI
+_c8N4:
+	mulsd %xmm2,%xmm1
+	jmp *(%rbp)
+	.size $wg2_r8HI_info, .-$wg2_r8HI_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.956178006 UTC
+
+.section .data
+.align 8
+.align 1
+$wg2_r8HI_closure:
+	.quad	$wg2_r8HI_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.957433333 UTC
+
+.section .text
+.align 8
+.globl Main.$wf1_slow
+.type Main.$wf1_slow, @function
+Main.$wf1_slow:
+_c8Nw:
+	movq 8(%rbp),%r14
+	movsd (%rbp),%xmm1
+	addq $16,%rbp
+	jmp Main.$wf1_info
+	.size Main.$wf1_slow, .-Main.$wf1_slow
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.957764913 UTC
+
+.section .text
+.align 8
+.align 8
+	.long	Main.$wf1_slow-(Main.$wf1_info)+0
+	.long	0
+	.quad	194
+	.quad	8589934592
+	.quad	0
+	.long	14
+	.long	0
+.globl Main.$wf1_info
+.type Main.$wf1_info, @function
+Main.$wf1_info:
+_c8NF:
+	jmp _c8Nx
+_c8NE:
+	shrq $1,%r14
+	movsd %xmm1,%xmm0
+	mulsd %xmm0,%xmm1
+_c8Nx:
+	testb $1,%r14b
+	je _c8NE
+_c8ND:
+	cmpq $1,%r14
+	jne _c8NP
+_c8NQ:
+	jmp *(%rbp)
+_c8NP:
+	movsd %xmm1,%xmm2
+	shrq $1,%r14
+	movsd %xmm1,%xmm0
+	mulsd %xmm0,%xmm1
+	jmp $wg2_r8HI_info
+	.size Main.$wf1_info, .-Main.$wf1_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.957904745 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.$wf1_closure
+.type Main.$wf1_closure, @object
+Main.$wf1_closure:
+	.quad	Main.$wf1_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.961476707 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	4294967301
+	.quad	0
+	.long	14
+	.long	0
+.globl Main.main_go_info
+.type Main.main_go_info, @function
+Main.main_go_info:
+_c8On:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jae _c8Od
+_c8Oo:
+	movl $Main.main_go_closure,%ebx
+	jmp *-8(%r13)
+.align 8
+	.quad	1
+	.long	30
+	.long	0
+block_c8Ov_info:
+_c8Ov:
+	movq 8(%rbp),%rax
+	addq $16,%rbp
+_n8OH:
+	movq %rax,%r14
+_c8Od:
+	movq $block_c8Og_info,-8(%rbp)
+	movq %r14,%rbx
+	addq $-8,%rbp
+	testb $7,%bl
+	jne _c8Og
+_c8Oh:
+	jmp *(%rbx)
+.align 8
+	.quad	0
+	.long	30
+	.long	0
+block_c8Og_info:
+_c8Og:
+	movq %rbx,%rax
+	andl $7,%eax
+	cmpq $1,%rax
+	je _c8Ok
+_c8Ol:
+	movq $block_c8Ov_info,-8(%rbp)
+	movq 14(%rbx),%rax
+	movq 6(%rbx),%rbx
+	movq %rax,(%rbp)
+	addq $-8,%rbp
+	testb $7,%bl
+	jne _c8Ov
+_c8Ox:
+	jmp *(%rbx)
+_c8Ok:
+	movl $()_closure+1,%ebx
+	addq $8,%rbp
+	jmp *(%rbp)
+	.size Main.main_go_info, .-Main.main_go_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.961799555 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main_go_closure
+.type Main.main_go_closure, @object
+Main.main_go_closure:
+	.quad	Main.main_go_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.962301074 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+.globl Main.$trModule4_bytes
+.type Main.$trModule4_bytes, @object
+Main.$trModule4_bytes:
+	.string "main"
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.962729381 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.$trModule3_closure
+.type Main.$trModule3_closure, @object
+Main.$trModule3_closure:
+	.quad	GHC.Types.TrNameS_con_info
+	.quad	Main.$trModule4_bytes
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.963160977 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+.globl Main.$trModule2_bytes
+.type Main.$trModule2_bytes, @object
+Main.$trModule2_bytes:
+	.string "Main"
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.96344532 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.$trModule1_closure
+.type Main.$trModule1_closure, @object
+Main.$trModule1_closure:
+	.quad	GHC.Types.TrNameS_con_info
+	.quad	Main.$trModule2_bytes
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.963757905 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.$trModule_closure
+.type Main.$trModule_closure, @object
+Main.$trModule_closure:
+	.quad	GHC.Types.Module_con_info
+	.quad	Main.$trModule3_closure+1
+	.quad	Main.$trModule1_closure+1
+	.quad	3
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.964086699 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+.globl Main.main6_bytes
+.type Main.main6_bytes, @object
+Main.main6_bytes:
+	.string " milli seconds -- "
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.964335248 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+.globl Main.main5_bytes
+.type Main.main5_bytes, @object
+Main.main5_bytes:
+	.string " pico seconds"
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.964620564 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main7_closure
+.type Main.main7_closure, @object
+Main.main7_closure:
+	.quad	GHC.Integer.Type.S#_con_info
+	.quad	1000000000
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.965753719 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	0
+.globl Main.main4_info
+.type Main.main4_info, @function
+Main.main4_info:
+_c8OY:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8OZ
+_c8P0:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8OX
+_c8OW:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $Main.main5_bytes,%r14d
+	addq $-16,%rbp
+	jmp GHC.CString.unpackCString#_info
+_c8OX:
+	jmp *(%rbx)
+_c8OZ:
+	jmp *-16(%r13)
+	.size Main.main4_info, .-Main.main4_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.965907722 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main4_closure
+.type Main.main4_closure, @object
+Main.main4_closure:
+	.quad	Main.main4_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.971147488 UTC
+
+.section .data
+.align 8
+.align 1
+_u8Qy_srt:
+	.quad	stg_SRT_2_info
+	.quad	GHC.Show.$w$cshowsPrec4_closure
+	.quad	Main.main4_closure
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.971244298 UTC
+
+.section .data
+.align 8
+.align 1
+_u8Qz_srt:
+	.quad	stg_SRT_2_info
+	.quad	GHC.Integer.Type.divInteger_closure
+	.quad	_u8Qy_srt
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.971324989 UTC
+
+.section .data
+.align 8
+.align 1
+_u8QA_srt:
+	.quad	stg_SRT_2_info
+	.quad	GHC.Show.showLitString_closure
+	.quad	_u8Qz_srt
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.971407522 UTC
+
+.section .data
+.align 8
+.align 1
+_u8QB_srt:
+	.quad	stg_SRT_4_info
+	.quad	GHC.Integer.Type.minusInteger_closure
+	.quad	GHC.IO.Handle.FD.stdout_closure
+	.quad	GHC.IO.Handle.Text.hPutStr'_closure
+	.quad	_u8QA_srt
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.971492136 UTC
+
+.section .data
+.align 8
+.align 1
+_u8QC_srt:
+	.quad	stg_SRT_3_info
+	.quad	System.CPUTime.Posix.ClockGetTime.getCPUTime4_closure
+	.quad	System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure
+	.quad	_u8QB_srt
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.971915231 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	2
+	.long	18
+	.long	GHC.Integer.Type.minusInteger_closure-(duration_s8II_info)+0
+duration_s8II_info:
+_c8Pp:
+	leaq -32(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Pt
+_c8Pu:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq $block_c8Pm_info,-32(%rbp)
+	movq 16(%rbx),%rax
+	movq 24(%rbx),%rbx
+	movq %rax,-24(%rbp)
+	addq $-32,%rbp
+	testb $7,%bl
+	jne _c8Pm
+_c8Pn:
+	jmp *(%rbx)
+.align 8
+	.quad	1
+	.long	30
+	.long	GHC.Integer.Type.minusInteger_closure-(block_c8Pm_info)+0
+block_c8Pm_info:
+_c8Pm:
+	movq $block_c8Ps_info,(%rbp)
+	movq 15(%rbx),%rax
+	movq 8(%rbp),%rbx
+	movq %rax,8(%rbp)
+	testb $7,%bl
+	jne _c8Ps
+_c8Pw:
+	jmp *(%rbx)
+.align 8
+	.quad	1
+	.long	30
+	.long	GHC.Integer.Type.minusInteger_closure-(block_c8Ps_info)+0
+block_c8Ps_info:
+_c8Ps:
+	movq 15(%rbx),%rsi
+	movq 8(%rbp),%r14
+	addq $16,%rbp
+	jmp GHC.Integer.Type.minusInteger_info
+_c8Pt:
+	jmp *-16(%r13)
+	.size duration_s8II_info, .-duration_s8II_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.972388476 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qy_srt-(sat_s8IW_info)+0
+sat_s8IW_info:
+_c8PZ:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Q0
+_c8Q1:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq $block_c8PX_info,-24(%rbp)
+	movl $GHC.Types.[]_closure+1,%edi
+	movq 16(%rbx),%rsi
+	xorl %r14d,%r14d
+	addq $-24,%rbp
+	jmp GHC.Show.$w$cshowsPrec4_info
+_c8Q0:
+	jmp *-16(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	Main.main4_closure-(block_c8PX_info)+0
+block_c8PX_info:
+_c8PX:
+	movq %r14,%rdi
+	movq %rbx,%rsi
+	movl $Main.main4_closure,%r14d
+	addq $8,%rbp
+	jmp GHC.Base.++_$s++_info
+	.size sat_s8IW_info, .-sat_s8IW_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.97271213 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qy_srt-(sat_s8IX_info)+0
+sat_s8IX_info:
+_c8Q3:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Q7
+_c8Q6:
+	movq 16(%rbx),%rax
+	movq $sat_s8IW_info,-16(%r12)
+	movq %rax,(%r12)
+	leaq -16(%r12),%rsi
+	movl $Main.main6_bytes,%r14d
+	jmp GHC.CString.unpackAppendCString#_info
+_c8Q7:
+	movq $24,904(%r13)
+	jmp *-16(%r13)
+	.size sat_s8IX_info, .-sat_s8IX_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.973186884 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qz_srt-(sat_s8IY_info)+0
+sat_s8IY_info:
+_c8Q8:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Q9
+_c8Qa:
+	movq $block_c8PJ_info,-16(%rbp)
+	movl $Main.main7_closure+1,%esi
+	movq 16(%rbx),%rax
+	movq %rax,%r14
+	movq %rax,-8(%rbp)
+	addq $-16,%rbp
+	jmp GHC.Integer.Type.divInteger_info
+_c8Q9:
+	jmp *-16(%r13)
+.align 8
+	.quad	1
+	.long	30
+	.long	_u8Qy_srt-(block_c8PJ_info)+0
+block_c8PJ_info:
+_c8PJ:
+	movq $block_c8PN_info,(%rbp)
+	movl $GHC.Types.[]_closure+1,%edi
+	movq %rbx,%rsi
+	xorl %r14d,%r14d
+	jmp GHC.Show.$w$cshowsPrec4_info
+.align 8
+	.quad	1
+	.long	30
+	.long	_u8Qy_srt-(block_c8PN_info)+0
+block_c8PN_info:
+_c8PN:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Qe
+_c8Qd:
+	movq $sat_s8IX_info,-16(%r12)
+	movq 8(%rbp),%rax
+	movq %rax,(%r12)
+	movq %r14,%rdi
+	movq %rbx,%rsi
+	leaq -16(%r12),%r14
+	addq $16,%rbp
+	jmp GHC.Base.++_$s++_info
+_c8Qe:
+	movq $24,904(%r13)
+	jmp stg_gc_pp
+	.size sat_s8IY_info, .-sat_s8IY_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.974289262 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	2
+	.long	18
+	.long	_u8QA_srt-(sat_s8J0_info)+0
+sat_s8J0_info:
+_c8Qh:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Qi
+_c8Qj:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Ql
+_c8Qk:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq 16(%rbx),%rax
+	movq 24(%rbx),%rbx
+	movq $sat_s8IY_info,-16(%r12)
+	movq %rax,(%r12)
+	movq $block_c8Qf_info,-24(%rbp)
+	leaq -16(%r12),%rsi
+	movq %rbx,%r14
+	addq $-24,%rbp
+	jmp GHC.Base.++_info
+_c8Ql:
+	movq $24,904(%r13)
+_c8Qi:
+	jmp *-16(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	GHC.Show.showLitString_closure-(block_c8Qf_info)+0
+block_c8Qf_info:
+_c8Qf:
+	movl $GHC.Show.$fShow[]1_closure,%esi
+	movq %rbx,%r14
+	addq $8,%rbp
+	jmp GHC.Show.showLitString_info
+	.size sat_s8J0_info, .-sat_s8J0_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.97485479 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	12884901903
+	.quad	0
+	.long	14
+	.long	_u8QC_srt-(Main.main_$smeasure2_info)+0
+.globl Main.main_$smeasure2_info
+.type Main.main_$smeasure2_info, @function
+Main.main_$smeasure2_info:
+_c8Qp:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Qr
+_c8Qs:
+	movq $block_c8Pa_info,-24(%rbp)
+	movq %r14,%rax
+	movl $System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2,%r14d
+	movq %rax,-16(%rbp)
+	movq %rsi,-8(%rbp)
+	addq $-24,%rbp
+	jmp System.CPUTime.Posix.ClockGetTime.getCPUTime4_info
+_c8Qr:
+	movl $Main.main_$smeasure2_closure,%ebx
+	jmp *-8(%r13)
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QC_srt-(block_c8Pa_info)+0
+block_c8Pa_info:
+_c8Pa:
+	movq $block_c8Pc_info,(%rbp)
+	movq 16(%rbp),%r14
+	movq %rbx,16(%rbp)
+	jmp Main.main_go_info
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QC_srt-(block_c8Pc_info)+0
+block_c8Pc_info:
+_c8Pc:
+	movq $block_c8Pg_info,(%rbp)
+	movl $System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2,%r14d
+	jmp System.CPUTime.Posix.ClockGetTime.getCPUTime4_info
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QB_srt-(block_c8Pg_info)+0
+block_c8Pg_info:
+_c8Pg:
+	addq $88,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Qx
+_c8Qw:
+	movq $duration_s8II_info,-80(%r12)
+	movq 16(%rbp),%rax
+	movq %rax,-64(%r12)
+	movq %rbx,-56(%r12)
+	movq $sat_s8J0_info,-48(%r12)
+	leaq -80(%r12),%rax
+	movq %rax,-32(%r12)
+	movq 8(%rbp),%rax
+	movq %rax,-24(%r12)
+	movq $:_con_info,-16(%r12)
+	movq $GHC.Show.$fShow(,)3_closure,-8(%r12)
+	leaq -48(%r12),%rax
+	movq %rax,(%r12)
+	movl $GHC.Types.True_closure+2,%edi
+	leaq -14(%r12),%rsi
+	movl $GHC.IO.Handle.FD.stdout_closure,%r14d
+	addq $24,%rbp
+	jmp GHC.IO.Handle.Text.hPutStr'_info
+_c8Qx:
+	movq $88,904(%r13)
+	jmp stg_gc_unpt_r1
+	.size Main.main_$smeasure2_info, .-Main.main_$smeasure2_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.975252212 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main_$smeasure2_closure
+.type Main.main_$smeasure2_closure, @object
+Main.main_$smeasure2_closure:
+	.quad	Main.main_$smeasure2_info
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.98089107 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	2
+	.long	18
+	.long	GHC.Integer.Type.minusInteger_closure-(duration_s8Jd_info)+0
+duration_s8Jd_info:
+_c8Rp:
+	leaq -32(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Rt
+_c8Ru:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq $block_c8Rm_info,-32(%rbp)
+	movq 16(%rbx),%rax
+	movq 24(%rbx),%rbx
+	movq %rax,-24(%rbp)
+	addq $-32,%rbp
+	testb $7,%bl
+	jne _c8Rm
+_c8Rn:
+	jmp *(%rbx)
+.align 8
+	.quad	1
+	.long	30
+	.long	GHC.Integer.Type.minusInteger_closure-(block_c8Rm_info)+0
+block_c8Rm_info:
+_c8Rm:
+	movq $block_c8Rs_info,(%rbp)
+	movq 15(%rbx),%rax
+	movq 8(%rbp),%rbx
+	movq %rax,8(%rbp)
+	testb $7,%bl
+	jne _c8Rs
+_c8Rw:
+	jmp *(%rbx)
+.align 8
+	.quad	1
+	.long	30
+	.long	GHC.Integer.Type.minusInteger_closure-(block_c8Rs_info)+0
+block_c8Rs_info:
+_c8Rs:
+	movq 15(%rbx),%rsi
+	movq 8(%rbp),%r14
+	addq $16,%rbp
+	jmp GHC.Integer.Type.minusInteger_info
+_c8Rt:
+	jmp *-16(%r13)
+	.size duration_s8Jd_info, .-duration_s8Jd_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.981441798 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qy_srt-(sat_s8Jr_info)+0
+sat_s8Jr_info:
+_c8RZ:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8S0
+_c8S1:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq $block_c8RX_info,-24(%rbp)
+	movl $GHC.Types.[]_closure+1,%edi
+	movq 16(%rbx),%rsi
+	xorl %r14d,%r14d
+	addq $-24,%rbp
+	jmp GHC.Show.$w$cshowsPrec4_info
+_c8S0:
+	jmp *-16(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	Main.main4_closure-(block_c8RX_info)+0
+block_c8RX_info:
+_c8RX:
+	movq %r14,%rdi
+	movq %rbx,%rsi
+	movl $Main.main4_closure,%r14d
+	addq $8,%rbp
+	jmp GHC.Base.++_$s++_info
+	.size sat_s8Jr_info, .-sat_s8Jr_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.982361754 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qy_srt-(sat_s8Js_info)+0
+sat_s8Js_info:
+_c8S3:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8S7
+_c8S6:
+	movq 16(%rbx),%rax
+	movq $sat_s8Jr_info,-16(%r12)
+	movq %rax,(%r12)
+	leaq -16(%r12),%rsi
+	movl $Main.main6_bytes,%r14d
+	jmp GHC.CString.unpackAppendCString#_info
+_c8S7:
+	movq $24,904(%r13)
+	jmp *-16(%r13)
+	.size sat_s8Js_info, .-sat_s8Js_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.982979482 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qz_srt-(sat_s8Jt_info)+0
+sat_s8Jt_info:
+_c8S8:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8S9
+_c8Sa:
+	movq $block_c8RJ_info,-16(%rbp)
+	movl $Main.main7_closure+1,%esi
+	movq 16(%rbx),%rax
+	movq %rax,%r14
+	movq %rax,-8(%rbp)
+	addq $-16,%rbp
+	jmp GHC.Integer.Type.divInteger_info
+_c8S9:
+	jmp *-16(%r13)
+.align 8
+	.quad	1
+	.long	30
+	.long	_u8Qy_srt-(block_c8RJ_info)+0
+block_c8RJ_info:
+_c8RJ:
+	movq $block_c8RN_info,(%rbp)
+	movl $GHC.Types.[]_closure+1,%edi
+	movq %rbx,%rsi
+	xorl %r14d,%r14d
+	jmp GHC.Show.$w$cshowsPrec4_info
+.align 8
+	.quad	1
+	.long	30
+	.long	_u8Qy_srt-(block_c8RN_info)+0
+block_c8RN_info:
+_c8RN:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Se
+_c8Sd:
+	movq $sat_s8Js_info,-16(%r12)
+	movq 8(%rbp),%rax
+	movq %rax,(%r12)
+	movq %r14,%rdi
+	movq %rbx,%rsi
+	leaq -16(%r12),%r14
+	addq $16,%rbp
+	jmp GHC.Base.++_$s++_info
+_c8Se:
+	movq $24,904(%r13)
+	jmp stg_gc_pp
+	.size sat_s8Jt_info, .-sat_s8Jt_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.983583827 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	2
+	.long	18
+	.long	_u8QA_srt-(sat_s8Jv_info)+0
+sat_s8Jv_info:
+_c8Sh:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Si
+_c8Sj:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Sl
+_c8Sk:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq 16(%rbx),%rax
+	movq 24(%rbx),%rbx
+	movq $sat_s8Jt_info,-16(%r12)
+	movq %rax,(%r12)
+	movq $block_c8Sf_info,-24(%rbp)
+	leaq -16(%r12),%rsi
+	movq %rbx,%r14
+	addq $-24,%rbp
+	jmp GHC.Base.++_info
+_c8Sl:
+	movq $24,904(%r13)
+_c8Si:
+	jmp *-16(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	GHC.Show.showLitString_closure-(block_c8Sf_info)+0
+block_c8Sf_info:
+_c8Sf:
+	movl $GHC.Show.$fShow[]1_closure,%esi
+	movq %rbx,%r14
+	addq $8,%rbp
+	jmp GHC.Show.showLitString_info
+	.size sat_s8Jv_info, .-sat_s8Jv_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.984185273 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	12884901903
+	.quad	0
+	.long	14
+	.long	_u8QC_srt-(Main.main_$smeasure1_info)+0
+.globl Main.main_$smeasure1_info
+.type Main.main_$smeasure1_info, @function
+Main.main_$smeasure1_info:
+_c8Sp:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Sr
+_c8Ss:
+	movq $block_c8R9_info,-24(%rbp)
+	movq %r14,%rax
+	movl $System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2,%r14d
+	movq %rax,-16(%rbp)
+	movq %rsi,-8(%rbp)
+	addq $-24,%rbp
+	jmp System.CPUTime.Posix.ClockGetTime.getCPUTime4_info
+_c8Sr:
+	movl $Main.main_$smeasure1_closure,%ebx
+	jmp *-8(%r13)
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QC_srt-(block_c8R9_info)+0
+block_c8R9_info:
+_c8R9:
+	movq $block_c8Rb_info,(%rbp)
+	movq %rbx,%rax
+	movq 16(%rbp),%rbx
+	movq %rax,16(%rbp)
+	testb $7,%bl
+	jne _c8Rb
+_c8Rc:
+	jmp *(%rbx)
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QC_srt-(block_c8Rb_info)+0
+block_c8Rb_info:
+_c8Rb:
+	movq $block_c8Rg_info,(%rbp)
+	movl $System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2,%r14d
+	jmp System.CPUTime.Posix.ClockGetTime.getCPUTime4_info
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QB_srt-(block_c8Rg_info)+0
+block_c8Rg_info:
+_c8Rg:
+	addq $88,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Sx
+_c8Sw:
+	movq $duration_s8Jd_info,-80(%r12)
+	movq 16(%rbp),%rax
+	movq %rax,-64(%r12)
+	movq %rbx,-56(%r12)
+	movq $sat_s8Jv_info,-48(%r12)
+	leaq -80(%r12),%rax
+	movq %rax,-32(%r12)
+	movq 8(%rbp),%rax
+	movq %rax,-24(%r12)
+	movq $:_con_info,-16(%r12)
+	movq $GHC.Show.$fShow(,)3_closure,-8(%r12)
+	leaq -48(%r12),%rax
+	movq %rax,(%r12)
+	movl $GHC.Types.True_closure+2,%edi
+	leaq -14(%r12),%rsi
+	movl $GHC.IO.Handle.FD.stdout_closure,%r14d
+	addq $24,%rbp
+	jmp GHC.IO.Handle.Text.hPutStr'_info
+_c8Sx:
+	movq $88,904(%r13)
+	jmp stg_gc_unpt_r1
+	.size Main.main_$smeasure1_info, .-Main.main_$smeasure1_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.984555731 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main_$smeasure1_closure
+.type Main.main_$smeasure1_closure, @object
+Main.main_$smeasure1_closure:
+	.quad	Main.main_$smeasure1_info
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.989781474 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	2
+	.long	18
+	.long	GHC.Integer.Type.minusInteger_closure-(duration_s8JH_info)+0
+duration_s8JH_info:
+_c8Tf:
+	leaq -32(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Tj
+_c8Tk:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq $block_c8Tc_info,-32(%rbp)
+	movq 16(%rbx),%rax
+	movq 24(%rbx),%rbx
+	movq %rax,-24(%rbp)
+	addq $-32,%rbp
+	testb $7,%bl
+	jne _c8Tc
+_c8Td:
+	jmp *(%rbx)
+.align 8
+	.quad	1
+	.long	30
+	.long	GHC.Integer.Type.minusInteger_closure-(block_c8Tc_info)+0
+block_c8Tc_info:
+_c8Tc:
+	movq $block_c8Ti_info,(%rbp)
+	movq 15(%rbx),%rax
+	movq 8(%rbp),%rbx
+	movq %rax,8(%rbp)
+	testb $7,%bl
+	jne _c8Ti
+_c8Tm:
+	jmp *(%rbx)
+.align 8
+	.quad	1
+	.long	30
+	.long	GHC.Integer.Type.minusInteger_closure-(block_c8Ti_info)+0
+block_c8Ti_info:
+_c8Ti:
+	movq 15(%rbx),%rsi
+	movq 8(%rbp),%r14
+	addq $16,%rbp
+	jmp GHC.Integer.Type.minusInteger_info
+_c8Tj:
+	jmp *-16(%r13)
+	.size duration_s8JH_info, .-duration_s8JH_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.99028551 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qy_srt-(sat_s8JV_info)+0
+sat_s8JV_info:
+_c8TP:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8TQ
+_c8TR:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq $block_c8TN_info,-24(%rbp)
+	movl $GHC.Types.[]_closure+1,%edi
+	movq 16(%rbx),%rsi
+	xorl %r14d,%r14d
+	addq $-24,%rbp
+	jmp GHC.Show.$w$cshowsPrec4_info
+_c8TQ:
+	jmp *-16(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	Main.main4_closure-(block_c8TN_info)+0
+block_c8TN_info:
+_c8TN:
+	movq %r14,%rdi
+	movq %rbx,%rsi
+	movl $Main.main4_closure,%r14d
+	addq $8,%rbp
+	jmp GHC.Base.++_$s++_info
+	.size sat_s8JV_info, .-sat_s8JV_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.990600054 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qy_srt-(sat_s8JW_info)+0
+sat_s8JW_info:
+_c8TT:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8TX
+_c8TW:
+	movq 16(%rbx),%rax
+	movq $sat_s8JV_info,-16(%r12)
+	movq %rax,(%r12)
+	leaq -16(%r12),%rsi
+	movl $Main.main6_bytes,%r14d
+	jmp GHC.CString.unpackAppendCString#_info
+_c8TX:
+	movq $24,904(%r13)
+	jmp *-16(%r13)
+	.size sat_s8JW_info, .-sat_s8JW_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.991062733 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qz_srt-(sat_s8JX_info)+0
+sat_s8JX_info:
+_c8TY:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8TZ
+_c8U0:
+	movq $block_c8Tz_info,-16(%rbp)
+	movl $Main.main7_closure+1,%esi
+	movq 16(%rbx),%rax
+	movq %rax,%r14
+	movq %rax,-8(%rbp)
+	addq $-16,%rbp
+	jmp GHC.Integer.Type.divInteger_info
+_c8TZ:
+	jmp *-16(%r13)
+.align 8
+	.quad	1
+	.long	30
+	.long	_u8Qy_srt-(block_c8Tz_info)+0
+block_c8Tz_info:
+_c8Tz:
+	movq $block_c8TD_info,(%rbp)
+	movl $GHC.Types.[]_closure+1,%edi
+	movq %rbx,%rsi
+	xorl %r14d,%r14d
+	jmp GHC.Show.$w$cshowsPrec4_info
+.align 8
+	.quad	1
+	.long	30
+	.long	_u8Qy_srt-(block_c8TD_info)+0
+block_c8TD_info:
+_c8TD:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8U4
+_c8U3:
+	movq $sat_s8JW_info,-16(%r12)
+	movq 8(%rbp),%rax
+	movq %rax,(%r12)
+	movq %r14,%rdi
+	movq %rbx,%rsi
+	leaq -16(%r12),%r14
+	addq $16,%rbp
+	jmp GHC.Base.++_$s++_info
+_c8U4:
+	movq $24,904(%r13)
+	jmp stg_gc_pp
+	.size sat_s8JX_info, .-sat_s8JX_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.991510527 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	2
+	.long	18
+	.long	_u8QA_srt-(sat_s8JZ_info)+0
+sat_s8JZ_info:
+_c8U7:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8U8
+_c8U9:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Ub
+_c8Ua:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq 16(%rbx),%rax
+	movq 24(%rbx),%rbx
+	movq $sat_s8JX_info,-16(%r12)
+	movq %rax,(%r12)
+	movq $block_c8U5_info,-24(%rbp)
+	leaq -16(%r12),%rsi
+	movq %rbx,%r14
+	addq $-24,%rbp
+	jmp GHC.Base.++_info
+_c8Ub:
+	movq $24,904(%r13)
+_c8U8:
+	jmp *-16(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	GHC.Show.showLitString_closure-(block_c8U5_info)+0
+block_c8U5_info:
+_c8U5:
+	movl $GHC.Show.$fShow[]1_closure,%esi
+	movq %rbx,%r14
+	addq $8,%rbp
+	jmp GHC.Show.showLitString_info
+	.size sat_s8JZ_info, .-sat_s8JZ_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.992127519 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	12884901903
+	.quad	0
+	.long	14
+	.long	_u8QC_srt-(Main.main_$smeasure_info)+0
+.globl Main.main_$smeasure_info
+.type Main.main_$smeasure_info, @function
+Main.main_$smeasure_info:
+_c8Uf:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Uh
+_c8Ui:
+	movq $block_c8SZ_info,-24(%rbp)
+	movq %r14,%rax
+	movl $System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2,%r14d
+	movq %rax,-16(%rbp)
+	movq %rsi,-8(%rbp)
+	addq $-24,%rbp
+	jmp System.CPUTime.Posix.ClockGetTime.getCPUTime4_info
+_c8Uh:
+	movl $Main.main_$smeasure_closure,%ebx
+	jmp *-8(%r13)
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QC_srt-(block_c8SZ_info)+0
+block_c8SZ_info:
+_c8SZ:
+	movq $block_c8T1_info,(%rbp)
+	movq %rbx,%rax
+	movq 16(%rbp),%rbx
+	movq %rax,16(%rbp)
+	testb $7,%bl
+	jne _c8T1
+_c8T2:
+	jmp *(%rbx)
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QC_srt-(block_c8T1_info)+0
+block_c8T1_info:
+_c8T1:
+	movq $block_c8T6_info,(%rbp)
+	movl $System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2,%r14d
+	jmp System.CPUTime.Posix.ClockGetTime.getCPUTime4_info
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QB_srt-(block_c8T6_info)+0
+block_c8T6_info:
+_c8T6:
+	addq $88,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Un
+_c8Um:
+	movq $duration_s8JH_info,-80(%r12)
+	movq 16(%rbp),%rax
+	movq %rax,-64(%r12)
+	movq %rbx,-56(%r12)
+	movq $sat_s8JZ_info,-48(%r12)
+	leaq -80(%r12),%rax
+	movq %rax,-32(%r12)
+	movq 8(%rbp),%rax
+	movq %rax,-24(%r12)
+	movq $:_con_info,-16(%r12)
+	movq $GHC.Show.$fShow(,)3_closure,-8(%r12)
+	leaq -48(%r12),%rax
+	movq %rax,(%r12)
+	movl $GHC.Types.True_closure+2,%edi
+	leaq -14(%r12),%rsi
+	movl $GHC.IO.Handle.FD.stdout_closure,%r14d
+	addq $24,%rbp
+	jmp GHC.IO.Handle.Text.hPutStr'_info
+_c8Un:
+	movq $88,904(%r13)
+	jmp stg_gc_unpt_r1
+	.size Main.main_$smeasure_info, .-Main.main_$smeasure_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.992444091 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main_$smeasure_closure
+.type Main.main_$smeasure_closure, @object
+Main.main_$smeasure_closure:
+	.quad	Main.main_$smeasure_info
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.999548383 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	2
+	.long	18
+	.long	GHC.Integer.Type.minusInteger_closure-(duration_s8Kc_info)+0
+duration_s8Kc_info:
+_c8V4:
+	leaq -32(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8V8
+_c8V9:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq $block_c8V1_info,-32(%rbp)
+	movq 16(%rbx),%rax
+	movq 24(%rbx),%rbx
+	movq %rax,-24(%rbp)
+	addq $-32,%rbp
+	testb $7,%bl
+	jne _c8V1
+_c8V2:
+	jmp *(%rbx)
+.align 8
+	.quad	1
+	.long	30
+	.long	GHC.Integer.Type.minusInteger_closure-(block_c8V1_info)+0
+block_c8V1_info:
+_c8V1:
+	movq $block_c8V7_info,(%rbp)
+	movq 15(%rbx),%rax
+	movq 8(%rbp),%rbx
+	movq %rax,8(%rbp)
+	testb $7,%bl
+	jne _c8V7
+_c8Vb:
+	jmp *(%rbx)
+.align 8
+	.quad	1
+	.long	30
+	.long	GHC.Integer.Type.minusInteger_closure-(block_c8V7_info)+0
+block_c8V7_info:
+_c8V7:
+	movq 15(%rbx),%rsi
+	movq 8(%rbp),%r14
+	addq $16,%rbp
+	jmp GHC.Integer.Type.minusInteger_info
+_c8V8:
+	jmp *-16(%r13)
+	.size duration_s8Kc_info, .-duration_s8Kc_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:15.999990419 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qy_srt-(sat_s8Kq_info)+0
+sat_s8Kq_info:
+_c8VE:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8VF
+_c8VG:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq $block_c8VC_info,-24(%rbp)
+	movl $GHC.Types.[]_closure+1,%edi
+	movq 16(%rbx),%rsi
+	xorl %r14d,%r14d
+	addq $-24,%rbp
+	jmp GHC.Show.$w$cshowsPrec4_info
+_c8VF:
+	jmp *-16(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	Main.main4_closure-(block_c8VC_info)+0
+block_c8VC_info:
+_c8VC:
+	movq %r14,%rdi
+	movq %rbx,%rsi
+	movl $Main.main4_closure,%r14d
+	addq $8,%rbp
+	jmp GHC.Base.++_$s++_info
+	.size sat_s8Kq_info, .-sat_s8Kq_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.000440416 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qy_srt-(sat_s8Kr_info)+0
+sat_s8Kr_info:
+_c8VI:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8VM
+_c8VL:
+	movq 16(%rbx),%rax
+	movq $sat_s8Kq_info,-16(%r12)
+	movq %rax,(%r12)
+	leaq -16(%r12),%rsi
+	movl $Main.main6_bytes,%r14d
+	jmp GHC.CString.unpackAppendCString#_info
+_c8VM:
+	movq $24,904(%r13)
+	jmp *-16(%r13)
+	.size sat_s8Kr_info, .-sat_s8Kr_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.000894767 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	1
+	.long	16
+	.long	_u8Qz_srt-(sat_s8Ks_info)+0
+sat_s8Ks_info:
+_c8VN:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8VO
+_c8VP:
+	movq $block_c8Vo_info,-16(%rbp)
+	movl $Main.main7_closure+1,%esi
+	movq 16(%rbx),%rax
+	movq %rax,%r14
+	movq %rax,-8(%rbp)
+	addq $-16,%rbp
+	jmp GHC.Integer.Type.divInteger_info
+_c8VO:
+	jmp *-16(%r13)
+.align 8
+	.quad	1
+	.long	30
+	.long	_u8Qy_srt-(block_c8Vo_info)+0
+block_c8Vo_info:
+_c8Vo:
+	movq $block_c8Vs_info,(%rbp)
+	movl $GHC.Types.[]_closure+1,%edi
+	movq %rbx,%rsi
+	xorl %r14d,%r14d
+	jmp GHC.Show.$w$cshowsPrec4_info
+.align 8
+	.quad	1
+	.long	30
+	.long	_u8Qy_srt-(block_c8Vs_info)+0
+block_c8Vs_info:
+_c8Vs:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8VT
+_c8VS:
+	movq $sat_s8Kr_info,-16(%r12)
+	movq 8(%rbp),%rax
+	movq %rax,(%r12)
+	movq %r14,%rdi
+	movq %rbx,%rsi
+	leaq -16(%r12),%r14
+	addq $16,%rbp
+	jmp GHC.Base.++_$s++_info
+_c8VT:
+	movq $24,904(%r13)
+	jmp stg_gc_pp
+	.size sat_s8Ks_info, .-sat_s8Ks_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.001347564 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	2
+	.long	18
+	.long	_u8QA_srt-(sat_s8Ku_info)+0
+sat_s8Ku_info:
+_c8VW:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8VX
+_c8VY:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8W0
+_c8VZ:
+	movq $stg_upd_frame_info,-16(%rbp)
+	movq %rbx,-8(%rbp)
+	movq 16(%rbx),%rax
+	movq 24(%rbx),%rbx
+	movq $sat_s8Ks_info,-16(%r12)
+	movq %rax,(%r12)
+	movq $block_c8VU_info,-24(%rbp)
+	leaq -16(%r12),%rsi
+	movq %rbx,%r14
+	addq $-24,%rbp
+	jmp GHC.Base.++_info
+_c8W0:
+	movq $24,904(%r13)
+_c8VX:
+	jmp *-16(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	GHC.Show.showLitString_closure-(block_c8VU_info)+0
+block_c8VU_info:
+_c8VU:
+	movl $GHC.Show.$fShow[]1_closure,%esi
+	movq %rbx,%r14
+	addq $8,%rbp
+	jmp GHC.Show.showLitString_info
+	.size sat_s8Ku_info, .-sat_s8Ku_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.001871892 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	17179869207
+	.quad	0
+	.long	14
+	.long	_u8QC_srt-(Main.measure1_info)+0
+.globl Main.measure1_info
+.type Main.measure1_info, @function
+Main.measure1_info:
+_c8W4:
+	leaq -32(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8W6
+_c8W7:
+	movq $block_c8UP_info,-32(%rbp)
+	movq %r14,%rax
+	movl $System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2,%r14d
+	movq %rax,-24(%rbp)
+	movq %rsi,-16(%rbp)
+	movq %rdi,-8(%rbp)
+	addq $-32,%rbp
+	jmp System.CPUTime.Posix.ClockGetTime.getCPUTime4_info
+_c8W6:
+	movl $Main.measure1_closure,%ebx
+	jmp *-8(%r13)
+.align 8
+	.quad	3
+	.long	30
+	.long	_u8QC_srt-(block_c8UP_info)+0
+block_c8UP_info:
+_c8UP:
+	movq 8(%rbp),%rax
+	movq $block_c8UR_info,8(%rbp)
+	movq 24(%rbp),%r14
+	movq %rbx,%rcx
+	movq %rax,%rbx
+	movq %rcx,24(%rbp)
+	addq $8,%rbp
+	jmp stg_ap_p_fast
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QC_srt-(block_c8UR_info)+0
+block_c8UR_info:
+_c8UR:
+	movq $block_c8UV_info,(%rbp)
+	movl $System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2,%r14d
+	jmp System.CPUTime.Posix.ClockGetTime.getCPUTime4_info
+.align 8
+	.quad	2
+	.long	30
+	.long	_u8QB_srt-(block_c8UV_info)+0
+block_c8UV_info:
+_c8UV:
+	addq $88,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Wc
+_c8Wb:
+	movq $duration_s8Kc_info,-80(%r12)
+	movq 16(%rbp),%rax
+	movq %rax,-64(%r12)
+	movq %rbx,-56(%r12)
+	movq $sat_s8Ku_info,-48(%r12)
+	leaq -80(%r12),%rax
+	movq %rax,-32(%r12)
+	movq 8(%rbp),%rax
+	movq %rax,-24(%r12)
+	movq $:_con_info,-16(%r12)
+	movq $GHC.Show.$fShow(,)3_closure,-8(%r12)
+	leaq -48(%r12),%rax
+	movq %rax,(%r12)
+	movl $GHC.Types.True_closure+2,%edi
+	leaq -14(%r12),%rsi
+	movl $GHC.IO.Handle.FD.stdout_closure,%r14d
+	addq $24,%rbp
+	jmp GHC.IO.Handle.Text.hPutStr'_info
+_c8Wc:
+	movq $88,904(%r13)
+	jmp stg_gc_unpt_r1
+	.size Main.measure1_info, .-Main.measure1_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.002199028 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.measure1_closure
+.type Main.measure1_closure, @object
+Main.measure1_closure:
+	.quad	Main.measure1_info
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.003023854 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	17179869207
+	.quad	0
+	.long	14
+	.long	Main.measure1_closure-(Main.measure_info)+0
+.globl Main.measure_info
+.type Main.measure_info, @function
+Main.measure_info:
+_c8WE:
+	jmp Main.measure1_info
+	.size Main.measure_info, .-Main.measure_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.003193502 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.measure_closure
+.type Main.measure_closure, @object
+Main.measure_closure:
+	.quad	Main.measure_info
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.003547831 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+w1_r8HJ_bytes:
+	.string "foo"
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.004564604 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	0
+w2_r8HK_info:
+_c8WR:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8WS
+_c8WT:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8WQ
+_c8WP:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $w1_r8HJ_bytes,%r14d
+	addq $-16,%rbp
+	jmp GHC.CString.unpackCString#_info
+_c8WQ:
+	jmp *(%rbx)
+_c8WS:
+	jmp *-16(%r13)
+	.size w2_r8HK_info, .-w2_r8HK_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.00471357 UTC
+
+.section .data
+.align 8
+.align 1
+w2_r8HK_closure:
+	.quad	w2_r8HK_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.005890272 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	4294967296
+	.long	17
+	.long	Main.$wrep_closure-(sat_s8Kz_info)+0
+sat_s8Kz_info:
+_c8Xb:
+	movq 16(%rbx),%rax
+	leaq -1(%rax),%r14
+	jmp Main.$wrep_info
+	.size sat_s8Kz_info, .-sat_s8Kz_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.006199184 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	4294967300
+	.quad	0
+	.long	14
+	.long	w2_r8HK_closure-(Main.$wrep_info)+0
+.globl Main.$wrep_info
+.type Main.$wrep_info, @function
+Main.$wrep_info:
+_c8Xh:
+	addq $24,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Xl
+_c8Xk:
+	testq %r14,%r14
+	jne _c8Xf
+_c8Xg:
+	addq $-24,%r12
+	movl $[]_closure+1,%ebx
+	jmp *(%rbp)
+_c8Xf:
+	movq $sat_s8Kz_info,-16(%r12)
+	movq %r14,(%r12)
+	leaq -16(%r12),%rsi
+	movl $w2_r8HK_closure,%r14d
+	jmp GHC.Base.++_info
+_c8Xl:
+	movq $24,904(%r13)
+	movl $Main.$wrep_closure,%ebx
+	jmp *-8(%r13)
+	.size Main.$wrep_info, .-Main.$wrep_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.006349172 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.$wrep_closure
+.type Main.$wrep_closure, @object
+Main.$wrep_closure:
+	.quad	Main.$wrep_info
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.007277627 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	Main.$wrep_closure-(Main.testStimes_info)+0
+.globl Main.testStimes_info
+.type Main.testStimes_info, @function
+Main.testStimes_info:
+_c8Xy:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Xz
+_c8XA:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8Xx
+_c8Xw:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $1000000,%r14d
+	addq $-16,%rbp
+	jmp Main.$wrep_info
+_c8Xx:
+	jmp *(%rbx)
+_c8Xz:
+	jmp *-16(%r13)
+	.size Main.testStimes_info, .-Main.testStimes_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.007427366 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.testStimes_closure
+.type Main.testStimes_closure, @object
+Main.testStimes_closure:
+	.quad	Main.testStimes_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.007717164 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.testIntegralPower1_closure
+.type Main.testIntegralPower1_closure, @object
+Main.testIntegralPower1_closure:
+	.quad	GHC.Integer.Type.S#_con_info
+	.quad	3
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.008675102 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	Main.$wf_closure-(Main.testIntegralPower_info)+0
+.globl Main.testIntegralPower_info
+.type Main.testIntegralPower_info, @function
+Main.testIntegralPower_info:
+_c8XN:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8XO
+_c8XP:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8XM
+_c8XL:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $1000000,%esi
+	movl $Main.testIntegralPower1_closure+1,%r14d
+	addq $-16,%rbp
+	jmp Main.$wf_info
+_c8XM:
+	jmp *(%rbx)
+_c8XO:
+	jmp *-16(%r13)
+	.size Main.testIntegralPower_info, .-Main.testIntegralPower_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.008834042 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.testIntegralPower_closure
+.type Main.testIntegralPower_closure, @object
+Main.testIntegralPower_closure:
+	.quad	Main.testIntegralPower_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.010590964 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	0
+.globl Main.testFractionalPower_info
+.type Main.testFractionalPower_info, @function
+Main.testFractionalPower_info:
+_c8Y3:
+	leaq -24(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Y7
+_c8Y8:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8Y0
+_c8XZ:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movq $block_c8Y1_info,-24(%rbp)
+	movl $441,%r14d
+	movsd _n8Yd(%rip),%xmm1
+	addq $-24,%rbp
+	jmp Main.$wf1_info
+_c8Y0:
+	jmp *(%rbx)
+_c8Y7:
+	jmp *-16(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	0
+block_c8Y1_info:
+_c8Y1:
+	addq $16,%r12
+	cmpq 856(%r13),%r12
+	ja _c8Yb
+_c8Ya:
+	movq $GHC.Types.D#_con_info,-8(%r12)
+	movsd %xmm1,(%r12)
+	leaq -7(%r12),%rbx
+	addq $8,%rbp
+	jmp *(%rbp)
+_c8Yb:
+	movq $16,904(%r13)
+	jmp stg_gc_d1
+	.size Main.testFractionalPower_info, .-Main.testFractionalPower_info
+.section .rodata
+.align 8
+.align 8
+_n8Yd:
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	0
+	.byte	20
+	.byte	64
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.010847734 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.testFractionalPower_closure
+.type Main.testFractionalPower_closure, @object
+Main.testFractionalPower_closure:
+	.quad	Main.testFractionalPower_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.011265207 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+.globl Main.main3_bytes
+.type Main.main3_bytes, @object
+Main.main3_bytes:
+	.string "integral power : "
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.012309127 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	0
+.globl Main.main2_info
+.type Main.main2_info, @function
+Main.main2_info:
+_c8Yp:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Yq
+_c8Yr:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8Yo
+_c8Yn:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $Main.main3_bytes,%r14d
+	addq $-16,%rbp
+	jmp GHC.CString.unpackCString#_info
+_c8Yo:
+	jmp *(%rbx)
+_c8Yq:
+	jmp *-16(%r13)
+	.size Main.main2_info, .-Main.main2_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.012506653 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main2_closure
+.type Main.main2_closure, @object
+Main.main2_closure:
+	.quad	Main.main2_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.012866283 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+.globl Main.main9_bytes
+.type Main.main9_bytes, @object
+Main.main9_bytes:
+	.string "fractional power 3 : "
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.013838342 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	0
+.globl Main.main8_info
+.type Main.main8_info, @function
+Main.main8_info:
+_c8YE:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8YF
+_c8YG:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8YD
+_c8YC:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $Main.main9_bytes,%r14d
+	addq $-16,%rbp
+	jmp GHC.CString.unpackCString#_info
+_c8YD:
+	jmp *(%rbx)
+_c8YF:
+	jmp *-16(%r13)
+	.size Main.main8_info, .-Main.main8_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.01399926 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main8_closure
+.type Main.main8_closure, @object
+Main.main8_closure:
+	.quad	Main.main8_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.014268405 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+.globl Main.main11_bytes
+.type Main.main11_bytes, @object
+Main.main11_bytes:
+	.string "fractional power 2 : "
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.015188553 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	0
+.globl Main.main10_info
+.type Main.main10_info, @function
+Main.main10_info:
+_c8YT:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8YU
+_c8YV:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8YS
+_c8YR:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $Main.main11_bytes,%r14d
+	addq $-16,%rbp
+	jmp GHC.CString.unpackCString#_info
+_c8YS:
+	jmp *(%rbx)
+_c8YU:
+	jmp *-16(%r13)
+	.size Main.main10_info, .-Main.main10_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.015333708 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main10_closure
+.type Main.main10_closure, @object
+Main.main10_closure:
+	.quad	Main.main10_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.015597683 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+.globl Main.main13_bytes
+.type Main.main13_bytes, @object
+Main.main13_bytes:
+	.string "fractional power 1 : "
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.016516064 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	0
+.globl Main.main12_info
+.type Main.main12_info, @function
+Main.main12_info:
+_c8Z8:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Z9
+_c8Za:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8Z7
+_c8Z6:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $Main.main13_bytes,%r14d
+	addq $-16,%rbp
+	jmp GHC.CString.unpackCString#_info
+_c8Z7:
+	jmp *(%rbx)
+_c8Z9:
+	jmp *-16(%r13)
+	.size Main.main12_info, .-Main.main12_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.016659495 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main12_closure
+.type Main.main12_closure, @object
+Main.main12_closure:
+	.quad	Main.main12_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.017020386 UTC
+
+.section .rodata.str,"aMS",@progbits,1
+.align 1
+.align 1
+.globl Main.main15_bytes
+.type Main.main15_bytes, @object
+Main.main15_bytes:
+	.string "stimes : "
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.017871362 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	0
+	.long	21
+	.long	0
+.globl Main.main14_info
+.type Main.main14_info, @function
+Main.main14_info:
+_c8Zn:
+	leaq -16(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8Zo
+_c8Zp:
+	subq $8,%rsp
+	movq %r13,%rax
+	movq %rbx,%rsi
+	movq %rax,%rdi
+	xorl %eax,%eax
+	call newCAF
+	addq $8,%rsp
+	testq %rax,%rax
+	je _c8Zm
+_c8Zl:
+	movq $stg_bh_upd_frame_info,-16(%rbp)
+	movq %rax,-8(%rbp)
+	movl $Main.main15_bytes,%r14d
+	addq $-16,%rbp
+	jmp GHC.CString.unpackCString#_info
+_c8Zm:
+	jmp *(%rbx)
+_c8Zo:
+	jmp *-16(%r13)
+	.size Main.main14_info, .-Main.main14_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.018060579 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main14_closure
+.type Main.main14_closure, @object
+Main.main14_closure:
+	.quad	Main.main14_info
+	.quad	0
+	.quad	0
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.019245502 UTC
+
+.section .data
+.align 8
+.align 1
+_u8ZO_srt:
+	.quad	stg_SRT_3_info
+	.quad	Main.testIntegralPower_closure
+	.quad	Main.main2_closure
+	.quad	Main.main_$smeasure_closure
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.019330692 UTC
+
+.section .data
+.align 8
+.align 1
+_u8ZP_srt:
+	.quad	stg_SRT_4_info
+	.quad	Main.testFractionalPower_closure
+	.quad	Main.main8_closure
+	.quad	Main.main_$smeasure1_closure
+	.quad	_u8ZO_srt
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.019410551 UTC
+
+.section .data
+.align 8
+.align 1
+_u8ZQ_srt:
+	.quad	stg_SRT_2_info
+	.quad	Main.main10_closure
+	.quad	_u8ZP_srt
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.019781949 UTC
+
+.section .data
+.align 8
+.align 1
+_u8ZR_srt:
+	.quad	stg_SRT_2_info
+	.quad	Main.main12_closure
+	.quad	_u8ZQ_srt
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.020157909 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	4294967299
+	.quad	4
+	.long	14
+	.long	0
+.globl Main.main1_info
+.type Main.main1_info, @function
+Main.main1_info:
+_c8ZH:
+	leaq -8(%rbp),%rax
+	cmpq %r15,%rax
+	jb _c8ZI
+_c8ZJ:
+	movq $block_c8Zz_info,-8(%rbp)
+	movl $Main.testStimes_closure,%esi
+	movl $Main.main14_closure,%r14d
+	addq $-8,%rbp
+	jmp Main.main_$smeasure2_info
+_c8ZI:
+	movl $Main.main1_closure,%ebx
+	jmp *-8(%r13)
+.align 8
+	.quad	0
+	.long	30
+	.long	_u8ZR_srt-(block_c8Zz_info)+0
+block_c8Zz_info:
+_c8Zz:
+	movq $block_c8ZB_info,(%rbp)
+	movl $Main.testFractionalPower_closure,%esi
+	movl $Main.main12_closure,%r14d
+	jmp Main.main_$smeasure1_info
+.align 8
+	.quad	0
+	.long	30
+	.long	_u8ZQ_srt-(block_c8ZB_info)+0
+block_c8ZB_info:
+_c8ZB:
+	movq $block_c8ZD_info,(%rbp)
+	movl $Main.testFractionalPower_closure,%esi
+	movl $Main.main10_closure,%r14d
+	jmp Main.main_$smeasure1_info
+.align 8
+	.quad	0
+	.long	30
+	.long	_u8ZP_srt-(block_c8ZD_info)+0
+block_c8ZD_info:
+_c8ZD:
+	movq $block_c8ZF_info,(%rbp)
+	movl $Main.testFractionalPower_closure,%esi
+	movl $Main.main8_closure,%r14d
+	jmp Main.main_$smeasure1_info
+.align 8
+	.quad	0
+	.long	30
+	.long	_u8ZO_srt-(block_c8ZF_info)+0
+block_c8ZF_info:
+_c8ZF:
+	movl $Main.testIntegralPower_closure,%esi
+	movl $Main.main2_closure,%r14d
+	addq $8,%rbp
+	jmp Main.main_$smeasure_info
+	.size Main.main1_info, .-Main.main1_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.020437423 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main1_closure
+.type Main.main1_closure, @object
+Main.main1_closure:
+	.quad	Main.main1_info
+	.quad	Main.testStimes_closure
+	.quad	Main.main14_closure
+	.quad	Main.main_$smeasure2_closure
+	.quad	_u8ZR_srt
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.0211246 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	4294967299
+	.quad	0
+	.long	14
+	.long	Main.main1_closure-(Main.main_info)+0
+.globl Main.main_info
+.type Main.main_info, @function
+Main.main_info:
+_c904:
+	jmp Main.main1_info
+	.size Main.main_info, .-Main.main_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.021255368 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main_closure
+.type Main.main_closure, @object
+Main.main_closure:
+	.quad	Main.main_info
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.021923885 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	4294967299
+	.quad	2
+	.long	14
+	.long	0
+.globl Main.main16_info
+.type Main.main16_info, @function
+Main.main16_info:
+_c90e:
+	movl $Main.main1_closure+1,%r14d
+	jmp GHC.TopHandler.runMainIO1_info
+	.size Main.main16_info, .-Main.main16_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.022079646 UTC
+
+.section .data
+.align 8
+.align 1
+.globl Main.main16_closure
+.type Main.main16_closure, @object
+Main.main16_closure:
+	.quad	Main.main16_info
+	.quad	GHC.TopHandler.runMainIO1_closure
+	.quad	Main.main1_closure
+	.quad	0
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.022692408 UTC
+
+.section .text
+.align 8
+.align 8
+	.quad	4294967299
+	.quad	0
+	.long	14
+	.long	Main.main16_closure-(:Main.main_info)+0
+.globl :Main.main_info
+.type :Main.main_info, @function
+:Main.main_info:
+_c90o:
+	jmp Main.main16_info
+	.size :Main.main_info, .-:Main.main_info
+
+
+==================== Asm code ====================
+2019-11-05 16:48:16.022837915 UTC
+
+.section .data
+.align 8
+.align 1
+.globl :Main.main_closure
+.type :Main.main_closure, @object
+:Main.main_closure:
+	.quad	:Main.main_info
+	.quad	0
+

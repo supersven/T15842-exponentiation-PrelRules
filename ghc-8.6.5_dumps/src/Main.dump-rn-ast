@@ -1,0 +1,1077 @@
+
+==================== Renamer ====================
+2019-11-05 16:48:02.91818654 UTC
+
+
+(Just
+ ((,,,)
+  (HsGroup
+   (NoExt)
+   (XValBindsLR
+    (NValBinds
+     [((,)
+       (NonRecursive)
+       {Bag(Located (HsBind Name)):
+        [({ src/Main.hs:(29,1)-(35,107) }
+          (FunBind
+           {NameSet:
+            []}
+           ({ src/Main.hs:29:1-7 }
+            {Name: Main.measure})
+           (MG
+            (NoExt)
+            ({ src/Main.hs:(29,1)-(35,107) }
+             [({ src/Main.hs:(29,1)-(35,107) }
+               (Match
+                (NoExt)
+                (FunRhs
+                 ({ src/Main.hs:29:1-7 }
+                  {Name: Main.measure})
+                 (Prefix)
+                 (NoSrcStrict))
+                [({ src/Main.hs:29:9-19 }
+                  (VarPat
+                   (NoExt)
+                   ({ src/Main.hs:29:9-19 }
+                    {Name: description_a1UB})))
+                ,({ src/Main.hs:29:21 }
+                  (VarPat
+                   (NoExt)
+                   ({ src/Main.hs:29:21 }
+                    {Name: f_a1UC})))]
+                (GRHSs
+                 (NoExt)
+                 [({ src/Main.hs:(29,23)-(35,107) }
+                   (GRHS
+                    (NoExt)
+                    []
+                    ({ src/Main.hs:(29,25)-(35,107) }
+                     (HsDo
+                      (NoExt)
+                      (DoExpr)
+                      ({ src/Main.hs:(30,3)-(35,107) }
+                       [({ src/Main.hs:30:3-21 }
+                         (BindStmt
+                          (NoExt)
+                          ({ src/Main.hs:30:3-7 }
+                           (VarPat
+                            (NoExt)
+                            ({ src/Main.hs:30:3-7 }
+                             {Name: start_a1UD})))
+                          ({ src/Main.hs:30:12-21 }
+                           (HsVar
+                            (NoExt)
+                            ({ src/Main.hs:30:12-21 }
+                             {Name: System.CPUTime.getCPUTime})))
+                          (SyntaxExpr
+                           (HsVar
+                            (NoExt)
+                            ({ <no location info> }
+                             {Name: GHC.Base.>>=}))
+                           []
+                           (WpHole))
+                          (SyntaxExpr
+                           (HsLit
+                            (NoExt)
+                            (HsString
+                             (NoSourceText)
+                             {FastString: "noSyntaxExpr"}))
+                           []
+                           (WpHole))))
+                       ,({ src/Main.hs:31:3-11 }
+                         (LetStmt
+                          (NoExt)
+                          ({ src/Main.hs:31:7-11 }
+                           (HsValBinds
+                            (NoExt)
+                            (XValBindsLR
+                             (NValBinds
+                              [((,)
+                                (NonRecursive)
+                                {Bag(Located (HsBind Name)):
+                                 [({ src/Main.hs:31:7-11 }
+                                   (FunBind
+                                    {NameSet:
+                                     [{Name: f_a1UC}]}
+                                    ({ src/Main.hs:31:7 }
+                                     {Name: a_a1UE})
+                                    (MG
+                                     (NoExt)
+                                     ({ src/Main.hs:31:7-11 }
+                                      [({ src/Main.hs:31:7-11 }
+                                        (Match
+                                         (NoExt)
+                                         (FunRhs
+                                          ({ src/Main.hs:31:7 }
+                                           {Name: a_a1UE})
+                                          (Prefix)
+                                          (NoSrcStrict))
+                                         []
+                                         (GRHSs
+                                          (NoExt)
+                                          [({ src/Main.hs:31:9-11 }
+                                            (GRHS
+                                             (NoExt)
+                                             []
+                                             ({ src/Main.hs:31:11 }
+                                              (HsVar
+                                               (NoExt)
+                                               ({ src/Main.hs:31:11 }
+                                                {Name: f_a1UC})))))]
+                                          ({ <no location info> }
+                                           (EmptyLocalBinds
+                                            (NoExt))))))])
+                                     (FromSource))
+                                    (WpHole)
+                                    []))]})]
+                              []))))))
+                       ,({ src/Main.hs:32:3-31 }
+                         (BindStmt
+                          (NoExt)
+                          ({ src/Main.hs:32:3-5 }
+                           (VarPat
+                            (NoExt)
+                            ({ src/Main.hs:32:3-5 }
+                             {Name: end_a1UF})))
+                          ({ src/Main.hs:32:10-31 }
+                           (OpApp
+                            {Fixity: infixl 9}
+                            ({ src/Main.hs:32:10 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:32:10 }
+                               {Name: a_a1UE})))
+                            ({ src/Main.hs:32:12-20 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:32:12-20 }
+                               {Name: Control.DeepSeq.deepseq})))
+                            ({ src/Main.hs:32:22-31 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:32:22-31 }
+                               {Name: System.CPUTime.getCPUTime})))))
+                          (SyntaxExpr
+                           (HsVar
+                            (NoExt)
+                            ({ <no location info> }
+                             {Name: GHC.Base.>>=}))
+                           []
+                           (WpHole))
+                          (SyntaxExpr
+                           (HsLit
+                            (NoExt)
+                            (HsString
+                             (NoSourceText)
+                             {FastString: "noSyntaxExpr"}))
+                           []
+                           (WpHole))))
+                       ,({ src/Main.hs:(33,3)-(34,51) }
+                         (LetStmt
+                          (NoExt)
+                          ({ src/Main.hs:(33,7)-(34,51) }
+                           (HsValBinds
+                            (NoExt)
+                            (XValBindsLR
+                             (NValBinds
+                              [((,)
+                                (NonRecursive)
+                                {Bag(Located (HsBind Name)):
+                                 [({ src/Main.hs:33:7-41 }
+                                   (FunBind
+                                    {NameSet:
+                                     [{Name: end_a1UF}
+                                     ,{Name: start_a1UD}]}
+                                    ({ src/Main.hs:33:7-14 }
+                                     {Name: duration_a1UG})
+                                    (MG
+                                     (NoExt)
+                                     ({ src/Main.hs:33:7-41 }
+                                      [({ src/Main.hs:33:7-41 }
+                                        (Match
+                                         (NoExt)
+                                         (FunRhs
+                                          ({ src/Main.hs:33:7-14 }
+                                           {Name: duration_a1UG})
+                                          (Prefix)
+                                          (NoSrcStrict))
+                                         []
+                                         (GRHSs
+                                          (NoExt)
+                                          [({ src/Main.hs:33:16-41 }
+                                            (GRHS
+                                             (NoExt)
+                                             []
+                                             ({ src/Main.hs:33:18-41 }
+                                              (ExprWithTySig
+                                               (HsWC
+                                                []
+                                                (HsIB
+                                                 (HsIBRn
+                                                  []
+                                                  (True))
+                                                 ({ src/Main.hs:33:35-41 }
+                                                  (HsTyVar
+                                                   (NoExt)
+                                                   (NotPromoted)
+                                                   ({ src/Main.hs:33:35-41 }
+                                                    {Name: GHC.Integer.Type.Integer})))))
+                                               ({ src/Main.hs:33:18-30 }
+                                                (HsPar
+                                                 (NoExt)
+                                                 ({ src/Main.hs:33:19-29 }
+                                                  (OpApp
+                                                   {Fixity: infixl 6}
+                                                   ({ src/Main.hs:33:19-21 }
+                                                    (HsVar
+                                                     (NoExt)
+                                                     ({ src/Main.hs:33:19-21 }
+                                                      {Name: end_a1UF})))
+                                                   ({ src/Main.hs:33:23 }
+                                                    (HsVar
+                                                     (NoExt)
+                                                     ({ src/Main.hs:33:23 }
+                                                      {Name: GHC.Num.-})))
+                                                   ({ src/Main.hs:33:25-29 }
+                                                    (HsVar
+                                                     (NoExt)
+                                                     ({ src/Main.hs:33:25-29 }
+                                                      {Name: start_a1UD})))))))))))]
+                                          ({ <no location info> }
+                                           (EmptyLocalBinds
+                                            (NoExt))))))])
+                                     (FromSource))
+                                    (WpHole)
+                                    []))]})
+                              ,((,)
+                                (NonRecursive)
+                                {Bag(Located (HsBind Name)):
+                                 [({ src/Main.hs:34:7-51 }
+                                   (FunBind
+                                    {NameSet:
+                                     [{Name: duration_a1UG}]}
+                                    ({ src/Main.hs:34:7-23 }
+                                     {Name: durationInSeconds_a1UH})
+                                    (MG
+                                     (NoExt)
+                                     ({ src/Main.hs:34:7-51 }
+                                      [({ src/Main.hs:34:7-51 }
+                                        (Match
+                                         (NoExt)
+                                         (FunRhs
+                                          ({ src/Main.hs:34:7-23 }
+                                           {Name: durationInSeconds_a1UH})
+                                          (Prefix)
+                                          (NoSrcStrict))
+                                         []
+                                         (GRHSs
+                                          (NoExt)
+                                          [({ src/Main.hs:34:25-51 }
+                                            (GRHS
+                                             (NoExt)
+                                             []
+                                             ({ src/Main.hs:34:27-51 }
+                                              (OpApp
+                                               {Fixity: infixl 7}
+                                               ({ src/Main.hs:34:27-34 }
+                                                (HsVar
+                                                 (NoExt)
+                                                 ({ src/Main.hs:34:27-34 }
+                                                  {Name: duration_a1UG})))
+                                               ({ src/Main.hs:34:36-40 }
+                                                (HsVar
+                                                 (NoExt)
+                                                 ({ src/Main.hs:34:36-40 }
+                                                  {Name: GHC.Real.div})))
+                                               ({ src/Main.hs:34:42-51 }
+                                                (HsOverLit
+                                                 (NoExt)
+                                                 (OverLit
+                                                  (False)
+                                                  (HsIntegral
+                                                   (IL
+                                                    (SourceText
+                                                     "1000000000")
+                                                    (False)
+                                                    (1000000000)))
+                                                  (HsVar
+                                                   (NoExt)
+                                                   ({ <no location info> }
+                                                    {Name: GHC.Num.fromInteger})))))))))]
+                                          ({ <no location info> }
+                                           (EmptyLocalBinds
+                                            (NoExt))))))])
+                                     (FromSource))
+                                    (WpHole)
+                                    []))]})]
+                              []))))))
+                       ,({ src/Main.hs:35:3-107 }
+                         (LastStmt
+                          (NoExt)
+                          ({ src/Main.hs:35:3-107 }
+                           (OpApp
+                            {Fixity: infixr 0}
+                            ({ src/Main.hs:35:3-7 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:35:3-7 }
+                               {Name: System.IO.print})))
+                            ({ src/Main.hs:35:9 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:35:9 }
+                               {Name: GHC.Base.$})))
+                            ({ src/Main.hs:35:11-107 }
+                             (OpApp
+                              {Fixity: infixr 5}
+                              ({ src/Main.hs:35:11-21 }
+                               (HsVar
+                                (NoExt)
+                                ({ src/Main.hs:35:11-21 }
+                                 {Name: description_a1UB})))
+                              ({ src/Main.hs:35:23-24 }
+                               (HsVar
+                                (NoExt)
+                                ({ src/Main.hs:35:23-24 }
+                                 {Name: GHC.Base.++})))
+                              ({ src/Main.hs:35:26-107 }
+                               (OpApp
+                                {Fixity: infixr 5}
+                                ({ src/Main.hs:35:26-47 }
+                                 (HsApp
+                                  (NoExt)
+                                  ({ src/Main.hs:35:26-29 }
+                                   (HsVar
+                                    (NoExt)
+                                    ({ src/Main.hs:35:26-29 }
+                                     {Name: GHC.Show.show})))
+                                  ({ src/Main.hs:35:31-47 }
+                                   (HsVar
+                                    (NoExt)
+                                    ({ src/Main.hs:35:31-47 }
+                                     {Name: durationInSeconds_a1UH})))))
+                                ({ src/Main.hs:35:49-50 }
+                                 (HsVar
+                                  (NoExt)
+                                  ({ src/Main.hs:35:49-50 }
+                                   {Name: GHC.Base.++})))
+                                ({ src/Main.hs:35:52-107 }
+                                 (OpApp
+                                  {Fixity: infixr 5}
+                                  ({ src/Main.hs:35:52-71 }
+                                   (HsLit
+                                    (NoExt)
+                                    (HsString
+                                     (SourceText
+                                      "\" milli seconds -- \"")
+                                     {FastString: " milli seconds -- "})))
+                                  ({ src/Main.hs:35:73-74 }
+                                   (HsVar
+                                    (NoExt)
+                                    ({ src/Main.hs:35:73-74 }
+                                     {Name: GHC.Base.++})))
+                                  ({ src/Main.hs:35:76-107 }
+                                   (OpApp
+                                    {Fixity: infixr 5}
+                                    ({ src/Main.hs:35:76-88 }
+                                     (HsApp
+                                      (NoExt)
+                                      ({ src/Main.hs:35:76-79 }
+                                       (HsVar
+                                        (NoExt)
+                                        ({ src/Main.hs:35:76-79 }
+                                         {Name: GHC.Show.show})))
+                                      ({ src/Main.hs:35:81-88 }
+                                       (HsVar
+                                        (NoExt)
+                                        ({ src/Main.hs:35:81-88 }
+                                         {Name: duration_a1UG})))))
+                                    ({ src/Main.hs:35:90-91 }
+                                     (HsVar
+                                      (NoExt)
+                                      ({ src/Main.hs:35:90-91 }
+                                       {Name: GHC.Base.++})))
+                                    ({ src/Main.hs:35:93-107 }
+                                     (HsLit
+                                      (NoExt)
+                                      (HsString
+                                       (SourceText
+                                        "\" pico seconds\"")
+                                       {FastString: " pico seconds"})))))))))))))
+                          (False)
+                          (SyntaxExpr
+                           (HsVar
+                            (NoExt)
+                            ({ <no location info> }
+                             {Name: GHC.Base.return}))
+                           []
+                           (WpHole))))])))))]
+                 ({ <no location info> }
+                  (EmptyLocalBinds
+                   (NoExt))))))])
+            (FromSource))
+           (WpHole)
+           []))]})
+     ,((,)
+       (NonRecursive)
+       {Bag(Located (HsBind Name)):
+        [({ src/Main.hs:18:1-30 }
+          (FunBind
+           {NameSet:
+            []}
+           ({ src/Main.hs:18:1-19 }
+            {Name: Main.testFractionalPower})
+           (MG
+            (NoExt)
+            ({ src/Main.hs:18:1-30 }
+             [({ src/Main.hs:18:1-30 }
+               (Match
+                (NoExt)
+                (FunRhs
+                 ({ src/Main.hs:18:1-19 }
+                  {Name: Main.testFractionalPower})
+                 (Prefix)
+                 (NoSrcStrict))
+                []
+                (GRHSs
+                 (NoExt)
+                 [({ src/Main.hs:18:21-30 }
+                   (GRHS
+                    (NoExt)
+                    []
+                    ({ src/Main.hs:18:23-30 }
+                     (OpApp
+                      {Fixity: infixr 8}
+                      ({ src/Main.hs:18:23 }
+                       (HsOverLit
+                        (NoExt)
+                        (OverLit
+                         (False)
+                         (HsIntegral
+                          (IL
+                           (SourceText
+                            "5")
+                           (False)
+                           (5)))
+                         (HsVar
+                          (NoExt)
+                          ({ <no location info> }
+                           {Name: GHC.Num.fromInteger})))))
+                      ({ src/Main.hs:18:25-26 }
+                       (HsVar
+                        (NoExt)
+                        ({ src/Main.hs:18:25-26 }
+                         {Name: GHC.Real.^^})))
+                      ({ src/Main.hs:18:28-30 }
+                       (HsOverLit
+                        (NoExt)
+                        (OverLit
+                         (False)
+                         (HsIntegral
+                          (IL
+                           (SourceText
+                            "441")
+                           (False)
+                           (441)))
+                         (HsVar
+                          (NoExt)
+                          ({ <no location info> }
+                           {Name: GHC.Num.fromInteger})))))))))]
+                 ({ <no location info> }
+                  (EmptyLocalBinds
+                   (NoExt))))))])
+            (FromSource))
+           (WpHole)
+           []))]})
+     ,((,)
+       (NonRecursive)
+       {Bag(Located (HsBind Name)):
+        [({ src/Main.hs:15:1-31 }
+          (FunBind
+           {NameSet:
+            []}
+           ({ src/Main.hs:15:1-17 }
+            {Name: Main.testIntegralPower})
+           (MG
+            (NoExt)
+            ({ src/Main.hs:15:1-31 }
+             [({ src/Main.hs:15:1-31 }
+               (Match
+                (NoExt)
+                (FunRhs
+                 ({ src/Main.hs:15:1-17 }
+                  {Name: Main.testIntegralPower})
+                 (Prefix)
+                 (NoSrcStrict))
+                []
+                (GRHSs
+                 (NoExt)
+                 [({ src/Main.hs:15:19-31 }
+                   (GRHS
+                    (NoExt)
+                    []
+                    ({ src/Main.hs:15:21-31 }
+                     (OpApp
+                      {Fixity: infixr 8}
+                      ({ src/Main.hs:15:21 }
+                       (HsOverLit
+                        (NoExt)
+                        (OverLit
+                         (False)
+                         (HsIntegral
+                          (IL
+                           (SourceText
+                            "3")
+                           (False)
+                           (3)))
+                         (HsVar
+                          (NoExt)
+                          ({ <no location info> }
+                           {Name: GHC.Num.fromInteger})))))
+                      ({ src/Main.hs:15:23 }
+                       (HsVar
+                        (NoExt)
+                        ({ src/Main.hs:15:23 }
+                         {Name: GHC.Real.^})))
+                      ({ src/Main.hs:15:25-31 }
+                       (HsOverLit
+                        (NoExt)
+                        (OverLit
+                         (False)
+                         (HsIntegral
+                          (IL
+                           (SourceText
+                            "1000000")
+                           (False)
+                           (1000000)))
+                         (HsVar
+                          (NoExt)
+                          ({ <no location info> }
+                           {Name: GHC.Num.fromInteger})))))))))]
+                 ({ <no location info> }
+                  (EmptyLocalBinds
+                   (NoExt))))))])
+            (FromSource))
+           (WpHole)
+           []))]})
+     ,((,)
+       (NonRecursive)
+       {Bag(Located (HsBind Name)):
+        [({ src/Main.hs:12:1-33 }
+          (FunBind
+           {NameSet:
+            []}
+           ({ src/Main.hs:12:1-10 }
+            {Name: Main.testStimes})
+           (MG
+            (NoExt)
+            ({ src/Main.hs:12:1-33 }
+             [({ src/Main.hs:12:1-33 }
+               (Match
+                (NoExt)
+                (FunRhs
+                 ({ src/Main.hs:12:1-10 }
+                  {Name: Main.testStimes})
+                 (Prefix)
+                 (NoSrcStrict))
+                []
+                (GRHSs
+                 (NoExt)
+                 [({ src/Main.hs:12:12-33 }
+                   (GRHS
+                    (NoExt)
+                    []
+                    ({ src/Main.hs:12:14-33 }
+                     (HsApp
+                      (NoExt)
+                      ({ src/Main.hs:12:14-27 }
+                       (HsApp
+                        (NoExt)
+                        ({ src/Main.hs:12:14-19 }
+                         (HsVar
+                          (NoExt)
+                          ({ src/Main.hs:12:14-19 }
+                           {Name: GHC.Base.stimes})))
+                        ({ src/Main.hs:12:21-27 }
+                         (HsOverLit
+                          (NoExt)
+                          (OverLit
+                           (False)
+                           (HsIntegral
+                            (IL
+                             (SourceText
+                              "1000000")
+                             (False)
+                             (1000000)))
+                           (HsVar
+                            (NoExt)
+                            ({ <no location info> }
+                             {Name: GHC.Num.fromInteger})))))))
+                      ({ src/Main.hs:12:29-33 }
+                       (HsLit
+                        (NoExt)
+                        (HsString
+                         (SourceText
+                          "\"foo\"")
+                         {FastString: "foo"})))))))]
+                 ({ <no location info> }
+                  (EmptyLocalBinds
+                   (NoExt))))))])
+            (FromSource))
+           (WpHole)
+           []))]})
+     ,((,)
+       (NonRecursive)
+       {Bag(Located (HsBind Name)):
+        [({ src/Main.hs:(21,1)-(26,47) }
+          (FunBind
+           {NameSet:
+            [{Name: Main.measure}
+            ,{Name: Main.testFractionalPower}
+            ,{Name: Main.testIntegralPower}
+            ,{Name: Main.testStimes}]}
+           ({ src/Main.hs:21:1-4 }
+            {Name: Main.main})
+           (MG
+            (NoExt)
+            ({ src/Main.hs:(21,1)-(26,47) }
+             [({ src/Main.hs:(21,1)-(26,47) }
+               (Match
+                (NoExt)
+                (FunRhs
+                 ({ src/Main.hs:21:1-4 }
+                  {Name: Main.main})
+                 (Prefix)
+                 (NoSrcStrict))
+                []
+                (GRHSs
+                 (NoExt)
+                 [({ src/Main.hs:(21,6)-(26,47) }
+                   (GRHS
+                    (NoExt)
+                    []
+                    ({ src/Main.hs:(21,8)-(26,47) }
+                     (HsDo
+                      (NoExt)
+                      (DoExpr)
+                      ({ src/Main.hs:(22,3)-(26,47) }
+                       [({ src/Main.hs:22:3-32 }
+                         (BodyStmt
+                          (NoExt)
+                          ({ src/Main.hs:22:3-32 }
+                           (HsApp
+                            (NoExt)
+                            ({ src/Main.hs:22:3-21 }
+                             (HsApp
+                              (NoExt)
+                              ({ src/Main.hs:22:3-9 }
+                               (HsVar
+                                (NoExt)
+                                ({ src/Main.hs:22:3-9 }
+                                 {Name: Main.measure})))
+                              ({ src/Main.hs:22:11-21 }
+                               (HsLit
+                                (NoExt)
+                                (HsString
+                                 (SourceText
+                                  "\"stimes : \"")
+                                 {FastString: "stimes : "})))))
+                            ({ src/Main.hs:22:23-32 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:22:23-32 }
+                               {Name: Main.testStimes})))))
+                          (SyntaxExpr
+                           (HsVar
+                            (NoExt)
+                            ({ <no location info> }
+                             {Name: GHC.Base.>>}))
+                           []
+                           (WpHole))
+                          (SyntaxExpr
+                           (HsLit
+                            (NoExt)
+                            (HsString
+                             (NoSourceText)
+                             {FastString: "noSyntaxExpr"}))
+                           []
+                           (WpHole))))
+                       ,({ src/Main.hs:23:3-53 }
+                         (BodyStmt
+                          (NoExt)
+                          ({ src/Main.hs:23:3-53 }
+                           (HsApp
+                            (NoExt)
+                            ({ src/Main.hs:23:3-33 }
+                             (HsApp
+                              (NoExt)
+                              ({ src/Main.hs:23:3-9 }
+                               (HsVar
+                                (NoExt)
+                                ({ src/Main.hs:23:3-9 }
+                                 {Name: Main.measure})))
+                              ({ src/Main.hs:23:11-33 }
+                               (HsLit
+                                (NoExt)
+                                (HsString
+                                 (SourceText
+                                  "\"fractional power 1 : \"")
+                                 {FastString: "fractional power 1 : "})))))
+                            ({ src/Main.hs:23:35-53 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:23:35-53 }
+                               {Name: Main.testFractionalPower})))))
+                          (SyntaxExpr
+                           (HsVar
+                            (NoExt)
+                            ({ <no location info> }
+                             {Name: GHC.Base.>>}))
+                           []
+                           (WpHole))
+                          (SyntaxExpr
+                           (HsLit
+                            (NoExt)
+                            (HsString
+                             (NoSourceText)
+                             {FastString: "noSyntaxExpr"}))
+                           []
+                           (WpHole))))
+                       ,({ src/Main.hs:24:3-53 }
+                         (BodyStmt
+                          (NoExt)
+                          ({ src/Main.hs:24:3-53 }
+                           (HsApp
+                            (NoExt)
+                            ({ src/Main.hs:24:3-33 }
+                             (HsApp
+                              (NoExt)
+                              ({ src/Main.hs:24:3-9 }
+                               (HsVar
+                                (NoExt)
+                                ({ src/Main.hs:24:3-9 }
+                                 {Name: Main.measure})))
+                              ({ src/Main.hs:24:11-33 }
+                               (HsLit
+                                (NoExt)
+                                (HsString
+                                 (SourceText
+                                  "\"fractional power 2 : \"")
+                                 {FastString: "fractional power 2 : "})))))
+                            ({ src/Main.hs:24:35-53 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:24:35-53 }
+                               {Name: Main.testFractionalPower})))))
+                          (SyntaxExpr
+                           (HsVar
+                            (NoExt)
+                            ({ <no location info> }
+                             {Name: GHC.Base.>>}))
+                           []
+                           (WpHole))
+                          (SyntaxExpr
+                           (HsLit
+                            (NoExt)
+                            (HsString
+                             (NoSourceText)
+                             {FastString: "noSyntaxExpr"}))
+                           []
+                           (WpHole))))
+                       ,({ src/Main.hs:25:3-53 }
+                         (BodyStmt
+                          (NoExt)
+                          ({ src/Main.hs:25:3-53 }
+                           (HsApp
+                            (NoExt)
+                            ({ src/Main.hs:25:3-33 }
+                             (HsApp
+                              (NoExt)
+                              ({ src/Main.hs:25:3-9 }
+                               (HsVar
+                                (NoExt)
+                                ({ src/Main.hs:25:3-9 }
+                                 {Name: Main.measure})))
+                              ({ src/Main.hs:25:11-33 }
+                               (HsLit
+                                (NoExt)
+                                (HsString
+                                 (SourceText
+                                  "\"fractional power 3 : \"")
+                                 {FastString: "fractional power 3 : "})))))
+                            ({ src/Main.hs:25:35-53 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:25:35-53 }
+                               {Name: Main.testFractionalPower})))))
+                          (SyntaxExpr
+                           (HsVar
+                            (NoExt)
+                            ({ <no location info> }
+                             {Name: GHC.Base.>>}))
+                           []
+                           (WpHole))
+                          (SyntaxExpr
+                           (HsLit
+                            (NoExt)
+                            (HsString
+                             (NoSourceText)
+                             {FastString: "noSyntaxExpr"}))
+                           []
+                           (WpHole))))
+                       ,({ src/Main.hs:26:3-47 }
+                         (LastStmt
+                          (NoExt)
+                          ({ src/Main.hs:26:3-47 }
+                           (HsApp
+                            (NoExt)
+                            ({ src/Main.hs:26:3-29 }
+                             (HsApp
+                              (NoExt)
+                              ({ src/Main.hs:26:3-9 }
+                               (HsVar
+                                (NoExt)
+                                ({ src/Main.hs:26:3-9 }
+                                 {Name: Main.measure})))
+                              ({ src/Main.hs:26:11-29 }
+                               (HsLit
+                                (NoExt)
+                                (HsString
+                                 (SourceText
+                                  "\"integral power : \"")
+                                 {FastString: "integral power : "})))))
+                            ({ src/Main.hs:26:31-47 }
+                             (HsVar
+                              (NoExt)
+                              ({ src/Main.hs:26:31-47 }
+                               {Name: Main.testIntegralPower})))))
+                          (False)
+                          (SyntaxExpr
+                           (HsVar
+                            (NoExt)
+                            ({ <no location info> }
+                             {Name: GHC.Base.return}))
+                           []
+                           (WpHole))))])))))]
+                 ({ <no location info> }
+                  (EmptyLocalBinds
+                   (NoExt))))))])
+            (FromSource))
+           (WpHole)
+           []))]})]
+     [({ src/Main.hs:28:1-43 }
+       (TypeSig
+        (NoExt)
+        [({ src/Main.hs:28:1-7 }
+          {Name: Main.measure})]
+        (HsWC
+         []
+         (HsIB
+          (HsIBRn
+           [{Name: a_a1gC}]
+           (True))
+          ({ src/Main.hs:28:12-43 }
+           (HsQualTy
+            (NoExt)
+            ({ src/Main.hs:28:12-19 }
+             [({ src/Main.hs:28:12-19 }
+               (HsAppTy
+                (NoExt)
+                ({ src/Main.hs:28:12-17 }
+                 (HsTyVar
+                  (NoExt)
+                  (NotPromoted)
+                  ({ src/Main.hs:28:12-17 }
+                   {Name: Control.DeepSeq.NFData})))
+                ({ src/Main.hs:28:19 }
+                 (HsTyVar
+                  (NoExt)
+                  (NotPromoted)
+                  ({ src/Main.hs:28:19 }
+                   {Name: a_a1gC})))))])
+            ({ src/Main.hs:28:24-43 }
+             (HsFunTy
+              (NoExt)
+              ({ src/Main.hs:28:24-29 }
+               (HsTyVar
+                (NoExt)
+                (NotPromoted)
+                ({ src/Main.hs:28:24-29 }
+                 {Name: GHC.Base.String})))
+              ({ src/Main.hs:28:34-43 }
+               (HsFunTy
+                (NoExt)
+                ({ src/Main.hs:28:34 }
+                 (HsTyVar
+                  (NoExt)
+                  (NotPromoted)
+                  ({ src/Main.hs:28:34 }
+                   {Name: a_a1gC})))
+                ({ src/Main.hs:28:39-43 }
+                 (HsAppTy
+                  (NoExt)
+                  ({ src/Main.hs:28:39-40 }
+                   (HsTyVar
+                    (NoExt)
+                    (NotPromoted)
+                    ({ src/Main.hs:28:39-40 }
+                     {Name: GHC.Types.IO})))
+                  ({ src/Main.hs:28:42-43 }
+                   (HsTupleTy
+                    (NoExt)
+                    (HsBoxedOrConstraintTuple)
+                    []))))))))))))))
+     ,({ src/Main.hs:20:1-13 }
+       (TypeSig
+        (NoExt)
+        [({ src/Main.hs:20:1-4 }
+          {Name: Main.main})]
+        (HsWC
+         []
+         (HsIB
+          (HsIBRn
+           []
+           (True))
+          ({ src/Main.hs:20:9-13 }
+           (HsAppTy
+            (NoExt)
+            ({ src/Main.hs:20:9-10 }
+             (HsTyVar
+              (NoExt)
+              (NotPromoted)
+              ({ src/Main.hs:20:9-10 }
+               {Name: GHC.Types.IO})))
+            ({ src/Main.hs:20:12-13 }
+             (HsTupleTy
+              (NoExt)
+              (HsBoxedOrConstraintTuple)
+              []))))))))
+     ,({ src/Main.hs:17:1-29 }
+       (TypeSig
+        (NoExt)
+        [({ src/Main.hs:17:1-19 }
+          {Name: Main.testFractionalPower})]
+        (HsWC
+         []
+         (HsIB
+          (HsIBRn
+           []
+           (True))
+          ({ src/Main.hs:17:24-29 }
+           (HsTyVar
+            (NoExt)
+            (NotPromoted)
+            ({ src/Main.hs:17:24-29 }
+             {Name: GHC.Types.Double})))))))
+     ,({ src/Main.hs:14:1-28 }
+       (TypeSig
+        (NoExt)
+        [({ src/Main.hs:14:1-17 }
+          {Name: Main.testIntegralPower})]
+        (HsWC
+         []
+         (HsIB
+          (HsIBRn
+           []
+           (True))
+          ({ src/Main.hs:14:22-28 }
+           (HsTyVar
+            (NoExt)
+            (NotPromoted)
+            ({ src/Main.hs:14:22-28 }
+             {Name: GHC.Integer.Type.Integer})))))))
+     ,({ src/Main.hs:11:1-20 }
+       (TypeSig
+        (NoExt)
+        [({ src/Main.hs:11:1-10 }
+          {Name: Main.testStimes})]
+        (HsWC
+         []
+         (HsIB
+          (HsIBRn
+           []
+           (True))
+          ({ src/Main.hs:11:15-20 }
+           (HsTyVar
+            (NoExt)
+            (NotPromoted)
+            ({ src/Main.hs:11:15-20 }
+             {Name: GHC.Base.String})))))))]))
+   []
+   []
+   []
+   []
+   []
+   []
+   []
+   []
+   []
+   [])
+  [({ src/Main.hs:1:8-11 }
+    (ImportDecl
+     (NoExt)
+     (NoSourceText)
+     ({ src/Main.hs:1:8-11 }
+      {ModuleName: Prelude})
+     (Nothing)
+     (False)
+     (False)
+     (False)
+     (True)
+     (Nothing)
+     (Nothing)))
+  ,({ src/Main.hs:3:1-21 }
+    (ImportDecl
+     (NoExt)
+     (NoSourceText)
+     ({ src/Main.hs:3:8-21 }
+      {ModuleName: Data.Semigroup})
+     (Nothing)
+     (False)
+     (False)
+     (False)
+     (False)
+     (Nothing)
+     (Nothing)))
+  ,({ src/Main.hs:4:1-21 }
+    (ImportDecl
+     (NoExt)
+     (NoSourceText)
+     ({ src/Main.hs:4:8-21 }
+      {ModuleName: System.CPUTime})
+     (Nothing)
+     (False)
+     (False)
+     (False)
+     (False)
+     (Nothing)
+     (Nothing)))
+  ,({ src/Main.hs:5:1-22 }
+    (ImportDecl
+     (NoExt)
+     (NoSourceText)
+     ({ src/Main.hs:5:8-22 }
+      {ModuleName: Control.DeepSeq})
+     (Nothing)
+     (False)
+     (False)
+     (False)
+     (False)
+     (Nothing)
+     (Nothing)))
+  ,({ src/Main.hs:6:1-15 }
+    (ImportDecl
+     (NoExt)
+     (NoSourceText)
+     ({ src/Main.hs:6:8-15 }
+      {ModuleName: GHC.Real})
+     (Nothing)
+     (False)
+     (False)
+     (False)
+     (False)
+     (Nothing)
+     (Nothing)))]
+  (Nothing)
+  (Nothing)))
+

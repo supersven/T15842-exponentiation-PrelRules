@@ -1,0 +1,317 @@
+
+==================== Desugar (before optimization) ====================
+2019-11-05 16:48:07.69757343 UTC
+
+Result size of Desugar (before optimization)
+  = {terms: 179, types: 146, coercions: 0, joins: 0/16}
+
+Rec {
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dFractional_a5NO :: Fractional Double
+[LclId]
+$dFractional_a5NO = GHC.Float.$fFractionalDouble
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNum_a5NT :: Num Double
+[LclId]
+$dNum_a5NT = GHC.Float.$fNumDouble
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNum_a5Ou :: Num Integer
+[LclId]
+$dNum_a5Ou = $dNum_a5O4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNum_a5Od :: Num Integer
+[LclId]
+$dNum_a5Od = $dNum_a5O4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNum_a5NX :: Num Integer
+[LclId]
+$dNum_a5NX = $dNum_a5O4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNum_a5O9 :: Num Integer
+[LclId]
+$dNum_a5O9 = $dNum_a5O4
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNum_a5O4 :: Num Integer
+[LclId]
+$dNum_a5O4 = GHC.Num.$fNumInteger
+
+-- RHS size: {terms: 1, types: 1, coercions: 0, joins: 0/0}
+$dSemigroup_a5Oo :: Semigroup [Char]
+[LclId]
+$dSemigroup_a5Oo = GHC.Base.$fSemigroup[] @ Char
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dMonad_a5OZ :: Monad IO
+[LclId]
+$dMonad_a5OZ = $dMonad_a5OB
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dMonad_a5OR :: Monad IO
+[LclId]
+$dMonad_a5OR = $dMonad_a5OB
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dMonad_a5OJ :: Monad IO
+[LclId]
+$dMonad_a5OJ = $dMonad_a5OB
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dMonad_a5OB :: Monad IO
+[LclId]
+$dMonad_a5OB = GHC.Base.$fMonadIO
+
+-- RHS size: {terms: 2, types: 1, coercions: 0, joins: 0/0}
+$dNFData_a5OF :: NFData String
+[LclId]
+$dNFData_a5OF = Control.DeepSeq.$fNFData[] @ Char $dNFData_a5SG
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNFData_a5SG :: NFData Char
+[LclId]
+$dNFData_a5SG = Control.DeepSeq.$fNFDataChar
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNFData_a5P3 :: NFData Double
+[LclId]
+$dNFData_a5P3 = $dNFData_a5ON
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNFData_a5OV :: NFData Double
+[LclId]
+$dNFData_a5OV = $dNFData_a5ON
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNFData_a5ON :: NFData Double
+[LclId]
+$dNFData_a5ON = Control.DeepSeq.$fNFDataDouble
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dNFData_a5P5 :: NFData Integer
+[LclId]
+$dNFData_a5P5 = Control.DeepSeq.$fNFDataInteger
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dIntegral_a5Oq :: Integral Integer
+[LclId]
+$dIntegral_a5Oq = $dIntegral_a5NP
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dIntegral_a5O5 :: Integral Integer
+[LclId]
+$dIntegral_a5O5 = $dIntegral_a5NP
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$dIntegral_a5NP :: Integral Integer
+[LclId]
+$dIntegral_a5NP = GHC.Real.$fIntegralInteger
+
+-- RHS size: {terms: 5, types: 0, coercions: 0, joins: 0/0}
+Main.$trModule :: ghc-prim-0.5.3:GHC.Types.Module
+[LclIdX]
+Main.$trModule
+  = ghc-prim-0.5.3:GHC.Types.Module
+      (ghc-prim-0.5.3:GHC.Types.TrNameS "main"#)
+      (ghc-prim-0.5.3:GHC.Types.TrNameS "Main"#)
+
+-- RHS size: {terms: 72, types: 60, coercions: 0, joins: 0/16}
+measure :: forall a. NFData a => String -> a -> IO ()
+[LclIdX]
+measure
+  = \ (@ a_a5LI) ($dNFData_a5LK :: NFData a_a5LI) ->
+      let {
+        $dShow_a5Nr :: Show Integer
+        [LclId]
+        $dShow_a5Nr = GHC.Show.$fShowInteger } in
+      let {
+        $dShow_a5Nv :: Show Integer
+        [LclId]
+        $dShow_a5Nv = $dShow_a5Nr } in
+      let {
+        $dShow_a5SL :: Show Char
+        [LclId]
+        $dShow_a5SL = GHC.Show.$fShowChar } in
+      let {
+        $dShow_a5Nm :: Show [Char]
+        [LclId]
+        $dShow_a5Nm = GHC.Show.$fShow[] @ Char $dShow_a5SL } in
+      let {
+        $dNFData_a5Mk :: NFData a_a5LI
+        [LclId]
+        $dNFData_a5Mk = $dNFData_a5LK } in
+      let {
+        $dMonad_a5Mc :: Monad IO
+        [LclId]
+        $dMonad_a5Mc = $dMonad_a5OB } in
+      let {
+        $dMonad_a5LY :: Monad IO
+        [LclId]
+        $dMonad_a5LY = $dMonad_a5OB } in
+      \ (description_a1VE :: String) (f_a1VF :: a_a5LI) ->
+        >>=
+          @ IO
+          $dMonad_a5LY
+          @ Integer
+          @ ()
+          getCPUTime
+          (\ (start_a1VG :: Integer) ->
+             letrec {
+               a_a1VH :: a_a5LI
+               [LclId]
+               a_a1VH
+                 = letrec {
+                     a_a5M6 :: a_a5LI
+                     [LclId]
+                     a_a5M6 = f_a1VF; } in
+                   a_a5M6; } in
+             >>=
+               @ IO
+               $dMonad_a5Mc
+               @ Integer
+               @ ()
+               (deepseq @ a_a5LI @ (IO Integer) $dNFData_a5Mk a_a1VH getCPUTime)
+               (\ (end_a1VI :: Integer) ->
+                  letrec {
+                    duration_a1VJ :: Integer
+                    [LclId]
+                    duration_a1VJ
+                      = let {
+                          $dNum_a5MC :: Num Integer
+                          [LclId]
+                          $dNum_a5MC = GHC.Num.$fNumInteger } in
+                        letrec {
+                          duration_a5MF :: Integer
+                          [LclId]
+                          duration_a5MF = - @ Integer $dNum_a5MC end_a1VI start_a1VG; } in
+                        duration_a5MF; } in
+                  letrec {
+                    durationInSeconds_a1VK :: Integer
+                    [LclId]
+                    durationInSeconds_a1VK
+                      = let {
+                          $dNum_a5N3 :: Num Integer
+                          [LclId]
+                          $dNum_a5N3 = GHC.Num.$fNumInteger } in
+                        let {
+                          $dIntegral_a5MZ :: Integral Integer
+                          [LclId]
+                          $dIntegral_a5MZ = GHC.Real.$fIntegralInteger } in
+                        letrec {
+                          durationInSeconds_a5N6 :: Integer
+                          [LclId]
+                          durationInSeconds_a5N6
+                            = div @ Integer $dIntegral_a5MZ duration_a1VJ 1000000000; } in
+                        durationInSeconds_a5N6; } in
+                  $ @ 'ghc-prim-0.5.3:GHC.Types.LiftedRep
+                    @ [Char]
+                    @ (IO ())
+                    (print @ [Char] $dShow_a5Nm)
+                    (++
+                       @ Char
+                       description_a1VE
+                       (++
+                          @ Char
+                          (show @ Integer $dShow_a5Nr durationInSeconds_a1VK)
+                          (++
+                             @ Char
+                             (ghc-prim-0.5.3:GHC.CString.unpackCString# " milli seconds -- "#)
+                             (++
+                                @ Char
+                                (show @ Integer $dShow_a5Nv duration_a1VJ)
+                                (ghc-prim-0.5.3:GHC.CString.unpackCString# " pico seconds"#)))))))
+
+-- RHS size: {terms: 6, types: 2, coercions: 0, joins: 0/0}
+testFractionalPower :: Double
+[LclIdX]
+testFractionalPower
+  = ^^
+      @ Double
+      @ Integer
+      $dFractional_a5NO
+      $dIntegral_a5NP
+      (ghc-prim-0.5.3:GHC.Types.D# 5.0##)
+      441
+
+-- RHS size: {terms: 5, types: 2, coercions: 0, joins: 0/0}
+testIntegralPower :: Integer
+[LclIdX]
+testIntegralPower
+  = ^ @ Integer @ Integer $dNum_a5O4 $dIntegral_a5O5 3 1000000
+
+-- RHS size: {terms: 6, types: 3, coercions: 0, joins: 0/0}
+testStimes :: String
+[LclIdX]
+testStimes
+  = stimes
+      @ [Char]
+      $dSemigroup_a5Oo
+      @ Integer
+      $dIntegral_a5Oq
+      1000000
+      (ghc-prim-0.5.3:GHC.CString.unpackCString# "foo"#)
+
+-- RHS size: {terms: 33, types: 17, coercions: 0, joins: 0/0}
+main :: IO ()
+[LclIdX]
+main
+  = >>
+      @ IO
+      $dMonad_a5OB
+      @ ()
+      @ ()
+      (measure
+         @ String
+         $dNFData_a5OF
+         (ghc-prim-0.5.3:GHC.CString.unpackCString# "stimes : "#)
+         testStimes)
+      (>>
+         @ IO
+         $dMonad_a5OJ
+         @ ()
+         @ ()
+         (measure
+            @ Double
+            $dNFData_a5ON
+            (ghc-prim-0.5.3:GHC.CString.unpackCString#
+               "fractional power 1 : "#)
+            testFractionalPower)
+         (>>
+            @ IO
+            $dMonad_a5OR
+            @ ()
+            @ ()
+            (measure
+               @ Double
+               $dNFData_a5OV
+               (ghc-prim-0.5.3:GHC.CString.unpackCString#
+                  "fractional power 2 : "#)
+               testFractionalPower)
+            (>>
+               @ IO
+               $dMonad_a5OZ
+               @ ()
+               @ ()
+               (measure
+                  @ Double
+                  $dNFData_a5P3
+                  (ghc-prim-0.5.3:GHC.CString.unpackCString#
+                     "fractional power 3 : "#)
+                  testFractionalPower)
+               (measure
+                  @ Integer
+                  $dNFData_a5P5
+                  (ghc-prim-0.5.3:GHC.CString.unpackCString# "integral power : "#)
+                  testIntegralPower))))
+
+-- RHS size: {terms: 2, types: 1, coercions: 0, joins: 0/0}
+:Main.main :: IO ()
+[LclIdX]
+:Main.main = GHC.TopHandler.runMainIO @ () main
+end Rec }
+
+

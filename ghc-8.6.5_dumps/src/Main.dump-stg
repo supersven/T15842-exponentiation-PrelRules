@@ -1,0 +1,1463 @@
+
+==================== Pre unarise: ====================
+2019-11-05 16:48:03.506226674 UTC
+
+Main.$s^2 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [0#];
+
+lvl_r8tR :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "Negative exponent"#;
+
+Main.$s^1 :: GHC.Types.Double
+[GblId, Str=x] =
+    [] \u []
+        case GHC.CString.unpackCString# lvl_r8tR of sat_s8u1 [Occ=Once] {
+          __DEFAULT -> GHC.Err.errorWithoutStackTrace sat_s8u1;
+        };
+
+Main.$seven1 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [2#];
+
+lvl1_r8tS :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [1#];
+
+$wg1_r8tT
+  :: GHC.Prim.Double#
+     -> GHC.Integer.Type.Integer -> GHC.Prim.Double# -> GHC.Prim.Double#
+[GblId, Arity=3, Str=<S,U><S,U><S,U>, Unf=OtherCon []] =
+    sat-only [] \r [ww_s8u2 w_s8u3 ww1_s8u4]
+        case
+            GHC.Integer.Type.remInteger w_s8u3 Main.$seven1
+        of
+        sat_s8u5 [Occ=Once]
+        { __DEFAULT ->
+              case GHC.Integer.Type.eqInteger# sat_s8u5 Main.$s^2 of {
+                __DEFAULT ->
+                    case GHC.Integer.Type.eqInteger# w_s8u3 lvl1_r8tS of {
+                      __DEFAULT ->
+                          case *## [ww_s8u2 ww1_s8u4] of sat_s8ua [Occ=Once] {
+                            __DEFAULT ->
+                                case
+                                    GHC.Integer.Type.quotInteger w_s8u3 Main.$seven1
+                                of
+                                sat_s8u9 [Occ=Once]
+                                { __DEFAULT ->
+                                      case *## [ww_s8u2 ww_s8u2] of sat_s8u8 [Occ=Once] {
+                                        __DEFAULT -> $wg1_r8tT sat_s8u8 sat_s8u9 sat_s8ua;
+                                      };
+                                };
+                          };
+                      1# -> *## [ww_s8u2 ww1_s8u4];
+                    };
+                1# ->
+                    case
+                        GHC.Integer.Type.quotInteger w_s8u3 Main.$seven1
+                    of
+                    sat_s8uc [Occ=Once]
+                    { __DEFAULT ->
+                          case *## [ww_s8u2 ww_s8u2] of sat_s8ub [Occ=Once] {
+                            __DEFAULT -> $wg1_r8tT sat_s8ub sat_s8uc ww1_s8u4;
+                          };
+                    };
+              };
+        };
+
+Main.$wf [InlPrag=NOUSERINLINE[2], Occ=LoopBreaker]
+  :: GHC.Prim.Double# -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+[GblId, Arity=2, Str=<S,U><S,U>, Unf=OtherCon []] =
+    [] \r [ww_s8ud w_s8ue]
+        case
+            GHC.Integer.Type.remInteger w_s8ue Main.$seven1
+        of
+        sat_s8uf [Occ=Once]
+        { __DEFAULT ->
+              case GHC.Integer.Type.eqInteger# sat_s8uf Main.$s^2 of {
+                __DEFAULT ->
+                    case GHC.Integer.Type.eqInteger# w_s8ue lvl1_r8tS of {
+                      __DEFAULT ->
+                          case
+                              GHC.Integer.Type.quotInteger w_s8ue Main.$seven1
+                          of
+                          sat_s8uj [Occ=Once]
+                          { __DEFAULT ->
+                                case *## [ww_s8ud ww_s8ud] of sat_s8ui [Occ=Once] {
+                                  __DEFAULT -> $wg1_r8tT sat_s8ui sat_s8uj ww_s8ud;
+                                };
+                          };
+                      1# -> ww_s8ud;
+                    };
+                1# ->
+                    case
+                        GHC.Integer.Type.quotInteger w_s8ue Main.$seven1
+                    of
+                    sat_s8ul [Occ=Once]
+                    { __DEFAULT ->
+                          case *## [ww_s8ud ww_s8ud] of sat_s8uk [Occ=Once] {
+                            __DEFAULT -> Main.$wf sat_s8uk sat_s8ul;
+                          };
+                    };
+              };
+        };
+
+Main.$w$s^ [InlPrag=NOUSERINLINE[1]]
+  :: GHC.Types.Double -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+[GblId, Arity=2, Str=<L,1*U(U)><S,U>, Unf=OtherCon []] =
+    [] \r [w_s8um w1_s8un]
+        case GHC.Integer.Type.ltInteger# w1_s8un Main.$s^2 of {
+          __DEFAULT ->
+              case GHC.Integer.Type.eqInteger# w1_s8un Main.$s^2 of {
+                __DEFAULT ->
+                    case w_s8um of {
+                      GHC.Types.D# ww1_s8ur [Occ=Once] -> Main.$wf ww1_s8ur w1_s8un;
+                    };
+                1# -> 1.0##;
+              };
+          1# -> Main.$s^1;
+        };
+
+Main.$w$s^^ [InlPrag=NOUSERINLINE[1]]
+  :: GHC.Types.Double -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+[GblId, Arity=2, Str=<L,1*U(U)><S,U>, Unf=OtherCon []] =
+    [] \r [w_s8ut w1_s8uu]
+        case GHC.Integer.Type.geInteger# w1_s8uu Main.$s^2 of {
+          __DEFAULT ->
+              case
+                  GHC.Integer.Type.negateInteger w1_s8uu
+              of
+              sat_s8uw [Occ=Once]
+              { __DEFAULT ->
+                    case Main.$w$s^ w_s8ut sat_s8uw of ww_s8ux [Occ=Once] {
+                      __DEFAULT -> /## [1.0## ww_s8ux];
+                    };
+              };
+          1# -> Main.$w$s^ w_s8ut w1_s8uu;
+        };
+
+Main.main_go [Occ=LoopBreaker] :: [GHC.Types.Char] -> ()
+[GblId, Arity=1, Caf=NoCafRefs, Str=<S,1*U>, Unf=OtherCon []] =
+    [] \r [ds_s8uy]
+        case ds_s8uy of {
+          [] -> () [];
+          : x_s8uA [Occ=Once!] xs_s8uB [Occ=Once] ->
+              case x_s8uA of {
+                GHC.Types.C# _ [Occ=Dead] -> Main.main_go xs_s8uB;
+              };
+        };
+
+Main.$trModule4 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "main"#;
+
+Main.$trModule3 :: GHC.Types.TrName
+[GblId, Caf=NoCafRefs, Str=m1, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Types.TrNameS! [Main.$trModule4];
+
+Main.$trModule2 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "Main"#;
+
+Main.$trModule1 :: GHC.Types.TrName
+[GblId, Caf=NoCafRefs, Str=m1, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Types.TrNameS! [Main.$trModule2];
+
+Main.$trModule :: GHC.Types.Module
+[GblId, Caf=NoCafRefs, Str=m, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Types.Module! [Main.$trModule3 Main.$trModule1];
+
+Main.main6 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    " milli seconds -- "#;
+
+Main.main5 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    " pico seconds"#;
+
+Main.main7 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [1000000000#];
+
+Main.main4 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main5;
+
+Main.main_$smeasure2
+  :: GHC.Base.String
+     -> GHC.Base.String
+     -> GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=3, Str=<L,1*U><L,1*U><S,U>, Unf=OtherCon []] =
+    [] \r [description_s8uE f_s8uF s_s8uG]
+        case
+            System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                System.CPUTime.Posix.ClockGetTime.getCPUTime2 s_s8uG
+        of
+        { (#,#) ipv_s8uI [Occ=Once] ipv1_s8uJ [Occ=Once!] ->
+              case Main.main_go f_s8uF of {
+                () ->
+                    case
+                        System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                            System.CPUTime.Posix.ClockGetTime.getCPUTime2 ipv_s8uI
+                    of
+                    { (#,#) ipv2_s8uM [Occ=Once] ipv3_s8uN [Occ=Once!] ->
+                          let {
+                            duration_s8uO :: GHC.Integer.Type.Integer
+                            [LclId] =
+                                [ipv1_s8uJ ipv3_s8uN] \u []
+                                    case ipv3_s8uN of {
+                                      (,) _ [Occ=Dead] y_s8uR [Occ=Once] ->
+                                          case ipv1_s8uJ of {
+                                            (,) _ [Occ=Dead] y1_s8uU [Occ=Once] ->
+                                                GHC.Integer.Type.minusInteger y_s8uR y1_s8uU;
+                                          };
+                                    }; } in
+                          let {
+                            sat_s8v6 [Occ=Once] :: [GHC.Types.Char]
+                            [LclId] =
+                                [description_s8uE duration_s8uO] \u []
+                                    let {
+                                      sat_s8v4 [Occ=Once, Dmd=<L,1*U>] :: [GHC.Types.Char]
+                                      [LclId] =
+                                          [duration_s8uO] \s []
+                                              case
+                                                  GHC.Integer.Type.divInteger
+                                                      duration_s8uO Main.main7
+                                              of
+                                              sat_s8uV [Occ=Once]
+                                              { __DEFAULT ->
+                                                    case
+                                                        GHC.Show.$w$cshowsPrec4
+                                                            0# sat_s8uV GHC.Types.[]
+                                                    of
+                                                    { (#,#) ww3_s8uX [Occ=Once]
+                                                            ww4_s8uY [Occ=Once] ->
+                                                          let {
+                                                            sat_s8v3 [Occ=Once, Dmd=<L,1*U>]
+                                                              :: [GHC.Types.Char]
+                                                            [LclId] =
+                                                                [duration_s8uO] \s []
+                                                                    let {
+                                                                      sat_s8v2 [Occ=Once]
+                                                                        :: [GHC.Types.Char]
+                                                                      [LclId] =
+                                                                          [duration_s8uO] \u []
+                                                                              case
+                                                                                  GHC.Show.$w$cshowsPrec4
+                                                                                      0#
+                                                                                      duration_s8uO
+                                                                                      GHC.Types.[]
+                                                                              of
+                                                                              { (#,#) ww5_s8v0 [Occ=Once]
+                                                                                      ww6_s8v1 [Occ=Once] ->
+                                                                                    GHC.Base.++_$s++
+                                                                                        Main.main4
+                                                                                        ww5_s8v0
+                                                                                        ww6_s8v1;
+                                                                              };
+                                                                    } in 
+                                                                      GHC.CString.unpackAppendCString#
+                                                                          Main.main6 sat_s8v2;
+                                                          } in 
+                                                            GHC.Base.++_$s++
+                                                                sat_s8v3 ww3_s8uX ww4_s8uY;
+                                                    };
+                                              };
+                                    } in 
+                                      case
+                                          GHC.Base.++ description_s8uE sat_s8v4
+                                      of
+                                      sat_s8v5 [Occ=Once]
+                                      { __DEFAULT ->
+                                            GHC.Show.showLitString sat_s8v5 GHC.Show.$fShow[]1;
+                                      }; } in
+                          let {
+                            sat_s8v7 [Occ=Once] :: GHC.Base.String
+                            [LclId] =
+                                CCCS :! [GHC.Show.$fShow(,)3 sat_s8v6];
+                          } in 
+                            GHC.IO.Handle.Text.hPutStr'
+                                GHC.IO.Handle.FD.stdout sat_s8v7 GHC.Types.True ipv2_s8uM;
+                    };
+              };
+        };
+
+Main.main_$smeasure1
+  :: GHC.Base.String
+     -> GHC.Types.Double
+     -> GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=3, Str=<L,1*U><L,1*H><S,U>, Unf=OtherCon []] =
+    [] \r [description_s8v8 f_s8v9 s_s8va]
+        case
+            System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                System.CPUTime.Posix.ClockGetTime.getCPUTime2 s_s8va
+        of
+        { (#,#) ipv_s8vc [Occ=Once] ipv1_s8vd [Occ=Once!] ->
+              case f_s8v9 of {
+                GHC.Types.D# _ [Occ=Dead] ->
+                    case
+                        System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                            System.CPUTime.Posix.ClockGetTime.getCPUTime2 ipv_s8vc
+                    of
+                    { (#,#) ipv3_s8vh [Occ=Once] ipv4_s8vi [Occ=Once!] ->
+                          let {
+                            duration_s8vj :: GHC.Integer.Type.Integer
+                            [LclId] =
+                                [ipv1_s8vd ipv4_s8vi] \u []
+                                    case ipv4_s8vi of {
+                                      (,) _ [Occ=Dead] y_s8vm [Occ=Once] ->
+                                          case ipv1_s8vd of {
+                                            (,) _ [Occ=Dead] y1_s8vp [Occ=Once] ->
+                                                GHC.Integer.Type.minusInteger y_s8vm y1_s8vp;
+                                          };
+                                    }; } in
+                          let {
+                            sat_s8vB [Occ=Once] :: [GHC.Types.Char]
+                            [LclId] =
+                                [description_s8v8 duration_s8vj] \u []
+                                    let {
+                                      sat_s8vz [Occ=Once, Dmd=<L,1*U>] :: [GHC.Types.Char]
+                                      [LclId] =
+                                          [duration_s8vj] \s []
+                                              case
+                                                  GHC.Integer.Type.divInteger
+                                                      duration_s8vj Main.main7
+                                              of
+                                              sat_s8vq [Occ=Once]
+                                              { __DEFAULT ->
+                                                    case
+                                                        GHC.Show.$w$cshowsPrec4
+                                                            0# sat_s8vq GHC.Types.[]
+                                                    of
+                                                    { (#,#) ww3_s8vs [Occ=Once]
+                                                            ww4_s8vt [Occ=Once] ->
+                                                          let {
+                                                            sat_s8vy [Occ=Once, Dmd=<L,1*U>]
+                                                              :: [GHC.Types.Char]
+                                                            [LclId] =
+                                                                [duration_s8vj] \s []
+                                                                    let {
+                                                                      sat_s8vx [Occ=Once]
+                                                                        :: [GHC.Types.Char]
+                                                                      [LclId] =
+                                                                          [duration_s8vj] \u []
+                                                                              case
+                                                                                  GHC.Show.$w$cshowsPrec4
+                                                                                      0#
+                                                                                      duration_s8vj
+                                                                                      GHC.Types.[]
+                                                                              of
+                                                                              { (#,#) ww5_s8vv [Occ=Once]
+                                                                                      ww6_s8vw [Occ=Once] ->
+                                                                                    GHC.Base.++_$s++
+                                                                                        Main.main4
+                                                                                        ww5_s8vv
+                                                                                        ww6_s8vw;
+                                                                              };
+                                                                    } in 
+                                                                      GHC.CString.unpackAppendCString#
+                                                                          Main.main6 sat_s8vx;
+                                                          } in 
+                                                            GHC.Base.++_$s++
+                                                                sat_s8vy ww3_s8vs ww4_s8vt;
+                                                    };
+                                              };
+                                    } in 
+                                      case
+                                          GHC.Base.++ description_s8v8 sat_s8vz
+                                      of
+                                      sat_s8vA [Occ=Once]
+                                      { __DEFAULT ->
+                                            GHC.Show.showLitString sat_s8vA GHC.Show.$fShow[]1;
+                                      }; } in
+                          let {
+                            sat_s8vC [Occ=Once] :: GHC.Base.String
+                            [LclId] =
+                                CCCS :! [GHC.Show.$fShow(,)3 sat_s8vB];
+                          } in 
+                            GHC.IO.Handle.Text.hPutStr'
+                                GHC.IO.Handle.FD.stdout sat_s8vC GHC.Types.True ipv3_s8vh;
+                    };
+              };
+        };
+
+Main.main_$smeasure
+  :: GHC.Base.String
+     -> GHC.Integer.Type.Integer
+     -> GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=3, Str=<L,1*U><L,1*U><S,U>, Unf=OtherCon []] =
+    [] \r [description_s8vD f_s8vE s_s8vF]
+        case
+            System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                System.CPUTime.Posix.ClockGetTime.getCPUTime2 s_s8vF
+        of
+        { (#,#) ipv_s8vH [Occ=Once] ipv1_s8vI [Occ=Once!] ->
+              case f_s8vE of {
+                __DEFAULT ->
+                    case
+                        System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                            System.CPUTime.Posix.ClockGetTime.getCPUTime2 ipv_s8vH
+                    of
+                    { (#,#) ipv2_s8vL [Occ=Once] ipv3_s8vM [Occ=Once!] ->
+                          let {
+                            duration_s8vN :: GHC.Integer.Type.Integer
+                            [LclId] =
+                                [ipv1_s8vI ipv3_s8vM] \u []
+                                    case ipv3_s8vM of {
+                                      (,) _ [Occ=Dead] y_s8vQ [Occ=Once] ->
+                                          case ipv1_s8vI of {
+                                            (,) _ [Occ=Dead] y1_s8vT [Occ=Once] ->
+                                                GHC.Integer.Type.minusInteger y_s8vQ y1_s8vT;
+                                          };
+                                    }; } in
+                          let {
+                            sat_s8w5 [Occ=Once] :: [GHC.Types.Char]
+                            [LclId] =
+                                [description_s8vD duration_s8vN] \u []
+                                    let {
+                                      sat_s8w3 [Occ=Once, Dmd=<L,1*U>] :: [GHC.Types.Char]
+                                      [LclId] =
+                                          [duration_s8vN] \s []
+                                              case
+                                                  GHC.Integer.Type.divInteger
+                                                      duration_s8vN Main.main7
+                                              of
+                                              sat_s8vU [Occ=Once]
+                                              { __DEFAULT ->
+                                                    case
+                                                        GHC.Show.$w$cshowsPrec4
+                                                            0# sat_s8vU GHC.Types.[]
+                                                    of
+                                                    { (#,#) ww3_s8vW [Occ=Once]
+                                                            ww4_s8vX [Occ=Once] ->
+                                                          let {
+                                                            sat_s8w2 [Occ=Once, Dmd=<L,1*U>]
+                                                              :: [GHC.Types.Char]
+                                                            [LclId] =
+                                                                [duration_s8vN] \s []
+                                                                    let {
+                                                                      sat_s8w1 [Occ=Once]
+                                                                        :: [GHC.Types.Char]
+                                                                      [LclId] =
+                                                                          [duration_s8vN] \u []
+                                                                              case
+                                                                                  GHC.Show.$w$cshowsPrec4
+                                                                                      0#
+                                                                                      duration_s8vN
+                                                                                      GHC.Types.[]
+                                                                              of
+                                                                              { (#,#) ww5_s8vZ [Occ=Once]
+                                                                                      ww6_s8w0 [Occ=Once] ->
+                                                                                    GHC.Base.++_$s++
+                                                                                        Main.main4
+                                                                                        ww5_s8vZ
+                                                                                        ww6_s8w0;
+                                                                              };
+                                                                    } in 
+                                                                      GHC.CString.unpackAppendCString#
+                                                                          Main.main6 sat_s8w1;
+                                                          } in 
+                                                            GHC.Base.++_$s++
+                                                                sat_s8w2 ww3_s8vW ww4_s8vX;
+                                                    };
+                                              };
+                                    } in 
+                                      case
+                                          GHC.Base.++ description_s8vD sat_s8w3
+                                      of
+                                      sat_s8w4 [Occ=Once]
+                                      { __DEFAULT ->
+                                            GHC.Show.showLitString sat_s8w4 GHC.Show.$fShow[]1;
+                                      }; } in
+                          let {
+                            sat_s8w6 [Occ=Once] :: GHC.Base.String
+                            [LclId] =
+                                CCCS :! [GHC.Show.$fShow(,)3 sat_s8w5];
+                          } in 
+                            GHC.IO.Handle.Text.hPutStr'
+                                GHC.IO.Handle.FD.stdout sat_s8w6 GHC.Types.True ipv2_s8vL;
+                    };
+              };
+        };
+
+Main.measure1
+  :: forall a.
+     Control.DeepSeq.NFData a =>
+     GHC.Base.String
+     -> a
+     -> GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId,
+ Arity=4,
+ Str=<L,1*C1(H)><L,1*U><L,U><S,U>,
+ Unf=OtherCon []] =
+    [] \r [$dNFData_s8w7 description_s8w8 f_s8w9 s_s8wa]
+        case
+            System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                System.CPUTime.Posix.ClockGetTime.getCPUTime2 s_s8wa
+        of
+        { (#,#) ipv_s8wc [Occ=Once] ipv1_s8wd [Occ=Once!] ->
+              case $dNFData_s8w7 f_s8w9 of {
+                () ->
+                    case
+                        System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                            System.CPUTime.Posix.ClockGetTime.getCPUTime2 ipv_s8wc
+                    of
+                    { (#,#) ipv2_s8wg [Occ=Once] ipv3_s8wh [Occ=Once!] ->
+                          let {
+                            duration_s8wi :: GHC.Integer.Type.Integer
+                            [LclId] =
+                                [ipv1_s8wd ipv3_s8wh] \u []
+                                    case ipv3_s8wh of {
+                                      (,) _ [Occ=Dead] y_s8wl [Occ=Once] ->
+                                          case ipv1_s8wd of {
+                                            (,) _ [Occ=Dead] y1_s8wo [Occ=Once] ->
+                                                GHC.Integer.Type.minusInteger y_s8wl y1_s8wo;
+                                          };
+                                    }; } in
+                          let {
+                            sat_s8wA [Occ=Once] :: [GHC.Types.Char]
+                            [LclId] =
+                                [description_s8w8 duration_s8wi] \u []
+                                    let {
+                                      sat_s8wy [Occ=Once, Dmd=<L,1*U>] :: [GHC.Types.Char]
+                                      [LclId] =
+                                          [duration_s8wi] \s []
+                                              case
+                                                  GHC.Integer.Type.divInteger
+                                                      duration_s8wi Main.main7
+                                              of
+                                              sat_s8wp [Occ=Once]
+                                              { __DEFAULT ->
+                                                    case
+                                                        GHC.Show.$w$cshowsPrec4
+                                                            0# sat_s8wp GHC.Types.[]
+                                                    of
+                                                    { (#,#) ww3_s8wr [Occ=Once]
+                                                            ww4_s8ws [Occ=Once] ->
+                                                          let {
+                                                            sat_s8wx [Occ=Once, Dmd=<L,1*U>]
+                                                              :: [GHC.Types.Char]
+                                                            [LclId] =
+                                                                [duration_s8wi] \s []
+                                                                    let {
+                                                                      sat_s8ww [Occ=Once]
+                                                                        :: [GHC.Types.Char]
+                                                                      [LclId] =
+                                                                          [duration_s8wi] \u []
+                                                                              case
+                                                                                  GHC.Show.$w$cshowsPrec4
+                                                                                      0#
+                                                                                      duration_s8wi
+                                                                                      GHC.Types.[]
+                                                                              of
+                                                                              { (#,#) ww5_s8wu [Occ=Once]
+                                                                                      ww6_s8wv [Occ=Once] ->
+                                                                                    GHC.Base.++_$s++
+                                                                                        Main.main4
+                                                                                        ww5_s8wu
+                                                                                        ww6_s8wv;
+                                                                              };
+                                                                    } in 
+                                                                      GHC.CString.unpackAppendCString#
+                                                                          Main.main6 sat_s8ww;
+                                                          } in 
+                                                            GHC.Base.++_$s++
+                                                                sat_s8wx ww3_s8wr ww4_s8ws;
+                                                    };
+                                              };
+                                    } in 
+                                      case
+                                          GHC.Base.++ description_s8w8 sat_s8wy
+                                      of
+                                      sat_s8wz [Occ=Once]
+                                      { __DEFAULT ->
+                                            GHC.Show.showLitString sat_s8wz GHC.Show.$fShow[]1;
+                                      }; } in
+                          let {
+                            sat_s8wB [Occ=Once] :: GHC.Base.String
+                            [LclId] =
+                                CCCS :! [GHC.Show.$fShow(,)3 sat_s8wA];
+                          } in 
+                            GHC.IO.Handle.Text.hPutStr'
+                                GHC.IO.Handle.FD.stdout sat_s8wB GHC.Types.True ipv2_s8wg;
+                    };
+              };
+        };
+
+Main.measure
+  :: forall a.
+     Control.DeepSeq.NFData a =>
+     GHC.Base.String -> a -> GHC.Types.IO ()
+[GblId,
+ Arity=4,
+ Str=<L,1*C1(H)><L,1*U><L,U><S,U>,
+ Unf=OtherCon []] =
+    [] \r [eta_B4 eta_B3 eta_B2 eta_B1]
+        Main.measure1 eta_B4 eta_B3 eta_B2 eta_B1;
+
+Main.testIntegralPower1 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [1000000#];
+
+Main.testStimes2 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "foo"#;
+
+Main.testStimes1 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.testStimes2;
+
+Main.testStimes :: GHC.Base.String
+[GblId] =
+    [] \u []
+        Data.Semigroup.Internal.stimesList
+            GHC.Real.$fIntegralInteger
+            Main.testIntegralPower1
+            Main.testStimes1;
+
+Main.testIntegralPower2 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [3#];
+
+Main.testIntegralPower :: GHC.Integer.Type.Integer
+[GblId] =
+    [] \u []
+        GHC.Real.^_$s^ Main.testIntegralPower2 Main.testIntegralPower1;
+
+Main.testFractionalPower2 :: GHC.Types.Double
+[GblId, Caf=NoCafRefs, Str=m, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Types.D#! [5.0##];
+
+Main.testFractionalPower1 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [441#];
+
+Main.testFractionalPower :: GHC.Types.Double
+[GblId] =
+    [] \u []
+        case
+            Main.$w$s^^ Main.testFractionalPower2 Main.testFractionalPower1
+        of
+        ww_s8wC [Occ=Once]
+        { __DEFAULT -> GHC.Types.D# [ww_s8wC];
+        };
+
+Main.main3 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "integral power : "#;
+
+Main.main2 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main3;
+
+Main.main9 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "fractional power 3 : "#;
+
+Main.main8 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main9;
+
+Main.main11 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "fractional power 2 : "#;
+
+Main.main10 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main11;
+
+Main.main13 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "fractional power 1 : "#;
+
+Main.main12 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main13;
+
+Main.main15 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "stimes : "#;
+
+Main.main14 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main15;
+
+Main.main1
+  :: GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=1, Str=<S,U>, Unf=OtherCon []] =
+    [] \r [s_s8wD]
+        case Main.main_$smeasure2 Main.main14 Main.testStimes s_s8wD of {
+          (#,#) ipv_s8wF [Occ=Once] _ [Occ=Dead] ->
+              case
+                  Main.main_$smeasure1 Main.main12 Main.testFractionalPower ipv_s8wF
+              of
+              { (#,#) ipv2_s8wI [Occ=Once] _ [Occ=Dead] ->
+                    case
+                        Main.main_$smeasure1 Main.main10 Main.testFractionalPower ipv2_s8wI
+                    of
+                    { (#,#) ipv4_s8wL [Occ=Once] _ [Occ=Dead] ->
+                          case
+                              Main.main_$smeasure1 Main.main8 Main.testFractionalPower ipv4_s8wL
+                          of
+                          { (#,#) ipv6_s8wO [Occ=Once] _ [Occ=Dead] ->
+                                Main.main_$smeasure Main.main2 Main.testIntegralPower ipv6_s8wO;
+                          };
+                    };
+              };
+        };
+
+Main.main :: GHC.Types.IO ()
+[GblId, Arity=1, Str=<S,U>, Unf=OtherCon []] =
+    [] \r [eta_B1] Main.main1 eta_B1;
+
+Main.main16
+  :: GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=1, Unf=OtherCon []] =
+    [] \r [eta_B1] GHC.TopHandler.runMainIO1 Main.main1 eta_B1;
+
+:Main.main :: GHC.Types.IO ()
+[GblId, Arity=1, Unf=OtherCon []] =
+    [] \r [eta_B1] Main.main16 eta_B1;
+
+
+==================== STG syntax: ====================
+2019-11-05 16:48:03.51257484 UTC
+
+Main.$s^2 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [0#];
+
+lvl_r8tR :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "Negative exponent"#;
+
+Main.$s^1 :: GHC.Types.Double
+[GblId, Str=x] =
+    [] \u []
+        case GHC.CString.unpackCString# lvl_r8tR of sat_s8u1 [Occ=Once] {
+          __DEFAULT -> GHC.Err.errorWithoutStackTrace sat_s8u1;
+        };
+
+Main.$seven1 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [2#];
+
+lvl1_r8tS :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [1#];
+
+$wg1_r8tT
+  :: GHC.Prim.Double#
+     -> GHC.Integer.Type.Integer -> GHC.Prim.Double# -> GHC.Prim.Double#
+[GblId, Arity=3, Str=<S,U><S,U><S,U>, Unf=OtherCon []] =
+    sat-only [] \r [ww_s8u2 w_s8u3 ww1_s8u4]
+        case
+            GHC.Integer.Type.remInteger w_s8u3 Main.$seven1
+        of
+        sat_s8u5 [Occ=Once]
+        { __DEFAULT ->
+              case GHC.Integer.Type.eqInteger# sat_s8u5 Main.$s^2 of {
+                __DEFAULT ->
+                    case GHC.Integer.Type.eqInteger# w_s8u3 lvl1_r8tS of {
+                      __DEFAULT ->
+                          case *## [ww_s8u2 ww1_s8u4] of sat_s8ua [Occ=Once] {
+                            __DEFAULT ->
+                                case
+                                    GHC.Integer.Type.quotInteger w_s8u3 Main.$seven1
+                                of
+                                sat_s8u9 [Occ=Once]
+                                { __DEFAULT ->
+                                      case *## [ww_s8u2 ww_s8u2] of sat_s8u8 [Occ=Once] {
+                                        __DEFAULT -> $wg1_r8tT sat_s8u8 sat_s8u9 sat_s8ua;
+                                      };
+                                };
+                          };
+                      1# -> *## [ww_s8u2 ww1_s8u4];
+                    };
+                1# ->
+                    case
+                        GHC.Integer.Type.quotInteger w_s8u3 Main.$seven1
+                    of
+                    sat_s8uc [Occ=Once]
+                    { __DEFAULT ->
+                          case *## [ww_s8u2 ww_s8u2] of sat_s8ub [Occ=Once] {
+                            __DEFAULT -> $wg1_r8tT sat_s8ub sat_s8uc ww1_s8u4;
+                          };
+                    };
+              };
+        };
+
+Main.$wf [InlPrag=NOUSERINLINE[2], Occ=LoopBreaker]
+  :: GHC.Prim.Double# -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+[GblId, Arity=2, Str=<S,U><S,U>, Unf=OtherCon []] =
+    [] \r [ww_s8ud w_s8ue]
+        case
+            GHC.Integer.Type.remInteger w_s8ue Main.$seven1
+        of
+        sat_s8uf [Occ=Once]
+        { __DEFAULT ->
+              case GHC.Integer.Type.eqInteger# sat_s8uf Main.$s^2 of {
+                __DEFAULT ->
+                    case GHC.Integer.Type.eqInteger# w_s8ue lvl1_r8tS of {
+                      __DEFAULT ->
+                          case
+                              GHC.Integer.Type.quotInteger w_s8ue Main.$seven1
+                          of
+                          sat_s8uj [Occ=Once]
+                          { __DEFAULT ->
+                                case *## [ww_s8ud ww_s8ud] of sat_s8ui [Occ=Once] {
+                                  __DEFAULT -> $wg1_r8tT sat_s8ui sat_s8uj ww_s8ud;
+                                };
+                          };
+                      1# -> ww_s8ud;
+                    };
+                1# ->
+                    case
+                        GHC.Integer.Type.quotInteger w_s8ue Main.$seven1
+                    of
+                    sat_s8ul [Occ=Once]
+                    { __DEFAULT ->
+                          case *## [ww_s8ud ww_s8ud] of sat_s8uk [Occ=Once] {
+                            __DEFAULT -> Main.$wf sat_s8uk sat_s8ul;
+                          };
+                    };
+              };
+        };
+
+Main.$w$s^ [InlPrag=NOUSERINLINE[1]]
+  :: GHC.Types.Double -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+[GblId, Arity=2, Str=<L,1*U(U)><S,U>, Unf=OtherCon []] =
+    [] \r [w_s8um w1_s8un]
+        case GHC.Integer.Type.ltInteger# w1_s8un Main.$s^2 of {
+          __DEFAULT ->
+              case GHC.Integer.Type.eqInteger# w1_s8un Main.$s^2 of {
+                __DEFAULT ->
+                    case w_s8um of {
+                      GHC.Types.D# ww1_s8ur [Occ=Once] -> Main.$wf ww1_s8ur w1_s8un;
+                    };
+                1# -> 1.0##;
+              };
+          1# -> Main.$s^1;
+        };
+
+Main.$w$s^^ [InlPrag=NOUSERINLINE[1]]
+  :: GHC.Types.Double -> GHC.Integer.Type.Integer -> GHC.Prim.Double#
+[GblId, Arity=2, Str=<L,1*U(U)><S,U>, Unf=OtherCon []] =
+    [] \r [w_s8ut w1_s8uu]
+        case GHC.Integer.Type.geInteger# w1_s8uu Main.$s^2 of {
+          __DEFAULT ->
+              case
+                  GHC.Integer.Type.negateInteger w1_s8uu
+              of
+              sat_s8uw [Occ=Once]
+              { __DEFAULT ->
+                    case Main.$w$s^ w_s8ut sat_s8uw of ww_s8ux [Occ=Once] {
+                      __DEFAULT -> /## [1.0## ww_s8ux];
+                    };
+              };
+          1# -> Main.$w$s^ w_s8ut w1_s8uu;
+        };
+
+Main.main_go [Occ=LoopBreaker] :: [GHC.Types.Char] -> ()
+[GblId, Arity=1, Caf=NoCafRefs, Str=<S,1*U>, Unf=OtherCon []] =
+    [] \r [ds_s8uy]
+        case ds_s8uy of {
+          [] -> () [];
+          : x_s8uA [Occ=Once!] xs_s8uB [Occ=Once] ->
+              case x_s8uA of {
+                GHC.Types.C# _ [Occ=Dead] -> Main.main_go xs_s8uB;
+              };
+        };
+
+Main.$trModule4 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "main"#;
+
+Main.$trModule3 :: GHC.Types.TrName
+[GblId, Caf=NoCafRefs, Str=m1, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Types.TrNameS! [Main.$trModule4];
+
+Main.$trModule2 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "Main"#;
+
+Main.$trModule1 :: GHC.Types.TrName
+[GblId, Caf=NoCafRefs, Str=m1, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Types.TrNameS! [Main.$trModule2];
+
+Main.$trModule :: GHC.Types.Module
+[GblId, Caf=NoCafRefs, Str=m, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Types.Module! [Main.$trModule3 Main.$trModule1];
+
+Main.main6 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    " milli seconds -- "#;
+
+Main.main5 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    " pico seconds"#;
+
+Main.main7 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [1000000000#];
+
+Main.main4 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main5;
+
+Main.main_$smeasure2
+  :: GHC.Base.String
+     -> GHC.Base.String
+     -> GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=3, Str=<L,1*U><L,1*U><S,U>, Unf=OtherCon []] =
+    [] \r [description_s8uE f_s8uF void_0E]
+        case
+            System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                System.CPUTime.Posix.ClockGetTime.getCPUTime2 GHC.Prim.void#
+        of
+        { Unit# ipv1_s8uJ [Occ=Once!] ->
+              case Main.main_go f_s8uF of {
+                () ->
+                    case
+                        System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                            System.CPUTime.Posix.ClockGetTime.getCPUTime2 GHC.Prim.void#
+                    of
+                    { Unit# ipv3_s8uN [Occ=Once!] ->
+                          let {
+                            duration_s8uO :: GHC.Integer.Type.Integer
+                            [LclId] =
+                                [ipv1_s8uJ ipv3_s8uN] \u []
+                                    case ipv3_s8uN of {
+                                      (,) _ [Occ=Dead] y_s8uR [Occ=Once] ->
+                                          case ipv1_s8uJ of {
+                                            (,) _ [Occ=Dead] y1_s8uU [Occ=Once] ->
+                                                GHC.Integer.Type.minusInteger y_s8uR y1_s8uU;
+                                          };
+                                    }; } in
+                          let {
+                            sat_s8v6 [Occ=Once] :: [GHC.Types.Char]
+                            [LclId] =
+                                [description_s8uE duration_s8uO] \u []
+                                    let {
+                                      sat_s8v4 [Occ=Once, Dmd=<L,1*U>] :: [GHC.Types.Char]
+                                      [LclId] =
+                                          [duration_s8uO] \s []
+                                              case
+                                                  GHC.Integer.Type.divInteger
+                                                      duration_s8uO Main.main7
+                                              of
+                                              sat_s8uV [Occ=Once]
+                                              { __DEFAULT ->
+                                                    case
+                                                        GHC.Show.$w$cshowsPrec4
+                                                            0# sat_s8uV GHC.Types.[]
+                                                    of
+                                                    { (#,#) ww3_s8uX [Occ=Once]
+                                                            ww4_s8uY [Occ=Once] ->
+                                                          let {
+                                                            sat_s8v3 [Occ=Once, Dmd=<L,1*U>]
+                                                              :: [GHC.Types.Char]
+                                                            [LclId] =
+                                                                [duration_s8uO] \s []
+                                                                    let {
+                                                                      sat_s8v2 [Occ=Once]
+                                                                        :: [GHC.Types.Char]
+                                                                      [LclId] =
+                                                                          [duration_s8uO] \u []
+                                                                              case
+                                                                                  GHC.Show.$w$cshowsPrec4
+                                                                                      0#
+                                                                                      duration_s8uO
+                                                                                      GHC.Types.[]
+                                                                              of
+                                                                              { (#,#) ww5_s8v0 [Occ=Once]
+                                                                                      ww6_s8v1 [Occ=Once] ->
+                                                                                    GHC.Base.++_$s++
+                                                                                        Main.main4
+                                                                                        ww5_s8v0
+                                                                                        ww6_s8v1;
+                                                                              };
+                                                                    } in 
+                                                                      GHC.CString.unpackAppendCString#
+                                                                          Main.main6 sat_s8v2;
+                                                          } in 
+                                                            GHC.Base.++_$s++
+                                                                sat_s8v3 ww3_s8uX ww4_s8uY;
+                                                    };
+                                              };
+                                    } in 
+                                      case
+                                          GHC.Base.++ description_s8uE sat_s8v4
+                                      of
+                                      sat_s8v5 [Occ=Once]
+                                      { __DEFAULT ->
+                                            GHC.Show.showLitString sat_s8v5 GHC.Show.$fShow[]1;
+                                      }; } in
+                          let {
+                            sat_s8v7 [Occ=Once] :: GHC.Base.String
+                            [LclId] =
+                                CCCS :! [GHC.Show.$fShow(,)3 sat_s8v6];
+                          } in 
+                            GHC.IO.Handle.Text.hPutStr'
+                                GHC.IO.Handle.FD.stdout sat_s8v7 GHC.Types.True GHC.Prim.void#;
+                    };
+              };
+        };
+
+Main.main_$smeasure1
+  :: GHC.Base.String
+     -> GHC.Types.Double
+     -> GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=3, Str=<L,1*U><L,1*H><S,U>, Unf=OtherCon []] =
+    [] \r [description_s8v8 f_s8v9 void_0E]
+        case
+            System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                System.CPUTime.Posix.ClockGetTime.getCPUTime2 GHC.Prim.void#
+        of
+        { Unit# ipv1_s8vd [Occ=Once!] ->
+              case f_s8v9 of {
+                GHC.Types.D# _ [Occ=Dead] ->
+                    case
+                        System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                            System.CPUTime.Posix.ClockGetTime.getCPUTime2 GHC.Prim.void#
+                    of
+                    { Unit# ipv4_s8vi [Occ=Once!] ->
+                          let {
+                            duration_s8vj :: GHC.Integer.Type.Integer
+                            [LclId] =
+                                [ipv1_s8vd ipv4_s8vi] \u []
+                                    case ipv4_s8vi of {
+                                      (,) _ [Occ=Dead] y_s8vm [Occ=Once] ->
+                                          case ipv1_s8vd of {
+                                            (,) _ [Occ=Dead] y1_s8vp [Occ=Once] ->
+                                                GHC.Integer.Type.minusInteger y_s8vm y1_s8vp;
+                                          };
+                                    }; } in
+                          let {
+                            sat_s8vB [Occ=Once] :: [GHC.Types.Char]
+                            [LclId] =
+                                [description_s8v8 duration_s8vj] \u []
+                                    let {
+                                      sat_s8vz [Occ=Once, Dmd=<L,1*U>] :: [GHC.Types.Char]
+                                      [LclId] =
+                                          [duration_s8vj] \s []
+                                              case
+                                                  GHC.Integer.Type.divInteger
+                                                      duration_s8vj Main.main7
+                                              of
+                                              sat_s8vq [Occ=Once]
+                                              { __DEFAULT ->
+                                                    case
+                                                        GHC.Show.$w$cshowsPrec4
+                                                            0# sat_s8vq GHC.Types.[]
+                                                    of
+                                                    { (#,#) ww3_s8vs [Occ=Once]
+                                                            ww4_s8vt [Occ=Once] ->
+                                                          let {
+                                                            sat_s8vy [Occ=Once, Dmd=<L,1*U>]
+                                                              :: [GHC.Types.Char]
+                                                            [LclId] =
+                                                                [duration_s8vj] \s []
+                                                                    let {
+                                                                      sat_s8vx [Occ=Once]
+                                                                        :: [GHC.Types.Char]
+                                                                      [LclId] =
+                                                                          [duration_s8vj] \u []
+                                                                              case
+                                                                                  GHC.Show.$w$cshowsPrec4
+                                                                                      0#
+                                                                                      duration_s8vj
+                                                                                      GHC.Types.[]
+                                                                              of
+                                                                              { (#,#) ww5_s8vv [Occ=Once]
+                                                                                      ww6_s8vw [Occ=Once] ->
+                                                                                    GHC.Base.++_$s++
+                                                                                        Main.main4
+                                                                                        ww5_s8vv
+                                                                                        ww6_s8vw;
+                                                                              };
+                                                                    } in 
+                                                                      GHC.CString.unpackAppendCString#
+                                                                          Main.main6 sat_s8vx;
+                                                          } in 
+                                                            GHC.Base.++_$s++
+                                                                sat_s8vy ww3_s8vs ww4_s8vt;
+                                                    };
+                                              };
+                                    } in 
+                                      case
+                                          GHC.Base.++ description_s8v8 sat_s8vz
+                                      of
+                                      sat_s8vA [Occ=Once]
+                                      { __DEFAULT ->
+                                            GHC.Show.showLitString sat_s8vA GHC.Show.$fShow[]1;
+                                      }; } in
+                          let {
+                            sat_s8vC [Occ=Once] :: GHC.Base.String
+                            [LclId] =
+                                CCCS :! [GHC.Show.$fShow(,)3 sat_s8vB];
+                          } in 
+                            GHC.IO.Handle.Text.hPutStr'
+                                GHC.IO.Handle.FD.stdout sat_s8vC GHC.Types.True GHC.Prim.void#;
+                    };
+              };
+        };
+
+Main.main_$smeasure
+  :: GHC.Base.String
+     -> GHC.Integer.Type.Integer
+     -> GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=3, Str=<L,1*U><L,1*U><S,U>, Unf=OtherCon []] =
+    [] \r [description_s8vD f_s8vE void_0E]
+        case
+            System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                System.CPUTime.Posix.ClockGetTime.getCPUTime2 GHC.Prim.void#
+        of
+        { Unit# ipv1_s8vI [Occ=Once!] ->
+              case f_s8vE of {
+                __DEFAULT ->
+                    case
+                        System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                            System.CPUTime.Posix.ClockGetTime.getCPUTime2 GHC.Prim.void#
+                    of
+                    { Unit# ipv3_s8vM [Occ=Once!] ->
+                          let {
+                            duration_s8vN :: GHC.Integer.Type.Integer
+                            [LclId] =
+                                [ipv1_s8vI ipv3_s8vM] \u []
+                                    case ipv3_s8vM of {
+                                      (,) _ [Occ=Dead] y_s8vQ [Occ=Once] ->
+                                          case ipv1_s8vI of {
+                                            (,) _ [Occ=Dead] y1_s8vT [Occ=Once] ->
+                                                GHC.Integer.Type.minusInteger y_s8vQ y1_s8vT;
+                                          };
+                                    }; } in
+                          let {
+                            sat_s8w5 [Occ=Once] :: [GHC.Types.Char]
+                            [LclId] =
+                                [description_s8vD duration_s8vN] \u []
+                                    let {
+                                      sat_s8w3 [Occ=Once, Dmd=<L,1*U>] :: [GHC.Types.Char]
+                                      [LclId] =
+                                          [duration_s8vN] \s []
+                                              case
+                                                  GHC.Integer.Type.divInteger
+                                                      duration_s8vN Main.main7
+                                              of
+                                              sat_s8vU [Occ=Once]
+                                              { __DEFAULT ->
+                                                    case
+                                                        GHC.Show.$w$cshowsPrec4
+                                                            0# sat_s8vU GHC.Types.[]
+                                                    of
+                                                    { (#,#) ww3_s8vW [Occ=Once]
+                                                            ww4_s8vX [Occ=Once] ->
+                                                          let {
+                                                            sat_s8w2 [Occ=Once, Dmd=<L,1*U>]
+                                                              :: [GHC.Types.Char]
+                                                            [LclId] =
+                                                                [duration_s8vN] \s []
+                                                                    let {
+                                                                      sat_s8w1 [Occ=Once]
+                                                                        :: [GHC.Types.Char]
+                                                                      [LclId] =
+                                                                          [duration_s8vN] \u []
+                                                                              case
+                                                                                  GHC.Show.$w$cshowsPrec4
+                                                                                      0#
+                                                                                      duration_s8vN
+                                                                                      GHC.Types.[]
+                                                                              of
+                                                                              { (#,#) ww5_s8vZ [Occ=Once]
+                                                                                      ww6_s8w0 [Occ=Once] ->
+                                                                                    GHC.Base.++_$s++
+                                                                                        Main.main4
+                                                                                        ww5_s8vZ
+                                                                                        ww6_s8w0;
+                                                                              };
+                                                                    } in 
+                                                                      GHC.CString.unpackAppendCString#
+                                                                          Main.main6 sat_s8w1;
+                                                          } in 
+                                                            GHC.Base.++_$s++
+                                                                sat_s8w2 ww3_s8vW ww4_s8vX;
+                                                    };
+                                              };
+                                    } in 
+                                      case
+                                          GHC.Base.++ description_s8vD sat_s8w3
+                                      of
+                                      sat_s8w4 [Occ=Once]
+                                      { __DEFAULT ->
+                                            GHC.Show.showLitString sat_s8w4 GHC.Show.$fShow[]1;
+                                      }; } in
+                          let {
+                            sat_s8w6 [Occ=Once] :: GHC.Base.String
+                            [LclId] =
+                                CCCS :! [GHC.Show.$fShow(,)3 sat_s8w5];
+                          } in 
+                            GHC.IO.Handle.Text.hPutStr'
+                                GHC.IO.Handle.FD.stdout sat_s8w6 GHC.Types.True GHC.Prim.void#;
+                    };
+              };
+        };
+
+Main.measure1
+  :: forall a.
+     Control.DeepSeq.NFData a =>
+     GHC.Base.String
+     -> a
+     -> GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId,
+ Arity=4,
+ Str=<L,1*C1(H)><L,1*U><L,U><S,U>,
+ Unf=OtherCon []] =
+    [] \r [$dNFData_s8w7 description_s8w8 f_s8w9 void_0E]
+        case
+            System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                System.CPUTime.Posix.ClockGetTime.getCPUTime2 GHC.Prim.void#
+        of
+        { Unit# ipv1_s8wd [Occ=Once!] ->
+              case $dNFData_s8w7 f_s8w9 of {
+                () ->
+                    case
+                        System.CPUTime.Posix.ClockGetTime.getCPUTime4
+                            System.CPUTime.Posix.ClockGetTime.getCPUTime2 GHC.Prim.void#
+                    of
+                    { Unit# ipv3_s8wh [Occ=Once!] ->
+                          let {
+                            duration_s8wi :: GHC.Integer.Type.Integer
+                            [LclId] =
+                                [ipv1_s8wd ipv3_s8wh] \u []
+                                    case ipv3_s8wh of {
+                                      (,) _ [Occ=Dead] y_s8wl [Occ=Once] ->
+                                          case ipv1_s8wd of {
+                                            (,) _ [Occ=Dead] y1_s8wo [Occ=Once] ->
+                                                GHC.Integer.Type.minusInteger y_s8wl y1_s8wo;
+                                          };
+                                    }; } in
+                          let {
+                            sat_s8wA [Occ=Once] :: [GHC.Types.Char]
+                            [LclId] =
+                                [description_s8w8 duration_s8wi] \u []
+                                    let {
+                                      sat_s8wy [Occ=Once, Dmd=<L,1*U>] :: [GHC.Types.Char]
+                                      [LclId] =
+                                          [duration_s8wi] \s []
+                                              case
+                                                  GHC.Integer.Type.divInteger
+                                                      duration_s8wi Main.main7
+                                              of
+                                              sat_s8wp [Occ=Once]
+                                              { __DEFAULT ->
+                                                    case
+                                                        GHC.Show.$w$cshowsPrec4
+                                                            0# sat_s8wp GHC.Types.[]
+                                                    of
+                                                    { (#,#) ww3_s8wr [Occ=Once]
+                                                            ww4_s8ws [Occ=Once] ->
+                                                          let {
+                                                            sat_s8wx [Occ=Once, Dmd=<L,1*U>]
+                                                              :: [GHC.Types.Char]
+                                                            [LclId] =
+                                                                [duration_s8wi] \s []
+                                                                    let {
+                                                                      sat_s8ww [Occ=Once]
+                                                                        :: [GHC.Types.Char]
+                                                                      [LclId] =
+                                                                          [duration_s8wi] \u []
+                                                                              case
+                                                                                  GHC.Show.$w$cshowsPrec4
+                                                                                      0#
+                                                                                      duration_s8wi
+                                                                                      GHC.Types.[]
+                                                                              of
+                                                                              { (#,#) ww5_s8wu [Occ=Once]
+                                                                                      ww6_s8wv [Occ=Once] ->
+                                                                                    GHC.Base.++_$s++
+                                                                                        Main.main4
+                                                                                        ww5_s8wu
+                                                                                        ww6_s8wv;
+                                                                              };
+                                                                    } in 
+                                                                      GHC.CString.unpackAppendCString#
+                                                                          Main.main6 sat_s8ww;
+                                                          } in 
+                                                            GHC.Base.++_$s++
+                                                                sat_s8wx ww3_s8wr ww4_s8ws;
+                                                    };
+                                              };
+                                    } in 
+                                      case
+                                          GHC.Base.++ description_s8w8 sat_s8wy
+                                      of
+                                      sat_s8wz [Occ=Once]
+                                      { __DEFAULT ->
+                                            GHC.Show.showLitString sat_s8wz GHC.Show.$fShow[]1;
+                                      }; } in
+                          let {
+                            sat_s8wB [Occ=Once] :: GHC.Base.String
+                            [LclId] =
+                                CCCS :! [GHC.Show.$fShow(,)3 sat_s8wA];
+                          } in 
+                            GHC.IO.Handle.Text.hPutStr'
+                                GHC.IO.Handle.FD.stdout sat_s8wB GHC.Types.True GHC.Prim.void#;
+                    };
+              };
+        };
+
+Main.measure
+  :: forall a.
+     Control.DeepSeq.NFData a =>
+     GHC.Base.String -> a -> GHC.Types.IO ()
+[GblId,
+ Arity=4,
+ Str=<L,1*C1(H)><L,1*U><L,U><S,U>,
+ Unf=OtherCon []] =
+    [] \r [eta_B4 eta_B3 eta_B2 void_0E]
+        Main.measure1 eta_B4 eta_B3 eta_B2 GHC.Prim.void#;
+
+Main.testIntegralPower1 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [1000000#];
+
+Main.testStimes2 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "foo"#;
+
+Main.testStimes1 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.testStimes2;
+
+Main.testStimes :: GHC.Base.String
+[GblId] =
+    [] \u []
+        Data.Semigroup.Internal.stimesList
+            GHC.Real.$fIntegralInteger
+            Main.testIntegralPower1
+            Main.testStimes1;
+
+Main.testIntegralPower2 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [3#];
+
+Main.testIntegralPower :: GHC.Integer.Type.Integer
+[GblId] =
+    [] \u []
+        GHC.Real.^_$s^ Main.testIntegralPower2 Main.testIntegralPower1;
+
+Main.testFractionalPower2 :: GHC.Types.Double
+[GblId, Caf=NoCafRefs, Str=m, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Types.D#! [5.0##];
+
+Main.testFractionalPower1 :: GHC.Integer.Type.Integer
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    CCS_DONT_CARE GHC.Integer.Type.S#! [441#];
+
+Main.testFractionalPower :: GHC.Types.Double
+[GblId] =
+    [] \u []
+        case
+            Main.$w$s^^ Main.testFractionalPower2 Main.testFractionalPower1
+        of
+        ww_s8wC [Occ=Once]
+        { __DEFAULT -> GHC.Types.D# [ww_s8wC];
+        };
+
+Main.main3 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "integral power : "#;
+
+Main.main2 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main3;
+
+Main.main9 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "fractional power 3 : "#;
+
+Main.main8 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main9;
+
+Main.main11 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "fractional power 2 : "#;
+
+Main.main10 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main11;
+
+Main.main13 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "fractional power 1 : "#;
+
+Main.main12 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main13;
+
+Main.main15 :: GHC.Prim.Addr#
+[GblId, Caf=NoCafRefs, Unf=OtherCon []] =
+    "stimes : "#;
+
+Main.main14 :: [GHC.Types.Char]
+[GblId] =
+    [] \u [] GHC.CString.unpackCString# Main.main15;
+
+Main.main1
+  :: GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=1, Str=<S,U>, Unf=OtherCon []] =
+    [] \r [void_0E]
+        case
+            Main.main_$smeasure2 Main.main14 Main.testStimes GHC.Prim.void#
+        of
+        { Unit# _ [Occ=Dead] ->
+              case
+                  Main.main_$smeasure1
+                      Main.main12 Main.testFractionalPower GHC.Prim.void#
+              of
+              { Unit# _ [Occ=Dead] ->
+                    case
+                        Main.main_$smeasure1
+                            Main.main10 Main.testFractionalPower GHC.Prim.void#
+                    of
+                    { Unit# _ [Occ=Dead] ->
+                          case
+                              Main.main_$smeasure1
+                                  Main.main8 Main.testFractionalPower GHC.Prim.void#
+                          of
+                          { Unit# _ [Occ=Dead] ->
+                                Main.main_$smeasure
+                                    Main.main2 Main.testIntegralPower GHC.Prim.void#;
+                          };
+                    };
+              };
+        };
+
+Main.main :: GHC.Types.IO ()
+[GblId, Arity=1, Str=<S,U>, Unf=OtherCon []] =
+    [] \r [void_0E] Main.main1 GHC.Prim.void#;
+
+Main.main16
+  :: GHC.Prim.State# GHC.Prim.RealWorld
+     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+[GblId, Arity=1, Unf=OtherCon []] =
+    [] \r [void_0E]
+        GHC.TopHandler.runMainIO1 Main.main1 GHC.Prim.void#;
+
+:Main.main :: GHC.Types.IO ()
+[GblId, Arity=1, Unf=OtherCon []] =
+    [] \r [void_0E] Main.main16 GHC.Prim.void#;
+

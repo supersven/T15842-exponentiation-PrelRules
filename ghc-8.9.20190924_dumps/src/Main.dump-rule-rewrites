@@ -1,0 +1,2619 @@
+Rule fired
+    Rule: SPEC $fShow[]
+    Module: (GHC.Show)
+    Before: GHC.Show.$fShow[]
+              TyArg GHC.Types.Char ValArg GHC.Show.$fShowChar
+    After:  (\ ($dShow_a7X2 :: GHC.Show.Show GHC.Types.Char) ->
+               GHC.Show.$fShow[]_$s$fShow[]1)
+              GHC.Show.$fShowChar
+    Cont:   Stop[RhsCtxt] GHC.Show.Show [GHC.Types.Char]
+Rule fired
+    Rule: Class op >>=
+    Module: (BUILTIN)
+    Before: GHC.Base.>>= TyArg GHC.Types.IO ValArg GHC.Base.$fMonadIO
+    After:  GHC.Base.$fMonadIO1
+            `cast` (forall (a :: <*>_N) (b :: <*>_N).
+                    <GHC.Types.IO a>_R
+                    ->_R <a -> GHC.Types.IO b>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <b>_R)
+                    :: (forall a b.
+                        GHC.Types.IO a
+                        -> (a -> GHC.Types.IO b)
+                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #))
+                       ~R# (forall a b.
+                            GHC.Types.IO a -> (a -> GHC.Types.IO b) -> GHC.Types.IO b))
+    Cont:   ApplyToTy GHC.Integer.Type.Integer
+            ApplyToTy ()
+            ApplyToVal nodup System.CPUTime.getCPUTime
+            ApplyToVal nodup (\ (start_a1W8 [Occ=OnceL]
+                                   :: GHC.Integer.Type.Integer) ->
+                                GHC.Base.>>=
+                                  @ GHC.Types.IO
+                                  GHC.Base.$fMonadIO
+                                  @ GHC.Integer.Type.Integer
+                                  @ ()
+                                  (Control.DeepSeq.deepseq
+                                     @ a_a5HY
+                                     @ (GHC.Types.IO GHC.Integer.Type.Integer)
+                                     $dNFData_a5I0
+                                     f_a1W7
+                                     System.CPUTime.getCPUTime)
+                                  (\ (end_a1Wa [Occ=Once] :: GHC.Integer.Type.Integer) ->
+                                     let {
+                                       duration_a1Wb :: GHC.Integer.Type.Integer
+                                       [LclId,
+                                        Unf=Unf{Src=<vanilla>, TopLvl=False, Value=False,
+                                                ConLike=False, WorkFree=False, Expandable=False,
+                                                Guidance=IF_ARGS [] 40 0}]
+                                       duration_a1Wb
+                                         = GHC.Num.-
+                                             @ GHC.Integer.Type.Integer
+                                             GHC.Num.$fNumInteger
+                                             end_a1Wa
+                                             start_a1W8 } in
+                                     GHC.Base.$
+                                       @ 'GHC.Types.LiftedRep
+                                       @ [GHC.Types.Char]
+                                       @ (GHC.Types.IO ())
+                                       (System.IO.print @ [GHC.Types.Char] $dShow_a5JC)
+                                       (GHC.Base.++
+                                          @ GHC.Types.Char
+                                          description_a1W6
+                                          (GHC.Base.++
+                                             @ GHC.Types.Char
+                                             (GHC.Show.show
+                                                @ GHC.Integer.Type.Integer
+                                                GHC.Show.$fShowInteger
+                                                (GHC.Real.div
+                                                   @ GHC.Integer.Type.Integer
+                                                   GHC.Real.$fIntegralInteger
+                                                   duration_a1Wb
+                                                   1000000000))
+                                             (GHC.Base.++
+                                                @ GHC.Types.Char
+                                                (GHC.CString.unpackCString# " milli seconds -- "#)
+                                                (GHC.Base.++
+                                                   @ GHC.Types.Char
+                                                   (GHC.Show.show
+                                                      @ GHC.Integer.Type.Integer
+                                                      GHC.Show.$fShowInteger
+                                                      duration_a1Wb)
+                                                   (GHC.CString.unpackCString#
+                                                      " pico seconds"#)))))))
+            Stop[BoringCtxt] GHC.Types.IO ()
+Rule fired
+    Rule: Class op >>=
+    Module: (BUILTIN)
+    Before: GHC.Base.>>= TyArg GHC.Types.IO ValArg GHC.Base.$fMonadIO
+    After:  GHC.Base.$fMonadIO1
+            `cast` (forall (a :: <*>_N) (b :: <*>_N).
+                    <GHC.Types.IO a>_R
+                    ->_R <a -> GHC.Types.IO b>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <b>_R)
+                    :: (forall a b.
+                        GHC.Types.IO a
+                        -> (a -> GHC.Types.IO b)
+                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #))
+                       ~R# (forall a b.
+                            GHC.Types.IO a -> (a -> GHC.Types.IO b) -> GHC.Types.IO b))
+    Cont:   ApplyToTy GHC.Integer.Type.Integer
+            ApplyToTy ()
+            ApplyToVal nodup (Control.DeepSeq.deepseq
+                                @ a_a5HY
+                                @ (GHC.Types.IO GHC.Integer.Type.Integer)
+                                $dNFData_a5I0
+                                f_a1W7
+                                System.CPUTime.getCPUTime)
+            ApplyToVal nodup (\ (end_a1Wa [Occ=Once]
+                                   :: GHC.Integer.Type.Integer) ->
+                                let {
+                                  duration_a1Wb :: GHC.Integer.Type.Integer
+                                  [LclId,
+                                   Unf=Unf{Src=<vanilla>, TopLvl=False, Value=False, ConLike=False,
+                                           WorkFree=False, Expandable=False,
+                                           Guidance=IF_ARGS [] 40 0}]
+                                  duration_a1Wb
+                                    = GHC.Num.-
+                                        @ GHC.Integer.Type.Integer
+                                        GHC.Num.$fNumInteger
+                                        end_a1Wa
+                                        start_a1W8 } in
+                                GHC.Base.$
+                                  @ 'GHC.Types.LiftedRep
+                                  @ [GHC.Types.Char]
+                                  @ (GHC.Types.IO ())
+                                  (System.IO.print @ [GHC.Types.Char] $dShow_a5JC)
+                                  (GHC.Base.++
+                                     @ GHC.Types.Char
+                                     description_a1W6
+                                     (GHC.Base.++
+                                        @ GHC.Types.Char
+                                        (GHC.Show.show
+                                           @ GHC.Integer.Type.Integer
+                                           GHC.Show.$fShowInteger
+                                           (GHC.Real.div
+                                              @ GHC.Integer.Type.Integer
+                                              GHC.Real.$fIntegralInteger
+                                              duration_a1Wb
+                                              1000000000))
+                                        (GHC.Base.++
+                                           @ GHC.Types.Char
+                                           (GHC.CString.unpackCString# " milli seconds -- "#)
+                                           (GHC.Base.++
+                                              @ GHC.Types.Char
+                                              (GHC.Show.show
+                                                 @ GHC.Integer.Type.Integer
+                                                 GHC.Show.$fShowInteger
+                                                 duration_a1Wb)
+                                              (GHC.CString.unpackCString# " pico seconds"#))))))
+            CastIt (GHC.Types.N:IO[0] <()>_R
+                    :: GHC.Types.IO ()
+                       ~R# (GHC.Prim.State# GHC.Prim.RealWorld
+                            -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)))
+            ApplyToVal nodup ipv_a7Xx
+            Stop[BoringCtxt] (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+Rule fired
+    Rule: Class op -
+    Module: (BUILTIN)
+    Before: GHC.Num.-
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Integer.Type.minusInteger
+    Cont:   ApplyToVal nodup end_a1Wa
+            ApplyToVal nodup start_a1W8
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op show
+    Module: (BUILTIN)
+    Before: GHC.Show.show
+              TyArg [GHC.Types.Char] ValArg GHC.Show.$fShow[]_$s$fShow[]1
+    After:  GHC.Show.$fShow[]_$s$cshow1
+    Cont:   ApplyToVal nodup x_a7Hr
+            Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: Class op show
+    Module: (BUILTIN)
+    Before: GHC.Show.show
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Show.$fShowInteger
+    After:  GHC.Show.$fShowInteger_$cshow
+    Cont:   ApplyToVal nodup (GHC.Real.div
+                                @ GHC.Integer.Type.Integer
+                                GHC.Real.$fIntegralInteger
+                                duration_a1Wb
+                                1000000000)
+            Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: Class op div
+    Module: (BUILTIN)
+    Before: GHC.Real.div
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fIntegralInteger_$cdiv
+    Cont:   ApplyToVal nodup duration_a1Wb
+            ApplyToVal nodup 1000000000
+            Stop[RuleArgCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: eqInteger#
+    Module: (BUILTIN)
+    Before: GHC.Integer.Type.eqInteger# ValArg ds1_a7YE ValArg 0
+    After:  0#
+    Cont:   Select nodup wild_a7YF
+            Stop[RuleArgCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: unpack
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackCString# ValArg " milli seconds -- "#
+    After:  (\ (a_a7YH :: GHC.Prim.Addr#) ->
+               GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) -> GHC.CString.unpackFoldrCString# @ b_a7YL a_a7YH))
+              " milli seconds -- "#
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: Class op show
+    Module: (BUILTIN)
+    Before: GHC.Show.show
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Show.$fShowInteger
+    After:  GHC.Show.$fShowInteger_$cshow
+    Cont:   ApplyToVal nodup duration_a1Wb
+            Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackCString# ValArg " pico seconds"#
+    After:  (\ (a_a7YH :: GHC.Prim.Addr#) ->
+               GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) -> GHC.CString.unpackFoldrCString# @ b_a7YL a_a7YH))
+              " pico seconds"#
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: ++
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Show.$fShowInteger_$cshowsPrec
+                       GHC.Show.$fShow(,)1 duration_a1Wb (GHC.Types.[] @ GHC.Types.Char)
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7YL) ->
+                          GHC.CString.unpackFoldrCString# @ b_a7YL " pico seconds"#)
+    After:  (\ (@ a_a7Y2)
+               (xs_a7Y3 :: [a_a7Y2])
+               (ys_a7Y4 :: [a_a7Y2]) ->
+               GHC.Base.augment
+                 @ a_a7Y2
+                 (\ (@ b_a7Y8)
+                    (c_a7Y9 [Occ=Once, OS=OneShot] :: a_a7Y2 -> b_a7Y8 -> b_a7Y8)
+                    (n_a7Ya [Occ=Once, OS=OneShot] :: b_a7Y8) ->
+                    GHC.Base.foldr @ a_a7Y2 @ b_a7Y8 c_a7Y9 n_a7Ya xs_a7Y3)
+                 ys_a7Y4)
+              @ GHC.Types.Char
+              (GHC.Show.$fShowInteger_$cshowsPrec
+                 GHC.Show.$fShow(,)1 duration_a1Wb (GHC.Types.[] @ GHC.Types.Char))
+              (GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) ->
+                    GHC.CString.unpackFoldrCString# @ b_a7YL " pico seconds"#))
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: augment/build
+    Module: (GHC.Base)
+    Before: GHC.Base.augment
+              TyArg GHC.Types.Char
+              ValArg \ (@ b_a7Y8)
+                       (c_a7Y9 [OS=OneShot] :: GHC.Types.Char -> b_a7Y8 -> b_a7Y8)
+                       (n_a7Ya [OS=OneShot] :: b_a7Y8) ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b_a7Y8
+                         c_a7Y9
+                         n_a7Ya
+                         (GHC.Show.$fShowInteger_$cshowsPrec
+                            GHC.Show.$fShow(,)1 duration_a1Wb (GHC.Types.[] @ GHC.Types.Char))
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7YL) ->
+                          GHC.CString.unpackFoldrCString# @ b_a7YL " pico seconds"#)
+    After:  (\ (@ a_a7Z0)
+               (g_a7Z1 :: forall b. (a_a7Z0 -> b -> b) -> b -> b)
+               (h_a7Z3 :: forall b. (a_a7Z0 -> b -> b) -> b -> b) ->
+               GHC.Base.build
+                 @ a_a7Z0
+                 (\ (@ b_a7Z5)
+                    (c_a7Z6 [OS=OneShot] :: a_a7Z0 -> b_a7Z5 -> b_a7Z5)
+                    (n_a7Z7 [Occ=Once, OS=OneShot] :: b_a7Z5) ->
+                    g_a7Z1 @ b_a7Z5 c_a7Z6 (h_a7Z3 @ b_a7Z5 c_a7Z6 n_a7Z7)))
+              @ GHC.Types.Char
+              (\ (@ b_a7Y8)
+                 (c_a7Y9 [OS=OneShot] :: GHC.Types.Char -> b_a7Y8 -> b_a7Y8)
+                 (n_a7Ya [OS=OneShot] :: b_a7Y8) ->
+                 GHC.Base.foldr
+                   @ GHC.Types.Char
+                   @ b_a7Y8
+                   c_a7Y9
+                   n_a7Ya
+                   (GHC.Show.$fShowInteger_$cshowsPrec
+                      GHC.Show.$fShow(,)1 duration_a1Wb (GHC.Types.[] @ GHC.Types.Char)))
+              (\ (@ b_a7YL) ->
+                 GHC.CString.unpackFoldrCString# @ b_a7YL " pico seconds"#)
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: ++
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7YL) ->
+                          GHC.CString.unpackFoldrCString# @ b_a7YL " milli seconds -- "#)
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7Z5)
+                          (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                          (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                          GHC.Base.foldr
+                            @ GHC.Types.Char
+                            @ b_a7Z5
+                            c_a7Z6
+                            (GHC.CString.unpackFoldrCString#
+                               @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                            (GHC.Show.$fShowInteger_$cshowsPrec
+                               GHC.Show.$fShow(,)1 duration_a1Wb (GHC.Types.[] @ GHC.Types.Char)))
+    After:  (\ (@ a_a7Y2)
+               (xs_a7Y3 :: [a_a7Y2])
+               (ys_a7Y4 :: [a_a7Y2]) ->
+               GHC.Base.augment
+                 @ a_a7Y2
+                 (\ (@ b_a7Y8)
+                    (c_a7Y9 [Occ=Once, OS=OneShot] :: a_a7Y2 -> b_a7Y8 -> b_a7Y8)
+                    (n_a7Ya [Occ=Once, OS=OneShot] :: b_a7Y8) ->
+                    GHC.Base.foldr @ a_a7Y2 @ b_a7Y8 c_a7Y9 n_a7Ya xs_a7Y3)
+                 ys_a7Y4)
+              @ GHC.Types.Char
+              (GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) ->
+                    GHC.CString.unpackFoldrCString# @ b_a7YL " milli seconds -- "#))
+              (GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7Z5)
+                    (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                    (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b_a7Z5
+                      c_a7Z6
+                      (GHC.CString.unpackFoldrCString#
+                         @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                      (GHC.Show.$fShowInteger_$cshowsPrec
+                         GHC.Show.$fShow(,)1
+                         duration_a1Wb
+                         (GHC.Types.[] @ GHC.Types.Char))))
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: fold/build
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg b_a7Y8
+              ValArg c_a7Y9
+              ValArg n_a7Ya
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7YL) ->
+                          GHC.CString.unpackFoldrCString# @ b_a7YL " milli seconds -- "#)
+    After:  (\ (@ b_a7ZW)
+               (@ a_a7ZX)
+               (k_a7ZY :: a_a7ZX -> b_a7ZW -> b_a7ZW)
+               (z_a7ZZ :: b_a7ZW)
+               (g_a800 :: forall b1. (a_a7ZX -> b1 -> b1) -> b1 -> b1) ->
+               g_a800 @ b_a7ZW k_a7ZY z_a7ZZ)
+              @ b_a7Y8
+              @ GHC.Types.Char
+              c_a7Y9
+              n_a7Ya
+              (\ (@ b_a7YL) ->
+                 GHC.CString.unpackFoldrCString# @ b_a7YL " milli seconds -- "#)
+    Cont:   Stop[BoringCtxt] b_a7Y8
+Rule fired
+    Rule: augment/build
+    Module: (GHC.Base)
+    Before: GHC.Base.augment
+              TyArg GHC.Types.Char
+              ValArg \ (@ b_a7Y8)
+                       (c_a7Y9 [OS=OneShot] :: GHC.Types.Char -> b_a7Y8 -> b_a7Y8)
+                       (n_a7Ya [OS=OneShot] :: b_a7Y8) ->
+                       GHC.CString.unpackFoldrCString#
+                         @ b_a7Y8 " milli seconds -- "# c_a7Y9 n_a7Ya
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7Z5)
+                          (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                          (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                          GHC.Base.foldr
+                            @ GHC.Types.Char
+                            @ b_a7Z5
+                            c_a7Z6
+                            (GHC.CString.unpackFoldrCString#
+                               @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                            (GHC.Show.$fShowInteger_$cshowsPrec
+                               GHC.Show.$fShow(,)1 duration_a1Wb (GHC.Types.[] @ GHC.Types.Char)))
+    After:  (\ (@ a_a7Z0)
+               (g_a7Z1 :: forall b. (a_a7Z0 -> b -> b) -> b -> b)
+               (h_a7Z3 :: forall b. (a_a7Z0 -> b -> b) -> b -> b) ->
+               GHC.Base.build
+                 @ a_a7Z0
+                 (\ (@ b_a7Z5)
+                    (c_a7Z6 [OS=OneShot] :: a_a7Z0 -> b_a7Z5 -> b_a7Z5)
+                    (n_a7Z7 [Occ=Once, OS=OneShot] :: b_a7Z5) ->
+                    g_a7Z1 @ b_a7Z5 c_a7Z6 (h_a7Z3 @ b_a7Z5 c_a7Z6 n_a7Z7)))
+              @ GHC.Types.Char
+              (\ (@ b_a7Y8)
+                 (c_a7Y9 [OS=OneShot] :: GHC.Types.Char -> b_a7Y8 -> b_a7Y8)
+                 (n_a7Ya [OS=OneShot] :: b_a7Y8) ->
+                 GHC.CString.unpackFoldrCString#
+                   @ b_a7Y8 " milli seconds -- "# c_a7Y9 n_a7Ya)
+              (\ (@ b_a7Z5)
+                 (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                 (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                 GHC.Base.foldr
+                   @ GHC.Types.Char
+                   @ b_a7Z5
+                   c_a7Z6
+                   (GHC.CString.unpackFoldrCString#
+                      @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                   (GHC.Show.$fShowInteger_$cshowsPrec
+                      GHC.Show.$fShow(,)1 duration_a1Wb (GHC.Types.[] @ GHC.Types.Char)))
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: ++
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Show.$fShowInteger_$cshowsPrec
+                       GHC.Show.$fShow(,)1
+                       (let {
+                          ds1_a7YE :: GHC.Integer.Type.Integer
+                          [LclId,
+                           Unf=Unf{Src=<vanilla>, TopLvl=False, Value=True, ConLike=True,
+                                   WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 100 0}]
+                          ds1_a7YE = 1000000000 } in
+                        GHC.Integer.Type.divInteger duration_a1Wb ds1_a7YE)
+                       (GHC.Types.[] @ GHC.Types.Char)
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7Z5)
+                          (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                          (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                          GHC.CString.unpackFoldrCString#
+                            @ b_a7Z5
+                            " milli seconds -- "#
+                            c_a7Z6
+                            (GHC.Base.foldr
+                               @ GHC.Types.Char
+                               @ b_a7Z5
+                               c_a7Z6
+                               (GHC.CString.unpackFoldrCString#
+                                  @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                               (GHC.Show.$fShowInteger_$cshowsPrec
+                                  GHC.Show.$fShow(,)1
+                                  duration_a1Wb
+                                  (GHC.Types.[] @ GHC.Types.Char))))
+    After:  (\ (@ a_a7Y2)
+               (xs_a7Y3 :: [a_a7Y2])
+               (ys_a7Y4 :: [a_a7Y2]) ->
+               GHC.Base.augment
+                 @ a_a7Y2
+                 (\ (@ b_a7Y8)
+                    (c_a7Y9 [Occ=Once, OS=OneShot] :: a_a7Y2 -> b_a7Y8 -> b_a7Y8)
+                    (n_a7Ya [Occ=Once, OS=OneShot] :: b_a7Y8) ->
+                    GHC.Base.foldr @ a_a7Y2 @ b_a7Y8 c_a7Y9 n_a7Ya xs_a7Y3)
+                 ys_a7Y4)
+              @ GHC.Types.Char
+              (GHC.Show.$fShowInteger_$cshowsPrec
+                 GHC.Show.$fShow(,)1
+                 (let {
+                    ds1_a7YE :: GHC.Integer.Type.Integer
+                    [LclId,
+                     Unf=Unf{Src=<vanilla>, TopLvl=False, Value=True, ConLike=True,
+                             WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 100 0}]
+                    ds1_a7YE = 1000000000 } in
+                  GHC.Integer.Type.divInteger duration_a1Wb ds1_a7YE)
+                 (GHC.Types.[] @ GHC.Types.Char))
+              (GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7Z5)
+                    (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                    (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                    GHC.CString.unpackFoldrCString#
+                      @ b_a7Z5
+                      " milli seconds -- "#
+                      c_a7Z6
+                      (GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b_a7Z5
+                         c_a7Z6
+                         (GHC.CString.unpackFoldrCString#
+                            @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                         (GHC.Show.$fShowInteger_$cshowsPrec
+                            GHC.Show.$fShow(,)1
+                            duration_a1Wb
+                            (GHC.Types.[] @ GHC.Types.Char)))))
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: augment/build
+    Module: (GHC.Base)
+    Before: GHC.Base.augment
+              TyArg GHC.Types.Char
+              ValArg \ (@ b_a7Y8)
+                       (c_a7Y9 [OS=OneShot] :: GHC.Types.Char -> b_a7Y8 -> b_a7Y8)
+                       (n_a7Ya [OS=OneShot] :: b_a7Y8) ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b_a7Y8
+                         c_a7Y9
+                         n_a7Ya
+                         (GHC.Show.$fShowInteger_$cshowsPrec
+                            GHC.Show.$fShow(,)1
+                            (GHC.Integer.Type.divInteger duration_a1Wb 1000000000)
+                            (GHC.Types.[] @ GHC.Types.Char))
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7Z5)
+                          (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                          (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                          GHC.CString.unpackFoldrCString#
+                            @ b_a7Z5
+                            " milli seconds -- "#
+                            c_a7Z6
+                            (GHC.Base.foldr
+                               @ GHC.Types.Char
+                               @ b_a7Z5
+                               c_a7Z6
+                               (GHC.CString.unpackFoldrCString#
+                                  @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                               (GHC.Show.$fShowInteger_$cshowsPrec
+                                  GHC.Show.$fShow(,)1
+                                  duration_a1Wb
+                                  (GHC.Types.[] @ GHC.Types.Char))))
+    After:  (\ (@ a_a7Z0)
+               (g_a7Z1 :: forall b. (a_a7Z0 -> b -> b) -> b -> b)
+               (h_a7Z3 :: forall b. (a_a7Z0 -> b -> b) -> b -> b) ->
+               GHC.Base.build
+                 @ a_a7Z0
+                 (\ (@ b_a7Z5)
+                    (c_a7Z6 [OS=OneShot] :: a_a7Z0 -> b_a7Z5 -> b_a7Z5)
+                    (n_a7Z7 [Occ=Once, OS=OneShot] :: b_a7Z5) ->
+                    g_a7Z1 @ b_a7Z5 c_a7Z6 (h_a7Z3 @ b_a7Z5 c_a7Z6 n_a7Z7)))
+              @ GHC.Types.Char
+              (\ (@ b_a7Y8)
+                 (c_a7Y9 [OS=OneShot] :: GHC.Types.Char -> b_a7Y8 -> b_a7Y8)
+                 (n_a7Ya [OS=OneShot] :: b_a7Y8) ->
+                 GHC.Base.foldr
+                   @ GHC.Types.Char
+                   @ b_a7Y8
+                   c_a7Y9
+                   n_a7Ya
+                   (GHC.Show.$fShowInteger_$cshowsPrec
+                      GHC.Show.$fShow(,)1
+                      (GHC.Integer.Type.divInteger duration_a1Wb 1000000000)
+                      (GHC.Types.[] @ GHC.Types.Char)))
+              (\ (@ b_a7Z5)
+                 (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                 (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                 GHC.CString.unpackFoldrCString#
+                   @ b_a7Z5
+                   " milli seconds -- "#
+                   c_a7Z6
+                   (GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b_a7Z5
+                      c_a7Z6
+                      (GHC.CString.unpackFoldrCString#
+                         @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                      (GHC.Show.$fShowInteger_$cshowsPrec
+                         GHC.Show.$fShow(,)1
+                         duration_a1Wb
+                         (GHC.Types.[] @ GHC.Types.Char))))
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: ++
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg description_a1W6
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7Z5)
+                          (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                          (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                          GHC.Base.foldr
+                            @ GHC.Types.Char
+                            @ b_a7Z5
+                            c_a7Z6
+                            (GHC.CString.unpackFoldrCString#
+                               @ b_a7Z5
+                               " milli seconds -- "#
+                               c_a7Z6
+                               (GHC.Base.foldr
+                                  @ GHC.Types.Char
+                                  @ b_a7Z5
+                                  c_a7Z6
+                                  (GHC.CString.unpackFoldrCString#
+                                     @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                                  (GHC.Show.$fShowInteger_$cshowsPrec
+                                     GHC.Show.$fShow(,)1
+                                     duration_a1Wb
+                                     (GHC.Types.[] @ GHC.Types.Char))))
+                            (GHC.Show.$fShowInteger_$cshowsPrec
+                               GHC.Show.$fShow(,)1
+                               (GHC.Integer.Type.divInteger duration_a1Wb 1000000000)
+                               (GHC.Types.[] @ GHC.Types.Char)))
+    After:  (\ (@ a_a7Y2)
+               (xs_a7Y3 :: [a_a7Y2])
+               (ys_a7Y4 :: [a_a7Y2]) ->
+               GHC.Base.augment
+                 @ a_a7Y2
+                 (\ (@ b_a7Y8)
+                    (c_a7Y9 [Occ=Once, OS=OneShot] :: a_a7Y2 -> b_a7Y8 -> b_a7Y8)
+                    (n_a7Ya [Occ=Once, OS=OneShot] :: b_a7Y8) ->
+                    GHC.Base.foldr @ a_a7Y2 @ b_a7Y8 c_a7Y9 n_a7Ya xs_a7Y3)
+                 ys_a7Y4)
+              @ GHC.Types.Char
+              description_a1W6
+              (GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7Z5)
+                    (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                    (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                    GHC.Base.foldr
+                      @ GHC.Types.Char
+                      @ b_a7Z5
+                      c_a7Z6
+                      (GHC.CString.unpackFoldrCString#
+                         @ b_a7Z5
+                         " milli seconds -- "#
+                         c_a7Z6
+                         (GHC.Base.foldr
+                            @ GHC.Types.Char
+                            @ b_a7Z5
+                            c_a7Z6
+                            (GHC.CString.unpackFoldrCString#
+                               @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                            (GHC.Show.$fShowInteger_$cshowsPrec
+                               GHC.Show.$fShow(,)1
+                               duration_a1Wb
+                               (GHC.Types.[] @ GHC.Types.Char))))
+                      (GHC.Show.$fShowInteger_$cshowsPrec
+                         GHC.Show.$fShow(,)1
+                         (GHC.Integer.Type.divInteger duration_a1Wb 1000000000)
+                         (GHC.Types.[] @ GHC.Types.Char))))
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: augment/build
+    Module: (GHC.Base)
+    Before: GHC.Base.augment
+              TyArg GHC.Types.Char
+              ValArg \ (@ b_a7Y8)
+                       (c_a7Y9 [OS=OneShot] :: GHC.Types.Char -> b_a7Y8 -> b_a7Y8)
+                       (n_a7Ya [OS=OneShot] :: b_a7Y8) ->
+                       GHC.Base.foldr
+                         @ GHC.Types.Char @ b_a7Y8 c_a7Y9 n_a7Ya description_a1W6
+              ValArg GHC.Base.build
+                       @ GHC.Types.Char
+                       (\ (@ b_a7Z5)
+                          (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                          (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                          GHC.Base.foldr
+                            @ GHC.Types.Char
+                            @ b_a7Z5
+                            c_a7Z6
+                            (GHC.CString.unpackFoldrCString#
+                               @ b_a7Z5
+                               " milli seconds -- "#
+                               c_a7Z6
+                               (GHC.Base.foldr
+                                  @ GHC.Types.Char
+                                  @ b_a7Z5
+                                  c_a7Z6
+                                  (GHC.CString.unpackFoldrCString#
+                                     @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                                  (GHC.Show.$fShowInteger_$cshowsPrec
+                                     GHC.Show.$fShow(,)1
+                                     duration_a1Wb
+                                     (GHC.Types.[] @ GHC.Types.Char))))
+                            (GHC.Show.$fShowInteger_$cshowsPrec
+                               GHC.Show.$fShow(,)1
+                               (GHC.Integer.Type.divInteger duration_a1Wb 1000000000)
+                               (GHC.Types.[] @ GHC.Types.Char)))
+    After:  (\ (@ a_a7Z0)
+               (g_a7Z1 :: forall b. (a_a7Z0 -> b -> b) -> b -> b)
+               (h_a7Z3 :: forall b. (a_a7Z0 -> b -> b) -> b -> b) ->
+               GHC.Base.build
+                 @ a_a7Z0
+                 (\ (@ b_a7Z5)
+                    (c_a7Z6 [OS=OneShot] :: a_a7Z0 -> b_a7Z5 -> b_a7Z5)
+                    (n_a7Z7 [Occ=Once, OS=OneShot] :: b_a7Z5) ->
+                    g_a7Z1 @ b_a7Z5 c_a7Z6 (h_a7Z3 @ b_a7Z5 c_a7Z6 n_a7Z7)))
+              @ GHC.Types.Char
+              (\ (@ b_a7Y8)
+                 (c_a7Y9 [OS=OneShot] :: GHC.Types.Char -> b_a7Y8 -> b_a7Y8)
+                 (n_a7Ya [OS=OneShot] :: b_a7Y8) ->
+                 GHC.Base.foldr
+                   @ GHC.Types.Char @ b_a7Y8 c_a7Y9 n_a7Ya description_a1W6)
+              (\ (@ b_a7Z5)
+                 (c_a7Z6 [OS=OneShot] :: GHC.Types.Char -> b_a7Z5 -> b_a7Z5)
+                 (n_a7Z7 [OS=OneShot] :: b_a7Z5) ->
+                 GHC.Base.foldr
+                   @ GHC.Types.Char
+                   @ b_a7Z5
+                   c_a7Z6
+                   (GHC.CString.unpackFoldrCString#
+                      @ b_a7Z5
+                      " milli seconds -- "#
+                      c_a7Z6
+                      (GHC.Base.foldr
+                         @ GHC.Types.Char
+                         @ b_a7Z5
+                         c_a7Z6
+                         (GHC.CString.unpackFoldrCString#
+                            @ b_a7Z5 " pico seconds"# c_a7Z6 n_a7Z7)
+                         (GHC.Show.$fShowInteger_$cshowsPrec
+                            GHC.Show.$fShow(,)1
+                            duration_a1Wb
+                            (GHC.Types.[] @ GHC.Types.Char))))
+                   (GHC.Show.$fShowInteger_$cshowsPrec
+                      GHC.Show.$fShow(,)1
+                      (GHC.Integer.Type.divInteger duration_a1Wb 1000000000)
+                      (GHC.Types.[] @ GHC.Types.Char)))
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: Class op stimes
+    Module: (BUILTIN)
+    Before: GHC.Base.stimes
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Base.$fSemigroup[] @ GHC.Types.Char
+    After:  GHC.Base.$fSemigroup[]_$cstimes @ GHC.Types.Char
+    Cont:   ApplyToTy GHC.Integer.Type.Integer
+            ApplyToVal nodup GHC.Real.$fIntegralInteger
+            ApplyToVal nodup 1000000
+            ApplyToVal nodup (GHC.CString.unpackCString# "foo"#)
+            Stop[RhsCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackCString# ValArg "foo"#
+    After:  (\ (a_a7YH :: GHC.Prim.Addr#) ->
+               GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) -> GHC.CString.unpackFoldrCString# @ b_a7YL a_a7YH))
+              "foo"#
+    Cont:   Stop[BoringCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: Class op >>
+    Module: (BUILTIN)
+    Before: GHC.Base.>> TyArg GHC.Types.IO ValArg GHC.Base.$fMonadIO
+    After:  GHC.Base.$fApplicativeIO2
+            `cast` (forall (a :: <*>_N) (b :: <*>_N).
+                    <GHC.Types.IO a>_R
+                    ->_R <GHC.Types.IO b>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <b>_R)
+                    :: (forall a b.
+                        GHC.Types.IO a
+                        -> GHC.Types.IO b
+                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #))
+                       ~R# (forall a b.
+                            GHC.Types.IO a -> GHC.Types.IO b -> GHC.Types.IO b))
+    Cont:   ApplyToTy ()
+            ApplyToTy ()
+            ApplyToVal nodup (Main.measure
+                                @ GHC.Base.String
+                                (Control.DeepSeq.$fNFData[]
+                                   @ GHC.Types.Char Control.DeepSeq.$fNFDataChar)
+                                (GHC.CString.unpackCString# "stimes : "#)
+                                Main.testStimes)
+            ApplyToVal nodup (GHC.Base.>>
+                                @ GHC.Types.IO
+                                GHC.Base.$fMonadIO
+                                @ ()
+                                @ ()
+                                (Main.measure
+                                   @ GHC.Types.Double
+                                   Control.DeepSeq.$fNFDataDouble
+                                   (GHC.CString.unpackCString# "fractional power 1 : "#)
+                                   Main.testFractionalPower)
+                                (GHC.Base.>>
+                                   @ GHC.Types.IO
+                                   GHC.Base.$fMonadIO
+                                   @ ()
+                                   @ ()
+                                   (Main.measure
+                                      @ GHC.Types.Double
+                                      Control.DeepSeq.$fNFDataDouble
+                                      (GHC.CString.unpackCString# "fractional power 2 : "#)
+                                      Main.testFractionalPower)
+                                   (GHC.Base.>>
+                                      @ GHC.Types.IO
+                                      GHC.Base.$fMonadIO
+                                      @ ()
+                                      @ ()
+                                      (Main.measure
+                                         @ GHC.Types.Double
+                                         Control.DeepSeq.$fNFDataDouble
+                                         (GHC.CString.unpackCString# "fractional power 3 : "#)
+                                         Main.testFractionalPower)
+                                      (Main.measure
+                                         @ GHC.Integer.Type.Integer
+                                         Control.DeepSeq.$fNFDataInteger
+                                         (GHC.CString.unpackCString# "integral power : "#)
+                                         Main.testIntegralPower))))
+            Stop[RhsCtxt] GHC.Types.IO ()
+Rule fired
+    Rule: unpack
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackCString# ValArg "stimes : "#
+    After:  (\ (a_a7YH :: GHC.Prim.Addr#) ->
+               GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) -> GHC.CString.unpackFoldrCString# @ b_a7YL a_a7YH))
+              "stimes : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: Class op >>
+    Module: (BUILTIN)
+    Before: GHC.Base.>> TyArg GHC.Types.IO ValArg GHC.Base.$fMonadIO
+    After:  GHC.Base.$fApplicativeIO2
+            `cast` (forall (a :: <*>_N) (b :: <*>_N).
+                    <GHC.Types.IO a>_R
+                    ->_R <GHC.Types.IO b>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <b>_R)
+                    :: (forall a b.
+                        GHC.Types.IO a
+                        -> GHC.Types.IO b
+                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #))
+                       ~R# (forall a b.
+                            GHC.Types.IO a -> GHC.Types.IO b -> GHC.Types.IO b))
+    Cont:   ApplyToTy ()
+            ApplyToTy ()
+            ApplyToVal nodup (Main.measure
+                                @ GHC.Types.Double
+                                Control.DeepSeq.$fNFDataDouble
+                                (GHC.CString.unpackCString# "fractional power 1 : "#)
+                                Main.testFractionalPower)
+            ApplyToVal nodup (GHC.Base.>>
+                                @ GHC.Types.IO
+                                GHC.Base.$fMonadIO
+                                @ ()
+                                @ ()
+                                (Main.measure
+                                   @ GHC.Types.Double
+                                   Control.DeepSeq.$fNFDataDouble
+                                   (GHC.CString.unpackCString# "fractional power 2 : "#)
+                                   Main.testFractionalPower)
+                                (GHC.Base.>>
+                                   @ GHC.Types.IO
+                                   GHC.Base.$fMonadIO
+                                   @ ()
+                                   @ ()
+                                   (Main.measure
+                                      @ GHC.Types.Double
+                                      Control.DeepSeq.$fNFDataDouble
+                                      (GHC.CString.unpackCString# "fractional power 3 : "#)
+                                      Main.testFractionalPower)
+                                   (Main.measure
+                                      @ GHC.Integer.Type.Integer
+                                      Control.DeepSeq.$fNFDataInteger
+                                      (GHC.CString.unpackCString# "integral power : "#)
+                                      Main.testIntegralPower)))
+            CastIt (GHC.Types.N:IO[0] <()>_R
+                    :: GHC.Types.IO ()
+                       ~R# (GHC.Prim.State# GHC.Prim.RealWorld
+                            -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)))
+            ApplyToVal nodup ipv_a81R
+            Stop[BoringCtxt] (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+Rule fired
+    Rule: unpack
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackCString# ValArg "fractional power 1 : "#
+    After:  (\ (a_a7YH :: GHC.Prim.Addr#) ->
+               GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) -> GHC.CString.unpackFoldrCString# @ b_a7YL a_a7YH))
+              "fractional power 1 : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: Class op >>
+    Module: (BUILTIN)
+    Before: GHC.Base.>> TyArg GHC.Types.IO ValArg GHC.Base.$fMonadIO
+    After:  GHC.Base.$fApplicativeIO2
+            `cast` (forall (a :: <*>_N) (b :: <*>_N).
+                    <GHC.Types.IO a>_R
+                    ->_R <GHC.Types.IO b>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <b>_R)
+                    :: (forall a b.
+                        GHC.Types.IO a
+                        -> GHC.Types.IO b
+                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #))
+                       ~R# (forall a b.
+                            GHC.Types.IO a -> GHC.Types.IO b -> GHC.Types.IO b))
+    Cont:   ApplyToTy ()
+            ApplyToTy ()
+            ApplyToVal nodup (Main.measure
+                                @ GHC.Types.Double
+                                Control.DeepSeq.$fNFDataDouble
+                                (GHC.CString.unpackCString# "fractional power 2 : "#)
+                                Main.testFractionalPower)
+            ApplyToVal nodup (GHC.Base.>>
+                                @ GHC.Types.IO
+                                GHC.Base.$fMonadIO
+                                @ ()
+                                @ ()
+                                (Main.measure
+                                   @ GHC.Types.Double
+                                   Control.DeepSeq.$fNFDataDouble
+                                   (GHC.CString.unpackCString# "fractional power 3 : "#)
+                                   Main.testFractionalPower)
+                                (Main.measure
+                                   @ GHC.Integer.Type.Integer
+                                   Control.DeepSeq.$fNFDataInteger
+                                   (GHC.CString.unpackCString# "integral power : "#)
+                                   Main.testIntegralPower))
+            CastIt (GHC.Types.N:IO[0] <()>_R
+                    :: GHC.Types.IO ()
+                       ~R# (GHC.Prim.State# GHC.Prim.RealWorld
+                            -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)))
+            ApplyToVal nodup ipv_a81R
+            Stop[BoringCtxt] (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+Rule fired
+    Rule: unpack
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackCString# ValArg "fractional power 2 : "#
+    After:  (\ (a_a7YH :: GHC.Prim.Addr#) ->
+               GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) -> GHC.CString.unpackFoldrCString# @ b_a7YL a_a7YH))
+              "fractional power 2 : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: Class op >>
+    Module: (BUILTIN)
+    Before: GHC.Base.>> TyArg GHC.Types.IO ValArg GHC.Base.$fMonadIO
+    After:  GHC.Base.$fApplicativeIO2
+            `cast` (forall (a :: <*>_N) (b :: <*>_N).
+                    <GHC.Types.IO a>_R
+                    ->_R <GHC.Types.IO b>_R
+                    ->_R Sym (GHC.Types.N:IO[0] <b>_R)
+                    :: (forall a b.
+                        GHC.Types.IO a
+                        -> GHC.Types.IO b
+                        -> GHC.Prim.State# GHC.Prim.RealWorld
+                        -> (# GHC.Prim.State# GHC.Prim.RealWorld, b #))
+                       ~R# (forall a b.
+                            GHC.Types.IO a -> GHC.Types.IO b -> GHC.Types.IO b))
+    Cont:   ApplyToTy ()
+            ApplyToTy ()
+            ApplyToVal nodup (Main.measure
+                                @ GHC.Types.Double
+                                Control.DeepSeq.$fNFDataDouble
+                                (GHC.CString.unpackCString# "fractional power 3 : "#)
+                                Main.testFractionalPower)
+            ApplyToVal nodup (Main.measure
+                                @ GHC.Integer.Type.Integer
+                                Control.DeepSeq.$fNFDataInteger
+                                (GHC.CString.unpackCString# "integral power : "#)
+                                Main.testIntegralPower)
+            CastIt (GHC.Types.N:IO[0] <()>_R
+                    :: GHC.Types.IO ()
+                       ~R# (GHC.Prim.State# GHC.Prim.RealWorld
+                            -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)))
+            ApplyToVal nodup ipv_a81R
+            Stop[BoringCtxt] (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+Rule fired
+    Rule: unpack
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackCString# ValArg "fractional power 3 : "#
+    After:  (\ (a_a7YH :: GHC.Prim.Addr#) ->
+               GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) -> GHC.CString.unpackFoldrCString# @ b_a7YL a_a7YH))
+              "fractional power 3 : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: unpack
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackCString# ValArg "integral power : "#
+    After:  (\ (a_a7YH :: GHC.Prim.Addr#) ->
+               GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) -> GHC.CString.unpackFoldrCString# @ b_a7YL a_a7YH))
+              "integral power : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: Class op $p1Integral
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Integral
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fRealInteger
+    Cont:   Stop[RhsCtxt] GHC.Real.Real GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Num.$fNumInteger
+    Cont:   Stop[RhsCtxt] GHC.Num.Num GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fU
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p2Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p2Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Integer.Type.$fOrdInteger
+    Cont:   Stop[RhsCtxt] GHC.Classes.Ord GHC.Integer.Type.Integer
+Rule fired
+    Rule: unpack
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackCString# ValArg "Negative exponent"#
+    After:  (\ (a_a7YH :: GHC.Prim.Addr#) ->
+               GHC.Base.build
+                 @ GHC.Types.Char
+                 (\ (@ b_a7YL) -> GHC.CString.unpackFoldrCString# @ b_a7YL a_a7YH))
+              "Negative exponent"#
+    Cont:   StrictArg GHC.Err.errorWithoutStackTrace
+            Stop[RhsCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op $p1Integral
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Integral
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fRealInteger
+    Cont:   Stop[RhsCtxt] GHC.Real.Real GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Num.$fNumInteger
+    Cont:   Stop[RhsCtxt] GHC.Num.Num GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fC
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fA
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fE
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p2Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p2Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Integer.Type.$fOrdInteger
+    Cont:   Stop[RhsCtxt] GHC.Classes.Ord GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Ord
+    Module: (BUILTIN)
+    Before: GHC.Classes.$p1Ord
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fOrdInteger
+    After:  GHC.Integer.Type.$fEqInteger
+    Cont:   Stop[RhsCtxt] GHC.Classes.Eq GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Integral
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Integral
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fRealInteger
+    Cont:   Stop[RhsCtxt] GHC.Real.Real GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Num.$fNumInteger
+    Cont:   Stop[RhsCtxt] GHC.Num.Num GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fG
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fo
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fI
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p2Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p2Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Integer.Type.$fOrdInteger
+    Cont:   Stop[RhsCtxt] GHC.Classes.Ord GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Ord
+    Module: (BUILTIN)
+    Before: GHC.Classes.$p1Ord
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fOrdInteger
+    After:  GHC.Integer.Type.$fEqInteger
+    Cont:   Stop[RhsCtxt] GHC.Classes.Eq GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Integral
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Integral
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fRealInteger
+    Cont:   Stop[RhsCtxt] GHC.Real.Real GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Num.$fNumInteger
+    Cont:   Stop[RhsCtxt] GHC.Num.Num GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fc
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fa
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p2Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p2Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Integer.Type.$fOrdInteger
+    Cont:   Stop[RhsCtxt] GHC.Classes.Ord GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Ord
+    Module: (BUILTIN)
+    Before: GHC.Classes.$p1Ord
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fOrdInteger
+    After:  GHC.Integer.Type.$fEqInteger
+    Cont:   Stop[RhsCtxt] GHC.Classes.Eq GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Integral
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Integral
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fRealInteger
+    Cont:   Stop[RhsCtxt] GHC.Real.Real GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Num.$fNumInteger
+    Cont:   Stop[RhsCtxt] GHC.Num.Num GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8eY
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Num.$fNumInteger_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8f0
+            Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p2Real
+    Module: (BUILTIN)
+    Before: GHC.Real.$p2Real
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fRealInteger
+    After:  GHC.Integer.Type.$fOrdInteger
+    Cont:   Stop[RhsCtxt] GHC.Classes.Ord GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op $p1Ord
+    Module: (BUILTIN)
+    Before: GHC.Classes.$p1Ord
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fOrdInteger
+    After:  GHC.Integer.Type.$fEqInteger
+    Cont:   Stop[RhsCtxt] GHC.Classes.Eq GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op ==
+    Module: (BUILTIN)
+    Before: GHC.Classes.==
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fEqInteger
+    After:  GHC.Integer.Type.eqInteger
+    Cont:   ApplyToVal nodup (GHC.Real.rem
+                                @ GHC.Integer.Type.Integer
+                                GHC.Real.$fIntegralInteger
+                                n_a8es
+                                lvl_s8eZ)
+            ApplyToVal nodup lvl_s8f1
+            Stop[BoringCtxt] GHC.Types.Bool
+Rule fired
+    Rule: Class op rem
+    Module: (BUILTIN)
+    Before: GHC.Real.rem
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fIntegralInteger_$crem
+    Cont:   ApplyToVal nodup n_a8es
+            ApplyToVal nodup lvl_s8eZ
+            StrictArg GHC.Integer.Type.eqInteger#
+            ApplyToVal nodup y_a8gO
+            Select nodup wild_a8gP
+            Stop[BoringCtxt] GHC.Types.Bool
+Rule fired
+    Rule: eqInteger#
+    Module: (BUILTIN)
+    Before: GHC.Integer.Type.eqInteger# ValArg lvl_s8eZ ValArg 0
+    After:  0#
+    Cont:   Select nodup wild_a8gS
+            StrictArg GHC.Integer.Type.eqInteger#
+            ApplyToVal nodup y_a8gO
+            Select nodup wild_a8gP
+            Stop[BoringCtxt] GHC.Types.Bool
+Rule fired
+    Rule: Class op $p1Fractional
+    Module: (BUILTIN)
+    Before: GHC.Real.$p1Fractional
+              TyArg GHC.Types.Double ValArg GHC.Float.$fFractionalDouble
+    After:  GHC.Float.$fNumDouble
+    Cont:   Stop[RhsCtxt] GHC.Num.Num GHC.Types.Double
+Rule fired
+    Rule: SPEC/Main even @ Integer
+    Module: (Main)
+    Before: GHC.Real.even
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  (\ ($dIntegral_s8ex
+                  :: GHC.Real.Integral GHC.Integer.Type.Integer) ->
+               $seven_s8eG)
+              GHC.Real.$fIntegralInteger
+    Cont:   ApplyToVal nodup y1_a7W4
+            Select nodup wild4_a7W6
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op ==
+    Module: (BUILTIN)
+    Before: GHC.Classes.==
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fEqInteger
+    After:  GHC.Integer.Type.eqInteger
+    Cont:   ApplyToVal nodup y1_a7W4
+            ApplyToVal nodup lvl_s8fB
+            Select nodup wild5_a7W9
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op *
+    Module: (BUILTIN)
+    Before: GHC.Num.*
+              TyArg GHC.Types.Double ValArg GHC.Float.$fNumDouble
+    After:  GHC.Float.timesDouble
+    Cont:   ApplyToVal nodup x1_a7W3
+            ApplyToVal nodup x1_a7W3
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op quot
+    Module: (BUILTIN)
+    Before: GHC.Real.quot
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fIntegralInteger_$cquot
+    Cont:   ApplyToVal nodup y1_a7W4
+            ApplyToVal nodup lvl_s8fD
+            Stop[BoringCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: eqInteger#
+    Module: (BUILTIN)
+    Before: GHC.Integer.Type.eqInteger# ValArg lvl_s8fD ValArg 0
+    After:  0#
+    Cont:   Select nodup wild_a8hj
+            Stop[BoringCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op *
+    Module: (BUILTIN)
+    Before: GHC.Num.*
+              TyArg GHC.Types.Double ValArg GHC.Float.$fNumDouble
+    After:  GHC.Float.timesDouble
+    Cont:   ApplyToVal nodup x1_a7W3
+            ApplyToVal nodup z_a7W5
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op *
+    Module: (BUILTIN)
+    Before: GHC.Num.*
+              TyArg GHC.Types.Double ValArg GHC.Float.$fNumDouble
+    After:  GHC.Float.timesDouble
+    Cont:   ApplyToVal nodup x1_a7W3
+            ApplyToVal nodup z_a7W5
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op *
+    Module: (BUILTIN)
+    Before: GHC.Num.*
+              TyArg GHC.Types.Double ValArg GHC.Float.$fNumDouble
+    After:  GHC.Float.timesDouble
+    Cont:   ApplyToVal nodup x1_a7W3
+            ApplyToVal nodup x1_a7W3
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op quot
+    Module: (BUILTIN)
+    Before: GHC.Real.quot
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fIntegralInteger_$cquot
+    Cont:   ApplyToVal nodup y1_a7W4
+            ApplyToVal nodup lvl_s8fF
+            Stop[BoringCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: eqInteger#
+    Module: (BUILTIN)
+    Before: GHC.Integer.Type.eqInteger# ValArg lvl_s8fF ValArg 0
+    After:  0#
+    Cont:   Select nodup wild_a8hj
+            Stop[BoringCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: SPEC/Main even @ Integer
+    Module: (Main)
+    Before: GHC.Real.even
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  (\ ($dIntegral_s8ex
+                  :: GHC.Real.Integral GHC.Integer.Type.Integer) ->
+               $seven_s8eG)
+              GHC.Real.$fIntegralInteger
+    Cont:   ApplyToVal nodup y_a7VP
+            Select nodup wild2_a7VS
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op ==
+    Module: (BUILTIN)
+    Before: GHC.Classes.==
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fEqInteger
+    After:  GHC.Integer.Type.eqInteger
+    Cont:   ApplyToVal nodup y_a7VP
+            ApplyToVal nodup lvl_s8fp
+            Select nodup wild3_a7VV
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op *
+    Module: (BUILTIN)
+    Before: GHC.Num.*
+              TyArg GHC.Types.Double ValArg GHC.Float.$fNumDouble
+    After:  GHC.Float.timesDouble
+    Cont:   ApplyToVal nodup x_a7VO
+            ApplyToVal nodup x_a7VO
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op quot
+    Module: (BUILTIN)
+    Before: GHC.Real.quot
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fIntegralInteger_$cquot
+    Cont:   ApplyToVal nodup y_a7VP
+            ApplyToVal nodup lvl_s8fH
+            Stop[BoringCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: eqInteger#
+    Module: (BUILTIN)
+    Before: GHC.Integer.Type.eqInteger# ValArg lvl_s8fH ValArg 0
+    After:  0#
+    Cont:   Select nodup wild_a8hj
+            Stop[BoringCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op *
+    Module: (BUILTIN)
+    Before: GHC.Num.*
+              TyArg GHC.Types.Double ValArg GHC.Float.$fNumDouble
+    After:  GHC.Float.timesDouble
+    Cont:   ApplyToVal nodup x_a7VO
+            ApplyToVal nodup x_a7VO
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op quot
+    Module: (BUILTIN)
+    Before: GHC.Real.quot
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Real.$fIntegralInteger
+    After:  GHC.Real.$fIntegralInteger_$cquot
+    Cont:   ApplyToVal nodup y_a7VP
+            ApplyToVal nodup lvl_s8fJ
+            Stop[BoringCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: eqInteger#
+    Module: (BUILTIN)
+    Before: GHC.Integer.Type.eqInteger# ValArg lvl_s8fJ ValArg 0
+    After:  0#
+    Cont:   Select nodup wild_a8hj
+            Stop[BoringCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: Class op fromInteger
+    Module: (BUILTIN)
+    Before: GHC.Num.fromInteger
+              TyArg GHC.Types.Double ValArg GHC.Float.$fNumDouble
+    After:  GHC.Float.$fNumDouble_$cfromInteger
+    Cont:   ApplyToVal nodup lvl_s8fK
+            Stop[RhsCtxt] GHC.Types.Double
+Rule fired
+    Rule: doubleFromInteger
+    Module: (BUILTIN)
+    Before: GHC.Integer.Type.doubleFromInteger ValArg 1
+    After:  1.0##
+    Cont:   Select nodup wild_a8ht
+            Stop[RhsCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op <
+    Module: (BUILTIN)
+    Before: GHC.Classes.<
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fOrdInteger
+    After:  GHC.Integer.Type.ltInteger
+    Cont:   ApplyToVal nodup y0_a7VC
+            ApplyToVal nodup lvl_s8fb
+            Select nodup wild_a7VD
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op ==
+    Module: (BUILTIN)
+    Before: GHC.Classes.==
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fEqInteger
+    After:  GHC.Integer.Type.eqInteger
+    Cont:   ApplyToVal nodup y0_a7VC
+            ApplyToVal nodup lvl_s8fd
+            Select nodup wild1_a7VG
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op >=
+    Module: (BUILTIN)
+    Before: GHC.Classes.>=
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Integer.Type.$fOrdInteger
+    After:  GHC.Integer.Type.geInteger
+    Cont:   ApplyToVal nodup n_a7Vn
+            ApplyToVal nodup lvl_s8fV
+            Select nodup wild_a7Vo
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op recip
+    Module: (BUILTIN)
+    Before: GHC.Real.recip
+              TyArg GHC.Types.Double ValArg GHC.Float.$fFractionalDouble
+    After:  GHC.Float.$fFractionalDouble_$crecip
+    Cont:   ApplyToVal nodup (GHC.Real.^
+                                @ GHC.Types.Double
+                                @ GHC.Integer.Type.Integer
+                                $dNum1_s8dN
+                                GHC.Real.$fIntegralInteger
+                                x_a7Vm
+                                (GHC.Num.negate @ GHC.Integer.Type.Integer $dNum_s8fR n_a7Vn))
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: Class op negate
+    Module: (BUILTIN)
+    Before: GHC.Num.negate
+              TyArg GHC.Integer.Type.Integer ValArg GHC.Num.$fNumInteger
+    After:  GHC.Integer.Type.negateInteger
+    Cont:   ApplyToVal nodup n_a7Vn
+            Stop[RuleArgCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: SPEC measure @ String
+    Module: (Main)
+    Before: measure_s802
+              TyArg GHC.Base.String
+              ValArg (\ (eta_X856 :: [GHC.Types.Char]) -> go_s8gh eta_X856)
+                     `cast` (Sym (Control.DeepSeq.N:NFData[0] <[GHC.Types.Char]>_N)
+                             :: ([GHC.Types.Char] -> ())
+                                ~R# Control.DeepSeq.NFData [GHC.Types.Char])
+    After:  (\ ($dNFData_X8dT
+                  :: Control.DeepSeq.NFData GHC.Base.String) ->
+               $smeasure_s8eM)
+              ((\ (eta_X856 :: [GHC.Types.Char]) -> go_s8gh eta_X856)
+               `cast` (Sym (Control.DeepSeq.N:NFData[0] <[GHC.Types.Char]>_N)
+                       :: ([GHC.Types.Char] -> ())
+                          ~R# Control.DeepSeq.NFData [GHC.Types.Char]))
+    Cont:   ApplyToVal nodup lvl_s8gl
+            ApplyToVal nodup Main.testStimes
+            ApplyToVal nodup s_a81O
+            Select nodup ds1_a81P
+            Stop[BoringCtxt] (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+Rule fired
+    Rule: SPEC measure @ Double
+    Module: (Main)
+    Before: measure_s802
+              TyArg GHC.Types.Double
+              ValArg (\ (ds_X85s :: GHC.Types.Double) ->
+                        case ds_X85s of { GHC.Types.D# ipv_a82m -> GHC.Tuple.() })
+                     `cast` (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Double>_N)
+                             :: (GHC.Types.Double -> ())
+                                ~R# Control.DeepSeq.NFData GHC.Types.Double)
+    After:  (\ ($dNFData_X8dN
+                  :: Control.DeepSeq.NFData GHC.Types.Double) ->
+               $smeasure_s8dA)
+              ((\ (ds_X85s :: GHC.Types.Double) ->
+                  case ds_X85s of { GHC.Types.D# ipv_a82m -> GHC.Tuple.() })
+               `cast` (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Double>_N)
+                       :: (GHC.Types.Double -> ())
+                          ~R# Control.DeepSeq.NFData GHC.Types.Double))
+    Cont:   ApplyToVal nodup lvl_s8gp
+            ApplyToVal nodup Main.testFractionalPower
+            ApplyToVal nodup ipv_a81R
+            Select nodup ds1_X82f
+            Stop[BoringCtxt] (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+Rule fired
+    Rule: SPEC measure @ Double
+    Module: (Main)
+    Before: measure_s802
+              TyArg GHC.Types.Double
+              ValArg (\ (ds_X85x :: GHC.Types.Double) ->
+                        case ds_X85x of { GHC.Types.D# ipv_a82m -> GHC.Tuple.() })
+                     `cast` (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Double>_N)
+                             :: (GHC.Types.Double -> ())
+                                ~R# Control.DeepSeq.NFData GHC.Types.Double)
+    After:  (\ ($dNFData_X8dN
+                  :: Control.DeepSeq.NFData GHC.Types.Double) ->
+               $smeasure_s8dA)
+              ((\ (ds_X85x :: GHC.Types.Double) ->
+                  case ds_X85x of { GHC.Types.D# ipv_a82m -> GHC.Tuple.() })
+               `cast` (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Double>_N)
+                       :: (GHC.Types.Double -> ())
+                          ~R# Control.DeepSeq.NFData GHC.Types.Double))
+    Cont:   ApplyToVal nodup lvl_s8gt
+            ApplyToVal nodup Main.testFractionalPower
+            ApplyToVal nodup ipv_X82j
+            Select nodup ds1_X82k
+            Stop[BoringCtxt] (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+Rule fired
+    Rule: SPEC measure @ Double
+    Module: (Main)
+    Before: measure_s802
+              TyArg GHC.Types.Double
+              ValArg (\ (ds_X85C :: GHC.Types.Double) ->
+                        case ds_X85C of { GHC.Types.D# ipv_a82m -> GHC.Tuple.() })
+                     `cast` (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Double>_N)
+                             :: (GHC.Types.Double -> ())
+                                ~R# Control.DeepSeq.NFData GHC.Types.Double)
+    After:  (\ ($dNFData_X8dN
+                  :: Control.DeepSeq.NFData GHC.Types.Double) ->
+               $smeasure_s8dA)
+              ((\ (ds_X85C :: GHC.Types.Double) ->
+                  case ds_X85C of { GHC.Types.D# ipv_a82m -> GHC.Tuple.() })
+               `cast` (Sym (Control.DeepSeq.N:NFData[0] <GHC.Types.Double>_N)
+                       :: (GHC.Types.Double -> ())
+                          ~R# Control.DeepSeq.NFData GHC.Types.Double))
+    Cont:   ApplyToVal nodup lvl_s8gx
+            ApplyToVal nodup Main.testFractionalPower
+            ApplyToVal nodup ipv_X82o
+            Select nodup ds1_X82p
+            Stop[BoringCtxt] (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+Rule fired
+    Rule: SPEC measure @ Integer
+    Module: (Main)
+    Before: measure_s802
+              TyArg GHC.Integer.Type.Integer
+              ValArg (\ (ds_X85S :: GHC.Integer.Type.Integer) ->
+                        case ds_X85S of { __DEFAULT -> GHC.Tuple.() })
+                     `cast` (Sym (Control.DeepSeq.N:NFData[0]
+                                      <GHC.Integer.Type.Integer>_N)
+                             :: (GHC.Integer.Type.Integer -> ())
+                                ~R# Control.DeepSeq.NFData GHC.Integer.Type.Integer)
+    After:  (\ ($dNFData_X8dJ
+                  :: Control.DeepSeq.NFData GHC.Integer.Type.Integer) ->
+               $smeasure_s8dw)
+              ((\ (ds_X85S :: GHC.Integer.Type.Integer) ->
+                  case ds_X85S of { __DEFAULT -> GHC.Tuple.() })
+               `cast` (Sym (Control.DeepSeq.N:NFData[0]
+                                <GHC.Integer.Type.Integer>_N)
+                       :: (GHC.Integer.Type.Integer -> ())
+                          ~R# Control.DeepSeq.NFData GHC.Integer.Type.Integer))
+    Cont:   ApplyToVal nodup lvl_s8gB
+            ApplyToVal nodup Main.testIntegralPower
+            ApplyToVal nodup ipv_X82t
+            Stop[BoringCtxt] (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg "Negative exponent"#
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              "Negative exponent"#
+    Cont:   StrictArg GHC.Err.errorWithoutStackTrace
+            Stop[RhsCtxt] GHC.Types.Double
+Rule fired
+    Rule: SPEC/Main ^ @ Double @ Integer
+    Module: (Main)
+    Before: GHC.Real.^
+              TyArg GHC.Types.Double
+              TyArg GHC.Integer.Type.Integer
+              ValArg GHC.Float.$fNumDouble
+              ValArg GHC.Real.$fIntegralInteger
+              ValArg x_a7Vm
+              ValArg GHC.Integer.Type.negateInteger n_a7Vn
+    After:  (\ ($dNum_s8dS :: GHC.Num.Num GHC.Types.Double)
+               ($dIntegral_s8dT :: GHC.Real.Integral GHC.Integer.Type.Integer) ->
+               $s^_s8et)
+              GHC.Float.$fNumDouble GHC.Real.$fIntegralInteger
+    Cont:   Select nodup wild_a8hJ
+            Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: SPEC/Main ^ @ Double @ Integer
+    Module: (Main)
+    Before: GHC.Real.^
+              TyArg GHC.Types.Double
+              TyArg GHC.Integer.Type.Integer
+              ValArg GHC.Float.$fNumDouble
+              ValArg GHC.Real.$fIntegralInteger
+              ValArg x_a7Vm
+              ValArg n_a7Vn
+    After:  (\ ($dNum_s8dS :: GHC.Num.Num GHC.Types.Double)
+               ($dIntegral_s8dT :: GHC.Real.Integral GHC.Integer.Type.Integer) ->
+               $s^_s8et)
+              GHC.Float.$fNumDouble GHC.Real.$fIntegralInteger
+    Cont:   Stop[BoringCtxt] GHC.Types.Double
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg lvl_s8fX
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              lvl_s8fX
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.CString.unpackCString# lvl_s8fX
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_X809 ww4_X80b
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char (GHC.CString.unpackCString# lvl_s8fX)
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: SC:++0
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_X809 ww4_X80b
+              ValArg GHC.CString.unpackCString# lvl_s8fX
+    After:  (\ (@ b_a7XX)
+               (sc_a7XY :: [b_a7XX])
+               (sc1_a7XZ :: b_a7XX)
+               (sc2_a7Y0 :: [b_a7XX]) ->
+               GHC.Base.++_$s++ @ b_a7XX sc_a7XY sc1_a7XZ sc2_a7Y0)
+              @ GHC.Types.Char
+              (GHC.CString.unpackCString# lvl_s8fX)
+              ww3_X809
+              ww4_X80b
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack-append
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg lvl_s8fW
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg case GHC.Show.$w$cshowsPrec4
+                            0# duration_s8dF (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_X809, ww4_X80b #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackCString# lvl_s8fX)
+                       ww3_X809
+                       ww4_X80b
+                     }
+    After:  (\ (a_a7YR :: GHC.Prim.Addr#)
+               (n_a7YS :: [GHC.Types.Char]) ->
+               GHC.CString.unpackAppendCString# a_a7YR n_a7YS)
+              lvl_s8fW
+              (case GHC.Show.$w$cshowsPrec4
+                      0# duration_s8dF (GHC.Types.[] @ GHC.Types.Char)
+               of
+               { (# ww3_X809, ww4_X80b #) ->
+               GHC.Base.++_$s++
+                 @ GHC.Types.Char
+                 (GHC.CString.unpackCString# lvl_s8fX)
+                 ww3_X809
+                 ww4_X80b
+               })
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.CString.unpackAppendCString#
+                       lvl_s8fW
+                       (case GHC.Show.$w$cshowsPrec4
+                               0# duration_s8dF (GHC.Types.[] @ GHC.Types.Char)
+                        of
+                        { (# ww3_X809, ww4_X80b #) ->
+                        GHC.Base.++_$s++
+                          @ GHC.Types.Char
+                          (GHC.CString.unpackCString# lvl_s8fX)
+                          ww3_X809
+                          ww4_X80b
+                        })
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_a7Yt ww4_a7Yu
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char
+              (GHC.CString.unpackAppendCString#
+                 lvl_s8fW
+                 (case GHC.Show.$w$cshowsPrec4
+                         0# duration_s8dF (GHC.Types.[] @ GHC.Types.Char)
+                  of
+                  { (# ww3_X809, ww4_X80b #) ->
+                  GHC.Base.++_$s++
+                    @ GHC.Types.Char
+                    (GHC.CString.unpackCString# lvl_s8fX)
+                    ww3_X809
+                    ww4_X80b
+                  }))
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: SC:++0
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_a7Yt ww4_a7Yu
+              ValArg GHC.CString.unpackAppendCString#
+                       lvl_s8fW
+                       (case GHC.Show.$w$cshowsPrec4
+                               0# duration_s8dF (GHC.Types.[] @ GHC.Types.Char)
+                        of
+                        { (# ww3_X809, ww4_X80b #) ->
+                        GHC.Base.++_$s++
+                          @ GHC.Types.Char
+                          (GHC.CString.unpackCString# lvl_s8fX)
+                          ww3_X809
+                          ww4_X80b
+                        })
+    After:  (\ (@ b_a7XX)
+               (sc_a7XY :: [b_a7XX])
+               (sc1_a7XZ :: b_a7XX)
+               (sc2_a7Y0 :: [b_a7XX]) ->
+               GHC.Base.++_$s++ @ b_a7XX sc_a7XY sc1_a7XZ sc2_a7Y0)
+              @ GHC.Types.Char
+              (GHC.CString.unpackAppendCString#
+                 lvl_s8fW
+                 (case GHC.Show.$w$cshowsPrec4
+                         0# duration_s8dF (GHC.Types.[] @ GHC.Types.Char)
+                  of
+                  { (# ww3_X809, ww4_X80b #) ->
+                  GHC.Base.++_$s++
+                    @ GHC.Types.Char
+                    (GHC.CString.unpackCString# lvl_s8fX)
+                    ww3_X809
+                    ww4_X80b
+                  }))
+              ww3_a7Yt
+              ww4_a7Yu
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg case GHC.Show.$w$cshowsPrec4
+                            0#
+                            (GHC.Integer.Type.divInteger duration_s8dF lvl_s8fY)
+                            (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_a7Yt, ww4_a7Yu #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackAppendCString#
+                          lvl_s8fW
+                          (case GHC.Show.$w$cshowsPrec4
+                                  0# duration_s8dF (GHC.Types.[] @ GHC.Types.Char)
+                           of
+                           { (# ww3_X809, ww4_X80b #) ->
+                           GHC.Base.++_$s++
+                             @ GHC.Types.Char
+                             (GHC.CString.unpackCString# lvl_s8fX)
+                             ww3_X809
+                             ww4_X80b
+                           }))
+                       ww3_a7Yt
+                       ww4_a7Yu
+                     }
+              ValArg description_a1W6
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char
+              (case GHC.Show.$w$cshowsPrec4
+                      0#
+                      (GHC.Integer.Type.divInteger duration_s8dF lvl_s8fY)
+                      (GHC.Types.[] @ GHC.Types.Char)
+               of
+               { (# ww3_a7Yt, ww4_a7Yu #) ->
+               GHC.Base.++_$s++
+                 @ GHC.Types.Char
+                 (GHC.CString.unpackAppendCString#
+                    lvl_s8fW
+                    (case GHC.Show.$w$cshowsPrec4
+                            0# duration_s8dF (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_X809, ww4_X80b #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackCString# lvl_s8fX)
+                       ww3_X809
+                       ww4_X80b
+                     }))
+                 ww3_a7Yt
+                 ww4_a7Yu
+               })
+    Cont:   StrictArg GHC.Show.showLitString
+            ApplyToVal nodup GHC.Show.$fShow[]1
+            Stop[BoringCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg lvl_s8g0
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              lvl_s8g0
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.CString.unpackCString# lvl_s8g0
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_X80f ww4_X80h
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char (GHC.CString.unpackCString# lvl_s8g0)
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: SC:++0
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_X80f ww4_X80h
+              ValArg GHC.CString.unpackCString# lvl_s8g0
+    After:  (\ (@ b_a7XX)
+               (sc_a7XY :: [b_a7XX])
+               (sc1_a7XZ :: b_a7XX)
+               (sc2_a7Y0 :: [b_a7XX]) ->
+               GHC.Base.++_$s++ @ b_a7XX sc_a7XY sc1_a7XZ sc2_a7Y0)
+              @ GHC.Types.Char
+              (GHC.CString.unpackCString# lvl_s8g0)
+              ww3_X80f
+              ww4_X80h
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack-append
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg lvl_s8fZ
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg case GHC.Show.$w$cshowsPrec4
+                            0# duration_s8dz (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_X80f, ww4_X80h #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackCString# lvl_s8g0)
+                       ww3_X80f
+                       ww4_X80h
+                     }
+    After:  (\ (a_a7YR :: GHC.Prim.Addr#)
+               (n_a7YS :: [GHC.Types.Char]) ->
+               GHC.CString.unpackAppendCString# a_a7YR n_a7YS)
+              lvl_s8fZ
+              (case GHC.Show.$w$cshowsPrec4
+                      0# duration_s8dz (GHC.Types.[] @ GHC.Types.Char)
+               of
+               { (# ww3_X80f, ww4_X80h #) ->
+               GHC.Base.++_$s++
+                 @ GHC.Types.Char
+                 (GHC.CString.unpackCString# lvl_s8g0)
+                 ww3_X80f
+                 ww4_X80h
+               })
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.CString.unpackAppendCString#
+                       lvl_s8fZ
+                       (case GHC.Show.$w$cshowsPrec4
+                               0# duration_s8dz (GHC.Types.[] @ GHC.Types.Char)
+                        of
+                        { (# ww3_X80f, ww4_X80h #) ->
+                        GHC.Base.++_$s++
+                          @ GHC.Types.Char
+                          (GHC.CString.unpackCString# lvl_s8g0)
+                          ww3_X80f
+                          ww4_X80h
+                        })
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_a7Yt ww4_a7Yu
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char
+              (GHC.CString.unpackAppendCString#
+                 lvl_s8fZ
+                 (case GHC.Show.$w$cshowsPrec4
+                         0# duration_s8dz (GHC.Types.[] @ GHC.Types.Char)
+                  of
+                  { (# ww3_X80f, ww4_X80h #) ->
+                  GHC.Base.++_$s++
+                    @ GHC.Types.Char
+                    (GHC.CString.unpackCString# lvl_s8g0)
+                    ww3_X80f
+                    ww4_X80h
+                  }))
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: SC:++0
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_a7Yt ww4_a7Yu
+              ValArg GHC.CString.unpackAppendCString#
+                       lvl_s8fZ
+                       (case GHC.Show.$w$cshowsPrec4
+                               0# duration_s8dz (GHC.Types.[] @ GHC.Types.Char)
+                        of
+                        { (# ww3_X80f, ww4_X80h #) ->
+                        GHC.Base.++_$s++
+                          @ GHC.Types.Char
+                          (GHC.CString.unpackCString# lvl_s8g0)
+                          ww3_X80f
+                          ww4_X80h
+                        })
+    After:  (\ (@ b_a7XX)
+               (sc_a7XY :: [b_a7XX])
+               (sc1_a7XZ :: b_a7XX)
+               (sc2_a7Y0 :: [b_a7XX]) ->
+               GHC.Base.++_$s++ @ b_a7XX sc_a7XY sc1_a7XZ sc2_a7Y0)
+              @ GHC.Types.Char
+              (GHC.CString.unpackAppendCString#
+                 lvl_s8fZ
+                 (case GHC.Show.$w$cshowsPrec4
+                         0# duration_s8dz (GHC.Types.[] @ GHC.Types.Char)
+                  of
+                  { (# ww3_X80f, ww4_X80h #) ->
+                  GHC.Base.++_$s++
+                    @ GHC.Types.Char
+                    (GHC.CString.unpackCString# lvl_s8g0)
+                    ww3_X80f
+                    ww4_X80h
+                  }))
+              ww3_a7Yt
+              ww4_a7Yu
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg case GHC.Show.$w$cshowsPrec4
+                            0#
+                            (GHC.Integer.Type.divInteger duration_s8dz lvl_s8g1)
+                            (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_a7Yt, ww4_a7Yu #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackAppendCString#
+                          lvl_s8fZ
+                          (case GHC.Show.$w$cshowsPrec4
+                                  0# duration_s8dz (GHC.Types.[] @ GHC.Types.Char)
+                           of
+                           { (# ww3_X80f, ww4_X80h #) ->
+                           GHC.Base.++_$s++
+                             @ GHC.Types.Char
+                             (GHC.CString.unpackCString# lvl_s8g0)
+                             ww3_X80f
+                             ww4_X80h
+                           }))
+                       ww3_a7Yt
+                       ww4_a7Yu
+                     }
+              ValArg description_a1W6
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char
+              (case GHC.Show.$w$cshowsPrec4
+                      0#
+                      (GHC.Integer.Type.divInteger duration_s8dz lvl_s8g1)
+                      (GHC.Types.[] @ GHC.Types.Char)
+               of
+               { (# ww3_a7Yt, ww4_a7Yu #) ->
+               GHC.Base.++_$s++
+                 @ GHC.Types.Char
+                 (GHC.CString.unpackAppendCString#
+                    lvl_s8fZ
+                    (case GHC.Show.$w$cshowsPrec4
+                            0# duration_s8dz (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_X80f, ww4_X80h #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackCString# lvl_s8g0)
+                       ww3_X80f
+                       ww4_X80h
+                     }))
+                 ww3_a7Yt
+                 ww4_a7Yu
+               })
+    Cont:   StrictArg GHC.Show.showLitString
+            ApplyToVal nodup GHC.Show.$fShow[]1
+            Stop[BoringCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg lvl_s8g3
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              lvl_s8g3
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.CString.unpackCString# lvl_s8g3
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_X80h ww4_X80j
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char (GHC.CString.unpackCString# lvl_s8g3)
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: SC:++0
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_X80h ww4_X80j
+              ValArg GHC.CString.unpackCString# lvl_s8g3
+    After:  (\ (@ b_a7XX)
+               (sc_a7XY :: [b_a7XX])
+               (sc1_a7XZ :: b_a7XX)
+               (sc2_a7Y0 :: [b_a7XX]) ->
+               GHC.Base.++_$s++ @ b_a7XX sc_a7XY sc1_a7XZ sc2_a7Y0)
+              @ GHC.Types.Char
+              (GHC.CString.unpackCString# lvl_s8g3)
+              ww3_X80h
+              ww4_X80j
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack-append
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg lvl_s8g2
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg case GHC.Show.$w$cshowsPrec4
+                            0# duration_s8dv (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_X80h, ww4_X80j #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackCString# lvl_s8g3)
+                       ww3_X80h
+                       ww4_X80j
+                     }
+    After:  (\ (a_a7YR :: GHC.Prim.Addr#)
+               (n_a7YS :: [GHC.Types.Char]) ->
+               GHC.CString.unpackAppendCString# a_a7YR n_a7YS)
+              lvl_s8g2
+              (case GHC.Show.$w$cshowsPrec4
+                      0# duration_s8dv (GHC.Types.[] @ GHC.Types.Char)
+               of
+               { (# ww3_X80h, ww4_X80j #) ->
+               GHC.Base.++_$s++
+                 @ GHC.Types.Char
+                 (GHC.CString.unpackCString# lvl_s8g3)
+                 ww3_X80h
+                 ww4_X80j
+               })
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.CString.unpackAppendCString#
+                       lvl_s8g2
+                       (case GHC.Show.$w$cshowsPrec4
+                               0# duration_s8dv (GHC.Types.[] @ GHC.Types.Char)
+                        of
+                        { (# ww3_X80h, ww4_X80j #) ->
+                        GHC.Base.++_$s++
+                          @ GHC.Types.Char
+                          (GHC.CString.unpackCString# lvl_s8g3)
+                          ww3_X80h
+                          ww4_X80j
+                        })
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_a7Yt ww4_a7Yu
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char
+              (GHC.CString.unpackAppendCString#
+                 lvl_s8g2
+                 (case GHC.Show.$w$cshowsPrec4
+                         0# duration_s8dv (GHC.Types.[] @ GHC.Types.Char)
+                  of
+                  { (# ww3_X80h, ww4_X80j #) ->
+                  GHC.Base.++_$s++
+                    @ GHC.Types.Char
+                    (GHC.CString.unpackCString# lvl_s8g3)
+                    ww3_X80h
+                    ww4_X80j
+                  }))
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: SC:++0
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_a7Yt ww4_a7Yu
+              ValArg GHC.CString.unpackAppendCString#
+                       lvl_s8g2
+                       (case GHC.Show.$w$cshowsPrec4
+                               0# duration_s8dv (GHC.Types.[] @ GHC.Types.Char)
+                        of
+                        { (# ww3_X80h, ww4_X80j #) ->
+                        GHC.Base.++_$s++
+                          @ GHC.Types.Char
+                          (GHC.CString.unpackCString# lvl_s8g3)
+                          ww3_X80h
+                          ww4_X80j
+                        })
+    After:  (\ (@ b_a7XX)
+               (sc_a7XY :: [b_a7XX])
+               (sc1_a7XZ :: b_a7XX)
+               (sc2_a7Y0 :: [b_a7XX]) ->
+               GHC.Base.++_$s++ @ b_a7XX sc_a7XY sc1_a7XZ sc2_a7Y0)
+              @ GHC.Types.Char
+              (GHC.CString.unpackAppendCString#
+                 lvl_s8g2
+                 (case GHC.Show.$w$cshowsPrec4
+                         0# duration_s8dv (GHC.Types.[] @ GHC.Types.Char)
+                  of
+                  { (# ww3_X80h, ww4_X80j #) ->
+                  GHC.Base.++_$s++
+                    @ GHC.Types.Char
+                    (GHC.CString.unpackCString# lvl_s8g3)
+                    ww3_X80h
+                    ww4_X80j
+                  }))
+              ww3_a7Yt
+              ww4_a7Yu
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg case GHC.Show.$w$cshowsPrec4
+                            0#
+                            (GHC.Integer.Type.divInteger duration_s8dv lvl_s8g4)
+                            (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_a7Yt, ww4_a7Yu #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackAppendCString#
+                          lvl_s8g2
+                          (case GHC.Show.$w$cshowsPrec4
+                                  0# duration_s8dv (GHC.Types.[] @ GHC.Types.Char)
+                           of
+                           { (# ww3_X80h, ww4_X80j #) ->
+                           GHC.Base.++_$s++
+                             @ GHC.Types.Char
+                             (GHC.CString.unpackCString# lvl_s8g3)
+                             ww3_X80h
+                             ww4_X80j
+                           }))
+                       ww3_a7Yt
+                       ww4_a7Yu
+                     }
+              ValArg description_a1W6
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char
+              (case GHC.Show.$w$cshowsPrec4
+                      0#
+                      (GHC.Integer.Type.divInteger duration_s8dv lvl_s8g4)
+                      (GHC.Types.[] @ GHC.Types.Char)
+               of
+               { (# ww3_a7Yt, ww4_a7Yu #) ->
+               GHC.Base.++_$s++
+                 @ GHC.Types.Char
+                 (GHC.CString.unpackAppendCString#
+                    lvl_s8g2
+                    (case GHC.Show.$w$cshowsPrec4
+                            0# duration_s8dv (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_X80h, ww4_X80j #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackCString# lvl_s8g3)
+                       ww3_X80h
+                       ww4_X80j
+                     }))
+                 ww3_a7Yt
+                 ww4_a7Yu
+               })
+    Cont:   StrictArg GHC.Show.showLitString
+            ApplyToVal nodup GHC.Show.$fShow[]1
+            Stop[BoringCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg lvl_s8g6
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              lvl_s8g6
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.CString.unpackCString# lvl_s8g6
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_X80o ww4_X80q
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char (GHC.CString.unpackCString# lvl_s8g6)
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: SC:++0
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_X80o ww4_X80q
+              ValArg GHC.CString.unpackCString# lvl_s8g6
+    After:  (\ (@ b_a7XX)
+               (sc_a7XY :: [b_a7XX])
+               (sc1_a7XZ :: b_a7XX)
+               (sc2_a7Y0 :: [b_a7XX]) ->
+               GHC.Base.++_$s++ @ b_a7XX sc_a7XY sc1_a7XZ sc2_a7Y0)
+              @ GHC.Types.Char
+              (GHC.CString.unpackCString# lvl_s8g6)
+              ww3_X80o
+              ww4_X80q
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack-append
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg lvl_s8g5
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg case GHC.Show.$w$cshowsPrec4
+                            0# duration_s8ds (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_X80o, ww4_X80q #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackCString# lvl_s8g6)
+                       ww3_X80o
+                       ww4_X80q
+                     }
+    After:  (\ (a_a7YR :: GHC.Prim.Addr#)
+               (n_a7YS :: [GHC.Types.Char]) ->
+               GHC.CString.unpackAppendCString# a_a7YR n_a7YS)
+              lvl_s8g5
+              (case GHC.Show.$w$cshowsPrec4
+                      0# duration_s8ds (GHC.Types.[] @ GHC.Types.Char)
+               of
+               { (# ww3_X80o, ww4_X80q #) ->
+               GHC.Base.++_$s++
+                 @ GHC.Types.Char
+                 (GHC.CString.unpackCString# lvl_s8g6)
+                 ww3_X80o
+                 ww4_X80q
+               })
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.CString.unpackAppendCString#
+                       lvl_s8g5
+                       (case GHC.Show.$w$cshowsPrec4
+                               0# duration_s8ds (GHC.Types.[] @ GHC.Types.Char)
+                        of
+                        { (# ww3_X80o, ww4_X80q #) ->
+                        GHC.Base.++_$s++
+                          @ GHC.Types.Char
+                          (GHC.CString.unpackCString# lvl_s8g6)
+                          ww3_X80o
+                          ww4_X80q
+                        })
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_a7Yt ww4_a7Yu
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char
+              (GHC.CString.unpackAppendCString#
+                 lvl_s8g5
+                 (case GHC.Show.$w$cshowsPrec4
+                         0# duration_s8ds (GHC.Types.[] @ GHC.Types.Char)
+                  of
+                  { (# ww3_X80o, ww4_X80q #) ->
+                  GHC.Base.++_$s++
+                    @ GHC.Types.Char
+                    (GHC.CString.unpackCString# lvl_s8g6)
+                    ww3_X80o
+                    ww4_X80q
+                  }))
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: SC:++0
+    Module: (GHC.Base)
+    Before: GHC.Base.++
+              TyArg GHC.Types.Char
+              ValArg GHC.Types.: @ GHC.Types.Char ww3_a7Yt ww4_a7Yu
+              ValArg GHC.CString.unpackAppendCString#
+                       lvl_s8g5
+                       (case GHC.Show.$w$cshowsPrec4
+                               0# duration_s8ds (GHC.Types.[] @ GHC.Types.Char)
+                        of
+                        { (# ww3_X80o, ww4_X80q #) ->
+                        GHC.Base.++_$s++
+                          @ GHC.Types.Char
+                          (GHC.CString.unpackCString# lvl_s8g6)
+                          ww3_X80o
+                          ww4_X80q
+                        })
+    After:  (\ (@ b_a7XX)
+               (sc_a7XY :: [b_a7XX])
+               (sc1_a7XZ :: b_a7XX)
+               (sc2_a7Y0 :: [b_a7XX]) ->
+               GHC.Base.++_$s++ @ b_a7XX sc_a7XY sc1_a7XZ sc2_a7Y0)
+              @ GHC.Types.Char
+              (GHC.CString.unpackAppendCString#
+                 lvl_s8g5
+                 (case GHC.Show.$w$cshowsPrec4
+                         0# duration_s8ds (GHC.Types.[] @ GHC.Types.Char)
+                  of
+                  { (# ww3_X80o, ww4_X80q #) ->
+                  GHC.Base.++_$s++
+                    @ GHC.Types.Char
+                    (GHC.CString.unpackCString# lvl_s8g6)
+                    ww3_X80o
+                    ww4_X80q
+                  }))
+              ww3_a7Yt
+              ww4_a7Yu
+    Cont:   Stop[RuleArgCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: foldr/app
+    Module: (GHC.Base)
+    Before: GHC.Base.foldr
+              TyArg GHC.Types.Char
+              TyArg [GHC.Types.Char]
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg case GHC.Show.$w$cshowsPrec4
+                            0#
+                            (GHC.Integer.Type.divInteger duration_s8ds lvl_s8g7)
+                            (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_a7Yt, ww4_a7Yu #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackAppendCString#
+                          lvl_s8g5
+                          (case GHC.Show.$w$cshowsPrec4
+                                  0# duration_s8ds (GHC.Types.[] @ GHC.Types.Char)
+                           of
+                           { (# ww3_X80o, ww4_X80q #) ->
+                           GHC.Base.++_$s++
+                             @ GHC.Types.Char
+                             (GHC.CString.unpackCString# lvl_s8g6)
+                             ww3_X80o
+                             ww4_X80q
+                           }))
+                       ww3_a7Yt
+                       ww4_a7Yu
+                     }
+              ValArg description_a1W6
+    After:  (\ (@ a_a7ZT)
+               (ys_a7ZU :: [a_a7ZT])
+               (xs_a7ZV [Occ=Once] :: [a_a7ZT]) ->
+               GHC.Base.++ @ a_a7ZT xs_a7ZV ys_a7ZU)
+              @ GHC.Types.Char
+              (case GHC.Show.$w$cshowsPrec4
+                      0#
+                      (GHC.Integer.Type.divInteger duration_s8ds lvl_s8g7)
+                      (GHC.Types.[] @ GHC.Types.Char)
+               of
+               { (# ww3_a7Yt, ww4_a7Yu #) ->
+               GHC.Base.++_$s++
+                 @ GHC.Types.Char
+                 (GHC.CString.unpackAppendCString#
+                    lvl_s8g5
+                    (case GHC.Show.$w$cshowsPrec4
+                            0# duration_s8ds (GHC.Types.[] @ GHC.Types.Char)
+                     of
+                     { (# ww3_X80o, ww4_X80q #) ->
+                     GHC.Base.++_$s++
+                       @ GHC.Types.Char
+                       (GHC.CString.unpackCString# lvl_s8g6)
+                       ww3_X80o
+                       ww4_X80q
+                     }))
+                 ww3_a7Yt
+                 ww4_a7Yu
+               })
+    Cont:   StrictArg GHC.Show.showLitString
+            ApplyToVal nodup GHC.Show.$fShow[]1
+            Stop[BoringCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg "foo"#
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              "foo"#
+    Cont:   Stop[BoringCtxt] [GHC.Types.Char]
+Rule fired
+    Rule: SPEC ^
+    Module: (GHC.Real)
+    Before: GHC.Real.^
+              TyArg GHC.Integer.Type.Integer
+              TyArg GHC.Integer.Type.Integer
+              ValArg GHC.Num.$fNumInteger
+              ValArg GHC.Real.$fIntegralInteger
+              ValArg 3
+              ValArg 1000000
+    After:  (\ ($dIntegral_a81o
+                  :: GHC.Real.Integral GHC.Integer.Type.Integer)
+               ($dNum_a81p :: GHC.Num.Num GHC.Integer.Type.Integer) ->
+               GHC.Real.^_$s^)
+              GHC.Real.$fIntegralInteger GHC.Num.$fNumInteger
+    Cont:   Stop[RhsCtxt] GHC.Integer.Type.Integer
+Rule fired
+    Rule: SPEC/Main ^^ @ Double @ Integer
+    Module: (Main)
+    Before: GHC.Real.^^
+              TyArg GHC.Types.Double
+              TyArg GHC.Integer.Type.Integer
+              ValArg GHC.Float.$fFractionalDouble
+              ValArg GHC.Real.$fIntegralInteger
+    After:  (\ ($dFractional_s8dH
+                  :: GHC.Real.Fractional GHC.Types.Double)
+               ($dIntegral_s8dI :: GHC.Real.Integral GHC.Integer.Type.Integer) ->
+               $s^^_s8eL)
+              GHC.Float.$fFractionalDouble GHC.Real.$fIntegralInteger
+    Cont:   ApplyToVal nodup (GHC.Types.D# 5.0##)
+            ApplyToVal nodup 441
+            Stop[RhsCtxt] GHC.Types.Double
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg "stimes : "#
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              "stimes : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg "fractional power 1 : "#
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              "fractional power 1 : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg "fractional power 2 : "#
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              "fractional power 2 : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg "fractional power 3 : "#
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              "fractional power 3 : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String
+Rule fired
+    Rule: unpack-list
+    Module: (GHC.Base)
+    Before: GHC.CString.unpackFoldrCString#
+              TyArg [GHC.Types.Char]
+              ValArg "integral power : "#
+              ValArg GHC.Types.: @ GHC.Types.Char
+              ValArg GHC.Types.[] @ GHC.Types.Char
+    After:  (\ (a_a7YQ :: GHC.Prim.Addr#) ->
+               GHC.CString.unpackCString# a_a7YQ)
+              "integral power : "#
+    Cont:   Stop[BoringCtxt] GHC.Base.String

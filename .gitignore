@@ -6,4 +6,4 @@ dist-newstyle
 CHANGELOG.md
 cabal.project.local
 .ghc.environment.*
-*.dump-*
+# *.dump-*

@@ -1,0 +1,2590 @@
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.33874441 UTC
+
+[]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.339034947 UTC
+
+[section ""data" . Main.$s^2_closure" {
+     Main.$s^2_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.339422915 UTC
+
+[section ""cstring" . lvl_r8vq_bytes" {
+     lvl_r8vq_bytes:
+         I8[] [78,101,103,97,116,105,118,101,32,101,120,112,111,110,101,110,116]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.340057954 UTC
+
+[Main.$s^1_entry() //  [R1]
+         { info_tbls: [(c8yz,
+                        label: block_c8yz_info
+                        rep: StackRep []
+                        srt: Just GHC.Err.errorWithoutStackTrace_closure),
+                       (c8yB,
+                        label: Main.$s^1_info
+                        rep: HeapRep static { Thunk }
+                        srt: Just GHC.Err.errorWithoutStackTrace_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8yB: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8yC; else goto c8yD;
+       c8yC: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8yD: // global
+           (_c8yw::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8yw::I64 == 0) goto c8yy; else goto c8yx;
+       c8yy: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8yx: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8yw::I64;
+           I64[Sp - 24] = c8yz;
+           R2 = lvl_r8vq_bytes;
+           Sp = Sp - 24;
+           call GHC.CString.unpackCString#_info(R2) returns to c8yz, args: 8, res: 8, upd: 24;
+       c8yz: // global
+           R2 = R1;
+           Sp = Sp + 8;
+           call GHC.Err.errorWithoutStackTrace_info(R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.$s^1_closure" {
+     Main.$s^1_closure:
+         const Main.$s^1_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.341146529 UTC
+
+[section ""data" . Main.$seven1_closure" {
+     Main.$seven1_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 2;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.341374643 UTC
+
+[section ""data" . lvl1_r8vr_closure" {
+     lvl1_r8vr_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 1;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.342495696 UTC
+
+[section ""data" . _u8zF_srt" {
+     _u8zF_srt:
+         const stg_SRT_2_info;
+         const GHC.Integer.Type.quotInteger_closure;
+         const GHC.Integer.Type.remInteger_closure;
+         const 0;
+ },
+ $wg1_r8vs_slow() //  [R1]
+         { info_tbls: []
+           stack_info: arg_space: 32 updfr_space: Just 8
+         }
+     {offset
+       c8yP: // global
+           D2 = F64[Sp + 16];
+           R2 = P64[Sp + 8];
+           D1 = F64[Sp];
+           R1 = R1;
+           Sp = Sp + 24;
+           call $wg1_r8vs_info(D2, R2, D1, R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ $wg1_r8vs_entry() //  [D2, R2, D1]
+         { info_tbls: [(c8yT,
+                        label: block_c8yT_info
+                        rep: StackRep [True, False, True]
+                        srt: Just _u8zF_srt),
+                       (c8yV,
+                        label: $wg1_r8vs_info
+                        rep: HeapRep static {
+                               Fun {arity: 3 fun_type: ArgGen [True, False, True]} }
+                        srt: Just _u8zF_srt),
+                       (c8z0,
+                        label: block_c8z0_info
+                        rep: StackRep [True, False, True]
+                        srt: Just _u8zF_srt),
+                       (c8z5,
+                        label: block_c8z5_info
+                        rep: StackRep [True, False, True]
+                        srt: Just _u8zF_srt),
+                       (c8zf,
+                        label: block_c8zf_info
+                        rep: StackRep [True, True, True]
+                        srt: Just _u8zF_srt),
+                       (c8zu,
+                        label: block_c8zu_info
+                        rep: StackRep [True, True, True]
+                        srt: Just _u8zF_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8yV: // global
+           _s8vD::F64 = D2;
+           _s8vC::P64 = R2;
+           _s8vB::F64 = D1;
+           if ((Sp + -32) >= SpLim) (likely: True) goto c8yQ; else goto c8yW;
+       c8yQ: // global
+           I64[Sp - 32] = c8yT;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8vC::P64;
+           F64[Sp - 24] = _s8vB::F64;
+           P64[Sp - 16] = _s8vC::P64;
+           F64[Sp - 8] = _s8vD::F64;
+           Sp = Sp - 32;
+           call GHC.Integer.Type.remInteger_info(R3,
+                                                 R2) returns to c8yT, args: 8, res: 8, upd: 8;
+       c8yT: // global
+           I64[Sp] = c8z0;
+           R3 = Main.$s^2_closure+1;
+           R2 = R1;
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8z0, args: 8, res: 8, upd: 8;
+       c8z0: // global
+           _s8vC::P64 = P64[Sp + 16];
+           if (R1 != 1) goto c8z8; else goto c8zw;
+       c8z8: // global
+           I64[Sp] = c8z5;
+           R3 = lvl1_r8vr_closure+1;
+           R2 = _s8vC::P64;
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8z5, args: 8, res: 8, upd: 8;
+       c8z5: // global
+           _s8vB::F64 = F64[Sp + 8];
+           _s8vD::F64 = F64[Sp + 24];
+           if (R1 != 1) goto c8zi; else goto c8zr;
+       c8zi: // global
+           I64[Sp] = c8zf;
+           R3 = Main.$seven1_closure+1;
+           R2 = P64[Sp + 16];
+           F64[Sp + 24] = %MO_F_Mul_W64(_s8vB::F64, _s8vD::F64);
+           call GHC.Integer.Type.quotInteger_info(R3,
+                                                  R2) returns to c8zf, args: 8, res: 8, upd: 8;
+       c8zf: // global
+           _s8vB::F64 = F64[Sp + 8];
+           _s8vD::F64 = F64[Sp + 24];
+           Sp = Sp + 32;
+           _s8vC::P64 = R1;
+           _s8vB::F64 = %MO_F_Mul_W64(_s8vB::F64, _s8vB::F64);
+           goto c8yQ;
+       c8zr: // global
+           D1 = %MO_F_Mul_W64(_s8vB::F64, _s8vD::F64);
+           Sp = Sp + 32;
+           call (P64[Sp])(D1) args: 8, res: 0, upd: 8;
+       c8zw: // global
+           I64[Sp] = c8zu;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8vC::P64;
+           call GHC.Integer.Type.quotInteger_info(R3,
+                                                  R2) returns to c8zu, args: 8, res: 8, upd: 8;
+       c8zu: // global
+           _s8vB::F64 = F64[Sp + 8];
+           _s8vD::F64 = F64[Sp + 24];
+           Sp = Sp + 32;
+           _s8vC::P64 = R1;
+           _s8vB::F64 = %MO_F_Mul_W64(_s8vB::F64, _s8vB::F64);
+           goto c8yQ;
+       c8yW: // global
+           R1 = $wg1_r8vs_closure;
+           F64[Sp - 24] = _s8vB::F64;
+           P64[Sp - 16] = _s8vC::P64;
+           F64[Sp - 8] = _s8vD::F64;
+           Sp = Sp - 24;
+           call (stg_gc_fun)(R1) args: 32, res: 0, upd: 8;
+     }
+ },
+ section ""data" . $wg1_r8vs_closure" {
+     $wg1_r8vs_closure:
+         const $wg1_r8vs_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.347121365 UTC
+
+[section ""data" . _u8AG_srt" {
+     _u8AG_srt:
+         const stg_SRT_2_info;
+         const GHC.Integer.Type.quotInteger_closure;
+         const $wg1_r8vs_closure;
+         const 0;
+ },
+ section ""data" . _u8AH_srt" {
+     _u8AH_srt:
+         const stg_SRT_2_info;
+         const GHC.Integer.Type.remInteger_closure;
+         const _u8AG_srt;
+         const 0;
+ },
+ Main.$wf_slow() //  [R1]
+         { info_tbls: []
+           stack_info: arg_space: 24 updfr_space: Just 8
+         }
+     {offset
+       c8zV: // global
+           R2 = P64[Sp + 8];
+           D1 = F64[Sp];
+           R1 = R1;
+           Sp = Sp + 16;
+           call Main.$wf_info(R2, D1, R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ Main.$wf_entry() //  [R2, D1]
+         { info_tbls: [(c8zZ,
+                        label: block_c8zZ_info
+                        rep: StackRep [True, False]
+                        srt: Just _u8AH_srt),
+                       (c8A1,
+                        label: Main.$wf_info
+                        rep: HeapRep static {
+                               Fun {arity: 2 fun_type: ArgGen [True, False]} }
+                        srt: Just _u8AH_srt),
+                       (c8A6,
+                        label: block_c8A6_info
+                        rep: StackRep [True, False]
+                        srt: Just _u8AH_srt),
+                       (c8Ab,
+                        label: block_c8Ab_info
+                        rep: StackRep [True, False]
+                        srt: Just _u8AG_srt),
+                       (c8Ai,
+                        label: block_c8Ai_info
+                        rep: StackRep [True, True]
+                        srt: Just $wg1_r8vs_closure),
+                       (c8Aw,
+                        label: block_c8Aw_info
+                        rep: StackRep [True, True]
+                        srt: Just _u8AH_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8A1: // global
+           _s8vN::P64 = R2;
+           _s8vM::F64 = D1;
+           if ((Sp + -24) >= SpLim) (likely: True) goto c8zW; else goto c8A2;
+       c8zW: // global
+           I64[Sp - 24] = c8zZ;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8vN::P64;
+           F64[Sp - 16] = _s8vM::F64;
+           P64[Sp - 8] = _s8vN::P64;
+           Sp = Sp - 24;
+           call GHC.Integer.Type.remInteger_info(R3,
+                                                 R2) returns to c8zZ, args: 8, res: 8, upd: 8;
+       c8zZ: // global
+           I64[Sp] = c8A6;
+           R3 = Main.$s^2_closure+1;
+           R2 = R1;
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8A6, args: 8, res: 8, upd: 8;
+       c8A6: // global
+           _s8vN::P64 = P64[Sp + 16];
+           if (R1 != 1) goto c8Ae; else goto c8Ay;
+       c8Ae: // global
+           I64[Sp] = c8Ab;
+           R3 = lvl1_r8vr_closure+1;
+           R2 = _s8vN::P64;
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8Ab, args: 8, res: 8, upd: 8;
+       c8Ab: // global
+           if (R1 != 1) goto c8Al; else goto c8At;
+       c8Al: // global
+           I64[Sp] = c8Ai;
+           R3 = Main.$seven1_closure+1;
+           R2 = P64[Sp + 16];
+           call GHC.Integer.Type.quotInteger_info(R3,
+                                                  R2) returns to c8Ai, args: 8, res: 8, upd: 8;
+       c8Ai: // global
+           _s8vM::F64 = F64[Sp + 8];
+           D2 = _s8vM::F64;
+           R2 = R1;
+           D1 = %MO_F_Mul_W64(_s8vM::F64, _s8vM::F64);
+           Sp = Sp + 24;
+           call $wg1_r8vs_info(D2, R2, D1) args: 8, res: 0, upd: 8;
+       c8At: // global
+           D1 = F64[Sp + 8];
+           Sp = Sp + 24;
+           call (P64[Sp])(D1) args: 8, res: 0, upd: 8;
+       c8Ay: // global
+           I64[Sp] = c8Aw;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8vN::P64;
+           call GHC.Integer.Type.quotInteger_info(R3,
+                                                  R2) returns to c8Aw, args: 8, res: 8, upd: 8;
+       c8Aw: // global
+           _s8vM::F64 = F64[Sp + 8];
+           Sp = Sp + 24;
+           _s8vN::P64 = R1;
+           _s8vM::F64 = %MO_F_Mul_W64(_s8vM::F64, _s8vM::F64);
+           goto c8zW;
+       c8A2: // global
+           R1 = Main.$wf_closure;
+           F64[Sp - 16] = _s8vM::F64;
+           P64[Sp - 8] = _s8vN::P64;
+           Sp = Sp - 16;
+           call (stg_gc_fun)(R1) args: 24, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.$wf_closure" {
+     Main.$wf_closure:
+         const Main.$wf_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.350910151 UTC
+
+[section ""data" . _u8Bs_srt" {
+     _u8Bs_srt:
+         const stg_SRT_2_info;
+         const Main.$s^1_closure;
+         const Main.$wf_closure;
+         const 0;
+ },
+ Main.$w$s^_entry() //  [R3, R2]
+         { info_tbls: [(c8AX,
+                        label: block_c8AX_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8Bs_srt),
+                       (c8B2,
+                        label: Main.$w$s^_info
+                        rep: HeapRep static { Fun {arity: 2 fun_type: ArgSpec 15} }
+                        srt: Just _u8Bs_srt),
+                       (c8B7,
+                        label: block_c8B7_info
+                        rep: StackRep [False, False]
+                        srt: Just Main.$wf_closure),
+                       (c8Bc,
+                        label: block_c8Bc_info
+                        rep: StackRep [False]
+                        srt: Just Main.$wf_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8B2: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8B3; else goto c8B4;
+       c8B3: // global
+           R3 = R3;
+           R2 = R2;
+           R1 = Main.$w$s^_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8B4: // global
+           I64[Sp - 24] = c8AX;
+           _s8vW::P64 = R3;
+           R3 = Main.$s^2_closure+1;
+           _s8vV::P64 = R2;
+           R2 = _s8vW::P64;
+           P64[Sp - 16] = _s8vV::P64;
+           P64[Sp - 8] = _s8vW::P64;
+           Sp = Sp - 24;
+           call GHC.Integer.Type.ltInteger#_info(R3,
+                                                 R2) returns to c8AX, args: 8, res: 8, upd: 8;
+       c8AX: // global
+           if (R1 != 1) goto c8B0; else goto c8B1;
+       c8B0: // global
+           I64[Sp] = c8B7;
+           R3 = Main.$s^2_closure+1;
+           R2 = P64[Sp + 16];
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8B7, args: 8, res: 8, upd: 8;
+       c8B7: // global
+           if (R1 != 1) goto c8Bf; else goto c8Bo;
+       c8Bf: // global
+           _s8vV::P64 = P64[Sp + 8];
+           I64[Sp + 8] = c8Bc;
+           R1 = _s8vV::P64;
+           Sp = Sp + 8;
+           if (R1 & 7 != 0) goto c8Bc; else goto c8Bg;
+       c8Bg: // global
+           call (I64[R1])(R1) returns to c8Bc, args: 8, res: 8, upd: 8;
+       c8Bc: // global
+           R2 = P64[Sp + 8];
+           D1 = F64[R1 + 7];
+           Sp = Sp + 16;
+           call Main.$wf_info(R2, D1) args: 8, res: 0, upd: 8;
+       c8Bo: // global
+           D1 = 1.0 :: W64;
+           Sp = Sp + 24;
+           call (P64[Sp])(D1) args: 8, res: 0, upd: 8;
+       c8B1: // global
+           R1 = Main.$s^1_closure;
+           Sp = Sp + 24;
+           call (I64[R1])(R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.$w$s^_closure" {
+     Main.$w$s^_closure:
+         const Main.$w$s^_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.352969605 UTC
+
+[section ""data" . _u8C2_srt" {
+     _u8C2_srt:
+         const stg_SRT_2_info;
+         const GHC.Integer.Type.negateInteger_closure;
+         const Main.$w$s^_closure;
+         const 0;
+ },
+ Main.$w$s^^_entry() //  [R3, R2]
+         { info_tbls: [(c8BD,
+                        label: block_c8BD_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8C2_srt),
+                       (c8BI,
+                        label: Main.$w$s^^_info
+                        rep: HeapRep static { Fun {arity: 2 fun_type: ArgSpec 15} }
+                        srt: Just _u8C2_srt),
+                       (c8BN,
+                        label: block_c8BN_info
+                        rep: StackRep [False, True]
+                        srt: Just Main.$w$s^_closure),
+                       (c8BR,
+                        label: block_c8BR_info
+                        rep: StackRep []
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8BI: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8BJ; else goto c8BK;
+       c8BJ: // global
+           R3 = R3;
+           R2 = R2;
+           R1 = Main.$w$s^^_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8BK: // global
+           I64[Sp - 24] = c8BD;
+           _s8w3::P64 = R3;
+           R3 = Main.$s^2_closure+1;
+           _s8w2::P64 = R2;
+           R2 = _s8w3::P64;
+           P64[Sp - 16] = _s8w2::P64;
+           P64[Sp - 8] = _s8w3::P64;
+           Sp = Sp - 24;
+           call GHC.Integer.Type.geInteger#_info(R3,
+                                                 R2) returns to c8BD, args: 8, res: 8, upd: 8;
+       c8BD: // global
+           _s8w3::P64 = P64[Sp + 16];
+           if (R1 != 1) goto c8BG; else goto c8BH;
+       c8BG: // global
+           I64[Sp] = c8BN;
+           R2 = _s8w3::P64;
+           call GHC.Integer.Type.negateInteger_info(R2) returns to c8BN, args: 8, res: 8, upd: 8;
+       c8BN: // global
+           I64[Sp + 16] = c8BR;
+           R3 = R1;
+           R2 = P64[Sp + 8];
+           Sp = Sp + 16;
+           call Main.$w$s^_info(R3,
+                                R2) returns to c8BR, args: 8, res: 8, upd: 8;
+       c8BR: // global
+           D1 = %MO_F_Quot_W64(1.0 :: W64, D1);
+           Sp = Sp + 8;
+           call (P64[Sp])(D1) args: 8, res: 0, upd: 8;
+       c8BH: // global
+           R3 = _s8w3::P64;
+           R2 = P64[Sp + 8];
+           Sp = Sp + 24;
+           call Main.$w$s^_info(R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.$w$s^^_closure" {
+     Main.$w$s^^_closure:
+         const Main.$w$s^^_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.35476713 UTC
+
+[Main.main_go_entry() //  [R2]
+         { info_tbls: [(c8Ce,
+                        label: block_c8Ce_info
+                        rep: StackRep []
+                        srt: Nothing),
+                       (c8Cl,
+                        label: Main.main_go_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} }
+                        srt: Nothing),
+                       (c8Ct,
+                        label: block_c8Ct_info
+                        rep: StackRep [False]
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Cl: // global
+           _s8w7::P64 = R2;
+           if ((Sp + -16) >= SpLim) (likely: True) goto c8Cb; else goto c8Cm;
+       c8Cb: // global
+           I64[Sp - 8] = c8Ce;
+           R1 = _s8w7::P64;
+           Sp = Sp - 8;
+           if (R1 & 7 != 0) goto c8Ce; else goto c8Cf;
+       c8Cf: // global
+           call (I64[R1])(R1) returns to c8Ce, args: 8, res: 8, upd: 8;
+       c8Ce: // global
+           if (R1 & 7 != 1) goto c8Cj; else goto c8Ci;
+       c8Cj: // global
+           I64[Sp - 8] = c8Ct;
+           _s8wa::P64 = P64[R1 + 14];
+           R1 = P64[R1 + 6];
+           P64[Sp] = _s8wa::P64;
+           Sp = Sp - 8;
+           if (R1 & 7 != 0) goto c8Ct; else goto c8Cv;
+       c8Cv: // global
+           call (I64[R1])(R1) returns to c8Ct, args: 8, res: 8, upd: 8;
+       c8Ct: // global
+           _s8w7::P64 = P64[Sp + 8];
+           Sp = Sp + 16;
+           goto c8Cb;
+       c8Ci: // global
+           R1 = ()_closure+1;
+           Sp = Sp + 8;
+           call (P64[Sp])(R1) args: 8, res: 0, upd: 8;
+       c8Cm: // global
+           R2 = _s8w7::P64;
+           R1 = Main.main_go_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.main_go_closure" {
+     Main.main_go_closure:
+         const Main.main_go_info;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.355904058 UTC
+
+[section ""cstring" . Main.$trModule4_bytes" {
+     Main.$trModule4_bytes:
+         I8[] [109,97,105,110]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.356150801 UTC
+
+[section ""data" . Main.$trModule3_closure" {
+     Main.$trModule3_closure:
+         const GHC.Types.TrNameS_con_info;
+         const Main.$trModule4_bytes;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.356386123 UTC
+
+[section ""cstring" . Main.$trModule2_bytes" {
+     Main.$trModule2_bytes:
+         I8[] [77,97,105,110]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.356637514 UTC
+
+[section ""data" . Main.$trModule1_closure" {
+     Main.$trModule1_closure:
+         const GHC.Types.TrNameS_con_info;
+         const Main.$trModule2_bytes;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.356885666 UTC
+
+[section ""data" . Main.$trModule_closure" {
+     Main.$trModule_closure:
+         const GHC.Types.Module_con_info;
+         const Main.$trModule3_closure+1;
+         const Main.$trModule1_closure+1;
+         const 3;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.357137243 UTC
+
+[section ""cstring" . Main.main6_bytes" {
+     Main.main6_bytes:
+         I8[] [32,109,105,108,108,105,32,115,101,99,111,110,100,115,32,45,45,32]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.357355462 UTC
+
+[section ""cstring" . Main.main5_bytes" {
+     Main.main5_bytes:
+         I8[] [32,112,105,99,111,32,115,101,99,111,110,100,115]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.357592625 UTC
+
+[section ""data" . Main.main7_closure" {
+     Main.main7_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 1000000000;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.358427565 UTC
+
+[Main.main4_entry() //  [R1]
+         { info_tbls: [(c8CW,
+                        label: Main.main4_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8CW: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8CX; else goto c8CY;
+       c8CX: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8CY: // global
+           (_c8CT::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8CT::I64 == 0) goto c8CV; else goto c8CU;
+       c8CV: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8CU: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8CT::I64;
+           R2 = Main.main5_bytes;
+           Sp = Sp - 16;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.main4_closure" {
+     Main.main4_closure:
+         const Main.main4_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.361932463 UTC
+
+[section ""data" . _u8Ew_srt" {
+     _u8Ew_srt:
+         const stg_SRT_2_info;
+         const GHC.Show.$w$cshowsPrec4_closure;
+         const Main.main4_closure;
+         const 0;
+ },
+ section ""data" . _u8Ex_srt" {
+     _u8Ex_srt:
+         const stg_SRT_2_info;
+         const GHC.Integer.Type.divInteger_closure;
+         const _u8Ew_srt;
+         const 0;
+ },
+ section ""data" . _u8Ey_srt" {
+     _u8Ey_srt:
+         const stg_SRT_2_info;
+         const GHC.Show.showLitString_closure;
+         const _u8Ex_srt;
+         const 0;
+ },
+ section ""data" . _u8Ez_srt" {
+     _u8Ez_srt:
+         const stg_SRT_4_info;
+         const GHC.Integer.Type.minusInteger_closure;
+         const GHC.IO.Handle.FD.stdout_closure;
+         const GHC.IO.Handle.Text.hPutStr'_closure;
+         const _u8Ey_srt;
+         const 0;
+ },
+ section ""data" . _u8EA_srt" {
+     _u8EA_srt:
+         const stg_SRT_3_info;
+         const System.CPUTime.Posix.ClockGetTime.getCPUTime4_closure;
+         const System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure;
+         const _u8Ez_srt;
+         const 0;
+ },
+ duration_s8wn_entry() //  [R1]
+         { info_tbls: [(c8Dk,
+                        label: block_c8Dk_info
+                        rep: StackRep [False]
+                        srt: Just GHC.Integer.Type.minusInteger_closure),
+                       (c8Dn,
+                        label: duration_s8wn_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Just GHC.Integer.Type.minusInteger_closure),
+                       (c8Dq,
+                        label: block_c8Dq_info
+                        rep: StackRep [False]
+                        srt: Just GHC.Integer.Type.minusInteger_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Dn: // global
+           if ((Sp + -32) < SpLim) (likely: False) goto c8Dr; else goto c8Ds;
+       c8Dr: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Ds: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = R1;
+           I64[Sp - 32] = c8Dk;
+           _s8wi::P64 = P64[R1 + 16];
+           R1 = P64[R1 + 24];
+           P64[Sp - 24] = _s8wi::P64;
+           Sp = Sp - 32;
+           if (R1 & 7 != 0) goto c8Dk; else goto c8Dl;
+       c8Dl: // global
+           call (I64[R1])(R1) returns to c8Dk, args: 8, res: 8, upd: 24;
+       c8Dk: // global
+           I64[Sp] = c8Dq;
+           _s8wq::P64 = P64[R1 + 15];
+           R1 = P64[Sp + 8];
+           P64[Sp + 8] = _s8wq::P64;
+           if (R1 & 7 != 0) goto c8Dq; else goto c8Du;
+       c8Du: // global
+           call (I64[R1])(R1) returns to c8Dq, args: 8, res: 8, upd: 24;
+       c8Dq: // global
+           R3 = P64[R1 + 15];
+           R2 = P64[Sp + 8];
+           Sp = Sp + 16;
+           call GHC.Integer.Type.minusInteger_info(R3,
+                                                   R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8wB_entry() //  [R1]
+         { info_tbls: [(c8DV,
+                        label: block_c8DV_info
+                        rep: StackRep []
+                        srt: Just Main.main4_closure),
+                       (c8DX,
+                        label: sat_s8wB_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ew_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8DX: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8DY; else goto c8DZ;
+       c8DY: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8DZ: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = R1;
+           I64[Sp - 24] = c8DV;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = P64[R1 + 16];
+           R2 = 0;
+           Sp = Sp - 24;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8DV, args: 8, res: 8, upd: 24;
+       c8DV: // global
+           R4 = R2;
+           R3 = R1;
+           R2 = Main.main4_closure;
+           Sp = Sp + 8;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8wC_entry() //  [R1]
+         { info_tbls: [(c8E1,
+                        label: sat_s8wC_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ew_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8E1: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8E5; else goto c8E4;
+       c8E5: // global
+           HpAlloc = 24;
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8E4: // global
+           _s8wn::P64 = P64[R1 + 16];
+           I64[Hp - 16] = sat_s8wB_info;
+           P64[Hp] = _s8wn::P64;
+           R3 = Hp - 16;
+           R2 = Main.main6_bytes;
+           call GHC.CString.unpackAppendCString#_info(R3,
+                                                      R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8wD_entry() //  [R1]
+         { info_tbls: [(c8DH,
+                        label: block_c8DH_info
+                        rep: StackRep [False]
+                        srt: Just _u8Ew_srt),
+                       (c8DL,
+                        label: block_c8DL_info
+                        rep: StackRep [False]
+                        srt: Just _u8Ew_srt),
+                       (c8E6,
+                        label: sat_s8wD_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ex_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8E6: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8E7; else goto c8E8;
+       c8E7: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8E8: // global
+           I64[Sp - 16] = c8DH;
+           R3 = Main.main7_closure+1;
+           _s8wn::P64 = P64[R1 + 16];
+           R2 = _s8wn::P64;
+           P64[Sp - 8] = _s8wn::P64;
+           Sp = Sp - 16;
+           call GHC.Integer.Type.divInteger_info(R3,
+                                                 R2) returns to c8DH, args: 8, res: 8, upd: 8;
+       c8DH: // global
+           I64[Sp] = c8DL;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = R1;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8DL, args: 8, res: 8, upd: 8;
+       c8DL: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Ec; else goto c8Eb;
+       c8Ec: // global
+           HpAlloc = 24;
+           R2 = R2;
+           R1 = R1;
+           call stg_gc_pp(R2, R1) returns to c8DL, args: 8, res: 8, upd: 8;
+       c8Eb: // global
+           I64[Hp - 16] = sat_s8wC_info;
+           P64[Hp] = P64[Sp + 8];
+           R4 = R2;
+           R3 = R1;
+           R2 = Hp - 16;
+           Sp = Sp + 16;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8wF_entry() //  [R1]
+         { info_tbls: [(c8Ed,
+                        label: block_c8Ed_info
+                        rep: StackRep []
+                        srt: Just GHC.Show.showLitString_closure),
+                       (c8Ef,
+                        label: sat_s8wF_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Just _u8Ey_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Ef: // global
+           _s8wF::P64 = R1;
+           if ((Sp + -24) < SpLim) (likely: False) goto c8Eg; else goto c8Eh;
+       c8Eh: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Ej; else goto c8Ei;
+       c8Ej: // global
+           HpAlloc = 24;
+           goto c8Eg;
+       c8Eg: // global
+           R1 = _s8wF::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Ei: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = _s8wF::P64;
+           _s8wn::P64 = P64[_s8wF::P64 + 16];
+           _s8wd::P64 = P64[_s8wF::P64 + 24];
+           I64[Hp - 16] = sat_s8wD_info;
+           P64[Hp] = _s8wn::P64;
+           I64[Sp - 24] = c8Ed;
+           R3 = Hp - 16;
+           R2 = _s8wd::P64;
+           Sp = Sp - 24;
+           call GHC.Base.++_info(R3,
+                                 R2) returns to c8Ed, args: 8, res: 8, upd: 24;
+       c8Ed: // global
+           R3 = GHC.Show.$fShow[]1_closure;
+           R2 = R1;
+           Sp = Sp + 8;
+           call GHC.Show.showLitString_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ Main.main_$smeasure2_entry() //  [R3, R2]
+         { info_tbls: [(c8D8,
+                        label: block_c8D8_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8EA_srt),
+                       (c8Da,
+                        label: block_c8Da_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8EA_srt),
+                       (c8De,
+                        label: block_c8De_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8Ez_srt),
+                       (c8En,
+                        label: Main.main_$smeasure2_info
+                        rep: HeapRep static { Fun {arity: 3 fun_type: ArgSpec 15} }
+                        srt: Just _u8EA_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8En: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8Ep; else goto c8Eq;
+       c8Ep: // global
+           R3 = R3;
+           R2 = R2;
+           R1 = Main.main_$smeasure2_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8Eq: // global
+           I64[Sp - 24] = c8D8;
+           _s8wd::P64 = R2;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           P64[Sp - 16] = _s8wd::P64;
+           P64[Sp - 8] = R3;
+           Sp = Sp - 24;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8D8, args: 8, res: 8, upd: 8;
+       c8D8: // global
+           I64[Sp] = c8Da;
+           R2 = P64[Sp + 16];
+           P64[Sp + 16] = R1;
+           call Main.main_go_info(R2) returns to c8Da, args: 8, res: 8, upd: 8;
+       c8Da: // global
+           I64[Sp] = c8De;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8De, args: 8, res: 8, upd: 8;
+       c8De: // global
+           Hp = Hp + 88;
+           if (Hp > HpLim) (likely: False) goto c8Ev; else goto c8Eu;
+       c8Ev: // global
+           HpAlloc = 88;
+           R1 = R1;
+           call stg_gc_unpt_r1(R1) returns to c8De, args: 8, res: 8, upd: 8;
+       c8Eu: // global
+           I64[Hp - 80] = duration_s8wn_info;
+           P64[Hp - 64] = P64[Sp + 16];
+           P64[Hp - 56] = R1;
+           I64[Hp - 48] = sat_s8wF_info;
+           P64[Hp - 32] = Hp - 80;
+           P64[Hp - 24] = P64[Sp + 8];
+           I64[Hp - 16] = :_con_info;
+           P64[Hp - 8] = GHC.Show.$fShow(,)3_closure;
+           P64[Hp] = Hp - 48;
+           R4 = GHC.Types.True_closure+2;
+           R3 = Hp - 14;
+           R2 = GHC.IO.Handle.FD.stdout_closure;
+           Sp = Sp + 24;
+           call GHC.IO.Handle.Text.hPutStr'_info(R4,
+                                                 R3,
+                                                 R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.main_$smeasure2_closure" {
+     Main.main_$smeasure2_closure:
+         const Main.main_$smeasure2_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.37318786 UTC
+
+[duration_s8wS_entry() //  [R1]
+         { info_tbls: [(c8Fk,
+                        label: block_c8Fk_info
+                        rep: StackRep [False]
+                        srt: Just GHC.Integer.Type.minusInteger_closure),
+                       (c8Fn,
+                        label: duration_s8wS_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Just GHC.Integer.Type.minusInteger_closure),
+                       (c8Fq,
+                        label: block_c8Fq_info
+                        rep: StackRep [False]
+                        srt: Just GHC.Integer.Type.minusInteger_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Fn: // global
+           if ((Sp + -32) < SpLim) (likely: False) goto c8Fr; else goto c8Fs;
+       c8Fr: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Fs: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = R1;
+           I64[Sp - 32] = c8Fk;
+           _s8wM::P64 = P64[R1 + 16];
+           R1 = P64[R1 + 24];
+           P64[Sp - 24] = _s8wM::P64;
+           Sp = Sp - 32;
+           if (R1 & 7 != 0) goto c8Fk; else goto c8Fl;
+       c8Fl: // global
+           call (I64[R1])(R1) returns to c8Fk, args: 8, res: 8, upd: 24;
+       c8Fk: // global
+           I64[Sp] = c8Fq;
+           _s8wV::P64 = P64[R1 + 15];
+           R1 = P64[Sp + 8];
+           P64[Sp + 8] = _s8wV::P64;
+           if (R1 & 7 != 0) goto c8Fq; else goto c8Fu;
+       c8Fu: // global
+           call (I64[R1])(R1) returns to c8Fq, args: 8, res: 8, upd: 24;
+       c8Fq: // global
+           R3 = P64[R1 + 15];
+           R2 = P64[Sp + 8];
+           Sp = Sp + 16;
+           call GHC.Integer.Type.minusInteger_info(R3,
+                                                   R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8x6_entry() //  [R1]
+         { info_tbls: [(c8FV,
+                        label: block_c8FV_info
+                        rep: StackRep []
+                        srt: Just Main.main4_closure),
+                       (c8FX,
+                        label: sat_s8x6_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ew_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8FX: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8FY; else goto c8FZ;
+       c8FY: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8FZ: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = R1;
+           I64[Sp - 24] = c8FV;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = P64[R1 + 16];
+           R2 = 0;
+           Sp = Sp - 24;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8FV, args: 8, res: 8, upd: 24;
+       c8FV: // global
+           R4 = R2;
+           R3 = R1;
+           R2 = Main.main4_closure;
+           Sp = Sp + 8;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8x7_entry() //  [R1]
+         { info_tbls: [(c8G1,
+                        label: sat_s8x7_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ew_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8G1: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8G5; else goto c8G4;
+       c8G5: // global
+           HpAlloc = 24;
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8G4: // global
+           _s8wS::P64 = P64[R1 + 16];
+           I64[Hp - 16] = sat_s8x6_info;
+           P64[Hp] = _s8wS::P64;
+           R3 = Hp - 16;
+           R2 = Main.main6_bytes;
+           call GHC.CString.unpackAppendCString#_info(R3,
+                                                      R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8x8_entry() //  [R1]
+         { info_tbls: [(c8FH,
+                        label: block_c8FH_info
+                        rep: StackRep [False]
+                        srt: Just _u8Ew_srt),
+                       (c8FL,
+                        label: block_c8FL_info
+                        rep: StackRep [False]
+                        srt: Just _u8Ew_srt),
+                       (c8G6,
+                        label: sat_s8x8_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ex_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8G6: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8G7; else goto c8G8;
+       c8G7: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8G8: // global
+           I64[Sp - 16] = c8FH;
+           R3 = Main.main7_closure+1;
+           _s8wS::P64 = P64[R1 + 16];
+           R2 = _s8wS::P64;
+           P64[Sp - 8] = _s8wS::P64;
+           Sp = Sp - 16;
+           call GHC.Integer.Type.divInteger_info(R3,
+                                                 R2) returns to c8FH, args: 8, res: 8, upd: 8;
+       c8FH: // global
+           I64[Sp] = c8FL;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = R1;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8FL, args: 8, res: 8, upd: 8;
+       c8FL: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Gc; else goto c8Gb;
+       c8Gc: // global
+           HpAlloc = 24;
+           R2 = R2;
+           R1 = R1;
+           call stg_gc_pp(R2, R1) returns to c8FL, args: 8, res: 8, upd: 8;
+       c8Gb: // global
+           I64[Hp - 16] = sat_s8x7_info;
+           P64[Hp] = P64[Sp + 8];
+           R4 = R2;
+           R3 = R1;
+           R2 = Hp - 16;
+           Sp = Sp + 16;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8xa_entry() //  [R1]
+         { info_tbls: [(c8Gd,
+                        label: block_c8Gd_info
+                        rep: StackRep []
+                        srt: Just GHC.Show.showLitString_closure),
+                       (c8Gf,
+                        label: sat_s8xa_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Just _u8Ey_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Gf: // global
+           _s8xa::P64 = R1;
+           if ((Sp + -24) < SpLim) (likely: False) goto c8Gg; else goto c8Gh;
+       c8Gh: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Gj; else goto c8Gi;
+       c8Gj: // global
+           HpAlloc = 24;
+           goto c8Gg;
+       c8Gg: // global
+           R1 = _s8xa::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Gi: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = _s8xa::P64;
+           _s8wS::P64 = P64[_s8xa::P64 + 16];
+           _s8wH::P64 = P64[_s8xa::P64 + 24];
+           I64[Hp - 16] = sat_s8x8_info;
+           P64[Hp] = _s8wS::P64;
+           I64[Sp - 24] = c8Gd;
+           R3 = Hp - 16;
+           R2 = _s8wH::P64;
+           Sp = Sp - 24;
+           call GHC.Base.++_info(R3,
+                                 R2) returns to c8Gd, args: 8, res: 8, upd: 24;
+       c8Gd: // global
+           R3 = GHC.Show.$fShow[]1_closure;
+           R2 = R1;
+           Sp = Sp + 8;
+           call GHC.Show.showLitString_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ Main.main_$smeasure1_entry() //  [R3, R2]
+         { info_tbls: [(c8F7,
+                        label: block_c8F7_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8EA_srt),
+                       (c8F9,
+                        label: block_c8F9_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8EA_srt),
+                       (c8Fe,
+                        label: block_c8Fe_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8Ez_srt),
+                       (c8Gn,
+                        label: Main.main_$smeasure1_info
+                        rep: HeapRep static { Fun {arity: 3 fun_type: ArgSpec 15} }
+                        srt: Just _u8EA_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Gn: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8Gp; else goto c8Gq;
+       c8Gp: // global
+           R3 = R3;
+           R2 = R2;
+           R1 = Main.main_$smeasure1_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8Gq: // global
+           I64[Sp - 24] = c8F7;
+           _s8wH::P64 = R2;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           P64[Sp - 16] = _s8wH::P64;
+           P64[Sp - 8] = R3;
+           Sp = Sp - 24;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8F7, args: 8, res: 8, upd: 8;
+       c8F7: // global
+           I64[Sp] = c8F9;
+           _s8wM::P64 = R1;
+           R1 = P64[Sp + 16];
+           P64[Sp + 16] = _s8wM::P64;
+           if (R1 & 7 != 0) goto c8F9; else goto c8Fa;
+       c8Fa: // global
+           call (I64[R1])(R1) returns to c8F9, args: 8, res: 8, upd: 8;
+       c8F9: // global
+           I64[Sp] = c8Fe;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8Fe, args: 8, res: 8, upd: 8;
+       c8Fe: // global
+           Hp = Hp + 88;
+           if (Hp > HpLim) (likely: False) goto c8Gv; else goto c8Gu;
+       c8Gv: // global
+           HpAlloc = 88;
+           R1 = R1;
+           call stg_gc_unpt_r1(R1) returns to c8Fe, args: 8, res: 8, upd: 8;
+       c8Gu: // global
+           I64[Hp - 80] = duration_s8wS_info;
+           P64[Hp - 64] = P64[Sp + 16];
+           P64[Hp - 56] = R1;
+           I64[Hp - 48] = sat_s8xa_info;
+           P64[Hp - 32] = Hp - 80;
+           P64[Hp - 24] = P64[Sp + 8];
+           I64[Hp - 16] = :_con_info;
+           P64[Hp - 8] = GHC.Show.$fShow(,)3_closure;
+           P64[Hp] = Hp - 48;
+           R4 = GHC.Types.True_closure+2;
+           R3 = Hp - 14;
+           R2 = GHC.IO.Handle.FD.stdout_closure;
+           Sp = Sp + 24;
+           call GHC.IO.Handle.Text.hPutStr'_info(R4,
+                                                 R3,
+                                                 R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.main_$smeasure1_closure" {
+     Main.main_$smeasure1_closure:
+         const Main.main_$smeasure1_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.380539196 UTC
+
+[duration_s8xm_entry() //  [R1]
+         { info_tbls: [(c8Ha,
+                        label: block_c8Ha_info
+                        rep: StackRep [False]
+                        srt: Just GHC.Integer.Type.minusInteger_closure),
+                       (c8Hd,
+                        label: duration_s8xm_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Just GHC.Integer.Type.minusInteger_closure),
+                       (c8Hg,
+                        label: block_c8Hg_info
+                        rep: StackRep [False]
+                        srt: Just GHC.Integer.Type.minusInteger_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Hd: // global
+           if ((Sp + -32) < SpLim) (likely: False) goto c8Hh; else goto c8Hi;
+       c8Hh: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Hi: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = R1;
+           I64[Sp - 32] = c8Ha;
+           _s8xh::P64 = P64[R1 + 16];
+           R1 = P64[R1 + 24];
+           P64[Sp - 24] = _s8xh::P64;
+           Sp = Sp - 32;
+           if (R1 & 7 != 0) goto c8Ha; else goto c8Hb;
+       c8Hb: // global
+           call (I64[R1])(R1) returns to c8Ha, args: 8, res: 8, upd: 24;
+       c8Ha: // global
+           I64[Sp] = c8Hg;
+           _s8xp::P64 = P64[R1 + 15];
+           R1 = P64[Sp + 8];
+           P64[Sp + 8] = _s8xp::P64;
+           if (R1 & 7 != 0) goto c8Hg; else goto c8Hk;
+       c8Hk: // global
+           call (I64[R1])(R1) returns to c8Hg, args: 8, res: 8, upd: 24;
+       c8Hg: // global
+           R3 = P64[R1 + 15];
+           R2 = P64[Sp + 8];
+           Sp = Sp + 16;
+           call GHC.Integer.Type.minusInteger_info(R3,
+                                                   R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8xA_entry() //  [R1]
+         { info_tbls: [(c8HL,
+                        label: block_c8HL_info
+                        rep: StackRep []
+                        srt: Just Main.main4_closure),
+                       (c8HN,
+                        label: sat_s8xA_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ew_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8HN: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8HO; else goto c8HP;
+       c8HO: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8HP: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = R1;
+           I64[Sp - 24] = c8HL;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = P64[R1 + 16];
+           R2 = 0;
+           Sp = Sp - 24;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8HL, args: 8, res: 8, upd: 24;
+       c8HL: // global
+           R4 = R2;
+           R3 = R1;
+           R2 = Main.main4_closure;
+           Sp = Sp + 8;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8xB_entry() //  [R1]
+         { info_tbls: [(c8HR,
+                        label: sat_s8xB_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ew_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8HR: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8HV; else goto c8HU;
+       c8HV: // global
+           HpAlloc = 24;
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8HU: // global
+           _s8xm::P64 = P64[R1 + 16];
+           I64[Hp - 16] = sat_s8xA_info;
+           P64[Hp] = _s8xm::P64;
+           R3 = Hp - 16;
+           R2 = Main.main6_bytes;
+           call GHC.CString.unpackAppendCString#_info(R3,
+                                                      R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8xC_entry() //  [R1]
+         { info_tbls: [(c8Hx,
+                        label: block_c8Hx_info
+                        rep: StackRep [False]
+                        srt: Just _u8Ew_srt),
+                       (c8HB,
+                        label: block_c8HB_info
+                        rep: StackRep [False]
+                        srt: Just _u8Ew_srt),
+                       (c8HW,
+                        label: sat_s8xC_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ex_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8HW: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8HX; else goto c8HY;
+       c8HX: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8HY: // global
+           I64[Sp - 16] = c8Hx;
+           R3 = Main.main7_closure+1;
+           _s8xm::P64 = P64[R1 + 16];
+           R2 = _s8xm::P64;
+           P64[Sp - 8] = _s8xm::P64;
+           Sp = Sp - 16;
+           call GHC.Integer.Type.divInteger_info(R3,
+                                                 R2) returns to c8Hx, args: 8, res: 8, upd: 8;
+       c8Hx: // global
+           I64[Sp] = c8HB;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = R1;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8HB, args: 8, res: 8, upd: 8;
+       c8HB: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8I2; else goto c8I1;
+       c8I2: // global
+           HpAlloc = 24;
+           R2 = R2;
+           R1 = R1;
+           call stg_gc_pp(R2, R1) returns to c8HB, args: 8, res: 8, upd: 8;
+       c8I1: // global
+           I64[Hp - 16] = sat_s8xB_info;
+           P64[Hp] = P64[Sp + 8];
+           R4 = R2;
+           R3 = R1;
+           R2 = Hp - 16;
+           Sp = Sp + 16;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8xE_entry() //  [R1]
+         { info_tbls: [(c8I3,
+                        label: block_c8I3_info
+                        rep: StackRep []
+                        srt: Just GHC.Show.showLitString_closure),
+                       (c8I5,
+                        label: sat_s8xE_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Just _u8Ey_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8I5: // global
+           _s8xE::P64 = R1;
+           if ((Sp + -24) < SpLim) (likely: False) goto c8I6; else goto c8I7;
+       c8I7: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8I9; else goto c8I8;
+       c8I9: // global
+           HpAlloc = 24;
+           goto c8I6;
+       c8I6: // global
+           R1 = _s8xE::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8I8: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = _s8xE::P64;
+           _s8xm::P64 = P64[_s8xE::P64 + 16];
+           _s8xc::P64 = P64[_s8xE::P64 + 24];
+           I64[Hp - 16] = sat_s8xC_info;
+           P64[Hp] = _s8xm::P64;
+           I64[Sp - 24] = c8I3;
+           R3 = Hp - 16;
+           R2 = _s8xc::P64;
+           Sp = Sp - 24;
+           call GHC.Base.++_info(R3,
+                                 R2) returns to c8I3, args: 8, res: 8, upd: 24;
+       c8I3: // global
+           R3 = GHC.Show.$fShow[]1_closure;
+           R2 = R1;
+           Sp = Sp + 8;
+           call GHC.Show.showLitString_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ Main.main_$smeasure_entry() //  [R3, R2]
+         { info_tbls: [(c8GX,
+                        label: block_c8GX_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8EA_srt),
+                       (c8GZ,
+                        label: block_c8GZ_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8EA_srt),
+                       (c8H4,
+                        label: block_c8H4_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8Ez_srt),
+                       (c8Id,
+                        label: Main.main_$smeasure_info
+                        rep: HeapRep static { Fun {arity: 3 fun_type: ArgSpec 15} }
+                        srt: Just _u8EA_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Id: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8If; else goto c8Ig;
+       c8If: // global
+           R3 = R3;
+           R2 = R2;
+           R1 = Main.main_$smeasure_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8Ig: // global
+           I64[Sp - 24] = c8GX;
+           _s8xc::P64 = R2;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           P64[Sp - 16] = _s8xc::P64;
+           P64[Sp - 8] = R3;
+           Sp = Sp - 24;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8GX, args: 8, res: 8, upd: 8;
+       c8GX: // global
+           I64[Sp] = c8GZ;
+           _s8xh::P64 = R1;
+           R1 = P64[Sp + 16];
+           P64[Sp + 16] = _s8xh::P64;
+           if (R1 & 7 != 0) goto c8GZ; else goto c8H0;
+       c8H0: // global
+           call (I64[R1])(R1) returns to c8GZ, args: 8, res: 8, upd: 8;
+       c8GZ: // global
+           I64[Sp] = c8H4;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8H4, args: 8, res: 8, upd: 8;
+       c8H4: // global
+           Hp = Hp + 88;
+           if (Hp > HpLim) (likely: False) goto c8Il; else goto c8Ik;
+       c8Il: // global
+           HpAlloc = 88;
+           R1 = R1;
+           call stg_gc_unpt_r1(R1) returns to c8H4, args: 8, res: 8, upd: 8;
+       c8Ik: // global
+           I64[Hp - 80] = duration_s8xm_info;
+           P64[Hp - 64] = P64[Sp + 16];
+           P64[Hp - 56] = R1;
+           I64[Hp - 48] = sat_s8xE_info;
+           P64[Hp - 32] = Hp - 80;
+           P64[Hp - 24] = P64[Sp + 8];
+           I64[Hp - 16] = :_con_info;
+           P64[Hp - 8] = GHC.Show.$fShow(,)3_closure;
+           P64[Hp] = Hp - 48;
+           R4 = GHC.Types.True_closure+2;
+           R3 = Hp - 14;
+           R2 = GHC.IO.Handle.FD.stdout_closure;
+           Sp = Sp + 24;
+           call GHC.IO.Handle.Text.hPutStr'_info(R4,
+                                                 R3,
+                                                 R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.main_$smeasure_closure" {
+     Main.main_$smeasure_closure:
+         const Main.main_$smeasure_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.387924538 UTC
+
+[duration_s8xR_entry() //  [R1]
+         { info_tbls: [(c8IZ,
+                        label: block_c8IZ_info
+                        rep: StackRep [False]
+                        srt: Just GHC.Integer.Type.minusInteger_closure),
+                       (c8J2,
+                        label: duration_s8xR_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Just GHC.Integer.Type.minusInteger_closure),
+                       (c8J5,
+                        label: block_c8J5_info
+                        rep: StackRep [False]
+                        srt: Just GHC.Integer.Type.minusInteger_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8J2: // global
+           if ((Sp + -32) < SpLim) (likely: False) goto c8J6; else goto c8J7;
+       c8J6: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8J7: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = R1;
+           I64[Sp - 32] = c8IZ;
+           _s8xM::P64 = P64[R1 + 16];
+           R1 = P64[R1 + 24];
+           P64[Sp - 24] = _s8xM::P64;
+           Sp = Sp - 32;
+           if (R1 & 7 != 0) goto c8IZ; else goto c8J0;
+       c8J0: // global
+           call (I64[R1])(R1) returns to c8IZ, args: 8, res: 8, upd: 24;
+       c8IZ: // global
+           I64[Sp] = c8J5;
+           _s8xU::P64 = P64[R1 + 15];
+           R1 = P64[Sp + 8];
+           P64[Sp + 8] = _s8xU::P64;
+           if (R1 & 7 != 0) goto c8J5; else goto c8J9;
+       c8J9: // global
+           call (I64[R1])(R1) returns to c8J5, args: 8, res: 8, upd: 24;
+       c8J5: // global
+           R3 = P64[R1 + 15];
+           R2 = P64[Sp + 8];
+           Sp = Sp + 16;
+           call GHC.Integer.Type.minusInteger_info(R3,
+                                                   R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8y5_entry() //  [R1]
+         { info_tbls: [(c8JA,
+                        label: block_c8JA_info
+                        rep: StackRep []
+                        srt: Just Main.main4_closure),
+                       (c8JC,
+                        label: sat_s8y5_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ew_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8JC: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8JD; else goto c8JE;
+       c8JD: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8JE: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = R1;
+           I64[Sp - 24] = c8JA;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = P64[R1 + 16];
+           R2 = 0;
+           Sp = Sp - 24;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8JA, args: 8, res: 8, upd: 24;
+       c8JA: // global
+           R4 = R2;
+           R3 = R1;
+           R2 = Main.main4_closure;
+           Sp = Sp + 8;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8y6_entry() //  [R1]
+         { info_tbls: [(c8JG,
+                        label: sat_s8y6_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ew_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8JG: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8JK; else goto c8JJ;
+       c8JK: // global
+           HpAlloc = 24;
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8JJ: // global
+           _s8xR::P64 = P64[R1 + 16];
+           I64[Hp - 16] = sat_s8y5_info;
+           P64[Hp] = _s8xR::P64;
+           R3 = Hp - 16;
+           R2 = Main.main6_bytes;
+           call GHC.CString.unpackAppendCString#_info(R3,
+                                                      R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8y7_entry() //  [R1]
+         { info_tbls: [(c8Jm,
+                        label: block_c8Jm_info
+                        rep: StackRep [False]
+                        srt: Just _u8Ew_srt),
+                       (c8Jq,
+                        label: block_c8Jq_info
+                        rep: StackRep [False]
+                        srt: Just _u8Ew_srt),
+                       (c8JL,
+                        label: sat_s8y7_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Just _u8Ex_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8JL: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8JM; else goto c8JN;
+       c8JM: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8JN: // global
+           I64[Sp - 16] = c8Jm;
+           R3 = Main.main7_closure+1;
+           _s8xR::P64 = P64[R1 + 16];
+           R2 = _s8xR::P64;
+           P64[Sp - 8] = _s8xR::P64;
+           Sp = Sp - 16;
+           call GHC.Integer.Type.divInteger_info(R3,
+                                                 R2) returns to c8Jm, args: 8, res: 8, upd: 8;
+       c8Jm: // global
+           I64[Sp] = c8Jq;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = R1;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8Jq, args: 8, res: 8, upd: 8;
+       c8Jq: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8JR; else goto c8JQ;
+       c8JR: // global
+           HpAlloc = 24;
+           R2 = R2;
+           R1 = R1;
+           call stg_gc_pp(R2, R1) returns to c8Jq, args: 8, res: 8, upd: 8;
+       c8JQ: // global
+           I64[Hp - 16] = sat_s8y6_info;
+           P64[Hp] = P64[Sp + 8];
+           R4 = R2;
+           R3 = R1;
+           R2 = Hp - 16;
+           Sp = Sp + 16;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8y9_entry() //  [R1]
+         { info_tbls: [(c8JS,
+                        label: block_c8JS_info
+                        rep: StackRep []
+                        srt: Just GHC.Show.showLitString_closure),
+                       (c8JU,
+                        label: sat_s8y9_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Just _u8Ey_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8JU: // global
+           _s8y9::P64 = R1;
+           if ((Sp + -24) < SpLim) (likely: False) goto c8JV; else goto c8JW;
+       c8JW: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8JY; else goto c8JX;
+       c8JY: // global
+           HpAlloc = 24;
+           goto c8JV;
+       c8JV: // global
+           R1 = _s8y9::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8JX: // global
+           I64[Sp - 16] = stg_upd_frame_info;
+           P64[Sp - 8] = _s8y9::P64;
+           _s8xR::P64 = P64[_s8y9::P64 + 16];
+           _s8xH::P64 = P64[_s8y9::P64 + 24];
+           I64[Hp - 16] = sat_s8y7_info;
+           P64[Hp] = _s8xR::P64;
+           I64[Sp - 24] = c8JS;
+           R3 = Hp - 16;
+           R2 = _s8xH::P64;
+           Sp = Sp - 24;
+           call GHC.Base.++_info(R3,
+                                 R2) returns to c8JS, args: 8, res: 8, upd: 24;
+       c8JS: // global
+           R3 = GHC.Show.$fShow[]1_closure;
+           R2 = R1;
+           Sp = Sp + 8;
+           call GHC.Show.showLitString_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ Main.measure1_entry() //  [R4, R3, R2]
+         { info_tbls: [(c8IN,
+                        label: block_c8IN_info
+                        rep: StackRep [False, False, False]
+                        srt: Just _u8EA_srt),
+                       (c8IP,
+                        label: block_c8IP_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8EA_srt),
+                       (c8IT,
+                        label: block_c8IT_info
+                        rep: StackRep [False, False]
+                        srt: Just _u8Ez_srt),
+                       (c8K2,
+                        label: Main.measure1_info
+                        rep: HeapRep static { Fun {arity: 4 fun_type: ArgSpec 23} }
+                        srt: Just _u8EA_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8K2: // global
+           if ((Sp + -32) < SpLim) (likely: False) goto c8K4; else goto c8K5;
+       c8K4: // global
+           R4 = R4;
+           R3 = R3;
+           R2 = R2;
+           R1 = Main.measure1_closure;
+           call (stg_gc_fun)(R4, R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8K5: // global
+           I64[Sp - 32] = c8IN;
+           _s8xG::P64 = R2;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           P64[Sp - 24] = _s8xG::P64;
+           P64[Sp - 16] = R3;
+           P64[Sp - 8] = R4;
+           Sp = Sp - 32;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8IN, args: 8, res: 8, upd: 8;
+       c8IN: // global
+           _s8xG::P64 = P64[Sp + 8];
+           I64[Sp + 8] = c8IP;
+           R2 = P64[Sp + 24];
+           _s8xM::P64 = R1;
+           R1 = _s8xG::P64;
+           P64[Sp + 24] = _s8xM::P64;
+           Sp = Sp + 8;
+           call stg_ap_p_fast(R2,
+                              R1) returns to c8IP, args: 8, res: 8, upd: 8;
+       c8IP: // global
+           I64[Sp] = c8IT;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8IT, args: 8, res: 8, upd: 8;
+       c8IT: // global
+           Hp = Hp + 88;
+           if (Hp > HpLim) (likely: False) goto c8Ka; else goto c8K9;
+       c8Ka: // global
+           HpAlloc = 88;
+           R1 = R1;
+           call stg_gc_unpt_r1(R1) returns to c8IT, args: 8, res: 8, upd: 8;
+       c8K9: // global
+           I64[Hp - 80] = duration_s8xR_info;
+           P64[Hp - 64] = P64[Sp + 16];
+           P64[Hp - 56] = R1;
+           I64[Hp - 48] = sat_s8y9_info;
+           P64[Hp - 32] = Hp - 80;
+           P64[Hp - 24] = P64[Sp + 8];
+           I64[Hp - 16] = :_con_info;
+           P64[Hp - 8] = GHC.Show.$fShow(,)3_closure;
+           P64[Hp] = Hp - 48;
+           R4 = GHC.Types.True_closure+2;
+           R3 = Hp - 14;
+           R2 = GHC.IO.Handle.FD.stdout_closure;
+           Sp = Sp + 24;
+           call GHC.IO.Handle.Text.hPutStr'_info(R4,
+                                                 R3,
+                                                 R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.measure1_closure" {
+     Main.measure1_closure:
+         const Main.measure1_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.393274663 UTC
+
+[Main.measure_entry() //  [R4, R3, R2]
+         { info_tbls: [(c8KC,
+                        label: Main.measure_info
+                        rep: HeapRep static { Fun {arity: 4 fun_type: ArgSpec 23} }
+                        srt: Just Main.measure1_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8KC: // global
+           R4 = R4;
+           R3 = R3;
+           R2 = R2;
+           call Main.measure1_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.measure_closure" {
+     Main.measure_closure:
+         const Main.measure_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.393937963 UTC
+
+[section ""data" . Main.testIntegralPower1_closure" {
+     Main.testIntegralPower1_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 1000000;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.394239967 UTC
+
+[section ""cstring" . Main.testStimes2_bytes" {
+     Main.testStimes2_bytes:
+         I8[] [102,111,111]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.394693747 UTC
+
+[Main.testStimes1_entry() //  [R1]
+         { info_tbls: [(c8KQ,
+                        label: Main.testStimes1_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8KQ: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8KR; else goto c8KS;
+       c8KR: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8KS: // global
+           (_c8KN::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8KN::I64 == 0) goto c8KP; else goto c8KO;
+       c8KP: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8KO: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8KN::I64;
+           R2 = Main.testStimes2_bytes;
+           Sp = Sp - 16;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.testStimes1_closure" {
+     Main.testStimes1_closure:
+         const Main.testStimes1_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.395790973 UTC
+
+[section ""data" . _u8L7_srt" {
+     _u8L7_srt:
+         const stg_SRT_3_info;
+         const GHC.Real.$fIntegralInteger_closure;
+         const Data.Semigroup.Internal.stimesList_closure;
+         const Main.testStimes1_closure;
+         const 0;
+ },
+ Main.testStimes_entry() //  [R1]
+         { info_tbls: [(c8L4,
+                        label: Main.testStimes_info
+                        rep: HeapRep static { Thunk }
+                        srt: Just _u8L7_srt)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8L4: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8L5; else goto c8L6;
+       c8L5: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8L6: // global
+           (_c8L1::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8L1::I64 == 0) goto c8L3; else goto c8L2;
+       c8L3: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8L2: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8L1::I64;
+           R4 = Main.testStimes1_closure;
+           R3 = Main.testIntegralPower1_closure+1;
+           R2 = GHC.Real.$fIntegralInteger_closure;
+           Sp = Sp - 16;
+           call Data.Semigroup.Internal.stimesList_info(R4,
+                                                        R3,
+                                                        R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.testStimes_closure" {
+     Main.testStimes_closure:
+         const Main.testStimes_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.396770159 UTC
+
+[section ""data" . Main.testIntegralPower2_closure" {
+     Main.testIntegralPower2_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 3;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.397288808 UTC
+
+[Main.testIntegralPower_entry() //  [R1]
+         { info_tbls: [(c8Ll,
+                        label: Main.testIntegralPower_info
+                        rep: HeapRep static { Thunk }
+                        srt: Just GHC.Real.^_$s^_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Ll: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8Lm; else goto c8Ln;
+       c8Lm: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Ln: // global
+           (_c8Li::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8Li::I64 == 0) goto c8Lk; else goto c8Lj;
+       c8Lk: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8Lj: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8Li::I64;
+           R3 = Main.testIntegralPower1_closure+1;
+           R2 = Main.testIntegralPower2_closure+1;
+           Sp = Sp - 16;
+           call GHC.Real.^_$s^_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.testIntegralPower_closure" {
+     Main.testIntegralPower_closure:
+         const Main.testIntegralPower_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.398138002 UTC
+
+[section ""data" . Main.testFractionalPower2_closure" {
+     Main.testFractionalPower2_closure:
+         const GHC.Types.D#_con_info;
+         const 5.0 :: W64;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.398381065 UTC
+
+[section ""data" . Main.testFractionalPower1_closure" {
+     Main.testFractionalPower1_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 441;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.399028478 UTC
+
+[Main.testFractionalPower_entry() //  [R1]
+         { info_tbls: [(c8LB,
+                        label: block_c8LB_info
+                        rep: StackRep []
+                        srt: Nothing),
+                       (c8LD,
+                        label: Main.testFractionalPower_info
+                        rep: HeapRep static { Thunk }
+                        srt: Just Main.$w$s^^_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8LD: // global
+           if ((Sp + -24) < SpLim) (likely: False) goto c8LH; else goto c8LI;
+       c8LH: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8LI: // global
+           (_c8Ly::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8Ly::I64 == 0) goto c8LA; else goto c8Lz;
+       c8LA: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8Lz: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8Ly::I64;
+           I64[Sp - 24] = c8LB;
+           R3 = Main.testFractionalPower1_closure+1;
+           R2 = Main.testFractionalPower2_closure+1;
+           Sp = Sp - 24;
+           call Main.$w$s^^_info(R3,
+                                 R2) returns to c8LB, args: 8, res: 8, upd: 24;
+       c8LB: // global
+           Hp = Hp + 16;
+           if (Hp > HpLim) (likely: False) goto c8LL; else goto c8LK;
+       c8LL: // global
+           HpAlloc = 16;
+           D1 = D1;
+           call stg_gc_d1(D1) returns to c8LB, args: 8, res: 8, upd: 24;
+       c8LK: // global
+           I64[Hp - 8] = GHC.Types.D#_con_info;
+           F64[Hp] = D1;
+           R1 = Hp - 7;
+           Sp = Sp + 8;
+           call (P64[Sp])(R1) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.testFractionalPower_closure" {
+     Main.testFractionalPower_closure:
+         const Main.testFractionalPower_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.40010108 UTC
+
+[section ""cstring" . Main.main3_bytes" {
+     Main.main3_bytes:
+         I8[] [105,110,116,101,103,114,97,108,32,112,111,119,101,114,32,58,32]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.40055399 UTC
+
+[Main.main2_entry() //  [R1]
+         { info_tbls: [(c8LY,
+                        label: Main.main2_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8LY: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8LZ; else goto c8M0;
+       c8LZ: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8M0: // global
+           (_c8LV::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8LV::I64 == 0) goto c8LX; else goto c8LW;
+       c8LX: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8LW: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8LV::I64;
+           R2 = Main.main3_bytes;
+           Sp = Sp - 16;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.main2_closure" {
+     Main.main2_closure:
+         const Main.main2_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.401653303 UTC
+
+[section ""cstring" . Main.main9_bytes" {
+     Main.main9_bytes:
+         I8[] [102,114,97,99,116,105,111,110,97,108,32,112,111,119,101,114,32,51,32,58,32]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.402191258 UTC
+
+[Main.main8_entry() //  [R1]
+         { info_tbls: [(c8Md,
+                        label: Main.main8_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Md: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8Me; else goto c8Mf;
+       c8Me: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Mf: // global
+           (_c8Ma::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8Ma::I64 == 0) goto c8Mc; else goto c8Mb;
+       c8Mc: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8Mb: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8Ma::I64;
+           R2 = Main.main9_bytes;
+           Sp = Sp - 16;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.main8_closure" {
+     Main.main8_closure:
+         const Main.main8_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.403071201 UTC
+
+[section ""cstring" . Main.main11_bytes" {
+     Main.main11_bytes:
+         I8[] [102,114,97,99,116,105,111,110,97,108,32,112,111,119,101,114,32,50,32,58,32]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.403616104 UTC
+
+[Main.main10_entry() //  [R1]
+         { info_tbls: [(c8Ms,
+                        label: Main.main10_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Ms: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8Mt; else goto c8Mu;
+       c8Mt: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Mu: // global
+           (_c8Mp::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8Mp::I64 == 0) goto c8Mr; else goto c8Mq;
+       c8Mr: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8Mq: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8Mp::I64;
+           R2 = Main.main11_bytes;
+           Sp = Sp - 16;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.main10_closure" {
+     Main.main10_closure:
+         const Main.main10_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.404555933 UTC
+
+[section ""cstring" . Main.main13_bytes" {
+     Main.main13_bytes:
+         I8[] [102,114,97,99,116,105,111,110,97,108,32,112,111,119,101,114,32,49,32,58,32]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.405037419 UTC
+
+[Main.main12_entry() //  [R1]
+         { info_tbls: [(c8MH,
+                        label: Main.main12_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8MH: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8MI; else goto c8MJ;
+       c8MI: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8MJ: // global
+           (_c8ME::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8ME::I64 == 0) goto c8MG; else goto c8MF;
+       c8MG: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8MF: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8ME::I64;
+           R2 = Main.main13_bytes;
+           Sp = Sp - 16;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.main12_closure" {
+     Main.main12_closure:
+         const Main.main12_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.405778623 UTC
+
+[section ""cstring" . Main.main15_bytes" {
+     Main.main15_bytes:
+         I8[] [115,116,105,109,101,115,32,58,32]
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.406231361 UTC
+
+[Main.main14_entry() //  [R1]
+         { info_tbls: [(c8MW,
+                        label: Main.main14_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8MW: // global
+           if ((Sp + -16) < SpLim) (likely: False) goto c8MX; else goto c8MY;
+       c8MX: // global
+           R1 = R1;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8MY: // global
+           (_c8MT::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, R1);
+           if (_c8MT::I64 == 0) goto c8MV; else goto c8MU;
+       c8MV: // global
+           call (I64[R1])() args: 8, res: 0, upd: 8;
+       c8MU: // global
+           I64[Sp - 16] = stg_bh_upd_frame_info;
+           I64[Sp - 8] = _c8MT::I64;
+           R2 = Main.main15_bytes;
+           Sp = Sp - 16;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ section ""data" . Main.main14_closure" {
+     Main.main14_closure:
+         const Main.main14_info;
+         const 0;
+         const 0;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.407345779 UTC
+
+[section ""data" . _u8Nn_srt" {
+     _u8Nn_srt:
+         const stg_SRT_3_info;
+         const Main.testIntegralPower_closure;
+         const Main.main2_closure;
+         const Main.main_$smeasure_closure;
+         const 0;
+ },
+ section ""data" . _u8No_srt" {
+     _u8No_srt:
+         const stg_SRT_4_info;
+         const Main.testFractionalPower_closure;
+         const Main.main8_closure;
+         const Main.main_$smeasure1_closure;
+         const _u8Nn_srt;
+         const 0;
+ },
+ section ""data" . _u8Np_srt" {
+     _u8Np_srt:
+         const stg_SRT_2_info;
+         const Main.main10_closure;
+         const _u8No_srt;
+         const 0;
+ },
+ section ""data" . _u8Nq_srt" {
+     _u8Nq_srt:
+         const stg_SRT_2_info;
+         const Main.main12_closure;
+         const _u8Np_srt;
+         const 0;
+ },
+ Main.main1_entry() //  []
+         { info_tbls: [(c8N8,
+                        label: block_c8N8_info
+                        rep: StackRep []
+                        srt: Just _u8Nq_srt),
+                       (c8Na,
+                        label: block_c8Na_info
+                        rep: StackRep []
+                        srt: Just _u8Np_srt),
+                       (c8Nc,
+                        label: block_c8Nc_info
+                        rep: StackRep []
+                        srt: Just _u8No_srt),
+                       (c8Ne,
+                        label: block_c8Ne_info
+                        rep: StackRep []
+                        srt: Just _u8Nn_srt),
+                       (c8Ng,
+                        label: Main.main1_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Ng: // global
+           if ((Sp + -8) < SpLim) (likely: False) goto c8Nh; else goto c8Ni;
+       c8Nh: // global
+           R1 = Main.main1_closure;
+           call (stg_gc_fun)(R1) args: 8, res: 0, upd: 8;
+       c8Ni: // global
+           I64[Sp - 8] = c8N8;
+           R3 = Main.testStimes_closure;
+           R2 = Main.main14_closure;
+           Sp = Sp - 8;
+           call Main.main_$smeasure2_info(R3,
+                                          R2) returns to c8N8, args: 8, res: 8, upd: 8;
+       c8N8: // global
+           I64[Sp] = c8Na;
+           R3 = Main.testFractionalPower_closure;
+           R2 = Main.main12_closure;
+           call Main.main_$smeasure1_info(R3,
+                                          R2) returns to c8Na, args: 8, res: 8, upd: 8;
+       c8Na: // global
+           I64[Sp] = c8Nc;
+           R3 = Main.testFractionalPower_closure;
+           R2 = Main.main10_closure;
+           call Main.main_$smeasure1_info(R3,
+                                          R2) returns to c8Nc, args: 8, res: 8, upd: 8;
+       c8Nc: // global
+           I64[Sp] = c8Ne;
+           R3 = Main.testFractionalPower_closure;
+           R2 = Main.main8_closure;
+           call Main.main_$smeasure1_info(R3,
+                                          R2) returns to c8Ne, args: 8, res: 8, upd: 8;
+       c8Ne: // global
+           R3 = Main.testIntegralPower_closure;
+           R2 = Main.main2_closure;
+           Sp = Sp + 8;
+           call Main.main_$smeasure_info(R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.main1_closure" {
+     Main.main1_closure:
+         const Main.main1_info;
+         const Main.testStimes_closure;
+         const Main.main14_closure;
+         const Main.main_$smeasure2_closure;
+         const _u8Nq_srt;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.409061689 UTC
+
+[Main.main_entry() //  []
+         { info_tbls: [(c8ND,
+                        label: Main.main_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} }
+                        srt: Just Main.main1_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8ND: // global
+           call Main.main1_info() args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.main_closure" {
+     Main.main_closure:
+         const Main.main_info;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.409649224 UTC
+
+[Main.main16_entry() //  []
+         { info_tbls: [(c8NN,
+                        label: Main.main16_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8NN: // global
+           R2 = Main.main1_closure+1;
+           call GHC.TopHandler.runMainIO1_info(R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . Main.main16_closure" {
+     Main.main16_closure:
+         const Main.main16_info;
+         const GHC.TopHandler.runMainIO1_closure;
+         const Main.main1_closure;
+         const 0;
+ }]
+
+
+==================== Output Cmm ====================
+2019-11-05 16:48:08.410615618 UTC
+
+[:Main.main_entry() //  []
+         { info_tbls: [(c8NX,
+                        label: :Main.main_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} }
+                        srt: Just Main.main16_closure)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8NX: // global
+           call Main.main16_info() args: 8, res: 0, upd: 8;
+     }
+ },
+ section ""data" . :Main.main_closure" {
+     :Main.main_closure:
+         const :Main.main_info;
+         const 0;
+ }]
+

@@ -1,0 +1,160 @@
+
+==================== Desugar (after optimization) ====================
+2019-11-05 16:48:02.943362771 UTC
+
+Result size of Desugar (after optimization)
+  = {terms: 109, types: 80, coercions: 0, joins: 0/2}
+
+-- RHS size: {terms: 5, types: 0, coercions: 0, joins: 0/0}
+Main.$trModule :: ghc-prim-0.5.3:GHC.Types.Module
+[LclIdX]
+Main.$trModule
+  = ghc-prim-0.5.3:GHC.Types.Module
+      (ghc-prim-0.5.3:GHC.Types.TrNameS "main"#)
+      (ghc-prim-0.5.3:GHC.Types.TrNameS "Main"#)
+
+-- RHS size: {terms: 44, types: 37, coercions: 0, joins: 0/2}
+measure :: forall a. NFData a => String -> a -> IO ()
+[LclIdX]
+measure
+  = \ (@ a_a5KA) ($dNFData_a5KC :: NFData a_a5KA) ->
+      let {
+        $dShow_a5Mb :: Show [Char]
+        [LclId]
+        $dShow_a5Mb = GHC.Show.$fShow[] @ Char GHC.Show.$fShowChar } in
+      \ (description_a1UB :: String) (f_a1UC :: a_a5KA) ->
+        >>=
+          @ IO
+          GHC.Base.$fMonadIO
+          @ Integer
+          @ ()
+          getCPUTime
+          (\ (start_a1UD :: Integer) ->
+             >>=
+               @ IO
+               GHC.Base.$fMonadIO
+               @ Integer
+               @ ()
+               (deepseq @ a_a5KA @ (IO Integer) $dNFData_a5KC f_a1UC getCPUTime)
+               (\ (end_a1UF :: Integer) ->
+                  let {
+                    duration_a1UG :: Integer
+                    [LclId]
+                    duration_a1UG
+                      = - @ Integer GHC.Num.$fNumInteger end_a1UF start_a1UD } in
+                  $ @ 'ghc-prim-0.5.3:GHC.Types.LiftedRep
+                    @ [Char]
+                    @ (IO ())
+                    (print @ [Char] $dShow_a5Mb)
+                    (++
+                       @ Char
+                       description_a1UB
+                       (++
+                          @ Char
+                          (show
+                             @ Integer
+                             GHC.Show.$fShowInteger
+                             (div
+                                @ Integer GHC.Real.$fIntegralInteger duration_a1UG 1000000000))
+                          (++
+                             @ Char
+                             (ghc-prim-0.5.3:GHC.CString.unpackCString# " milli seconds -- "#)
+                             (++
+                                @ Char
+                                (show @ Integer GHC.Show.$fShowInteger duration_a1UG)
+                                (ghc-prim-0.5.3:GHC.CString.unpackCString# " pico seconds"#)))))))
+
+-- RHS size: {terms: 6, types: 4, coercions: 0, joins: 0/0}
+testStimes :: String
+[LclIdX]
+testStimes
+  = stimes
+      @ [Char]
+      (GHC.Base.$fSemigroup[] @ Char)
+      @ Integer
+      GHC.Real.$fIntegralInteger
+      1000000
+      (ghc-prim-0.5.3:GHC.CString.unpackCString# "foo"#)
+
+-- RHS size: {terms: 5, types: 2, coercions: 0, joins: 0/0}
+testIntegralPower :: Integer
+[LclIdX]
+testIntegralPower
+  = ^ @ Integer
+      @ Integer
+      GHC.Num.$fNumInteger
+      GHC.Real.$fIntegralInteger
+      3
+      1000000
+
+-- RHS size: {terms: 6, types: 2, coercions: 0, joins: 0/0}
+testFractionalPower :: Double
+[LclIdX]
+testFractionalPower
+  = ^^
+      @ Double
+      @ Integer
+      GHC.Float.$fFractionalDouble
+      GHC.Real.$fIntegralInteger
+      (ghc-prim-0.5.3:GHC.Types.D# 5.0##)
+      441
+
+-- RHS size: {terms: 34, types: 18, coercions: 0, joins: 0/0}
+main :: IO ()
+[LclIdX]
+main
+  = >>
+      @ IO
+      GHC.Base.$fMonadIO
+      @ ()
+      @ ()
+      (measure
+         @ String
+         (Control.DeepSeq.$fNFData[] @ Char Control.DeepSeq.$fNFDataChar)
+         (ghc-prim-0.5.3:GHC.CString.unpackCString# "stimes : "#)
+         testStimes)
+      (>>
+         @ IO
+         GHC.Base.$fMonadIO
+         @ ()
+         @ ()
+         (measure
+            @ Double
+            Control.DeepSeq.$fNFDataDouble
+            (ghc-prim-0.5.3:GHC.CString.unpackCString#
+               "fractional power 1 : "#)
+            testFractionalPower)
+         (>>
+            @ IO
+            GHC.Base.$fMonadIO
+            @ ()
+            @ ()
+            (measure
+               @ Double
+               Control.DeepSeq.$fNFDataDouble
+               (ghc-prim-0.5.3:GHC.CString.unpackCString#
+                  "fractional power 2 : "#)
+               testFractionalPower)
+            (>>
+               @ IO
+               GHC.Base.$fMonadIO
+               @ ()
+               @ ()
+               (measure
+                  @ Double
+                  Control.DeepSeq.$fNFDataDouble
+                  (ghc-prim-0.5.3:GHC.CString.unpackCString#
+                     "fractional power 3 : "#)
+                  testFractionalPower)
+               (measure
+                  @ Integer
+                  Control.DeepSeq.$fNFDataInteger
+                  (ghc-prim-0.5.3:GHC.CString.unpackCString# "integral power : "#)
+                  testIntegralPower))))
+
+-- RHS size: {terms: 2, types: 1, coercions: 0, joins: 0/0}
+:Main.main :: IO ()
+[LclIdX]
+:Main.main = GHC.TopHandler.runMainIO @ () main
+
+

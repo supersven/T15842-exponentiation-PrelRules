@@ -1,0 +1,55 @@
+new GHC with rules
+1. Run
+"stimes : 22 milli seconds -- 22098683000 pico seconds"
+"fractional power 1 : 0 milli seconds -- 830000 pico seconds"
+"fractional power 2 : 0 milli seconds -- 601000 pico seconds"
+"fractional power 3 : 0 milli seconds -- 591000 pico seconds"
+"integral power : 6 milli seconds -- 6662814000 pico seconds"
+2. Run
+"stimes : 22 milli seconds -- 22048949000 pico seconds"
+"fractional power 1 : 0 milli seconds -- 807000 pico seconds"
+"fractional power 2 : 0 milli seconds -- 599000 pico seconds"
+"fractional power 3 : 0 milli seconds -- 580000 pico seconds"
+"integral power : 6 milli seconds -- 6671112000 pico seconds"
+ghc-8.9.20190924
+1. Run
+Resolving dependencies...
+"stimes : 38 milli seconds -- 38252165000 pico seconds"
+"fractional power 1 : 0 milli seconds -- 1634000 pico seconds"
+"fractional power 2 : 0 milli seconds -- 604000 pico seconds"
+"fractional power 3 : 0 milli seconds -- 588000 pico seconds"
+"integral power : 6 milli seconds -- 6831802000 pico seconds"
+2. Run
+"stimes : 38 milli seconds -- 38563477000 pico seconds"
+"fractional power 1 : 0 milli seconds -- 1675000 pico seconds"
+"fractional power 2 : 0 milli seconds -- 606000 pico seconds"
+"fractional power 3 : 0 milli seconds -- 595000 pico seconds"
+"integral power : 6 milli seconds -- 6787968000 pico seconds"
+ghc-8.6.5
+1. Run
+Resolving dependencies...
+"stimes : 38 milli seconds -- 38697081000 pico seconds"
+"fractional power 1 : 0 milli seconds -- 1924000 pico seconds"
+"fractional power 2 : 0 milli seconds -- 607000 pico seconds"
+"fractional power 3 : 0 milli seconds -- 591000 pico seconds"
+"integral power : 6 milli seconds -- 6819067000 pico seconds"
+2. Run
+"stimes : 39 milli seconds -- 39104326000 pico seconds"
+"fractional power 1 : 0 milli seconds -- 2000000 pico seconds"
+"fractional power 2 : 0 milli seconds -- 593000 pico seconds"
+"fractional power 3 : 0 milli seconds -- 624000 pico seconds"
+"integral power : 6 milli seconds -- 6833932000 pico seconds"
+ghc-8.8.1
+1. Run
+Resolving dependencies...
+"stimes : 39 milli seconds -- 39405519000 pico seconds"
+"fractional power 1 : 0 milli seconds -- 20323000 pico seconds"
+"fractional power 2 : 0 milli seconds -- 677000 pico seconds"
+"fractional power 3 : 0 milli seconds -- 653000 pico seconds"
+"integral power : 6 milli seconds -- 6999271000 pico seconds"
+2. Run
+"stimes : 39 milli seconds -- 39505422000 pico seconds"
+"fractional power 1 : 0 milli seconds -- 1810000 pico seconds"
+"fractional power 2 : 0 milli seconds -- 623000 pico seconds"
+"fractional power 3 : 0 milli seconds -- 620000 pico seconds"
+"integral power : 6 milli seconds -- 6793290000 pico seconds"

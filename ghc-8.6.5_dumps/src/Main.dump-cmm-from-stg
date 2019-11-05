@@ -1,0 +1,2316 @@
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.520673593 UTC
+
+[]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.521058939 UTC
+
+[section ""data" . Main.$s^2_closure" {
+     Main.$s^2_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 0;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.521566991 UTC
+
+[section ""cstring" . lvl_r8tR_bytes" {
+     lvl_r8tR_bytes:
+         I8[] [78,101,103,97,116,105,118,101,32,101,120,112,111,110,101,110,116]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.521911011 UTC
+
+[Main.$s^1_entry() //  [R1]
+         { info_tbls: [(c8x0,
+                        label: Main.$s^1_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8x0: // global
+           _r8tf::P64 = R1;
+           goto c8wT;
+       c8wT: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8x1; else goto c8x2;
+       c8x1: // global
+           R1 = _r8tf::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8x2: // global
+           (_c8wV::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r8tf::P64);
+           if (_c8wV::I64 == 0) goto c8wX; else goto c8wW;
+       c8wX: // global
+           call (I64[_r8tf::P64])() args: 8, res: 0, upd: 8;
+       c8wW: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8wV::I64;
+           I64[(young<c8wY> + 8)] = c8wY;
+           R2 = lvl_r8tR_bytes;
+           call GHC.CString.unpackCString#_info(R2) returns to c8wY, args: 8, res: 8, upd: 24;
+       c8wY: // global
+           _s8u1::P64 = R1;
+           R2 = _s8u1::P64;
+           call GHC.Err.errorWithoutStackTrace_info(R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.523551905 UTC
+
+[section ""data" . Main.$seven1_closure" {
+     Main.$seven1_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 2;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.523893806 UTC
+
+[section ""data" . lvl1_r8tS_closure" {
+     lvl1_r8tS_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 1;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.52425515 UTC
+
+[$wg1_r8tT_slow() //  [R1]
+         { info_tbls: []
+           stack_info: arg_space: 32 updfr_space: Just 8
+         }
+     {offset
+       c8xe: // global
+           _r8tT::P64 = R1;
+           _s8u2::F64 = F64[(old + 32)];
+           _s8u3::P64 = P64[(old + 24)];
+           _s8u4::F64 = F64[(old + 16)];
+           D2 = _s8u4::F64;
+           R2 = _s8u3::P64;
+           D1 = _s8u2::F64;
+           R1 = _r8tT::P64;
+           call $wg1_r8tT_info(D2, R2, D1, R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ $wg1_r8tT_entry() //  [D2, R2, D1]
+         { info_tbls: [(c8xk,
+                        label: $wg1_r8tT_info
+                        rep: HeapRep static {
+                               Fun {arity: 3 fun_type: ArgGen [True, False, True]} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8xk: // global
+           _s8u4::F64 = D2;
+           _s8u3::P64 = R2;
+           _s8u2::F64 = D1;
+           goto c8xg;
+       c8xg: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8xl; else goto c8xm;
+       c8xl: // global
+           R1 = $wg1_r8tT_closure;
+           F64[(old + 32)] = _s8u2::F64;
+           P64[(old + 24)] = _s8u3::P64;
+           F64[(old + 16)] = _s8u4::F64;
+           call (stg_gc_fun)(R1) args: 32, res: 0, upd: 8;
+       c8xm: // global
+           goto c8xf;
+       c8xf: // global
+           I64[(young<c8xi> + 8)] = c8xi;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8u3::P64;
+           call GHC.Integer.Type.remInteger_info(R3,
+                                                 R2) returns to c8xi, args: 8, res: 8, upd: 8;
+       c8xi: // global
+           _s8u5::P64 = R1;
+           I64[(young<c8xp> + 8)] = c8xp;
+           R3 = Main.$s^2_closure+1;
+           R2 = _s8u5::P64;
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8xp, args: 8, res: 8, upd: 8;
+       c8xp: // global
+           _s8u6::I64 = R1;
+           switch [-9223372036854775808 .. 9223372036854775807] _s8u6::I64 {
+               case 1 : goto c8xV;
+               default: {goto c8xx;}
+           }
+       c8xV: // global
+           I64[(young<c8xT> + 8)] = c8xT;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8u3::P64;
+           call GHC.Integer.Type.quotInteger_info(R3,
+                                                  R2) returns to c8xT, args: 8, res: 8, upd: 8;
+       c8xT: // global
+           _s8uc::P64 = R1;
+           _c8y1::F64 = %MO_F_Mul_W64(_s8u2::F64, _s8u2::F64);
+           _s8ub::F64 = _c8y1::F64;
+           _s8u4::F64 = _s8u4::F64;
+           _s8u3::P64 = _s8uc::P64;
+           _s8u2::F64 = _s8ub::F64;
+           goto c8xf;
+       c8xx: // global
+           I64[(young<c8xu> + 8)] = c8xu;
+           R3 = lvl1_r8tS_closure+1;
+           R2 = _s8u3::P64;
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8xu, args: 8, res: 8, upd: 8;
+       c8xu: // global
+           _s8u7::I64 = R1;
+           switch [-9223372036854775808 .. 9223372036854775807] _s8u7::I64 {
+               case 1 : goto c8xQ;
+               default: {goto c8xH;}
+           }
+       c8xQ: // global
+           _c8xO::F64 = %MO_F_Mul_W64(_s8u2::F64, _s8u4::F64);
+           D1 = _c8xO::F64;
+           call (P64[(old + 8)])(D1) args: 8, res: 0, upd: 8;
+       c8xH: // global
+           _c8xB::F64 = %MO_F_Mul_W64(_s8u2::F64, _s8u4::F64);
+           _s8ua::F64 = _c8xB::F64;
+           I64[(young<c8xE> + 8)] = c8xE;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8u3::P64;
+           call GHC.Integer.Type.quotInteger_info(R3,
+                                                  R2) returns to c8xE, args: 8, res: 8, upd: 8;
+       c8xE: // global
+           _s8u9::P64 = R1;
+           _c8y0::F64 = %MO_F_Mul_W64(_s8u2::F64, _s8u2::F64);
+           _s8u8::F64 = _c8y0::F64;
+           _s8u4::F64 = _s8ua::F64;
+           _s8u3::P64 = _s8u9::P64;
+           _s8u2::F64 = _s8u8::F64;
+           goto c8xf;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.527875543 UTC
+
+[Main.$wf_slow() //  [R1]
+         { info_tbls: []
+           stack_info: arg_space: 24 updfr_space: Just 8
+         }
+     {offset
+       c8yk: // global
+           _r8tg::P64 = R1;
+           _s8ud::F64 = F64[(old + 24)];
+           _s8ue::P64 = P64[(old + 16)];
+           R2 = _s8ue::P64;
+           D1 = _s8ud::F64;
+           R1 = _r8tg::P64;
+           call Main.$wf_info(R2, D1, R1) args: 8, res: 0, upd: 8;
+     }
+ },
+ Main.$wf_entry() //  [R2, D1]
+         { info_tbls: [(c8yq,
+                        label: Main.$wf_info
+                        rep: HeapRep static {
+                               Fun {arity: 2 fun_type: ArgGen [True, False]} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8yq: // global
+           _s8ue::P64 = R2;
+           _s8ud::F64 = D1;
+           goto c8ym;
+       c8ym: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8yr; else goto c8ys;
+       c8yr: // global
+           R1 = Main.$wf_closure;
+           F64[(old + 24)] = _s8ud::F64;
+           P64[(old + 16)] = _s8ue::P64;
+           call (stg_gc_fun)(R1) args: 24, res: 0, upd: 8;
+       c8ys: // global
+           goto c8yl;
+       c8yl: // global
+           I64[(young<c8yo> + 8)] = c8yo;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8ue::P64;
+           call GHC.Integer.Type.remInteger_info(R3,
+                                                 R2) returns to c8yo, args: 8, res: 8, upd: 8;
+       c8yo: // global
+           _s8uf::P64 = R1;
+           I64[(young<c8yv> + 8)] = c8yv;
+           R3 = Main.$s^2_closure+1;
+           R2 = _s8uf::P64;
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8yv, args: 8, res: 8, upd: 8;
+       c8yv: // global
+           _s8ug::I64 = R1;
+           switch [-9223372036854775808 .. 9223372036854775807] _s8ug::I64 {
+               case 1 : goto c8yX;
+               default: {goto c8yD;}
+           }
+       c8yX: // global
+           I64[(young<c8yV> + 8)] = c8yV;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8ue::P64;
+           call GHC.Integer.Type.quotInteger_info(R3,
+                                                  R2) returns to c8yV, args: 8, res: 8, upd: 8;
+       c8yV: // global
+           _s8ul::P64 = R1;
+           _c8z3::F64 = %MO_F_Mul_W64(_s8ud::F64, _s8ud::F64);
+           _s8uk::F64 = _c8z3::F64;
+           _s8ue::P64 = _s8ul::P64;
+           _s8ud::F64 = _s8uk::F64;
+           goto c8yl;
+       c8yD: // global
+           I64[(young<c8yA> + 8)] = c8yA;
+           R3 = lvl1_r8tS_closure+1;
+           R2 = _s8ue::P64;
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8yA, args: 8, res: 8, upd: 8;
+       c8yA: // global
+           _s8uh::I64 = R1;
+           switch [-9223372036854775808 .. 9223372036854775807] _s8uh::I64 {
+               case 1 : goto c8yS;
+               default: {goto c8yK;}
+           }
+       c8yS: // global
+           D1 = _s8ud::F64;
+           call (P64[(old + 8)])(D1) args: 8, res: 0, upd: 8;
+       c8yK: // global
+           I64[(young<c8yH> + 8)] = c8yH;
+           R3 = Main.$seven1_closure+1;
+           R2 = _s8ue::P64;
+           call GHC.Integer.Type.quotInteger_info(R3,
+                                                  R2) returns to c8yH, args: 8, res: 8, upd: 8;
+       c8yH: // global
+           _s8uj::P64 = R1;
+           _c8z2::F64 = %MO_F_Mul_W64(_s8ud::F64, _s8ud::F64);
+           _s8ui::F64 = _c8z2::F64;
+           D2 = _s8ud::F64;
+           R2 = _s8uj::P64;
+           D1 = _s8ui::F64;
+           call $wg1_r8tT_info(D2, R2, D1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.531317314 UTC
+
+[Main.$w$s^_entry() //  [R3, R2]
+         { info_tbls: [(c8zr,
+                        label: Main.$w$s^_info
+                        rep: HeapRep static { Fun {arity: 2 fun_type: ArgSpec 15} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8zr: // global
+           _s8un::P64 = R3;
+           _s8um::P64 = R2;
+           goto c8zk;
+       c8zk: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8zs; else goto c8zt;
+       c8zs: // global
+           R3 = _s8un::P64;
+           R2 = _s8um::P64;
+           R1 = Main.$w$s^_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8zt: // global
+           goto c8zj;
+       c8zj: // global
+           I64[(young<c8zm> + 8)] = c8zm;
+           R3 = Main.$s^2_closure+1;
+           R2 = _s8un::P64;
+           call GHC.Integer.Type.ltInteger#_info(R3,
+                                                 R2) returns to c8zm, args: 8, res: 8, upd: 8;
+       c8zm: // global
+           _s8uo::I64 = R1;
+           switch [-9223372036854775808 .. 9223372036854775807] _s8uo::I64 {
+               case 1 : goto c8zq;
+               default: {goto c8zp;}
+           }
+       c8zq: // global
+           R1 = Main.$s^1_closure;
+           call (I64[R1])(R1) args: 8, res: 0, upd: 8;
+       c8zp: // global
+           I64[(young<c8zw> + 8)] = c8zw;
+           R3 = Main.$s^2_closure+1;
+           R2 = _s8un::P64;
+           call GHC.Integer.Type.eqInteger#_info(R3,
+                                                 R2) returns to c8zw, args: 8, res: 8, upd: 8;
+       c8zw: // global
+           _s8up::I64 = R1;
+           switch [-9223372036854775808 .. 9223372036854775807] _s8up::I64 {
+               case 1 : goto c8zN;
+               default: {goto c8zE;}
+           }
+       c8zN: // global
+           D1 = 1.0 :: W64;
+           call (P64[(old + 8)])(D1) args: 8, res: 0, upd: 8;
+       c8zE: // global
+           I64[(young<c8zB> + 8)] = c8zB;
+           R1 = _s8um::P64;
+           if (R1 & 7 != 0) goto c8zB; else goto c8zF;
+       c8zF: // global
+           call (I64[R1])(R1) returns to c8zB, args: 8, res: 8, upd: 8;
+       c8zB: // global
+           _s8uq::P64 = R1;
+           _s8ur::F64 = F64[_s8uq::P64 + 7];
+           R2 = _s8un::P64;
+           D1 = _s8ur::F64;
+           call Main.$wf_info(R2, D1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.534020064 UTC
+
+[Main.$w$s^^_entry() //  [R3, R2]
+         { info_tbls: [(c8A7,
+                        label: Main.$w$s^^_info
+                        rep: HeapRep static { Fun {arity: 2 fun_type: ArgSpec 15} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8A7: // global
+           _s8uu::P64 = R3;
+           _s8ut::P64 = R2;
+           goto c8A0;
+       c8A0: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8A8; else goto c8A9;
+       c8A8: // global
+           R3 = _s8uu::P64;
+           R2 = _s8ut::P64;
+           R1 = Main.$w$s^^_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8A9: // global
+           goto c8zZ;
+       c8zZ: // global
+           I64[(young<c8A2> + 8)] = c8A2;
+           R3 = Main.$s^2_closure+1;
+           R2 = _s8uu::P64;
+           call GHC.Integer.Type.geInteger#_info(R3,
+                                                 R2) returns to c8A2, args: 8, res: 8, upd: 8;
+       c8A2: // global
+           _s8uv::I64 = R1;
+           switch [-9223372036854775808 .. 9223372036854775807] _s8uv::I64 {
+               case 1 : goto c8A6;
+               default: {goto c8A5;}
+           }
+       c8A6: // global
+           R3 = _s8uu::P64;
+           R2 = _s8ut::P64;
+           call Main.$w$s^_info(R3, R2) args: 8, res: 0, upd: 8;
+       c8A5: // global
+           I64[(young<c8Ac> + 8)] = c8Ac;
+           R2 = _s8uu::P64;
+           call GHC.Integer.Type.negateInteger_info(R2) returns to c8Ac, args: 8, res: 8, upd: 8;
+       c8Ac: // global
+           _s8uw::P64 = R1;
+           I64[(young<c8Ag> + 8)] = c8Ag;
+           R3 = _s8uw::P64;
+           R2 = _s8ut::P64;
+           call Main.$w$s^_info(R3,
+                                R2) returns to c8Ag, args: 8, res: 8, upd: 8;
+       c8Ag: // global
+           _s8ux::F64 = D1;
+           _c8Ak::F64 = %MO_F_Quot_W64(1.0 :: W64, _s8ux::F64);
+           D1 = _c8Ak::F64;
+           call (P64[(old + 8)])(D1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.536100076 UTC
+
+[Main.main_go_entry() //  [R2]
+         { info_tbls: [(c8AK,
+                        label: Main.main_go_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 5} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8AK: // global
+           _s8uy::P64 = R2;
+           goto c8AB;
+       c8AB: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8AL; else goto c8AM;
+       c8AL: // global
+           R2 = _s8uy::P64;
+           R1 = Main.main_go_closure;
+           call (stg_gc_fun)(R2, R1) args: 8, res: 0, upd: 8;
+       c8AM: // global
+           goto c8AA;
+       c8AA: // global
+           I64[(young<c8AD> + 8)] = c8AD;
+           R1 = _s8uy::P64;
+           if (R1 & 7 != 0) goto c8AD; else goto c8AE;
+       c8AE: // global
+           call (I64[R1])(R1) returns to c8AD, args: 8, res: 8, upd: 8;
+       c8AD: // global
+           _s8uz::P64 = R1;
+           _c8AJ::P64 = _s8uz::P64 & 7;
+           switch [1 .. 2] _c8AJ::P64 {
+               case 1 : goto c8AH;
+               case 2 : goto c8AI;
+           }
+       c8AI: // global
+           _s8uA::P64 = P64[_s8uz::P64 + 6];
+           _s8uB::P64 = P64[_s8uz::P64 + 14];
+           I64[(young<c8AS> + 8)] = c8AS;
+           R1 = _s8uA::P64;
+           if (R1 & 7 != 0) goto c8AS; else goto c8AU;
+       c8AU: // global
+           call (I64[R1])(R1) returns to c8AS, args: 8, res: 8, upd: 8;
+       c8AS: // global
+           _s8uC::P64 = R1;
+           _s8uy::P64 = _s8uB::P64;
+           goto c8AA;
+       c8AH: // global
+           R1 = ()_closure+1;
+           call (P64[(old + 8)])(R1) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.537866761 UTC
+
+[section ""cstring" . Main.$trModule4_bytes" {
+     Main.$trModule4_bytes:
+         I8[] [109,97,105,110]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.538418204 UTC
+
+[section ""data" . Main.$trModule3_closure" {
+     Main.$trModule3_closure:
+         const GHC.Types.TrNameS_con_info;
+         const Main.$trModule4_bytes;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.539154469 UTC
+
+[section ""cstring" . Main.$trModule2_bytes" {
+     Main.$trModule2_bytes:
+         I8[] [77,97,105,110]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.53965764 UTC
+
+[section ""data" . Main.$trModule1_closure" {
+     Main.$trModule1_closure:
+         const GHC.Types.TrNameS_con_info;
+         const Main.$trModule2_bytes;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.54039884 UTC
+
+[section ""data" . Main.$trModule_closure" {
+     Main.$trModule_closure:
+         const GHC.Types.Module_con_info;
+         const Main.$trModule3_closure+1;
+         const Main.$trModule1_closure+1;
+         const 3;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.54118943 UTC
+
+[section ""cstring" . Main.main6_bytes" {
+     Main.main6_bytes:
+         I8[] [32,109,105,108,108,105,32,115,101,99,111,110,100,115,32,45,45,32]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.541577138 UTC
+
+[section ""cstring" . Main.main5_bytes" {
+     Main.main5_bytes:
+         I8[] [32,112,105,99,111,32,115,101,99,111,110,100,115]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.541869101 UTC
+
+[section ""data" . Main.main7_closure" {
+     Main.main7_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 1000000000;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.542207684 UTC
+
+[Main.main4_entry() //  [R1]
+         { info_tbls: [(c8Bl,
+                        label: Main.main4_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Bl: // global
+           _r8tw::P64 = R1;
+           goto c8Bg;
+       c8Bg: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Bm; else goto c8Bn;
+       c8Bm: // global
+           R1 = _r8tw::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Bn: // global
+           (_c8Bi::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r8tw::P64);
+           if (_c8Bi::I64 == 0) goto c8Bk; else goto c8Bj;
+       c8Bk: // global
+           call (I64[_r8tw::P64])() args: 8, res: 0, upd: 8;
+       c8Bj: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8Bi::I64;
+           R2 = Main.main5_bytes;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.543494006 UTC
+
+[duration_s8uO_entry() //  [R1]
+         { info_tbls: [(c8BM,
+                        label: duration_s8uO_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8BM: // global
+           _s8uO::P64 = R1;
+           goto c8BH;
+       c8BH: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8BQ; else goto c8BR;
+       c8BQ: // global
+           R1 = _s8uO::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8BR: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8uO::P64;
+           _s8uJ::P64 = P64[_s8uO::P64 + 16];
+           _s8uN::P64 = P64[_s8uO::P64 + 24];
+           I64[(young<c8BJ> + 8)] = c8BJ;
+           R1 = _s8uN::P64;
+           if (R1 & 7 != 0) goto c8BJ; else goto c8BK;
+       c8BK: // global
+           call (I64[R1])(R1) returns to c8BJ, args: 8, res: 8, upd: 24;
+       c8BJ: // global
+           _s8uP::P64 = R1;
+           _s8uR::P64 = P64[_s8uP::P64 + 15];
+           I64[(young<c8BP> + 8)] = c8BP;
+           R1 = _s8uJ::P64;
+           if (R1 & 7 != 0) goto c8BP; else goto c8BT;
+       c8BT: // global
+           call (I64[R1])(R1) returns to c8BP, args: 8, res: 8, upd: 24;
+       c8BP: // global
+           _s8uS::P64 = R1;
+           _s8uU::P64 = P64[_s8uS::P64 + 15];
+           R3 = _s8uU::P64;
+           R2 = _s8uR::P64;
+           call GHC.Integer.Type.minusInteger_info(R3,
+                                                   R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8v2_entry() //  [R1]
+         { info_tbls: [(c8Cm,
+                        label: sat_s8v2_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Cm: // global
+           _s8v2::P64 = R1;
+           goto c8Ci;
+       c8Ci: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Cn; else goto c8Co;
+       c8Cn: // global
+           R1 = _s8v2::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Co: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8v2::P64;
+           _s8uO::P64 = P64[_s8v2::P64 + 16];
+           I64[(young<c8Ck> + 8)] = c8Ck;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = _s8uO::P64;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8Ck, args: 8, res: 8, upd: 24;
+       c8Ck: // global
+           _s8v1::P64 = R2;
+           _s8v0::P64 = R1;
+           R4 = _s8v1::P64;
+           R3 = _s8v0::P64;
+           R2 = Main.main4_closure;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8v3_entry() //  [R1]
+         { info_tbls: [(c8Cq,
+                        label: sat_s8v3_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Cq: // global
+           _s8v3::P64 = R1;
+           goto c8Ce;
+       c8Ce: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Cr; else goto c8Cs;
+       c8Cs: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Cu; else goto c8Ct;
+       c8Cu: // global
+           HpAlloc = 24;
+           goto c8Cr;
+       c8Cr: // global
+           R1 = _s8v3::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Ct: // global
+           _s8uO::P64 = P64[_s8v3::P64 + 16];
+           I64[Hp - 16] = sat_s8v2_info;
+           P64[Hp] = _s8uO::P64;
+           _c8Cg::P64 = Hp - 16;
+           R3 = _c8Cg::P64;
+           R2 = Main.main6_bytes;
+           call GHC.CString.unpackAppendCString#_info(R3,
+                                                      R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8v4_entry() //  [R1]
+         { info_tbls: [(c8Cv,
+                        label: sat_s8v4_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Cv: // global
+           _s8v4::P64 = R1;
+           goto c8C4;
+       c8C4: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Cw; else goto c8Cx;
+       c8Cw: // global
+           R1 = _s8v4::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Cx: // global
+           _s8uO::P64 = P64[_s8v4::P64 + 16];
+           I64[(young<c8C6> + 8)] = c8C6;
+           R3 = Main.main7_closure+1;
+           R2 = _s8uO::P64;
+           call GHC.Integer.Type.divInteger_info(R3,
+                                                 R2) returns to c8C6, args: 8, res: 8, upd: 8;
+       c8C6: // global
+           _s8uV::P64 = R1;
+           I64[(young<c8Ca> + 8)] = c8Ca;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = _s8uV::P64;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8Ca, args: 8, res: 8, upd: 8;
+       c8Ca: // global
+           _s8uY::P64 = R2;
+           _s8uX::P64 = R1;
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8CB; else goto c8CA;
+       c8CB: // global
+           HpAlloc = 24;
+           goto c8Cz;
+       c8Cz: // global
+           R2 = _s8uY::P64;
+           R1 = _s8uX::P64;
+           call stg_gc_pp(R2, R1) returns to c8Ca, args: 8, res: 8, upd: 8;
+       c8CA: // global
+           I64[Hp - 16] = sat_s8v3_info;
+           P64[Hp] = _s8uO::P64;
+           _c8Cc::P64 = Hp - 16;
+           R4 = _s8uY::P64;
+           R3 = _s8uX::P64;
+           R2 = _c8Cc::P64;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8v6_entry() //  [R1]
+         { info_tbls: [(c8CE,
+                        label: sat_s8v6_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8CE: // global
+           _s8v6::P64 = R1;
+           goto c8C0;
+       c8C0: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8CF; else goto c8CG;
+       c8CG: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8CI; else goto c8CH;
+       c8CI: // global
+           HpAlloc = 24;
+           goto c8CF;
+       c8CF: // global
+           R1 = _s8v6::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8CH: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8v6::P64;
+           _s8uE::P64 = P64[_s8v6::P64 + 16];
+           _s8uO::P64 = P64[_s8v6::P64 + 24];
+           I64[Hp - 16] = sat_s8v4_info;
+           P64[Hp] = _s8uO::P64;
+           _c8C2::P64 = Hp - 16;
+           I64[(young<c8CC> + 8)] = c8CC;
+           R3 = _c8C2::P64;
+           R2 = _s8uE::P64;
+           call GHC.Base.++_info(R3,
+                                 R2) returns to c8CC, args: 8, res: 8, upd: 24;
+       c8CC: // global
+           _s8v5::P64 = R1;
+           R3 = GHC.Show.$fShow[]1_closure;
+           R2 = _s8v5::P64;
+           call GHC.Show.showLitString_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ Main.main_$smeasure2_entry() //  [R3, R2]
+         { info_tbls: [(c8CM,
+                        label: Main.main_$smeasure2_info
+                        rep: HeapRep static { Fun {arity: 3 fun_type: ArgSpec 15} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8CM: // global
+           _s8uF::P64 = R3;
+           _s8uE::P64 = R2;
+           goto c8Bv;
+       c8Bv: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8CO; else goto c8CP;
+       c8CO: // global
+           R3 = _s8uF::P64;
+           R2 = _s8uE::P64;
+           R1 = Main.main_$smeasure2_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8CP: // global
+           goto c8Bu;
+       c8Bu: // global
+           I64[(young<c8Bx> + 8)] = c8Bx;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8Bx, args: 8, res: 8, upd: 8;
+       c8Bx: // global
+           _s8uJ::P64 = R1;
+           I64[(young<c8Bz> + 8)] = c8Bz;
+           R2 = _s8uF::P64;
+           call Main.main_go_info(R2) returns to c8Bz, args: 8, res: 8, upd: 8;
+       c8Bz: // global
+           _s8uK::P64 = R1;
+           I64[(young<c8BD> + 8)] = c8BD;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8BD, args: 8, res: 8, upd: 8;
+       c8BD: // global
+           _s8uN::P64 = R1;
+           Hp = Hp + 88;
+           if (Hp > HpLim) (likely: False) goto c8CU; else goto c8CT;
+       c8CU: // global
+           HpAlloc = 88;
+           goto c8CS;
+       c8CS: // global
+           R1 = _s8uN::P64;
+           call stg_gc_unpt_r1(R1) returns to c8BD, args: 8, res: 8, upd: 8;
+       c8CT: // global
+           I64[Hp - 80] = duration_s8uO_info;
+           P64[Hp - 64] = _s8uJ::P64;
+           P64[Hp - 56] = _s8uN::P64;
+           _c8BF::P64 = Hp - 80;
+           I64[Hp - 48] = sat_s8v6_info;
+           P64[Hp - 32] = _s8uE::P64;
+           P64[Hp - 24] = _c8BF::P64;
+           _c8BY::P64 = Hp - 48;
+           I64[Hp - 16] = :_con_info;
+           P64[Hp - 8] = GHC.Show.$fShow(,)3_closure;
+           P64[Hp] = _c8BY::P64;
+           _c8CN::P64 = Hp - 14;
+           R4 = GHC.Types.True_closure+2;
+           R3 = _c8CN::P64;
+           R2 = GHC.IO.Handle.FD.stdout_closure;
+           call GHC.IO.Handle.Text.hPutStr'_info(R4,
+                                                 R3,
+                                                 R2) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.551539873 UTC
+
+[duration_s8vj_entry() //  [R1]
+         { info_tbls: [(c8DM,
+                        label: duration_s8vj_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8DM: // global
+           _s8vj::P64 = R1;
+           goto c8DH;
+       c8DH: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8DQ; else goto c8DR;
+       c8DQ: // global
+           R1 = _s8vj::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8DR: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8vj::P64;
+           _s8vd::P64 = P64[_s8vj::P64 + 16];
+           _s8vi::P64 = P64[_s8vj::P64 + 24];
+           I64[(young<c8DJ> + 8)] = c8DJ;
+           R1 = _s8vi::P64;
+           if (R1 & 7 != 0) goto c8DJ; else goto c8DK;
+       c8DK: // global
+           call (I64[R1])(R1) returns to c8DJ, args: 8, res: 8, upd: 24;
+       c8DJ: // global
+           _s8vk::P64 = R1;
+           _s8vm::P64 = P64[_s8vk::P64 + 15];
+           I64[(young<c8DP> + 8)] = c8DP;
+           R1 = _s8vd::P64;
+           if (R1 & 7 != 0) goto c8DP; else goto c8DT;
+       c8DT: // global
+           call (I64[R1])(R1) returns to c8DP, args: 8, res: 8, upd: 24;
+       c8DP: // global
+           _s8vn::P64 = R1;
+           _s8vp::P64 = P64[_s8vn::P64 + 15];
+           R3 = _s8vp::P64;
+           R2 = _s8vm::P64;
+           call GHC.Integer.Type.minusInteger_info(R3,
+                                                   R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8vx_entry() //  [R1]
+         { info_tbls: [(c8Em,
+                        label: sat_s8vx_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Em: // global
+           _s8vx::P64 = R1;
+           goto c8Ei;
+       c8Ei: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8En; else goto c8Eo;
+       c8En: // global
+           R1 = _s8vx::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Eo: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8vx::P64;
+           _s8vj::P64 = P64[_s8vx::P64 + 16];
+           I64[(young<c8Ek> + 8)] = c8Ek;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = _s8vj::P64;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8Ek, args: 8, res: 8, upd: 24;
+       c8Ek: // global
+           _s8vw::P64 = R2;
+           _s8vv::P64 = R1;
+           R4 = _s8vw::P64;
+           R3 = _s8vv::P64;
+           R2 = Main.main4_closure;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8vy_entry() //  [R1]
+         { info_tbls: [(c8Eq,
+                        label: sat_s8vy_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Eq: // global
+           _s8vy::P64 = R1;
+           goto c8Ee;
+       c8Ee: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Er; else goto c8Es;
+       c8Es: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Eu; else goto c8Et;
+       c8Eu: // global
+           HpAlloc = 24;
+           goto c8Er;
+       c8Er: // global
+           R1 = _s8vy::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Et: // global
+           _s8vj::P64 = P64[_s8vy::P64 + 16];
+           I64[Hp - 16] = sat_s8vx_info;
+           P64[Hp] = _s8vj::P64;
+           _c8Eg::P64 = Hp - 16;
+           R3 = _c8Eg::P64;
+           R2 = Main.main6_bytes;
+           call GHC.CString.unpackAppendCString#_info(R3,
+                                                      R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8vz_entry() //  [R1]
+         { info_tbls: [(c8Ev,
+                        label: sat_s8vz_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Ev: // global
+           _s8vz::P64 = R1;
+           goto c8E4;
+       c8E4: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Ew; else goto c8Ex;
+       c8Ew: // global
+           R1 = _s8vz::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Ex: // global
+           _s8vj::P64 = P64[_s8vz::P64 + 16];
+           I64[(young<c8E6> + 8)] = c8E6;
+           R3 = Main.main7_closure+1;
+           R2 = _s8vj::P64;
+           call GHC.Integer.Type.divInteger_info(R3,
+                                                 R2) returns to c8E6, args: 8, res: 8, upd: 8;
+       c8E6: // global
+           _s8vq::P64 = R1;
+           I64[(young<c8Ea> + 8)] = c8Ea;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = _s8vq::P64;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8Ea, args: 8, res: 8, upd: 8;
+       c8Ea: // global
+           _s8vt::P64 = R2;
+           _s8vs::P64 = R1;
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8EB; else goto c8EA;
+       c8EB: // global
+           HpAlloc = 24;
+           goto c8Ez;
+       c8Ez: // global
+           R2 = _s8vt::P64;
+           R1 = _s8vs::P64;
+           call stg_gc_pp(R2, R1) returns to c8Ea, args: 8, res: 8, upd: 8;
+       c8EA: // global
+           I64[Hp - 16] = sat_s8vy_info;
+           P64[Hp] = _s8vj::P64;
+           _c8Ec::P64 = Hp - 16;
+           R4 = _s8vt::P64;
+           R3 = _s8vs::P64;
+           R2 = _c8Ec::P64;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8vB_entry() //  [R1]
+         { info_tbls: [(c8EE,
+                        label: sat_s8vB_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8EE: // global
+           _s8vB::P64 = R1;
+           goto c8E0;
+       c8E0: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8EF; else goto c8EG;
+       c8EG: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8EI; else goto c8EH;
+       c8EI: // global
+           HpAlloc = 24;
+           goto c8EF;
+       c8EF: // global
+           R1 = _s8vB::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8EH: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8vB::P64;
+           _s8v8::P64 = P64[_s8vB::P64 + 16];
+           _s8vj::P64 = P64[_s8vB::P64 + 24];
+           I64[Hp - 16] = sat_s8vz_info;
+           P64[Hp] = _s8vj::P64;
+           _c8E2::P64 = Hp - 16;
+           I64[(young<c8EC> + 8)] = c8EC;
+           R3 = _c8E2::P64;
+           R2 = _s8v8::P64;
+           call GHC.Base.++_info(R3,
+                                 R2) returns to c8EC, args: 8, res: 8, upd: 24;
+       c8EC: // global
+           _s8vA::P64 = R1;
+           R3 = GHC.Show.$fShow[]1_closure;
+           R2 = _s8vA::P64;
+           call GHC.Show.showLitString_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ Main.main_$smeasure1_entry() //  [R3, R2]
+         { info_tbls: [(c8EM,
+                        label: Main.main_$smeasure1_info
+                        rep: HeapRep static { Fun {arity: 3 fun_type: ArgSpec 15} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8EM: // global
+           _s8v9::P64 = R3;
+           _s8v8::P64 = R2;
+           goto c8Du;
+       c8Du: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8EO; else goto c8EP;
+       c8EO: // global
+           R3 = _s8v9::P64;
+           R2 = _s8v8::P64;
+           R1 = Main.main_$smeasure1_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8EP: // global
+           goto c8Dt;
+       c8Dt: // global
+           I64[(young<c8Dw> + 8)] = c8Dw;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8Dw, args: 8, res: 8, upd: 8;
+       c8Dw: // global
+           _s8vd::P64 = R1;
+           I64[(young<c8Dy> + 8)] = c8Dy;
+           R1 = _s8v9::P64;
+           if (R1 & 7 != 0) goto c8Dy; else goto c8Dz;
+       c8Dz: // global
+           call (I64[R1])(R1) returns to c8Dy, args: 8, res: 8, upd: 8;
+       c8Dy: // global
+           _s8ve::P64 = R1;
+           I64[(young<c8DD> + 8)] = c8DD;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8DD, args: 8, res: 8, upd: 8;
+       c8DD: // global
+           _s8vi::P64 = R1;
+           Hp = Hp + 88;
+           if (Hp > HpLim) (likely: False) goto c8EU; else goto c8ET;
+       c8EU: // global
+           HpAlloc = 88;
+           goto c8ES;
+       c8ES: // global
+           R1 = _s8vi::P64;
+           call stg_gc_unpt_r1(R1) returns to c8DD, args: 8, res: 8, upd: 8;
+       c8ET: // global
+           I64[Hp - 80] = duration_s8vj_info;
+           P64[Hp - 64] = _s8vd::P64;
+           P64[Hp - 56] = _s8vi::P64;
+           _c8DF::P64 = Hp - 80;
+           I64[Hp - 48] = sat_s8vB_info;
+           P64[Hp - 32] = _s8v8::P64;
+           P64[Hp - 24] = _c8DF::P64;
+           _c8DY::P64 = Hp - 48;
+           I64[Hp - 16] = :_con_info;
+           P64[Hp - 8] = GHC.Show.$fShow(,)3_closure;
+           P64[Hp] = _c8DY::P64;
+           _c8EN::P64 = Hp - 14;
+           R4 = GHC.Types.True_closure+2;
+           R3 = _c8EN::P64;
+           R2 = GHC.IO.Handle.FD.stdout_closure;
+           call GHC.IO.Handle.Text.hPutStr'_info(R4,
+                                                 R3,
+                                                 R2) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.559247347 UTC
+
+[duration_s8vN_entry() //  [R1]
+         { info_tbls: [(c8FC,
+                        label: duration_s8vN_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8FC: // global
+           _s8vN::P64 = R1;
+           goto c8Fx;
+       c8Fx: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8FG; else goto c8FH;
+       c8FG: // global
+           R1 = _s8vN::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8FH: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8vN::P64;
+           _s8vI::P64 = P64[_s8vN::P64 + 16];
+           _s8vM::P64 = P64[_s8vN::P64 + 24];
+           I64[(young<c8Fz> + 8)] = c8Fz;
+           R1 = _s8vM::P64;
+           if (R1 & 7 != 0) goto c8Fz; else goto c8FA;
+       c8FA: // global
+           call (I64[R1])(R1) returns to c8Fz, args: 8, res: 8, upd: 24;
+       c8Fz: // global
+           _s8vO::P64 = R1;
+           _s8vQ::P64 = P64[_s8vO::P64 + 15];
+           I64[(young<c8FF> + 8)] = c8FF;
+           R1 = _s8vI::P64;
+           if (R1 & 7 != 0) goto c8FF; else goto c8FJ;
+       c8FJ: // global
+           call (I64[R1])(R1) returns to c8FF, args: 8, res: 8, upd: 24;
+       c8FF: // global
+           _s8vR::P64 = R1;
+           _s8vT::P64 = P64[_s8vR::P64 + 15];
+           R3 = _s8vT::P64;
+           R2 = _s8vQ::P64;
+           call GHC.Integer.Type.minusInteger_info(R3,
+                                                   R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8w1_entry() //  [R1]
+         { info_tbls: [(c8Gc,
+                        label: sat_s8w1_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Gc: // global
+           _s8w1::P64 = R1;
+           goto c8G8;
+       c8G8: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Gd; else goto c8Ge;
+       c8Gd: // global
+           R1 = _s8w1::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Ge: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8w1::P64;
+           _s8vN::P64 = P64[_s8w1::P64 + 16];
+           I64[(young<c8Ga> + 8)] = c8Ga;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = _s8vN::P64;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8Ga, args: 8, res: 8, upd: 24;
+       c8Ga: // global
+           _s8w0::P64 = R2;
+           _s8vZ::P64 = R1;
+           R4 = _s8w0::P64;
+           R3 = _s8vZ::P64;
+           R2 = Main.main4_closure;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8w2_entry() //  [R1]
+         { info_tbls: [(c8Gg,
+                        label: sat_s8w2_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Gg: // global
+           _s8w2::P64 = R1;
+           goto c8G4;
+       c8G4: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Gh; else goto c8Gi;
+       c8Gi: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Gk; else goto c8Gj;
+       c8Gk: // global
+           HpAlloc = 24;
+           goto c8Gh;
+       c8Gh: // global
+           R1 = _s8w2::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Gj: // global
+           _s8vN::P64 = P64[_s8w2::P64 + 16];
+           I64[Hp - 16] = sat_s8w1_info;
+           P64[Hp] = _s8vN::P64;
+           _c8G6::P64 = Hp - 16;
+           R3 = _c8G6::P64;
+           R2 = Main.main6_bytes;
+           call GHC.CString.unpackAppendCString#_info(R3,
+                                                      R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8w3_entry() //  [R1]
+         { info_tbls: [(c8Gl,
+                        label: sat_s8w3_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Gl: // global
+           _s8w3::P64 = R1;
+           goto c8FU;
+       c8FU: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Gm; else goto c8Gn;
+       c8Gm: // global
+           R1 = _s8w3::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Gn: // global
+           _s8vN::P64 = P64[_s8w3::P64 + 16];
+           I64[(young<c8FW> + 8)] = c8FW;
+           R3 = Main.main7_closure+1;
+           R2 = _s8vN::P64;
+           call GHC.Integer.Type.divInteger_info(R3,
+                                                 R2) returns to c8FW, args: 8, res: 8, upd: 8;
+       c8FW: // global
+           _s8vU::P64 = R1;
+           I64[(young<c8G0> + 8)] = c8G0;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = _s8vU::P64;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8G0, args: 8, res: 8, upd: 8;
+       c8G0: // global
+           _s8vX::P64 = R2;
+           _s8vW::P64 = R1;
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Gr; else goto c8Gq;
+       c8Gr: // global
+           HpAlloc = 24;
+           goto c8Gp;
+       c8Gp: // global
+           R2 = _s8vX::P64;
+           R1 = _s8vW::P64;
+           call stg_gc_pp(R2, R1) returns to c8G0, args: 8, res: 8, upd: 8;
+       c8Gq: // global
+           I64[Hp - 16] = sat_s8w2_info;
+           P64[Hp] = _s8vN::P64;
+           _c8G2::P64 = Hp - 16;
+           R4 = _s8vX::P64;
+           R3 = _s8vW::P64;
+           R2 = _c8G2::P64;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8w5_entry() //  [R1]
+         { info_tbls: [(c8Gu,
+                        label: sat_s8w5_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Gu: // global
+           _s8w5::P64 = R1;
+           goto c8FQ;
+       c8FQ: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Gv; else goto c8Gw;
+       c8Gw: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Gy; else goto c8Gx;
+       c8Gy: // global
+           HpAlloc = 24;
+           goto c8Gv;
+       c8Gv: // global
+           R1 = _s8w5::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Gx: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8w5::P64;
+           _s8vD::P64 = P64[_s8w5::P64 + 16];
+           _s8vN::P64 = P64[_s8w5::P64 + 24];
+           I64[Hp - 16] = sat_s8w3_info;
+           P64[Hp] = _s8vN::P64;
+           _c8FS::P64 = Hp - 16;
+           I64[(young<c8Gs> + 8)] = c8Gs;
+           R3 = _c8FS::P64;
+           R2 = _s8vD::P64;
+           call GHC.Base.++_info(R3,
+                                 R2) returns to c8Gs, args: 8, res: 8, upd: 24;
+       c8Gs: // global
+           _s8w4::P64 = R1;
+           R3 = GHC.Show.$fShow[]1_closure;
+           R2 = _s8w4::P64;
+           call GHC.Show.showLitString_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ Main.main_$smeasure_entry() //  [R3, R2]
+         { info_tbls: [(c8GC,
+                        label: Main.main_$smeasure_info
+                        rep: HeapRep static { Fun {arity: 3 fun_type: ArgSpec 15} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8GC: // global
+           _s8vE::P64 = R3;
+           _s8vD::P64 = R2;
+           goto c8Fk;
+       c8Fk: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8GE; else goto c8GF;
+       c8GE: // global
+           R3 = _s8vE::P64;
+           R2 = _s8vD::P64;
+           R1 = Main.main_$smeasure_closure;
+           call (stg_gc_fun)(R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8GF: // global
+           goto c8Fj;
+       c8Fj: // global
+           I64[(young<c8Fm> + 8)] = c8Fm;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8Fm, args: 8, res: 8, upd: 8;
+       c8Fm: // global
+           _s8vI::P64 = R1;
+           I64[(young<c8Fo> + 8)] = c8Fo;
+           R1 = _s8vE::P64;
+           if (R1 & 7 != 0) goto c8Fo; else goto c8Fp;
+       c8Fp: // global
+           call (I64[R1])(R1) returns to c8Fo, args: 8, res: 8, upd: 8;
+       c8Fo: // global
+           _s8vJ::P64 = R1;
+           I64[(young<c8Ft> + 8)] = c8Ft;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8Ft, args: 8, res: 8, upd: 8;
+       c8Ft: // global
+           _s8vM::P64 = R1;
+           Hp = Hp + 88;
+           if (Hp > HpLim) (likely: False) goto c8GK; else goto c8GJ;
+       c8GK: // global
+           HpAlloc = 88;
+           goto c8GI;
+       c8GI: // global
+           R1 = _s8vM::P64;
+           call stg_gc_unpt_r1(R1) returns to c8Ft, args: 8, res: 8, upd: 8;
+       c8GJ: // global
+           I64[Hp - 80] = duration_s8vN_info;
+           P64[Hp - 64] = _s8vI::P64;
+           P64[Hp - 56] = _s8vM::P64;
+           _c8Fv::P64 = Hp - 80;
+           I64[Hp - 48] = sat_s8w5_info;
+           P64[Hp - 32] = _s8vD::P64;
+           P64[Hp - 24] = _c8Fv::P64;
+           _c8FO::P64 = Hp - 48;
+           I64[Hp - 16] = :_con_info;
+           P64[Hp - 8] = GHC.Show.$fShow(,)3_closure;
+           P64[Hp] = _c8FO::P64;
+           _c8GD::P64 = Hp - 14;
+           R4 = GHC.Types.True_closure+2;
+           R3 = _c8GD::P64;
+           R2 = GHC.IO.Handle.FD.stdout_closure;
+           call GHC.IO.Handle.Text.hPutStr'_info(R4,
+                                                 R3,
+                                                 R2) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.566551062 UTC
+
+[duration_s8wi_entry() //  [R1]
+         { info_tbls: [(c8Hr,
+                        label: duration_s8wi_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Hr: // global
+           _s8wi::P64 = R1;
+           goto c8Hm;
+       c8Hm: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Hv; else goto c8Hw;
+       c8Hv: // global
+           R1 = _s8wi::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Hw: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8wi::P64;
+           _s8wd::P64 = P64[_s8wi::P64 + 16];
+           _s8wh::P64 = P64[_s8wi::P64 + 24];
+           I64[(young<c8Ho> + 8)] = c8Ho;
+           R1 = _s8wh::P64;
+           if (R1 & 7 != 0) goto c8Ho; else goto c8Hp;
+       c8Hp: // global
+           call (I64[R1])(R1) returns to c8Ho, args: 8, res: 8, upd: 24;
+       c8Ho: // global
+           _s8wj::P64 = R1;
+           _s8wl::P64 = P64[_s8wj::P64 + 15];
+           I64[(young<c8Hu> + 8)] = c8Hu;
+           R1 = _s8wd::P64;
+           if (R1 & 7 != 0) goto c8Hu; else goto c8Hy;
+       c8Hy: // global
+           call (I64[R1])(R1) returns to c8Hu, args: 8, res: 8, upd: 24;
+       c8Hu: // global
+           _s8wm::P64 = R1;
+           _s8wo::P64 = P64[_s8wm::P64 + 15];
+           R3 = _s8wo::P64;
+           R2 = _s8wl::P64;
+           call GHC.Integer.Type.minusInteger_info(R3,
+                                                   R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8ww_entry() //  [R1]
+         { info_tbls: [(c8I1,
+                        label: sat_s8ww_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8I1: // global
+           _s8ww::P64 = R1;
+           goto c8HX;
+       c8HX: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8I2; else goto c8I3;
+       c8I2: // global
+           R1 = _s8ww::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8I3: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8ww::P64;
+           _s8wi::P64 = P64[_s8ww::P64 + 16];
+           I64[(young<c8HZ> + 8)] = c8HZ;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = _s8wi::P64;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8HZ, args: 8, res: 8, upd: 24;
+       c8HZ: // global
+           _s8wv::P64 = R2;
+           _s8wu::P64 = R1;
+           R4 = _s8wv::P64;
+           R3 = _s8wu::P64;
+           R2 = Main.main4_closure;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ sat_s8wx_entry() //  [R1]
+         { info_tbls: [(c8I5,
+                        label: sat_s8wx_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8I5: // global
+           _s8wx::P64 = R1;
+           goto c8HT;
+       c8HT: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8I6; else goto c8I7;
+       c8I7: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8I9; else goto c8I8;
+       c8I9: // global
+           HpAlloc = 24;
+           goto c8I6;
+       c8I6: // global
+           R1 = _s8wx::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8I8: // global
+           _s8wi::P64 = P64[_s8wx::P64 + 16];
+           I64[Hp - 16] = sat_s8ww_info;
+           P64[Hp] = _s8wi::P64;
+           _c8HV::P64 = Hp - 16;
+           R3 = _c8HV::P64;
+           R2 = Main.main6_bytes;
+           call GHC.CString.unpackAppendCString#_info(R3,
+                                                      R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8wy_entry() //  [R1]
+         { info_tbls: [(c8Ia,
+                        label: sat_s8wy_info
+                        rep: HeapRep 1 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Ia: // global
+           _s8wy::P64 = R1;
+           goto c8HJ;
+       c8HJ: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Ib; else goto c8Ic;
+       c8Ib: // global
+           R1 = _s8wy::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Ic: // global
+           _s8wi::P64 = P64[_s8wy::P64 + 16];
+           I64[(young<c8HL> + 8)] = c8HL;
+           R3 = Main.main7_closure+1;
+           R2 = _s8wi::P64;
+           call GHC.Integer.Type.divInteger_info(R3,
+                                                 R2) returns to c8HL, args: 8, res: 8, upd: 8;
+       c8HL: // global
+           _s8wp::P64 = R1;
+           I64[(young<c8HP> + 8)] = c8HP;
+           R4 = GHC.Types.[]_closure+1;
+           R3 = _s8wp::P64;
+           R2 = 0;
+           call GHC.Show.$w$cshowsPrec4_info(R4,
+                                             R3,
+                                             R2) returns to c8HP, args: 8, res: 8, upd: 8;
+       c8HP: // global
+           _s8ws::P64 = R2;
+           _s8wr::P64 = R1;
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8Ig; else goto c8If;
+       c8Ig: // global
+           HpAlloc = 24;
+           goto c8Ie;
+       c8Ie: // global
+           R2 = _s8ws::P64;
+           R1 = _s8wr::P64;
+           call stg_gc_pp(R2, R1) returns to c8HP, args: 8, res: 8, upd: 8;
+       c8If: // global
+           I64[Hp - 16] = sat_s8wx_info;
+           P64[Hp] = _s8wi::P64;
+           _c8HR::P64 = Hp - 16;
+           R4 = _s8ws::P64;
+           R3 = _s8wr::P64;
+           R2 = _c8HR::P64;
+           call GHC.Base.++_$s++_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ },
+ sat_s8wA_entry() //  [R1]
+         { info_tbls: [(c8Ij,
+                        label: sat_s8wA_info
+                        rep: HeapRep 2 ptrs { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Ij: // global
+           _s8wA::P64 = R1;
+           goto c8HF;
+       c8HF: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Ik; else goto c8Il;
+       c8Il: // global
+           Hp = Hp + 24;
+           if (Hp > HpLim) (likely: False) goto c8In; else goto c8Im;
+       c8In: // global
+           HpAlloc = 24;
+           goto c8Ik;
+       c8Ik: // global
+           R1 = _s8wA::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Im: // global
+           I64[(old + 24)] = stg_upd_frame_info;
+           P64[(old + 16)] = _s8wA::P64;
+           _s8w8::P64 = P64[_s8wA::P64 + 16];
+           _s8wi::P64 = P64[_s8wA::P64 + 24];
+           I64[Hp - 16] = sat_s8wy_info;
+           P64[Hp] = _s8wi::P64;
+           _c8HH::P64 = Hp - 16;
+           I64[(young<c8Ih> + 8)] = c8Ih;
+           R3 = _c8HH::P64;
+           R2 = _s8w8::P64;
+           call GHC.Base.++_info(R3,
+                                 R2) returns to c8Ih, args: 8, res: 8, upd: 24;
+       c8Ih: // global
+           _s8wz::P64 = R1;
+           R3 = GHC.Show.$fShow[]1_closure;
+           R2 = _s8wz::P64;
+           call GHC.Show.showLitString_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ },
+ Main.measure1_entry() //  [R4, R3, R2]
+         { info_tbls: [(c8Ir,
+                        label: Main.measure1_info
+                        rep: HeapRep static { Fun {arity: 4 fun_type: ArgSpec 23} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Ir: // global
+           _s8w9::P64 = R4;
+           _s8w8::P64 = R3;
+           _s8w7::P64 = R2;
+           goto c8Ha;
+       c8Ha: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8It; else goto c8Iu;
+       c8It: // global
+           R4 = _s8w9::P64;
+           R3 = _s8w8::P64;
+           R2 = _s8w7::P64;
+           R1 = Main.measure1_closure;
+           call (stg_gc_fun)(R4, R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8Iu: // global
+           goto c8H9;
+       c8H9: // global
+           I64[(young<c8Hc> + 8)] = c8Hc;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8Hc, args: 8, res: 8, upd: 8;
+       c8Hc: // global
+           _s8wd::P64 = R1;
+           I64[(young<c8He> + 8)] = c8He;
+           R2 = _s8w9::P64;
+           R1 = _s8w7::P64;
+           call stg_ap_p_fast(R2,
+                              R1) returns to c8He, args: 8, res: 8, upd: 8;
+       c8He: // global
+           _s8we::P64 = R1;
+           I64[(young<c8Hi> + 8)] = c8Hi;
+           R2 = System.CPUTime.Posix.ClockGetTime.getCPUTime2_closure+2;
+           call System.CPUTime.Posix.ClockGetTime.getCPUTime4_info(R2) returns to c8Hi, args: 8, res: 8, upd: 8;
+       c8Hi: // global
+           _s8wh::P64 = R1;
+           Hp = Hp + 88;
+           if (Hp > HpLim) (likely: False) goto c8Iz; else goto c8Iy;
+       c8Iz: // global
+           HpAlloc = 88;
+           goto c8Ix;
+       c8Ix: // global
+           R1 = _s8wh::P64;
+           call stg_gc_unpt_r1(R1) returns to c8Hi, args: 8, res: 8, upd: 8;
+       c8Iy: // global
+           I64[Hp - 80] = duration_s8wi_info;
+           P64[Hp - 64] = _s8wd::P64;
+           P64[Hp - 56] = _s8wh::P64;
+           _c8Hk::P64 = Hp - 80;
+           I64[Hp - 48] = sat_s8wA_info;
+           P64[Hp - 32] = _s8w8::P64;
+           P64[Hp - 24] = _c8Hk::P64;
+           _c8HD::P64 = Hp - 48;
+           I64[Hp - 16] = :_con_info;
+           P64[Hp - 8] = GHC.Show.$fShow(,)3_closure;
+           P64[Hp] = _c8HD::P64;
+           _c8Is::P64 = Hp - 14;
+           R4 = GHC.Types.True_closure+2;
+           R3 = _c8Is::P64;
+           R2 = GHC.IO.Handle.FD.stdout_closure;
+           call GHC.IO.Handle.Text.hPutStr'_info(R4,
+                                                 R3,
+                                                 R2) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.573816221 UTC
+
+[Main.measure_entry() //  [R4, R3, R2]
+         { info_tbls: [(c8J1,
+                        label: Main.measure_info
+                        rep: HeapRep static { Fun {arity: 4 fun_type: ArgSpec 23} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8J1: // global
+           _B2::P64 = R4;
+           _B3::P64 = R3;
+           _B4::P64 = R2;
+           goto c8IZ;
+       c8IZ: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8J2; else goto c8J3;
+       c8J2: // global
+           R4 = _B2::P64;
+           R3 = _B3::P64;
+           R2 = _B4::P64;
+           R1 = Main.measure_closure;
+           call (stg_gc_fun)(R4, R3, R2, R1) args: 8, res: 0, upd: 8;
+       c8J3: // global
+           goto c8IY;
+       c8IY: // global
+           R4 = _B2::P64;
+           R3 = _B3::P64;
+           R2 = _B4::P64;
+           call Main.measure1_info(R4, R3, R2) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.574625424 UTC
+
+[section ""data" . Main.testIntegralPower1_closure" {
+     Main.testIntegralPower1_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 1000000;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.57489255 UTC
+
+[section ""cstring" . Main.testStimes2_bytes" {
+     Main.testStimes2_bytes:
+         I8[] [102,111,111]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.575192116 UTC
+
+[Main.testStimes1_entry() //  [R1]
+         { info_tbls: [(c8Jf,
+                        label: Main.testStimes1_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Jf: // global
+           _r8tJ::P64 = R1;
+           goto c8Ja;
+       c8Ja: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Jg; else goto c8Jh;
+       c8Jg: // global
+           R1 = _r8tJ::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Jh: // global
+           (_c8Jc::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r8tJ::P64);
+           if (_c8Jc::I64 == 0) goto c8Je; else goto c8Jd;
+       c8Je: // global
+           call (I64[_r8tJ::P64])() args: 8, res: 0, upd: 8;
+       c8Jd: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8Jc::I64;
+           R2 = Main.testStimes2_bytes;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.576228967 UTC
+
+[Main.testStimes_entry() //  [R1]
+         { info_tbls: [(c8Jt,
+                        label: Main.testStimes_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Jt: // global
+           _r1dV::P64 = R1;
+           goto c8Jo;
+       c8Jo: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Ju; else goto c8Jv;
+       c8Ju: // global
+           R1 = _r1dV::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Jv: // global
+           (_c8Jq::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r1dV::P64);
+           if (_c8Jq::I64 == 0) goto c8Js; else goto c8Jr;
+       c8Js: // global
+           call (I64[_r1dV::P64])() args: 8, res: 0, upd: 8;
+       c8Jr: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8Jq::I64;
+           R4 = Main.testStimes1_closure;
+           R3 = Main.testIntegralPower1_closure+1;
+           R2 = GHC.Real.$fIntegralInteger_closure;
+           call Data.Semigroup.Internal.stimesList_info(R4,
+                                                        R3,
+                                                        R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.577481606 UTC
+
+[section ""data" . Main.testIntegralPower2_closure" {
+     Main.testIntegralPower2_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 3;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.57772607 UTC
+
+[Main.testIntegralPower_entry() //  [R1]
+         { info_tbls: [(c8JK,
+                        label: Main.testIntegralPower_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8JK: // global
+           _r1gx::P64 = R1;
+           goto c8JF;
+       c8JF: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8JL; else goto c8JM;
+       c8JL: // global
+           R1 = _r1gx::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8JM: // global
+           (_c8JH::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r1gx::P64);
+           if (_c8JH::I64 == 0) goto c8JJ; else goto c8JI;
+       c8JJ: // global
+           call (I64[_r1gx::P64])() args: 8, res: 0, upd: 8;
+       c8JI: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8JH::I64;
+           R3 = Main.testIntegralPower1_closure+1;
+           R2 = Main.testIntegralPower2_closure+1;
+           call GHC.Real.^_$s^_info(R3, R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.578825319 UTC
+
+[section ""data" . Main.testFractionalPower2_closure" {
+     Main.testFractionalPower2_closure:
+         const GHC.Types.D#_con_info;
+         const 5.0 :: W64;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.579156738 UTC
+
+[section ""data" . Main.testFractionalPower1_closure" {
+     Main.testFractionalPower1_closure:
+         const GHC.Integer.Type.S#_con_info;
+         const 441;
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.579420068 UTC
+
+[Main.testFractionalPower_entry() //  [R1]
+         { info_tbls: [(c8K2,
+                        label: Main.testFractionalPower_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8K2: // global
+           _r1gy::P64 = R1;
+           goto c8JV;
+       c8JV: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8K6; else goto c8K7;
+       c8K6: // global
+           R1 = _r1gy::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8K7: // global
+           (_c8JX::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r1gy::P64);
+           if (_c8JX::I64 == 0) goto c8JZ; else goto c8JY;
+       c8JZ: // global
+           call (I64[_r1gy::P64])() args: 8, res: 0, upd: 8;
+       c8JY: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8JX::I64;
+           I64[(young<c8K0> + 8)] = c8K0;
+           R3 = Main.testFractionalPower1_closure+1;
+           R2 = Main.testFractionalPower2_closure+1;
+           call Main.$w$s^^_info(R3,
+                                 R2) returns to c8K0, args: 8, res: 8, upd: 24;
+       c8K0: // global
+           _s8wC::F64 = D1;
+           Hp = Hp + 16;
+           if (Hp > HpLim) (likely: False) goto c8Ka; else goto c8K9;
+       c8Ka: // global
+           HpAlloc = 16;
+           goto c8K8;
+       c8K8: // global
+           D1 = _s8wC::F64;
+           call stg_gc_d1(D1) returns to c8K0, args: 8, res: 8, upd: 24;
+       c8K9: // global
+           I64[Hp - 8] = GHC.Types.D#_con_info;
+           F64[Hp] = _s8wC::F64;
+           _c8K5::P64 = Hp - 7;
+           R1 = _c8K5::P64;
+           call (P64[(old + 24)])(R1) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.581317205 UTC
+
+[section ""cstring" . Main.main3_bytes" {
+     Main.main3_bytes:
+         I8[] [105,110,116,101,103,114,97,108,32,112,111,119,101,114,32,58,32]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.581661124 UTC
+
+[Main.main2_entry() //  [R1]
+         { info_tbls: [(c8Kn,
+                        label: Main.main2_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Kn: // global
+           _r8tt::P64 = R1;
+           goto c8Ki;
+       c8Ki: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Ko; else goto c8Kp;
+       c8Ko: // global
+           R1 = _r8tt::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Kp: // global
+           (_c8Kk::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r8tt::P64);
+           if (_c8Kk::I64 == 0) goto c8Km; else goto c8Kl;
+       c8Km: // global
+           call (I64[_r8tt::P64])() args: 8, res: 0, upd: 8;
+       c8Kl: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8Kk::I64;
+           R2 = Main.main3_bytes;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.582920949 UTC
+
+[section ""cstring" . Main.main9_bytes" {
+     Main.main9_bytes:
+         I8[] [102,114,97,99,116,105,111,110,97,108,32,112,111,119,101,114,32,51,32,58,32]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.583317848 UTC
+
+[Main.main8_entry() //  [R1]
+         { info_tbls: [(c8KC,
+                        label: Main.main8_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8KC: // global
+           _r8tA::P64 = R1;
+           goto c8Kx;
+       c8Kx: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8KD; else goto c8KE;
+       c8KD: // global
+           R1 = _r8tA::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8KE: // global
+           (_c8Kz::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r8tA::P64);
+           if (_c8Kz::I64 == 0) goto c8KB; else goto c8KA;
+       c8KB: // global
+           call (I64[_r8tA::P64])() args: 8, res: 0, upd: 8;
+       c8KA: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8Kz::I64;
+           R2 = Main.main9_bytes;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.584450042 UTC
+
+[section ""cstring" . Main.main11_bytes" {
+     Main.main11_bytes:
+         I8[] [102,114,97,99,116,105,111,110,97,108,32,112,111,119,101,114,32,50,32,58,32]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.584744791 UTC
+
+[Main.main10_entry() //  [R1]
+         { info_tbls: [(c8KR,
+                        label: Main.main10_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8KR: // global
+           _r8tC::P64 = R1;
+           goto c8KM;
+       c8KM: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8KS; else goto c8KT;
+       c8KS: // global
+           R1 = _r8tC::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8KT: // global
+           (_c8KO::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r8tC::P64);
+           if (_c8KO::I64 == 0) goto c8KQ; else goto c8KP;
+       c8KQ: // global
+           call (I64[_r8tC::P64])() args: 8, res: 0, upd: 8;
+       c8KP: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8KO::I64;
+           R2 = Main.main11_bytes;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.585793172 UTC
+
+[section ""cstring" . Main.main13_bytes" {
+     Main.main13_bytes:
+         I8[] [102,114,97,99,116,105,111,110,97,108,32,112,111,119,101,114,32,49,32,58,32]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.586086018 UTC
+
+[Main.main12_entry() //  [R1]
+         { info_tbls: [(c8L6,
+                        label: Main.main12_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8L6: // global
+           _r8tG::P64 = R1;
+           goto c8L1;
+       c8L1: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8L7; else goto c8L8;
+       c8L7: // global
+           R1 = _r8tG::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8L8: // global
+           (_c8L3::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r8tG::P64);
+           if (_c8L3::I64 == 0) goto c8L5; else goto c8L4;
+       c8L5: // global
+           call (I64[_r8tG::P64])() args: 8, res: 0, upd: 8;
+       c8L4: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8L3::I64;
+           R2 = Main.main13_bytes;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.587131435 UTC
+
+[section ""cstring" . Main.main15_bytes" {
+     Main.main15_bytes:
+         I8[] [115,116,105,109,101,115,32,58,32]
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.587359324 UTC
+
+[Main.main14_entry() //  [R1]
+         { info_tbls: [(c8Ll,
+                        label: Main.main14_info
+                        rep: HeapRep static { Thunk }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Ll: // global
+           _r8tL::P64 = R1;
+           goto c8Lg;
+       c8Lg: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Lm; else goto c8Ln;
+       c8Lm: // global
+           R1 = _r8tL::P64;
+           call (stg_gc_enter_1)(R1) args: 8, res: 0, upd: 8;
+       c8Ln: // global
+           (_c8Li::I64) = call "ccall" arg hints:  [PtrHint,
+                                                    PtrHint]  result hints:  [PtrHint] newCAF(BaseReg, _r8tL::P64);
+           if (_c8Li::I64 == 0) goto c8Lk; else goto c8Lj;
+       c8Lk: // global
+           call (I64[_r8tL::P64])() args: 8, res: 0, upd: 8;
+       c8Lj: // global
+           I64[(old + 24)] = stg_bh_upd_frame_info;
+           I64[(old + 16)] = _c8Li::I64;
+           R2 = Main.main15_bytes;
+           call GHC.CString.unpackCString#_info(R2) args: 24, res: 0, upd: 24;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.588385626 UTC
+
+[Main.main1_entry() //  []
+         { info_tbls: [(c8LF,
+                        label: Main.main1_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8LF: // global
+           goto c8Lv;
+       c8Lv: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8LG; else goto c8LH;
+       c8LG: // global
+           R1 = Main.main1_closure;
+           call (stg_gc_fun)(R1) args: 8, res: 0, upd: 8;
+       c8LH: // global
+           goto c8Lu;
+       c8Lu: // global
+           I64[(young<c8Lx> + 8)] = c8Lx;
+           R3 = Main.testStimes_closure;
+           R2 = Main.main14_closure;
+           call Main.main_$smeasure2_info(R3,
+                                          R2) returns to c8Lx, args: 8, res: 8, upd: 8;
+       c8Lx: // global
+           _s8wG::P64 = R1;
+           I64[(young<c8Lz> + 8)] = c8Lz;
+           R3 = Main.testFractionalPower_closure;
+           R2 = Main.main12_closure;
+           call Main.main_$smeasure1_info(R3,
+                                          R2) returns to c8Lz, args: 8, res: 8, upd: 8;
+       c8Lz: // global
+           _s8wJ::P64 = R1;
+           I64[(young<c8LB> + 8)] = c8LB;
+           R3 = Main.testFractionalPower_closure;
+           R2 = Main.main10_closure;
+           call Main.main_$smeasure1_info(R3,
+                                          R2) returns to c8LB, args: 8, res: 8, upd: 8;
+       c8LB: // global
+           _s8wM::P64 = R1;
+           I64[(young<c8LD> + 8)] = c8LD;
+           R3 = Main.testFractionalPower_closure;
+           R2 = Main.main8_closure;
+           call Main.main_$smeasure1_info(R3,
+                                          R2) returns to c8LD, args: 8, res: 8, upd: 8;
+       c8LD: // global
+           _s8wP::P64 = R1;
+           R3 = Main.testIntegralPower_closure;
+           R2 = Main.main2_closure;
+           call Main.main_$smeasure_info(R3, R2) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.590693234 UTC
+
+[Main.main_entry() //  []
+         { info_tbls: [(c8M2,
+                        label: Main.main_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8M2: // global
+           goto c8M0;
+       c8M0: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8M3; else goto c8M4;
+       c8M3: // global
+           R1 = Main.main_closure;
+           call (stg_gc_fun)(R1) args: 8, res: 0, upd: 8;
+       c8M4: // global
+           goto c8LZ;
+       c8LZ: // global
+           call Main.main1_info() args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.591388813 UTC
+
+[Main.main16_entry() //  []
+         { info_tbls: [(c8Mc,
+                        label: Main.main16_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Mc: // global
+           goto c8Ma;
+       c8Ma: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Md; else goto c8Me;
+       c8Md: // global
+           R1 = Main.main16_closure;
+           call (stg_gc_fun)(R1) args: 8, res: 0, upd: 8;
+       c8Me: // global
+           goto c8M9;
+       c8M9: // global
+           R2 = Main.main1_closure+1;
+           call GHC.TopHandler.runMainIO1_info(R2) args: 8, res: 0, upd: 8;
+     }
+ }]
+
+
+==================== Cmm produced by codegen ====================
+2019-11-05 16:48:03.59205603 UTC
+
+[:Main.main_entry() //  []
+         { info_tbls: [(c8Mm,
+                        label: :Main.main_info
+                        rep: HeapRep static { Fun {arity: 1 fun_type: ArgSpec 3} }
+                        srt: Nothing)]
+           stack_info: arg_space: 8 updfr_space: Just 8
+         }
+     {offset
+       c8Mm: // global
+           goto c8Mk;
+       c8Mk: // global
+           if ((old + 0) - <highSp> < SpLim) (likely: False) goto c8Mn; else goto c8Mo;
+       c8Mn: // global
+           R1 = :Main.main_closure;
+           call (stg_gc_fun)(R1) args: 8, res: 0, upd: 8;
+       c8Mo: // global
+           goto c8Mj;
+       c8Mj: // global
+           call Main.main16_info() args: 8, res: 0, upd: 8;
+     }
+ }]
+

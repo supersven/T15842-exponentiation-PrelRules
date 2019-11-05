@@ -1,0 +1,425 @@
+
+==================== FloatOut stats: ====================
+2019-11-05 16:47:55.412414395 UTC
+
+89 Lets floated to top level; 0 Lets floated elsewhere; from 30 Lambda groups
+
+
+==================== FloatOut stats: ====================
+2019-11-05 16:47:55.726139545 UTC
+
+14 Lets floated to top level; 0 Lets floated elsewhere; from 13 Lambda groups
+
+
+==================== Grand total simplifier statistics ====================
+2019-11-05 16:47:55.874932992 UTC
+
+Total ticks:     1119
+
+300 PreInlineUnconditionally
+  12 ys_a7ZU
+  11 g_a7YO
+  11 a_a7YQ
+  11 x_a8gD
+  9 a_a7YH
+  8 s_a7XA
+  8 sc_a7XY
+  8 sc1_a7XZ
+  8 sc2_a7Y0
+  8 w_a7Yj
+  8 w1_a7Yk
+  8 w2_a7Yl
+  7 n_a7Z7
+  6 ds_a8h7
+  6 ds1_a8h8
+  4 xs_a7Y3
+  4 ys_a7Y4
+  4 c_a7Y9
+  4 n_a7Ya
+  4 a_a7YR
+  4 n_a7YS
+  4 g_a7Z1
+  4 h_a7Z3
+  4 ds_a81M
+  4 k_a81N
+  4 x_a8gN
+  4 y_a8gO
+  4 ds_a8hh
+  4 w_s8p2
+  4 w_s8p4
+  3 $dNFData_X8dN
+  3 s_a81O
+  3 w_s8p3
+  3 w_s8ph
+  2 ds_a7Xs
+  2 k_a7Xt
+  2 x_a7Yh
+  2 n_a8es
+  2 $dNum_s8dS
+  2 $dIntegral_s8dT
+  2 $dIntegral_s8ex
+  2 w_s8pi
+  2 w_s8pr
+  2 w_s8ps
+  1 $dNFData_X8dJ
+  1 $dNFData_X8dT
+  1 end_a1Wa
+  1 f_a7Hn
+  1 x_a7Ho
+  1 $dShow_a7Hq
+  1 x_a7Hr
+  1 $dNFData_a7Up
+  1 a1_a7Uq
+  1 b1_a7Ur
+  1 x0_a7VB
+  1 $dShow_a7X2
+  1 s_a7Xu
+  1 x_a7XT
+  1 ds_a7YD
+  1 ds1_a7YE
+  1 k_a7ZY
+  1 z_a7ZZ
+  1 g_a800
+  1 $dIntegral_a805
+  1 $dIntegral_a81o
+  1 $dNum_a81p
+  1 ds_a81U
+  1 eta_a822
+  1 ds_a82j
+  1 ds_a82u
+  1 ds_a8gQ
+  1 i_a8hs
+  1 x_a8hu
+  1 y_a8hv
+  1 x_a8hD
+  1 y_a8hE
+  1 x_a8hI
+  1 $dFractional_s8dH
+  1 $dIntegral_s8dI
+  1 lvl_s8eY
+  1 lvl_s8f0
+  1 lvl_s8fa
+  1 lvl_s8fc
+  1 lvl_s8fo
+  1 lvl_s8fA
+  1 lvl_s8fC
+  1 lvl_s8fE
+  1 lvl_s8fG
+  1 lvl_s8fI
+  1 lvl_s8fK
+  1 lvl_s8fM
+  1 lvl_s8fU
+  1 lvl_s8g8
+  1 lvl_s8g9
+  1 lvl_s8ga
+  1 lvl_s8gb
+  1 lvl_s8gc
+  1 lvl_s8gd
+  1 lvl_s8ge
+  1 lvl_s8gf
+  1 lvl_s8gi
+  1 lvl_s8gj
+  1 lvl_s8gk
+  1 lvl_s8gl
+  1 lvl_s8gm
+  1 lvl_s8gn
+  1 lvl_s8go
+  1 lvl_s8gp
+  1 lvl_s8gq
+  1 lvl_s8gr
+  1 lvl_s8gs
+  1 lvl_s8gt
+  1 lvl_s8gu
+  1 lvl_s8gv
+  1 lvl_s8gw
+  1 lvl_s8gx
+  1 lvl_s8gy
+  1 lvl_s8gz
+  1 lvl_s8gA
+  1 lvl_s8gB
+  1 ww_s8pf
+  1 w_s8px
+  1 w_s8py
+87 PostInlineUnconditionally
+  12 xs_a7ZV
+  8 ww1_a7Yp
+  7 c_a7Z6
+  6 x_a8hb
+  6 y_a8hf
+  4 ipv_X7XY
+  4 ipv1_X7Y0
+  4 ipv_a7Xx
+  4 ipv1_a7Xy
+  4 ds1_a8hi
+  3 ww_s8p7
+  3 ww_s8pb
+  3 ww_s8pp
+  2 ww_s8pf
+  2 ww_s8pv
+  2 ww_s8pB
+  1 start_a1W8
+  1 $dShow_a5JC
+  1 x_a7Vm
+  1 n_a7Vn
+  1 y0_a7VC
+  1 y_a7VP
+  1 y1_a7W4
+  1 z_a7W5
+  1 r_a821
+  1 ds1_a8gR
+  1 wild_a8ht
+  1 y_a8hL
+  1 ww_s8pl
+147 UnfoldingDone
+  11 GHC.Base.build
+  11 GHC.Num.$fNumInteger_$cfromInteger
+  9 $dNum1_s8dN
+  8 System.CPUTime.Posix.ClockGetTime.getCPUTime1
+  8 GHC.Show.$fShowInteger_$cshowsPrec
+  6 GHC.Float.timesDouble
+  5 Main.measure
+  4 GHC.Real.$fIntegralInteger_$cquot
+  4 GHC.Base.$fApplicativeIO2
+  4 GHC.Integer.Type.eqInteger
+  3 Control.DeepSeq.$fNFDataDouble
+  3 Main.main
+  3 $dNum2_s8fh
+  3 $dNum3_s8ft
+  3 g1_s8fz
+  2 System.CPUTime.getCPUTime
+  2 GHC.Base.$fMonadIO1
+  2 GHC.Show.$fShowInteger_$cshow
+  2 $s^_s8et
+  2 $seven_s8eG
+  2 $dReal_s8eR
+  2 $dNum_s8eT
+  2 $dReal_s8f3
+  2 $dNum1_s8f5
+  2 $dOrd_s8f7
+  2 $dReal1_s8ff
+  2 f_s8fn
+  2 $dReal2_s8fr
+  2 $dReal_s8fP
+  2 $dNum_s8fR
+  1 System.IO.print
+  1 GHC.TopHandler.runMainIO
+  1 GHC.Base.$
+  1 Control.DeepSeq.deepseq
+  1 Control.DeepSeq.$fNFData1NonEmpty_$cliftRnf1
+  1 Control.DeepSeq.$fNFDataChar
+  1 Control.DeepSeq.$fNFDataInteger
+  1 Control.DeepSeq.$fNFData[]
+  1 GHC.Real.$fIntegralInteger_$crem
+  1 GHC.Real.$fIntegralInteger_$cdiv
+  1 GHC.Float.$fFractionalDouble_$crecip
+  1 GHC.Float.$fNumDouble_$cfromInteger
+  1 GHC.Base.$fSemigroup[]_$cstimes
+  1 GHC.Integer.Type.geInteger
+  1 GHC.Integer.Type.ltInteger
+  1 GHC.Show.$fShow[]_$s$cshow1
+  1 r_s82f
+  1 $dNFData_s8dt
+  1 $dNFData_s8dx
+  1 $dNFData_s8dD
+  1 $s^^_s8eL
+  1 $dEq_s8eV
+  1 $dEq1_s8eX
+  1 $dEq_s8f9
+  1 $dEq1_s8fj
+  1 $dEq2_s8fl
+  1 $dEq3_s8fv
+  1 $dEq4_s8fx
+  1 $dOrd_s8fT
+  1 $dNFData_s8hS
+  1 $dNFData_s8hU
+  1 $dNFData_s8hX
+135 RuleFired
+  12 Class op fromInteger
+  12 foldr/app
+  11 unpack-list
+  9 unpack
+  8 SC:++0
+  6 Class op *
+  6 eqInteger#
+  5 Class op $p1Integral
+  5 Class op $p1Real
+  5 Class op $p2Real
+  4 ++
+  4 Class op $p1Ord
+  4 Class op ==
+  4 Class op >>
+  4 Class op quot
+  4 augment/build
+  4 unpack-append
+  3 Class op show
+  3 SPEC measure @ Double
+  2 Class op >>=
+  2 SPEC/Main ^ @ Double @ Integer
+  2 SPEC/Main even @ Integer
+  1 Class op $p1Fractional
+  1 Class op -
+  1 Class op <
+  1 Class op >=
+  1 Class op div
+  1 Class op negate
+  1 Class op recip
+  1 Class op rem
+  1 Class op stimes
+  1 SPEC $fShow[]
+  1 SPEC ^
+  1 SPEC measure @ Integer
+  1 SPEC measure @ String
+  1 SPEC/Main ^^ @ Double @ Integer
+  1 doubleFromInteger
+  1 fold/build
+8 LetFloatFromLet 8
+362 BetaReduction
+  12 a_a7ZT
+  12 ys_a7ZU
+  12 xs_a7ZV
+  11 a_a7YN
+  11 g_a7YO
+  11 a_a7YQ
+  11 x_a8gD
+  9 a_a7YH
+  9 b_a7YL
+  8 s_a7XA
+  8 b_a7XX
+  8 sc_a7XY
+  8 sc1_a7XZ
+  8 sc2_a7Y0
+  8 w_a7Yj
+  8 w1_a7Yk
+  8 w2_a7Yl
+  7 b_a7Z5
+  7 c_a7Z6
+  7 n_a7Z7
+  6 ds_a8h7
+  6 ds1_a8h8
+  4 a_a7Y2
+  4 xs_a7Y3
+  4 ys_a7Y4
+  4 b_a7Y8
+  4 c_a7Y9
+  4 n_a7Ya
+  4 a_a7YR
+  4 n_a7YS
+  4 a_a7Z0
+  4 g_a7Z1
+  4 h_a7Z3
+  4 a_a81K
+  4 b_a81L
+  4 ds_a81M
+  4 k_a81N
+  4 x_a8gN
+  4 y_a8gO
+  4 ds_a8hh
+  4 ds1_a8hi
+  3 $dNFData_X8dN
+  3 s_a81O
+  3 w_s8p2
+  3 w_s8p3
+  3 w_s8p4
+  2 a_a7Xq
+  2 b_a7Xr
+  2 ds_a7Xs
+  2 k_a7Xt
+  2 x_a7Yh
+  2 n_a8es
+  2 $dNum_s8dS
+  2 $dIntegral_s8dT
+  2 $dIntegral_s8ex
+  2 w_s8ph
+  2 w_s8pi
+  2 w_s8pr
+  2 w_s8ps
+  1 $dNFData_X8dJ
+  1 $dNFData_X8dT
+  1 start_a1W8
+  1 end_a1Wa
+  1 r_a7Hk
+  1 a_a7Hl
+  1 b_a7Hm
+  1 f_a7Hn
+  1 x_a7Ho
+  1 a_a7Hp
+  1 $dShow_a7Hq
+  1 x_a7Hr
+  1 a_a7Un
+  1 b_a7Uo
+  1 $dNFData_a7Up
+  1 a1_a7Uq
+  1 b1_a7Ur
+  1 $dShow_a7X2
+  1 s_a7Xu
+  1 x_a7XT
+  1 ds_a7YD
+  1 ds1_a7YE
+  1 b_a7ZW
+  1 a_a7ZX
+  1 k_a7ZY
+  1 z_a7ZZ
+  1 g_a800
+  1 a_a803
+  1 b_a804
+  1 $dIntegral_a805
+  1 $dIntegral_a81o
+  1 $dNum_a81p
+  1 ds_a81U
+  1 a_a820
+  1 r_a821
+  1 eta_a822
+  1 ds_a82j
+  1 ds_a82u
+  1 ds_a8gQ
+  1 ds1_a8gR
+  1 i_a8hs
+  1 x_a8hu
+  1 y_a8hv
+  1 x_a8hD
+  1 y_a8hE
+  1 x_a8hI
+  1 $dFractional_s8dH
+  1 $dIntegral_s8dI
+  1 w_s8px
+  1 w_s8py
+4 CaseOfCase
+  1 ww_s8pe
+  1 ww_s8po
+  1 ww_s8pu
+  1 ww_s8pA
+56 KnownBranch
+  8 ww_a7Ym
+  6 wild_a8h9
+  6 wild1_a8hd
+  4 ds1_X7XU
+  4 ds1_a7Xv
+  4 wild_a8hj
+  3 ww_s8p6
+  3 ww_s8pa
+  3 ww_s8pe
+  3 ww_s8po
+  2 wild_a7Us
+  2 ww_s8pu
+  2 ww_s8pA
+  1 wild_a7YF
+  1 wild1_a82b
+  1 wild_a8gS
+  1 wild_a8ht
+  1 wild_a8hJ
+  1 ww_s8pk
+7 CaseMerge
+  3 wild_a8gP
+  2 wild_X8jl
+  1 wild_a8hw
+  1 wild_a8hF
+7 CaseIdentity
+  3 ww_s8pf
+  2 ww_s8pp
+  1 wild1_a8hN
+  1 ww_s8pv
+6 FillInCaseDefault
+  4 wild_a7Us
+  2 wild_a825
+15 SimplifierDone 15
+

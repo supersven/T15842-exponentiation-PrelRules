@@ -1,0 +1,2124 @@
+
+==================== Specialise ====================
+2019-11-05 16:48:15.303844515 UTC
+
+Result size of Specialise
+  = {terms: 760, types: 629, coercions: 84, joins: 6/41}
+
+Rec {
+-- RHS size: {terms: 15, types: 14, coercions: 4, joins: 1/1}
+$dNFData_s8dr :: NFData String
+[LclId]
+$dNFData_s8dr
+  = (\ (eta_a81Q :: [Char]) ->
+       joinrec {
+         go_s8de [Occ=LoopBreaker] :: [Char] -> ()
+         [LclId[JoinId(1)], Arity=1, Str=<L,U>]
+         go_s8de (ds_a81S :: [Char])
+           = case ds_a81S of {
+               [] -> ghc-prim-0.6.1:GHC.Tuple.();
+               : x_a81W xs_a81X ->
+                 case x_a81W of { ghc-prim-0.6.1:GHC.Types.C# ipv_a81L ->
+                 jump go_s8de xs_a81X
+                 }
+             }; } in
+       jump go_s8de eta_a81Q)
+    `cast` (Sym (Control.DeepSeq.N:NFData[0] <[Char]>_N)
+            :: ([Char] -> ()) ~R# NFData [Char])
+
+-- RHS size: {terms: 5, types: 3, coercions: 3, joins: 0/0}
+$dNFData_s8dl :: NFData Double
+[LclId]
+$dNFData_s8dl
+  = (\ (ds_a827 :: Double) ->
+       case ds_a827 of { ghc-prim-0.6.1:GHC.Types.D# ipv_a82a ->
+       ghc-prim-0.6.1:GHC.Tuple.()
+       })
+    `cast` (Sym (Control.DeepSeq.N:NFData[0] <Double>_N)
+            :: (Double -> ()) ~R# NFData Double)
+
+-- RHS size: {terms: 5, types: 2, coercions: 3, joins: 0/0}
+$dNFData_s8dh :: NFData Integer
+[LclId]
+$dNFData_s8dh
+  = (\ (ds_a82i :: Integer) ->
+       case ds_a82i of { __DEFAULT -> ghc-prim-0.6.1:GHC.Tuple.() })
+    `cast` (Sym (Control.DeepSeq.N:NFData[0] <Integer>_N)
+            :: (Integer -> ()) ~R# NFData Integer)
+
+-- RHS size: {terms: 2, types: 1, coercions: 0, joins: 0/0}
+$dNum1_s8dB [Occ=OnceL*] :: Num Double
+[LclId]
+$dNum1_s8dB
+  = GHC.Real.$p1Fractional @ Double GHC.Float.$fFractionalDouble
+
+-- RHS size: {terms: 24, types: 17, coercions: 0, joins: 0/4}
+$seven_s8eu :: Word -> Bool
+[LclId, Arity=1]
+$seven_s8eu
+  = let {
+      $dReal_s8et :: Real Word
+      [LclId]
+      $dReal_s8et
+        = GHC.Real.$p1Integral @ Word GHC.Real.$fIntegralWord } in
+    let {
+      $dNum_s8es :: Num Word
+      [LclId]
+      $dNum_s8es = GHC.Real.$p1Real @ Word $dReal_s8et } in
+    let {
+      $dEq_s8er [Occ=OnceL] :: Ord Word
+      [LclId]
+      $dEq_s8er = GHC.Real.$p2Real @ Word $dReal_s8et } in
+    let {
+      $dEq1_s8eq [Occ=OnceL] :: Eq Word
+      [LclId]
+      $dEq1_s8eq
+        = ghc-prim-0.6.1:GHC.Classes.$p1Ord @ Word $dEq_s8er } in
+    \ (n_a8eg [Occ=Once] :: Word) ->
+      ==
+        @ Word
+        $dEq1_s8eq
+        (rem
+           @ Word
+           GHC.Real.$fIntegralWord
+           n_a8eg
+           (fromInteger @ Word $dNum_s8es 2))
+        (fromInteger @ Word $dNum_s8es 0)
+
+-- RHS size: {terms: 157, types: 83, coercions: 0, joins: 2/14}
+$s^_s8eh [InlPrag=NOUSERINLINE[1]] :: Double -> Word -> Double
+[LclId, Arity=2]
+$s^_s8eh
+  = let {
+      $dReal_s8dV :: Real Word
+      [LclId]
+      $dReal_s8dV
+        = GHC.Real.$p1Integral @ Word GHC.Real.$fIntegralWord } in
+    let {
+      $dNum1_s8dU :: Num Word
+      [LclId]
+      $dNum1_s8dU = GHC.Real.$p1Real @ Word $dReal_s8dV } in
+    let {
+      $dOrd_s8dT :: Ord Word
+      [LclId]
+      $dOrd_s8dT = GHC.Real.$p2Real @ Word $dReal_s8dV } in
+    let {
+      $dEq_s8dS [Occ=OnceL] :: Eq Word
+      [LclId]
+      $dEq_s8dS
+        = ghc-prim-0.6.1:GHC.Classes.$p1Ord @ Word $dOrd_s8dT } in
+    \ (x0_a7VQ [Occ=Once] :: Double) (y0_a7VR :: Word) ->
+      case < @ Word $dOrd_s8dT y0_a7VR (fromInteger @ Word $dNum1_s8dU 0)
+      of {
+        False ->
+          case == @ Word $dEq_s8dS y0_a7VR (fromInteger @ Word $dNum1_s8dU 0)
+          of {
+            False ->
+              let {
+                $dReal1_s8e5 :: Real Word
+                [LclId]
+                $dReal1_s8e5
+                  = GHC.Real.$p1Integral @ Word GHC.Real.$fIntegralWord } in
+              let {
+                $dNum2_s8e4 :: Num Word
+                [LclId]
+                $dNum2_s8e4 = GHC.Real.$p1Real @ Word $dReal1_s8e5 } in
+              let {
+                $dEq1_s8e3 [Occ=OnceL] :: Ord Word
+                [LclId]
+                $dEq1_s8e3 = GHC.Real.$p2Real @ Word $dReal1_s8e5 } in
+              let {
+                $dEq2_s8e2 [Occ=OnceL] :: Eq Word
+                [LclId]
+                $dEq2_s8e2
+                  = ghc-prim-0.6.1:GHC.Classes.$p1Ord @ Word $dEq1_s8e3 } in
+              joinrec {
+                f_s8dR [Occ=LoopBreakerT[2]] :: Double -> Word -> Double
+                [LclId[JoinId(2)], Arity=2, Str=<L,U><L,U>]
+                f_s8dR (x_a7W3 :: Double) (y_a7W4 :: Word)
+                  = case even @ Word GHC.Real.$fIntegralWord y_a7W4 of {
+                      False ->
+                        case == @ Word $dEq2_s8e2 y_a7W4 (fromInteger @ Word $dNum2_s8e4 1)
+                        of {
+                          False ->
+                            let {
+                              $dReal2_s8e9 :: Real Word
+                              [LclId]
+                              $dReal2_s8e9
+                                = GHC.Real.$p1Integral @ Word GHC.Real.$fIntegralWord } in
+                            let {
+                              $dNum3_s8e8 :: Num Word
+                              [LclId]
+                              $dNum3_s8e8 = GHC.Real.$p1Real @ Word $dReal2_s8e9 } in
+                            let {
+                              $dEq3_s8e7 [Occ=OnceL] :: Ord Word
+                              [LclId]
+                              $dEq3_s8e7 = GHC.Real.$p2Real @ Word $dReal2_s8e9 } in
+                            let {
+                              $dEq4_s8e6 [Occ=OnceL] :: Eq Word
+                              [LclId]
+                              $dEq4_s8e6
+                                = ghc-prim-0.6.1:GHC.Classes.$p1Ord @ Word $dEq3_s8e7 } in
+                            joinrec {
+                              g1_s8e1 [Occ=LoopBreakerT[3]] :: Double -> Word -> Double -> Double
+                              [LclId[JoinId(3)], Arity=3, Str=<L,U><L,U><L,U>]
+                              g1_s8e1 (x1_a7Wi :: Double)
+                                      (y1_a7Wj :: Word)
+                                      (z_a7Wk [Occ=Once*] :: Double)
+                                = case even @ Word GHC.Real.$fIntegralWord y1_a7Wj of {
+                                    False ->
+                                      case ==
+                                             @ Word
+                                             $dEq4_s8e6
+                                             y1_a7Wj
+                                             (fromInteger @ Word $dNum3_s8e8 1)
+                                      of {
+                                        False ->
+                                          jump g1_s8e1
+                                            (* @ Double $dNum1_s8dB x1_a7Wi x1_a7Wi)
+                                            (quot
+                                               @ Word
+                                               GHC.Real.$fIntegralWord
+                                               y1_a7Wj
+                                               (fromInteger @ Word $dNum3_s8e8 2))
+                                            (* @ Double $dNum1_s8dB x1_a7Wi z_a7Wk);
+                                        True -> * @ Double $dNum1_s8dB x1_a7Wi z_a7Wk
+                                      };
+                                    True ->
+                                      jump g1_s8e1
+                                        (* @ Double $dNum1_s8dB x1_a7Wi x1_a7Wi)
+                                        (quot
+                                           @ Word
+                                           GHC.Real.$fIntegralWord
+                                           y1_a7Wj
+                                           (fromInteger @ Word $dNum3_s8e8 2))
+                                        z_a7Wk
+                                  }; } in
+                            jump g1_s8e1
+                              (* @ Double $dNum1_s8dB x_a7W3 x_a7W3)
+                              (quot
+                                 @ Word
+                                 GHC.Real.$fIntegralWord
+                                 y_a7W4
+                                 (fromInteger @ Word $dNum2_s8e4 2))
+                              x_a7W3;
+                          True -> x_a7W3
+                        };
+                      True ->
+                        jump f_s8dR
+                          (* @ Double $dNum1_s8dB x_a7W3 x_a7W3)
+                          (quot
+                             @ Word
+                             GHC.Real.$fIntegralWord
+                             y_a7W4
+                             (fromInteger @ Word $dNum2_s8e4 2))
+                    }; } in
+              jump f_s8dR x0_a7VQ y0_a7VR;
+            True -> fromInteger @ Double $dNum1_s8dB 1
+          };
+        True ->
+          errorWithoutStackTrace
+            @ 'ghc-prim-0.6.1:GHC.Types.LiftedRep
+            @ Double
+            (ghc-prim-0.6.1:GHC.CString.unpackCString# "Negative exponent"#)
+      }
+
+-- RHS size: {terms: 34, types: 20, coercions: 0, joins: 0/3}
+$s^^_s8f4 [InlPrag=NOUSERINLINE[1]] :: Double -> Word -> Double
+[LclId, Arity=2]
+$s^^_s8f4
+  = let {
+      $dReal_s8dE :: Real Word
+      [LclId]
+      $dReal_s8dE
+        = GHC.Real.$p1Integral @ Word GHC.Real.$fIntegralWord } in
+    let {
+      $dNum_s8dD :: Num Word
+      [LclId]
+      $dNum_s8dD = GHC.Real.$p1Real @ Word $dReal_s8dE } in
+    let {
+      $dOrd_s8dC [Occ=OnceL] :: Ord Word
+      [LclId]
+      $dOrd_s8dC = GHC.Real.$p2Real @ Word $dReal_s8dE } in
+    \ (x_a7VB [Occ=Once*] :: Double) (n_a7VC :: Word) ->
+      case >= @ Word $dOrd_s8dC n_a7VC (fromInteger @ Word $dNum_s8dD 0)
+      of {
+        False ->
+          recip
+            @ Double
+            GHC.Float.$fFractionalDouble
+            (^ @ Double
+               @ Word
+               $dNum1_s8dB
+               GHC.Real.$fIntegralWord
+               x_a7VB
+               (negate @ Word $dNum_s8dD n_a7VC));
+        True ->
+          ^ @ Double @ Word $dNum1_s8dB GHC.Real.$fIntegralWord x_a7VB n_a7VC
+      }
+
+-- RHS size: {terms: 157, types: 83, coercions: 0, joins: 2/14}
+$s^_s8f5 [InlPrag=NOUSERINLINE[1]] :: Integer -> Word -> Integer
+[LclId, Arity=2]
+$s^_s8f5
+  = let {
+      $dReal_s8eM :: Real Word
+      [LclId]
+      $dReal_s8eM
+        = GHC.Real.$p1Integral @ Word GHC.Real.$fIntegralWord } in
+    let {
+      $dNum1_s8eL :: Num Word
+      [LclId]
+      $dNum1_s8eL = GHC.Real.$p1Real @ Word $dReal_s8eM } in
+    let {
+      $dOrd_s8eK :: Ord Word
+      [LclId]
+      $dOrd_s8eK = GHC.Real.$p2Real @ Word $dReal_s8eM } in
+    let {
+      $dEq_s8eJ [Occ=OnceL] :: Eq Word
+      [LclId]
+      $dEq_s8eJ
+        = ghc-prim-0.6.1:GHC.Classes.$p1Ord @ Word $dOrd_s8eK } in
+    \ (x0_a7VQ [Occ=Once] :: Integer) (y0_a7VR :: Word) ->
+      case < @ Word $dOrd_s8eK y0_a7VR (fromInteger @ Word $dNum1_s8eL 0)
+      of {
+        False ->
+          case == @ Word $dEq_s8eJ y0_a7VR (fromInteger @ Word $dNum1_s8eL 0)
+          of {
+            False ->
+              let {
+                $dReal1_s8eW :: Real Word
+                [LclId]
+                $dReal1_s8eW
+                  = GHC.Real.$p1Integral @ Word GHC.Real.$fIntegralWord } in
+              let {
+                $dNum2_s8eV :: Num Word
+                [LclId]
+                $dNum2_s8eV = GHC.Real.$p1Real @ Word $dReal1_s8eW } in
+              let {
+                $dEq1_s8eU [Occ=OnceL] :: Ord Word
+                [LclId]
+                $dEq1_s8eU = GHC.Real.$p2Real @ Word $dReal1_s8eW } in
+              let {
+                $dEq2_s8eT [Occ=OnceL] :: Eq Word
+                [LclId]
+                $dEq2_s8eT
+                  = ghc-prim-0.6.1:GHC.Classes.$p1Ord @ Word $dEq1_s8eU } in
+              joinrec {
+                f_s8eI [Occ=LoopBreakerT[2]] :: Integer -> Word -> Integer
+                [LclId[JoinId(2)], Arity=2, Str=<L,U><L,U>]
+                f_s8eI (x_a7W3 :: Integer) (y_a7W4 :: Word)
+                  = case even @ Word GHC.Real.$fIntegralWord y_a7W4 of {
+                      False ->
+                        case == @ Word $dEq2_s8eT y_a7W4 (fromInteger @ Word $dNum2_s8eV 1)
+                        of {
+                          False ->
+                            let {
+                              $dReal2_s8f0 :: Real Word
+                              [LclId]
+                              $dReal2_s8f0
+                                = GHC.Real.$p1Integral @ Word GHC.Real.$fIntegralWord } in
+                            let {
+                              $dNum3_s8eZ :: Num Word
+                              [LclId]
+                              $dNum3_s8eZ = GHC.Real.$p1Real @ Word $dReal2_s8f0 } in
+                            let {
+                              $dEq3_s8eY [Occ=OnceL] :: Ord Word
+                              [LclId]
+                              $dEq3_s8eY = GHC.Real.$p2Real @ Word $dReal2_s8f0 } in
+                            let {
+                              $dEq4_s8eX [Occ=OnceL] :: Eq Word
+                              [LclId]
+                              $dEq4_s8eX
+                                = ghc-prim-0.6.1:GHC.Classes.$p1Ord @ Word $dEq3_s8eY } in
+                            joinrec {
+                              g1_s8eS [Occ=LoopBreakerT[3]]
+                                :: Integer -> Word -> Integer -> Integer
+                              [LclId[JoinId(3)], Arity=3, Str=<L,U><L,U><L,U>]
+                              g1_s8eS (x1_a7Wi :: Integer)
+                                      (y1_a7Wj :: Word)
+                                      (z_a7Wk [Occ=Once*] :: Integer)
+                                = case even @ Word GHC.Real.$fIntegralWord y1_a7Wj of {
+                                    False ->
+                                      case ==
+                                             @ Word
+                                             $dEq4_s8eX
+                                             y1_a7Wj
+                                             (fromInteger @ Word $dNum3_s8eZ 1)
+                                      of {
+                                        False ->
+                                          jump g1_s8eS
+                                            (* @ Integer GHC.Num.$fNumInteger x1_a7Wi x1_a7Wi)
+                                            (quot
+                                               @ Word
+                                               GHC.Real.$fIntegralWord
+                                               y1_a7Wj
+                                               (fromInteger @ Word $dNum3_s8eZ 2))
+                                            (* @ Integer GHC.Num.$fNumInteger x1_a7Wi z_a7Wk);
+                                        True -> * @ Integer GHC.Num.$fNumInteger x1_a7Wi z_a7Wk
+                                      };
+                                    True ->
+                                      jump g1_s8eS
+                                        (* @ Integer GHC.Num.$fNumInteger x1_a7Wi x1_a7Wi)
+                                        (quot
+                                           @ Word
+                                           GHC.Real.$fIntegralWord
+                                           y1_a7Wj
+                                           (fromInteger @ Word $dNum3_s8eZ 2))
+                                        z_a7Wk
+                                  }; } in
+                            jump g1_s8eS
+                              (* @ Integer GHC.Num.$fNumInteger x_a7W3 x_a7W3)
+                              (quot
+                                 @ Word
+                                 GHC.Real.$fIntegralWord
+                                 y_a7W4
+                                 (fromInteger @ Word $dNum2_s8eV 2))
+                              x_a7W3;
+                          True -> x_a7W3
+                        };
+                      True ->
+                        jump f_s8eI
+                          (* @ Integer GHC.Num.$fNumInteger x_a7W3 x_a7W3)
+                          (quot
+                             @ Word
+                             GHC.Real.$fIntegralWord
+                             y_a7W4
+                             (fromInteger @ Word $dNum2_s8eV 2))
+                    }; } in
+              jump f_s8eI x0_a7VQ y0_a7VR;
+            True -> fromInteger @ Integer GHC.Num.$fNumInteger 1
+          };
+        True ->
+          errorWithoutStackTrace
+            @ 'ghc-prim-0.6.1:GHC.Types.LiftedRep
+            @ Integer
+            (ghc-prim-0.6.1:GHC.CString.unpackCString# "Negative exponent"#)
+      }
+end Rec }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule_s7Xa :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 20 0}]
+$trModule_s7Xa = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule_s7Xb :: ghc-prim-0.6.1:GHC.Types.TrName
+[LclId,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 20}]
+$trModule_s7Xb = ghc-prim-0.6.1:GHC.Types.TrNameS $trModule_s7Xa
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule_s7Xc :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 20 0}]
+$trModule_s7Xc = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule_s7Xd :: ghc-prim-0.6.1:GHC.Types.TrName
+[LclId,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 20}]
+$trModule_s7Xd = ghc-prim-0.6.1:GHC.Types.TrNameS $trModule_s7Xc
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+Main.$trModule :: ghc-prim-0.6.1:GHC.Types.Module
+[LclIdX,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 10 30}]
+Main.$trModule
+  = ghc-prim-0.6.1:GHC.Types.Module $trModule_s7Xb $trModule_s7Xd
+
+-- RHS size: {terms: 55, types: 46, coercions: 9, joins: 0/1}
+$smeasure_s8f6
+  :: String
+     -> String
+     -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId, Arity=3]
+$smeasure_s8f6
+  = \ (description_a29G :: String)
+      (f_a29H :: String)
+      (s_a7XI
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime1
+             s_a7XI
+      of
+      { (# ipv_a7XL, ipv1_a7XM #) ->
+      case ((case ($dNFData_s8dr
+                   `cast` (Control.DeepSeq.N:NFData[0] <String>_N
+                           :: NFData String ~R# (String -> ())))
+                    f_a29H
+             of
+             { () ->
+             base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime1
+             `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <Integer>_R)
+                     :: (ghc-prim-0.6.1:GHC.Prim.State#
+                           ghc-prim-0.6.1:GHC.Prim.RealWorld
+                         -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                 ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                               Integer #))
+                        ~R# IO Integer)
+             })
+            `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <Integer>_R
+                    :: IO Integer
+                       ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                              ghc-prim-0.6.1:GHC.Prim.RealWorld
+                            -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                    ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                  Integer #))))
+             ipv_a7XL
+      of
+      { (# ipv_X7Yc, ipv1_X7Ye #) ->
+      let {
+        duration_s8dt :: Integer
+        [LclId]
+        duration_s8dt
+          = integer-gmp-1.0.2.0:GHC.Integer.Type.minusInteger
+              ipv1_X7Ye ipv1_a7XM } in
+      ((GHC.IO.Handle.Text.hPutStr'
+          GHC.IO.Handle.FD.stdout
+          (ghc-prim-0.6.1:GHC.Types.:
+             @ Char
+             GHC.Show.$fShow(,)3
+             (GHC.Show.showLitString
+                (GHC.Base.build
+                   @ Char
+                   (\ (@ b_a7Zj)
+                      (c_a7Zk [OS=OneShot] :: Char -> b_a7Zj -> b_a7Zj)
+                      (n_a7Zl [OS=OneShot] :: b_a7Zj) ->
+                      GHC.Base.foldr
+                        @ Char
+                        @ b_a7Zj
+                        c_a7Zk
+                        (GHC.Base.foldr
+                           @ Char
+                           @ b_a7Zj
+                           c_a7Zk
+                           (ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                              @ b_a7Zj
+                              " milli seconds -- "#
+                              c_a7Zk
+                              (GHC.Base.foldr
+                                 @ Char
+                                 @ b_a7Zj
+                                 c_a7Zk
+                                 (ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                                    @ b_a7Zj " pico seconds"# c_a7Zk n_a7Zl)
+                                 (GHC.Show.$fShowInteger_$cshowsPrec
+                                    GHC.Show.$fShow(,)1
+                                    duration_s8dt
+                                    (ghc-prim-0.6.1:GHC.Types.[] @ Char))))
+                           (GHC.Show.$fShowInteger_$cshowsPrec
+                              GHC.Show.$fShow(,)1
+                              (integer-gmp-1.0.2.0:GHC.Integer.Type.divInteger
+                                 duration_s8dt 1000000000)
+                              (ghc-prim-0.6.1:GHC.Types.[] @ Char)))
+                        description_a29G))
+                GHC.Show.$fShow[]1))
+          ghc-prim-0.6.1:GHC.Types.True)
+       `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R
+               :: IO ()
+                  ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                         ghc-prim-0.6.1:GHC.Prim.RealWorld
+                       -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                               ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                             () #))))
+        ipv_X7Yc
+      }
+      }
+
+-- RHS size: {terms: 55, types: 46, coercions: 9, joins: 0/1}
+$smeasure_s8do
+  :: String
+     -> Double
+     -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId, Arity=3]
+$smeasure_s8do
+  = \ (description_a29G :: String)
+      (f_a29H :: Double)
+      (s_a7XI
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime1
+             s_a7XI
+      of
+      { (# ipv_a7XL, ipv1_a7XM #) ->
+      case ((case ($dNFData_s8dl
+                   `cast` (Control.DeepSeq.N:NFData[0] <Double>_N
+                           :: NFData Double ~R# (Double -> ())))
+                    f_a29H
+             of
+             { () ->
+             base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime1
+             `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <Integer>_R)
+                     :: (ghc-prim-0.6.1:GHC.Prim.State#
+                           ghc-prim-0.6.1:GHC.Prim.RealWorld
+                         -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                 ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                               Integer #))
+                        ~R# IO Integer)
+             })
+            `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <Integer>_R
+                    :: IO Integer
+                       ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                              ghc-prim-0.6.1:GHC.Prim.RealWorld
+                            -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                    ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                  Integer #))))
+             ipv_a7XL
+      of
+      { (# ipv_X7Yc, ipv1_X7Ye #) ->
+      let {
+        duration_s8dn :: Integer
+        [LclId]
+        duration_s8dn
+          = integer-gmp-1.0.2.0:GHC.Integer.Type.minusInteger
+              ipv1_X7Ye ipv1_a7XM } in
+      ((GHC.IO.Handle.Text.hPutStr'
+          GHC.IO.Handle.FD.stdout
+          (ghc-prim-0.6.1:GHC.Types.:
+             @ Char
+             GHC.Show.$fShow(,)3
+             (GHC.Show.showLitString
+                (GHC.Base.build
+                   @ Char
+                   (\ (@ b_a7Zj)
+                      (c_a7Zk [OS=OneShot] :: Char -> b_a7Zj -> b_a7Zj)
+                      (n_a7Zl [OS=OneShot] :: b_a7Zj) ->
+                      GHC.Base.foldr
+                        @ Char
+                        @ b_a7Zj
+                        c_a7Zk
+                        (GHC.Base.foldr
+                           @ Char
+                           @ b_a7Zj
+                           c_a7Zk
+                           (ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                              @ b_a7Zj
+                              " milli seconds -- "#
+                              c_a7Zk
+                              (GHC.Base.foldr
+                                 @ Char
+                                 @ b_a7Zj
+                                 c_a7Zk
+                                 (ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                                    @ b_a7Zj " pico seconds"# c_a7Zk n_a7Zl)
+                                 (GHC.Show.$fShowInteger_$cshowsPrec
+                                    GHC.Show.$fShow(,)1
+                                    duration_s8dn
+                                    (ghc-prim-0.6.1:GHC.Types.[] @ Char))))
+                           (GHC.Show.$fShowInteger_$cshowsPrec
+                              GHC.Show.$fShow(,)1
+                              (integer-gmp-1.0.2.0:GHC.Integer.Type.divInteger
+                                 duration_s8dn 1000000000)
+                              (ghc-prim-0.6.1:GHC.Types.[] @ Char)))
+                        description_a29G))
+                GHC.Show.$fShow[]1))
+          ghc-prim-0.6.1:GHC.Types.True)
+       `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R
+               :: IO ()
+                  ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                         ghc-prim-0.6.1:GHC.Prim.RealWorld
+                       -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                               ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                             () #))))
+        ipv_X7Yc
+      }
+      }
+
+-- RHS size: {terms: 55, types: 46, coercions: 9, joins: 0/1}
+$smeasure_s8dk
+  :: String
+     -> Integer
+     -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId, Arity=3]
+$smeasure_s8dk
+  = \ (description_a29G :: String)
+      (f_a29H :: Integer)
+      (s_a7XI
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime1
+             s_a7XI
+      of
+      { (# ipv_a7XL, ipv1_a7XM #) ->
+      case ((case ($dNFData_s8dh
+                   `cast` (Control.DeepSeq.N:NFData[0] <Integer>_N
+                           :: NFData Integer ~R# (Integer -> ())))
+                    f_a29H
+             of
+             { () ->
+             base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime1
+             `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <Integer>_R)
+                     :: (ghc-prim-0.6.1:GHC.Prim.State#
+                           ghc-prim-0.6.1:GHC.Prim.RealWorld
+                         -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                 ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                               Integer #))
+                        ~R# IO Integer)
+             })
+            `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <Integer>_R
+                    :: IO Integer
+                       ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                              ghc-prim-0.6.1:GHC.Prim.RealWorld
+                            -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                    ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                  Integer #))))
+             ipv_a7XL
+      of
+      { (# ipv_X7Yc, ipv1_X7Ye #) ->
+      let {
+        duration_s8dj :: Integer
+        [LclId]
+        duration_s8dj
+          = integer-gmp-1.0.2.0:GHC.Integer.Type.minusInteger
+              ipv1_X7Ye ipv1_a7XM } in
+      ((GHC.IO.Handle.Text.hPutStr'
+          GHC.IO.Handle.FD.stdout
+          (ghc-prim-0.6.1:GHC.Types.:
+             @ Char
+             GHC.Show.$fShow(,)3
+             (GHC.Show.showLitString
+                (GHC.Base.build
+                   @ Char
+                   (\ (@ b_a7Zj)
+                      (c_a7Zk [OS=OneShot] :: Char -> b_a7Zj -> b_a7Zj)
+                      (n_a7Zl [OS=OneShot] :: b_a7Zj) ->
+                      GHC.Base.foldr
+                        @ Char
+                        @ b_a7Zj
+                        c_a7Zk
+                        (GHC.Base.foldr
+                           @ Char
+                           @ b_a7Zj
+                           c_a7Zk
+                           (ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                              @ b_a7Zj
+                              " milli seconds -- "#
+                              c_a7Zk
+                              (GHC.Base.foldr
+                                 @ Char
+                                 @ b_a7Zj
+                                 c_a7Zk
+                                 (ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                                    @ b_a7Zj " pico seconds"# c_a7Zk n_a7Zl)
+                                 (GHC.Show.$fShowInteger_$cshowsPrec
+                                    GHC.Show.$fShow(,)1
+                                    duration_s8dj
+                                    (ghc-prim-0.6.1:GHC.Types.[] @ Char))))
+                           (GHC.Show.$fShowInteger_$cshowsPrec
+                              GHC.Show.$fShow(,)1
+                              (integer-gmp-1.0.2.0:GHC.Integer.Type.divInteger
+                                 duration_s8dj 1000000000)
+                              (ghc-prim-0.6.1:GHC.Types.[] @ Char)))
+                        description_a29G))
+                GHC.Show.$fShow[]1))
+          ghc-prim-0.6.1:GHC.Types.True)
+       `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R
+               :: IO ()
+                  ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                         ghc-prim-0.6.1:GHC.Prim.RealWorld
+                       -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                               ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                             () #))))
+        ipv_X7Yc
+      }
+      }
+
+-- RHS size: {terms: 57, types: 50, coercions: 9, joins: 0/1}
+measure_s80g
+  :: forall a.
+     NFData a =>
+     String
+     -> a
+     -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId,
+ Arity=4,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [60 0 0 0] 730 0},
+ RULES: "SPEC measure @ String"
+            forall ($dNFData_s8dr :: NFData String).
+              measure_s80g @ String $dNFData_s8dr
+              = $smeasure_s8f6
+        "SPEC measure @ Double"
+            forall ($dNFData_s8dl :: NFData Double).
+              measure_s80g @ Double $dNFData_s8dl
+              = $smeasure_s8do
+        "SPEC measure @ Integer"
+            forall ($dNFData_s8dh :: NFData Integer).
+              measure_s80g @ Integer $dNFData_s8dh
+              = $smeasure_s8dk]
+measure_s80g
+  = \ (@ a_a5Ia)
+      ($dNFData_a5Ic :: NFData a_a5Ia)
+      (description_a29G :: String)
+      (f_a29H :: a_a5Ia)
+      (s_a7XI
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime1
+             s_a7XI
+      of
+      { (# ipv_a7XL, ipv1_a7XM #) ->
+      case ((case ($dNFData_a5Ic
+                   `cast` (Control.DeepSeq.N:NFData[0] <a_a5Ia>_N
+                           :: NFData a_a5Ia ~R# (a_a5Ia -> ())))
+                    f_a29H
+             of
+             { () ->
+             base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime1
+             `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <Integer>_R)
+                     :: (ghc-prim-0.6.1:GHC.Prim.State#
+                           ghc-prim-0.6.1:GHC.Prim.RealWorld
+                         -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                 ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                               Integer #))
+                        ~R# IO Integer)
+             })
+            `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <Integer>_R
+                    :: IO Integer
+                       ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                              ghc-prim-0.6.1:GHC.Prim.RealWorld
+                            -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                    ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                  Integer #))))
+             ipv_a7XL
+      of
+      { (# ipv_X7Yc, ipv1_X7Ye #) ->
+      let {
+        duration_s8dg :: Integer
+        [LclId]
+        duration_s8dg
+          = integer-gmp-1.0.2.0:GHC.Integer.Type.minusInteger
+              ipv1_X7Ye ipv1_a7XM } in
+      ((GHC.IO.Handle.Text.hPutStr'
+          GHC.IO.Handle.FD.stdout
+          (ghc-prim-0.6.1:GHC.Types.:
+             @ Char
+             GHC.Show.$fShow(,)3
+             (GHC.Show.showLitString
+                (GHC.Base.build
+                   @ Char
+                   (\ (@ b_a7Zj)
+                      (c_a7Zk [OS=OneShot] :: Char -> b_a7Zj -> b_a7Zj)
+                      (n_a7Zl [OS=OneShot] :: b_a7Zj) ->
+                      GHC.Base.foldr
+                        @ Char
+                        @ b_a7Zj
+                        c_a7Zk
+                        (GHC.Base.foldr
+                           @ Char
+                           @ b_a7Zj
+                           c_a7Zk
+                           (ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                              @ b_a7Zj
+                              " milli seconds -- "#
+                              c_a7Zk
+                              (GHC.Base.foldr
+                                 @ Char
+                                 @ b_a7Zj
+                                 c_a7Zk
+                                 (ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                                    @ b_a7Zj " pico seconds"# c_a7Zk n_a7Zl)
+                                 (GHC.Show.$fShowInteger_$cshowsPrec
+                                    GHC.Show.$fShow(,)1
+                                    duration_s8dg
+                                    (ghc-prim-0.6.1:GHC.Types.[] @ Char))))
+                           (GHC.Show.$fShowInteger_$cshowsPrec
+                              GHC.Show.$fShow(,)1
+                              (integer-gmp-1.0.2.0:GHC.Integer.Type.divInteger
+                                 duration_s8dg 1000000000)
+                              (ghc-prim-0.6.1:GHC.Types.[] @ Char)))
+                        description_a29G))
+                GHC.Show.$fShow[]1))
+          ghc-prim-0.6.1:GHC.Types.True)
+       `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R
+               :: IO ()
+                  ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                         ghc-prim-0.6.1:GHC.Prim.RealWorld
+                       -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                               ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                             () #))))
+        ipv_X7Yc
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 13, joins: 0/0}
+measure :: forall a. NFData a => String -> a -> IO ()
+[LclIdX,
+ Arity=4,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)}]
+measure
+  = measure_s80g
+    `cast` (forall (a :: <*>_N).
+            <NFData a>_R
+            ->_R <String>_R
+            ->_R <a>_R
+            ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+            :: (forall a.
+                NFData a
+                -> String
+                -> a
+                -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                        ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                      () #))
+               ~R# (forall a. NFData a -> String -> a -> IO ()))
+
+-- RHS size: {terms: 8, types: 6, coercions: 0, joins: 0/0}
+testStimes :: String
+[LclIdX,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 90 0}]
+testStimes
+  = base-4.13.0.0:Data.Semigroup.Internal.$fSemigroup[]_$cstimes
+      @ Char
+      @ Word
+      GHC.Real.$fIntegralWord
+      (ghc-prim-0.6.1:GHC.Types.W# 1000000##)
+      (GHC.Base.build
+         @ Char
+         (\ (@ b_a7YZ) ->
+            ghc-prim-0.6.1:GHC.CString.unpackFoldrCString# @ b_a7YZ "foo"#))
+
+-- RHS size: {terms: 6, types: 2, coercions: 0, joins: 0/0}
+testIntegralPower :: Integer
+[LclIdX,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 160 0}]
+testIntegralPower
+  = ^ @ Integer
+      @ Word
+      GHC.Num.$fNumInteger
+      GHC.Real.$fIntegralWord
+      3
+      (ghc-prim-0.6.1:GHC.Types.W# 1000000##)
+
+-- RHS size: {terms: 7, types: 2, coercions: 0, joins: 0/0}
+testFractionalPower :: Double
+[LclIdX,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=False, ConLike=False,
+         WorkFree=False, Expandable=False, Guidance=IF_ARGS [] 70 0}]
+testFractionalPower
+  = ^^
+      @ Double
+      @ Word
+      GHC.Float.$fFractionalDouble
+      GHC.Real.$fIntegralWord
+      (ghc-prim-0.6.1:GHC.Types.D# 5.0##)
+      (ghc-prim-0.6.1:GHC.Types.W# 441##)
+
+-- RHS size: {terms: 79, types: 96, coercions: 16, joins: 1/1}
+main_s82n
+  :: ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId,
+ Arity=1,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=NEVER}]
+main_s82n
+  = \ (s_a81C
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case measure_s80g
+             @ String
+             ((\ (eta_a81Q :: [Char]) ->
+                 joinrec {
+                   go_s8de [Occ=LoopBreaker] :: [Char] -> ()
+                   [LclId[JoinId(1)], Arity=1, Str=<L,U>]
+                   go_s8de (ds_a81S :: [Char])
+                     = case ds_a81S of {
+                         [] -> ghc-prim-0.6.1:GHC.Tuple.();
+                         : x_a81W xs_a81X ->
+                           case x_a81W of { ghc-prim-0.6.1:GHC.Types.C# ipv_a81L ->
+                           jump go_s8de xs_a81X
+                           }
+                       }; } in
+                 jump go_s8de eta_a81Q)
+              `cast` (Sym (Control.DeepSeq.N:NFData[0] <[Char]>_N)
+                      :: ([Char] -> ()) ~R# NFData [Char]))
+             (GHC.Base.build
+                @ Char
+                (\ (@ b_a7YZ) ->
+                   ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                     @ b_a7YZ "stimes : "#))
+             testStimes
+             s_a81C
+      of
+      { (# ipv_a81F, ipv1_a81G #) ->
+      case measure_s80g
+             @ Double
+             ((\ (ds_a827 :: Double) ->
+                 case ds_a827 of { ghc-prim-0.6.1:GHC.Types.D# ipv_a82a ->
+                 ghc-prim-0.6.1:GHC.Tuple.()
+                 })
+              `cast` (Sym (Control.DeepSeq.N:NFData[0] <Double>_N)
+                      :: (Double -> ()) ~R# NFData Double))
+             (GHC.Base.build
+                @ Char
+                (\ (@ b_a7YZ) ->
+                   ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                     @ b_a7YZ "fractional power 1 : "#))
+             testFractionalPower
+             ipv_a81F
+      of
+      { (# ipv_X827, ipv1_X829 #) ->
+      case measure_s80g
+             @ Double
+             ((\ (ds_a827 :: Double) ->
+                 case ds_a827 of { ghc-prim-0.6.1:GHC.Types.D# ipv_a82a ->
+                 ghc-prim-0.6.1:GHC.Tuple.()
+                 })
+              `cast` (Sym (Control.DeepSeq.N:NFData[0] <Double>_N)
+                      :: (Double -> ()) ~R# NFData Double))
+             (GHC.Base.build
+                @ Char
+                (\ (@ b_a7YZ) ->
+                   ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                     @ b_a7YZ "fractional power 2 : "#))
+             testFractionalPower
+             ipv_X827
+      of
+      { (# ipv_X82c, ipv1_X82e #) ->
+      case measure_s80g
+             @ Double
+             ((\ (ds_a827 :: Double) ->
+                 case ds_a827 of { ghc-prim-0.6.1:GHC.Types.D# ipv_a82a ->
+                 ghc-prim-0.6.1:GHC.Tuple.()
+                 })
+              `cast` (Sym (Control.DeepSeq.N:NFData[0] <Double>_N)
+                      :: (Double -> ()) ~R# NFData Double))
+             (GHC.Base.build
+                @ Char
+                (\ (@ b_a7YZ) ->
+                   ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                     @ b_a7YZ "fractional power 3 : "#))
+             testFractionalPower
+             ipv_X82c
+      of
+      { (# ipv_X82h, ipv1_X82j #) ->
+      measure_s80g
+        @ Integer
+        ((\ (ds_a82i :: Integer) ->
+            case ds_a82i of { __DEFAULT -> ghc-prim-0.6.1:GHC.Tuple.() })
+         `cast` (Sym (Control.DeepSeq.N:NFData[0] <Integer>_N)
+                 :: (Integer -> ()) ~R# NFData Integer))
+        (GHC.Base.build
+           @ Char
+           (\ (@ b_a7YZ) ->
+              ghc-prim-0.6.1:GHC.CString.unpackFoldrCString#
+                @ b_a7YZ "integral power : "#))
+        testIntegralPower
+        ipv_X82h
+      }
+      }
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main :: IO ()
+[LclIdX,
+ Arity=1,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)}]
+main
+  = main_s82n
+    `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+            :: (ghc-prim-0.6.1:GHC.Prim.State#
+                  ghc-prim-0.6.1:GHC.Prim.RealWorld
+                -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                        ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                      () #))
+               ~R# IO ())
+
+-- RHS size: {terms: 2, types: 1, coercions: 3, joins: 0/0}
+main_s8cX
+  :: ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId,
+ Arity=1,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True, Guidance=IF_ARGS [] 20 60}]
+main_s8cX
+  = GHC.TopHandler.runMainIO1
+      @ ()
+      (main_s82n
+       `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+               :: (ghc-prim-0.6.1:GHC.Prim.State#
+                     ghc-prim-0.6.1:GHC.Prim.RealWorld
+                   -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                           ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                         () #))
+                  ~R# IO ()))
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+:Main.main :: IO ()
+[LclIdX,
+ Arity=1,
+ Unf=Unf{Src=<vanilla>, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)}]
+:Main.main
+  = main_s8cX
+    `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+            :: (ghc-prim-0.6.1:GHC.Prim.State#
+                  ghc-prim-0.6.1:GHC.Prim.RealWorld
+                -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                        ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                      () #))
+               ~R# IO ())
+
+
+------ Local rules for imported ids --------
+"SPEC/Main even @ Word"
+    forall ($dIntegral_s8el :: Integral Word).
+      even @ Word $dIntegral_s8el
+      = $seven_s8eu
+"SPEC/Main ^ @ Double @ Word" [1]
+    forall ($dNum_s8dG :: Num Double)
+           ($dIntegral_s8dH :: Integral Word).
+      ^ @ Double @ Word $dNum_s8dG $dIntegral_s8dH
+      = $s^_s8eh
+"SPEC/Main ^^ @ Double @ Word" [1]
+    forall ($dFractional_s8dv :: Fractional Double)
+           ($dIntegral_s8dw :: Integral Word).
+      ^^ @ Double @ Word $dFractional_s8dv $dIntegral_s8dw
+      = $s^^_s8f4
+"SPEC/Main ^ @ Integer @ Word" [1]
+    forall ($dNum_s8ex :: Num Integer)
+           ($dIntegral_s8ey :: Integral Word).
+      ^ @ Integer @ Word $dNum_s8ex $dIntegral_s8ey
+      = $s^_s8f5
+
+
+==================== SpecConstr ====================
+2019-11-05 16:48:15.844882562 UTC
+
+Result size of SpecConstr
+  = {terms: 561, types: 538, coercions: 80, joins: 0/4}
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8gZ :: Integer
+[LclId]
+lvl_s8gZ = 1
+
+Rec {
+-- RHS size: {terms: 34, types: 5, coercions: 0, joins: 0/0}
+$wg1_s8xe [InlPrag=NOUSERINLINE[2], Occ=LoopBreaker]
+  :: Integer -> ghc-prim-0.6.1:GHC.Prim.Word# -> Integer -> Integer
+[LclId, Arity=3, Str=<S,U><L,U><S,U>]
+$wg1_s8xe
+  = \ (w_s8x7 :: Integer)
+      (ww_s8xc :: ghc-prim-0.6.1:GHC.Prim.Word#)
+      (w_s8x9 :: Integer) ->
+      case ghc-prim-0.6.1:GHC.Prim.remWord# ww_s8xc 2## of {
+        __DEFAULT ->
+          case ww_s8xc of wild_X24 {
+            __DEFAULT ->
+              $wg1_s8xe
+                (integer-gmp-1.0.2.0:GHC.Integer.Type.timesInteger w_s8x7 w_s8x7)
+                (ghc-prim-0.6.1:GHC.Prim.quotWord# wild_X24 2##)
+                (integer-gmp-1.0.2.0:GHC.Integer.Type.timesInteger w_s8x7 w_s8x9);
+            1## ->
+              integer-gmp-1.0.2.0:GHC.Integer.Type.timesInteger w_s8x7 w_s8x9
+          };
+        0## ->
+          $wg1_s8xe
+            (integer-gmp-1.0.2.0:GHC.Integer.Type.timesInteger w_s8x7 w_s8x7)
+            (ghc-prim-0.6.1:GHC.Prim.quotWord# ww_s8xc 2##)
+            w_s8x9
+      }
+end Rec }
+
+Rec {
+-- RHS size: {terms: 28, types: 4, coercions: 0, joins: 0/0}
+$wf_s8xl [InlPrag=NOUSERINLINE[2], Occ=LoopBreaker]
+  :: Integer -> ghc-prim-0.6.1:GHC.Prim.Word# -> Integer
+[LclId, Arity=2, Str=<S,U><L,U>]
+$wf_s8xl
+  = \ (w_s8xf :: Integer)
+      (ww_s8xj :: ghc-prim-0.6.1:GHC.Prim.Word#) ->
+      case ghc-prim-0.6.1:GHC.Prim.remWord# ww_s8xj 2## of {
+        __DEFAULT ->
+          case ww_s8xj of wild_X24 {
+            __DEFAULT ->
+              $wg1_s8xe
+                (integer-gmp-1.0.2.0:GHC.Integer.Type.timesInteger w_s8xf w_s8xf)
+                (ghc-prim-0.6.1:GHC.Prim.quotWord# wild_X24 2##)
+                w_s8xf;
+            1## -> w_s8xf
+          };
+        0## ->
+          $wf_s8xl
+            (integer-gmp-1.0.2.0:GHC.Integer.Type.timesInteger w_s8xf w_s8xf)
+            (ghc-prim-0.6.1:GHC.Prim.quotWord# ww_s8xj 2##)
+      }
+end Rec }
+
+-- RHS size: {terms: 13, types: 5, coercions: 0, joins: 0/0}
+$s^_s8f5 [InlPrag=NOUSERINLINE[1]] :: Integer -> Word -> Integer
+[LclId,
+ Arity=2,
+ Str=<L,U><S(S),1*U(U)>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (x0_a7VQ [Occ=Once] :: Integer)
+                 (y0_a7VR [Occ=Once!] :: Word) ->
+                 case y0_a7VR of { ghc-prim-0.6.1:GHC.Types.W# x_X8kz ->
+                 case x_X8kz of {
+                   __DEFAULT -> $wf_s8xl x0_a7VQ x_X8kz;
+                   0## -> lvl_s8gZ
+                 }
+                 }}]
+$s^_s8f5
+  = \ (x0_a7VQ :: Integer) (y0_a7VR :: Word) ->
+      case y0_a7VR of { ghc-prim-0.6.1:GHC.Types.W# x_X8kz [Dmd=<S,U>] ->
+      case x_X8kz of wild_X23 [Dmd=<L,A>] {
+        __DEFAULT -> $wf_s8xl x0_a7VQ wild_X23;
+        0## -> lvl_s8gZ
+      }
+      }
+
+Rec {
+-- RHS size: {terms: 34, types: 5, coercions: 0, joins: 0/0}
+$wg1_s8xE [InlPrag=NOUSERINLINE[2], Occ=LoopBreaker]
+  :: ghc-prim-0.6.1:GHC.Prim.Double#
+     -> ghc-prim-0.6.1:GHC.Prim.Word#
+     -> ghc-prim-0.6.1:GHC.Prim.Double#
+     -> ghc-prim-0.6.1:GHC.Prim.Double#
+[LclId, Arity=3, Str=<L,U><L,U><L,U>]
+$wg1_s8xE
+  = \ (ww_s8xr :: ghc-prim-0.6.1:GHC.Prim.Double#)
+      (ww_s8xv :: ghc-prim-0.6.1:GHC.Prim.Word#)
+      (ww_s8xz :: ghc-prim-0.6.1:GHC.Prim.Double#) ->
+      case ghc-prim-0.6.1:GHC.Prim.remWord# ww_s8xv 2## of {
+        __DEFAULT ->
+          case ww_s8xv of wild_X1U {
+            __DEFAULT ->
+              $wg1_s8xE
+                (ghc-prim-0.6.1:GHC.Prim.*## ww_s8xr ww_s8xr)
+                (ghc-prim-0.6.1:GHC.Prim.quotWord# wild_X1U 2##)
+                (ghc-prim-0.6.1:GHC.Prim.*## ww_s8xr ww_s8xz);
+            1## -> ghc-prim-0.6.1:GHC.Prim.*## ww_s8xr ww_s8xz
+          };
+        0## ->
+          $wg1_s8xE
+            (ghc-prim-0.6.1:GHC.Prim.*## ww_s8xr ww_s8xr)
+            (ghc-prim-0.6.1:GHC.Prim.quotWord# ww_s8xv 2##)
+            ww_s8xz
+      }
+end Rec }
+
+Rec {
+-- RHS size: {terms: 28, types: 4, coercions: 0, joins: 0/0}
+$wf_s8xS [InlPrag=NOUSERINLINE[2], Occ=LoopBreaker]
+  :: ghc-prim-0.6.1:GHC.Prim.Double#
+     -> ghc-prim-0.6.1:GHC.Prim.Word# -> ghc-prim-0.6.1:GHC.Prim.Double#
+[LclId, Arity=2, Str=<L,U><L,U>]
+$wf_s8xS
+  = \ (ww_s8xJ :: ghc-prim-0.6.1:GHC.Prim.Double#)
+      (ww_s8xN :: ghc-prim-0.6.1:GHC.Prim.Word#) ->
+      case ghc-prim-0.6.1:GHC.Prim.remWord# ww_s8xN 2## of {
+        __DEFAULT ->
+          case ww_s8xN of wild_X1U {
+            __DEFAULT ->
+              $wg1_s8xE
+                (ghc-prim-0.6.1:GHC.Prim.*## ww_s8xJ ww_s8xJ)
+                (ghc-prim-0.6.1:GHC.Prim.quotWord# wild_X1U 2##)
+                ww_s8xJ;
+            1## -> ww_s8xJ
+          };
+        0## ->
+          $wf_s8xS
+            (ghc-prim-0.6.1:GHC.Prim.*## ww_s8xJ ww_s8xJ)
+            (ghc-prim-0.6.1:GHC.Prim.quotWord# ww_s8xN 2##)
+      }
+end Rec }
+
+-- RHS size: {terms: 12, types: 4, coercions: 0, joins: 0/0}
+$seven_s8eu :: Word -> Bool
+[LclId,
+ Arity=1,
+ Str=<S,1*U(U)>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=1,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (n_a8eg [Occ=Once!] :: Word) ->
+                 case n_a8eg of { ghc-prim-0.6.1:GHC.Types.W# x#_a8iP [Occ=Once] ->
+                 case ghc-prim-0.6.1:GHC.Prim.remWord# x#_a8iP 2## of {
+                   __DEFAULT -> ghc-prim-0.6.1:GHC.Types.False;
+                   0## -> ghc-prim-0.6.1:GHC.Types.True
+                 }
+                 }}]
+$seven_s8eu
+  = \ (n_a8eg :: Word) ->
+      case n_a8eg of { ghc-prim-0.6.1:GHC.Types.W# x#_a8iP ->
+      case ghc-prim-0.6.1:GHC.Prim.remWord# x#_a8iP 2## of {
+        __DEFAULT -> ghc-prim-0.6.1:GHC.Types.False;
+        0## -> ghc-prim-0.6.1:GHC.Types.True
+      }
+      }
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl_s8g5 :: Double
+[LclId, Str=m]
+lvl_s8g5 = ghc-prim-0.6.1:GHC.Types.D# 1.0##
+
+-- RHS size: {terms: 20, types: 8, coercions: 0, joins: 0/0}
+$s^_s8eh [InlPrag=NOUSERINLINE[1]] :: Double -> Word -> Double
+[LclId,
+ Arity=2,
+ Str=<L,U(U)><S(S),1*U(U)>m,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (x0_a7VQ [Occ=Once!] :: Double)
+                 (y0_a7VR [Occ=Once!] :: Word) ->
+                 case y0_a7VR of { ghc-prim-0.6.1:GHC.Types.W# x_X8ko ->
+                 case x_X8ko of {
+                   __DEFAULT ->
+                     case x0_a7VQ of { ghc-prim-0.6.1:GHC.Types.D# ww_s8xJ [Occ=Once] ->
+                     case $wf_s8xS ww_s8xJ x_X8ko of ww_s8xR [Occ=Once] { __DEFAULT ->
+                     ghc-prim-0.6.1:GHC.Types.D# ww_s8xR
+                     }
+                     };
+                   0## -> lvl_s8g5
+                 }
+                 }}]
+$s^_s8eh
+  = \ (x0_a7VQ :: Double) (y0_a7VR :: Word) ->
+      case y0_a7VR of { ghc-prim-0.6.1:GHC.Types.W# x_X8ko [Dmd=<S,U>] ->
+      case x_X8ko of wild_X1S [Dmd=<L,A>] {
+        __DEFAULT ->
+          case x0_a7VQ of { ghc-prim-0.6.1:GHC.Types.D# ww_s8xJ ->
+          case $wf_s8xS ww_s8xJ wild_X1S of ww_s8xR { __DEFAULT ->
+          ghc-prim-0.6.1:GHC.Types.D# ww_s8xR
+          }
+          };
+        0## -> lvl_s8g5
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$s^^_s8f4 [InlPrag=NOUSERINLINE[1]] :: Double -> Word -> Double
+[LclId,
+ Arity=2,
+ Str=<L,U(U)><S(S),1*U(U)>m,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=2,unsat_ok=True,boring_ok=False)
+         Tmpl= \ (x_a7VB [Occ=Once!] :: Double)
+                 (n_a7VC [Occ=Once!] :: Word) ->
+                 case n_a7VC of { ghc-prim-0.6.1:GHC.Types.W# x_a8jt ->
+                 case x_a8jt of {
+                   __DEFAULT ->
+                     case x_a7VB of { ghc-prim-0.6.1:GHC.Types.D# ww_s8xJ [Occ=Once] ->
+                     case $wf_s8xS ww_s8xJ x_a8jt of ww_s8xR [Occ=Once] { __DEFAULT ->
+                     ghc-prim-0.6.1:GHC.Types.D# ww_s8xR
+                     }
+                     };
+                   0## -> lvl_s8g5
+                 }
+                 }}]
+$s^^_s8f4 = $s^_s8eh
+
+Rec {
+-- RHS size: {terms: 11, types: 9, coercions: 0, joins: 0/0}
+go_s8f9 [Occ=LoopBreaker] :: [Char] -> ()
+[LclId, Arity=1, Str=<S,U>]
+go_s8f9
+  = \ (ds_a81S :: [Char]) ->
+      case ds_a81S of {
+        [] -> ghc-prim-0.6.1:GHC.Tuple.();
+        : x_a81W [Dmd=<S,H>] xs_a81X [Dmd=<S,U>] ->
+          case x_a81W of
+          { ghc-prim-0.6.1:GHC.Types.C# ipv_a81L [Dmd=<L,A>] ->
+          go_s8f9 xs_a81X
+          }
+      }
+end Rec }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule_s7Xa :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+$trModule_s7Xa = "main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule_s7Xb :: ghc-prim-0.6.1:GHC.Types.TrName
+[LclId, Str=m1]
+$trModule_s7Xb = ghc-prim-0.6.1:GHC.Types.TrNameS $trModule_s7Xa
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+$trModule_s7Xc :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+$trModule_s7Xc = "Main"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+$trModule_s7Xd :: ghc-prim-0.6.1:GHC.Types.TrName
+[LclId, Str=m1]
+$trModule_s7Xd = ghc-prim-0.6.1:GHC.Types.TrNameS $trModule_s7Xc
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+Main.$trModule :: ghc-prim-0.6.1:GHC.Types.Module
+[LclIdX, Str=m]
+Main.$trModule
+  = ghc-prim-0.6.1:GHC.Types.Module $trModule_s7Xb $trModule_s7Xd
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8h2 :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+lvl_s8h2 = " milli seconds -- "#
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8h3 :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+lvl_s8h3 = " pico seconds"#
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8h4 :: Integer
+[LclId]
+lvl_s8h4 = 1000000000
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl_s8C0 :: [Char]
+[LclId]
+lvl_s8C0 = ghc-prim-0.6.1:GHC.CString.unpackCString# lvl_s8h3
+
+-- RHS size: {terms: 60, types: 72, coercions: 14, joins: 0/1}
+$smeasure_s8f6
+  :: String
+     -> String
+     -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId, Arity=3, Str=<L,U><L,U><L,U>]
+$smeasure_s8f6
+  = \ (description_a29G :: String)
+      (f_a29H :: String)
+      (s_a7XI
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime4
+             @ ()
+             (base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime2
+              `cast` (<GHC.Ptr.Ptr
+                         base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec>_R
+                      ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                      :: (GHC.Ptr.Ptr
+                            base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                          -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                  ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                () #))
+                         ~R# (GHC.Ptr.Ptr
+                                base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                              -> IO ())))
+             s_a7XI
+      of
+      { (# ipv_a7XU, ipv1_a7XV [Dmd=<L,U(A,U)>] #) ->
+      case go_s8f9 f_a29H of { () ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime4
+             @ ()
+             (base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime2
+              `cast` (<GHC.Ptr.Ptr
+                         base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec>_R
+                      ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                      :: (GHC.Ptr.Ptr
+                            base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                          -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                  ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                () #))
+                         ~R# (GHC.Ptr.Ptr
+                                base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                              -> IO ())))
+             ipv_a7XU
+      of
+      { (# ipv_X81R, ipv1_X81T [Dmd=<L,U(A,U)>] #) ->
+      let {
+        duration_s8dt :: Integer
+        [LclId]
+        duration_s8dt
+          = case ipv1_X81T of { (ds1_a7XZ [Dmd=<L,A>], y_a7Y0 [Dmd=<S,U>]) ->
+            case ipv1_a7XV of { (ds1_X82a [Dmd=<L,A>], y_X82c [Dmd=<S,U>]) ->
+            integer-gmp-1.0.2.0:GHC.Integer.Type.minusInteger y_a7Y0 y_X82c
+            }
+            } } in
+      ((GHC.IO.Handle.Text.hPutStr'
+          GHC.IO.Handle.FD.stdout
+          (ghc-prim-0.6.1:GHC.Types.:
+             @ Char
+             GHC.Show.$fShow(,)3
+             (GHC.Show.showLitString
+                (++
+                   @ Char
+                   description_a29G
+                   (case GHC.Show.$w$cshowsPrec4
+                           0#
+                           (integer-gmp-1.0.2.0:GHC.Integer.Type.divInteger
+                              duration_s8dt lvl_s8h4)
+                           (ghc-prim-0.6.1:GHC.Types.[] @ Char)
+                    of
+                    { (# ww3_a7YH, ww4_a7YI #) ->
+                    GHC.Base.++_$s++
+                      @ Char
+                      (ghc-prim-0.6.1:GHC.CString.unpackAppendCString#
+                         lvl_s8h2
+                         (case GHC.Show.$w$cshowsPrec4
+                                 0# duration_s8dt (ghc-prim-0.6.1:GHC.Types.[] @ Char)
+                          of
+                          { (# ww3_X80r, ww4_X80t #) ->
+                          GHC.Base.++_$s++ @ Char lvl_s8C0 ww3_X80r ww4_X80t
+                          }))
+                      ww3_a7YH
+                      ww4_a7YI
+                    }))
+                GHC.Show.$fShow[]1))
+          ghc-prim-0.6.1:GHC.Types.True)
+       `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R
+               :: IO ()
+                  ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                         ghc-prim-0.6.1:GHC.Prim.RealWorld
+                       -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                               ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                             () #))))
+        ipv_X81R
+      }
+      }
+      }
+
+-- RHS size: {terms: 59, types: 73, coercions: 14, joins: 0/1}
+$smeasure_s8do
+  :: String
+     -> Double
+     -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId, Arity=3, Str=<L,U><L,H><L,U>]
+$smeasure_s8do
+  = \ (description_a29G :: String)
+      (f_a29H :: Double)
+      (s_a7XI
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime4
+             @ ()
+             (base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime2
+              `cast` (<GHC.Ptr.Ptr
+                         base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec>_R
+                      ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                      :: (GHC.Ptr.Ptr
+                            base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                          -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                  ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                () #))
+                         ~R# (GHC.Ptr.Ptr
+                                base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                              -> IO ())))
+             s_a7XI
+      of
+      { (# ipv_a7XU, ipv1_a7XV [Dmd=<L,U(A,U)>] #) ->
+      case f_a29H of
+      { ghc-prim-0.6.1:GHC.Types.D# ipv_a82a [Dmd=<L,A>] ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime4
+             @ ()
+             (base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime2
+              `cast` (<GHC.Ptr.Ptr
+                         base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec>_R
+                      ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                      :: (GHC.Ptr.Ptr
+                            base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                          -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                  ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                () #))
+                         ~R# (GHC.Ptr.Ptr
+                                base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                              -> IO ())))
+             ipv_a7XU
+      of
+      { (# ipv_X81X, ipv1_X81Z [Dmd=<L,U(A,U)>] #) ->
+      let {
+        duration_s8dn :: Integer
+        [LclId]
+        duration_s8dn
+          = case ipv1_X81Z of { (ds1_a7XZ [Dmd=<L,A>], y_a7Y0 [Dmd=<S,U>]) ->
+            case ipv1_a7XV of { (ds1_X82g [Dmd=<L,A>], y_X82i [Dmd=<S,U>]) ->
+            integer-gmp-1.0.2.0:GHC.Integer.Type.minusInteger y_a7Y0 y_X82i
+            }
+            } } in
+      ((GHC.IO.Handle.Text.hPutStr'
+          GHC.IO.Handle.FD.stdout
+          (ghc-prim-0.6.1:GHC.Types.:
+             @ Char
+             GHC.Show.$fShow(,)3
+             (GHC.Show.showLitString
+                (++
+                   @ Char
+                   description_a29G
+                   (case GHC.Show.$w$cshowsPrec4
+                           0#
+                           (integer-gmp-1.0.2.0:GHC.Integer.Type.divInteger
+                              duration_s8dn lvl_s8h4)
+                           (ghc-prim-0.6.1:GHC.Types.[] @ Char)
+                    of
+                    { (# ww3_a7YH, ww4_a7YI #) ->
+                    GHC.Base.++_$s++
+                      @ Char
+                      (ghc-prim-0.6.1:GHC.CString.unpackAppendCString#
+                         lvl_s8h2
+                         (case GHC.Show.$w$cshowsPrec4
+                                 0# duration_s8dn (ghc-prim-0.6.1:GHC.Types.[] @ Char)
+                          of
+                          { (# ww3_X80j, ww4_X80l #) ->
+                          GHC.Base.++_$s++ @ Char lvl_s8C0 ww3_X80j ww4_X80l
+                          }))
+                      ww3_a7YH
+                      ww4_a7YI
+                    }))
+                GHC.Show.$fShow[]1))
+          ghc-prim-0.6.1:GHC.Types.True)
+       `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R
+               :: IO ()
+                  ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                         ghc-prim-0.6.1:GHC.Prim.RealWorld
+                       -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                               ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                             () #))))
+        ipv_X81X
+      }
+      }
+      }
+
+-- RHS size: {terms: 59, types: 72, coercions: 14, joins: 0/1}
+$smeasure_s8dk
+  :: String
+     -> Integer
+     -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId, Arity=3, Str=<L,U><L,U><L,U>]
+$smeasure_s8dk
+  = \ (description_a29G :: String)
+      (f_a29H :: Integer)
+      (s_a7XI
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime4
+             @ ()
+             (base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime2
+              `cast` (<GHC.Ptr.Ptr
+                         base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec>_R
+                      ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                      :: (GHC.Ptr.Ptr
+                            base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                          -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                  ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                () #))
+                         ~R# (GHC.Ptr.Ptr
+                                base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                              -> IO ())))
+             s_a7XI
+      of
+      { (# ipv_a7XU, ipv1_a7XV [Dmd=<L,U(A,U)>] #) ->
+      case f_a29H of { __DEFAULT ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime4
+             @ ()
+             (base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime2
+              `cast` (<GHC.Ptr.Ptr
+                         base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec>_R
+                      ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                      :: (GHC.Ptr.Ptr
+                            base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                          -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                  ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                () #))
+                         ~R# (GHC.Ptr.Ptr
+                                base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                              -> IO ())))
+             ipv_a7XU
+      of
+      { (# ipv_X81Z, ipv1_X821 [Dmd=<L,U(A,U)>] #) ->
+      let {
+        duration_s8dj :: Integer
+        [LclId]
+        duration_s8dj
+          = case ipv1_X821 of { (ds1_a7XZ [Dmd=<L,A>], y_a7Y0 [Dmd=<S,U>]) ->
+            case ipv1_a7XV of { (ds1_X82i [Dmd=<L,A>], y_X82k [Dmd=<S,U>]) ->
+            integer-gmp-1.0.2.0:GHC.Integer.Type.minusInteger y_a7Y0 y_X82k
+            }
+            } } in
+      ((GHC.IO.Handle.Text.hPutStr'
+          GHC.IO.Handle.FD.stdout
+          (ghc-prim-0.6.1:GHC.Types.:
+             @ Char
+             GHC.Show.$fShow(,)3
+             (GHC.Show.showLitString
+                (++
+                   @ Char
+                   description_a29G
+                   (case GHC.Show.$w$cshowsPrec4
+                           0#
+                           (integer-gmp-1.0.2.0:GHC.Integer.Type.divInteger
+                              duration_s8dj lvl_s8h4)
+                           (ghc-prim-0.6.1:GHC.Types.[] @ Char)
+                    of
+                    { (# ww3_a7YH, ww4_a7YI #) ->
+                    GHC.Base.++_$s++
+                      @ Char
+                      (ghc-prim-0.6.1:GHC.CString.unpackAppendCString#
+                         lvl_s8h2
+                         (case GHC.Show.$w$cshowsPrec4
+                                 0# duration_s8dj (ghc-prim-0.6.1:GHC.Types.[] @ Char)
+                          of
+                          { (# ww3_X80d, ww4_X80f #) ->
+                          GHC.Base.++_$s++ @ Char lvl_s8C0 ww3_X80d ww4_X80f
+                          }))
+                      ww3_a7YH
+                      ww4_a7YI
+                    }))
+                GHC.Show.$fShow[]1))
+          ghc-prim-0.6.1:GHC.Types.True)
+       `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R
+               :: IO ()
+                  ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                         ghc-prim-0.6.1:GHC.Prim.RealWorld
+                       -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                               ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                             () #))))
+        ipv_X81Z
+      }
+      }
+      }
+
+-- RHS size: {terms: 62, types: 76, coercions: 16, joins: 0/1}
+measure_s80g
+  :: forall a.
+     NFData a =>
+     String
+     -> a
+     -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId,
+ Arity=4,
+ Str=<L,C1(H)><L,U><L,U><L,U>,
+ RULES: "SPEC measure @ String"
+            forall ($dNFData_X8dI :: NFData String).
+              measure_s80g @ String $dNFData_X8dI
+              = $smeasure_s8f6
+        "SPEC measure @ Double"
+            forall ($dNFData_X8dC :: NFData Double).
+              measure_s80g @ Double $dNFData_X8dC
+              = $smeasure_s8do
+        "SPEC measure @ Integer"
+            forall ($dNFData_X8dy :: NFData Integer).
+              measure_s80g @ Integer $dNFData_X8dy
+              = $smeasure_s8dk]
+measure_s80g
+  = \ (@ a_a5Ia)
+      ($dNFData_a5Ic :: NFData a_a5Ia)
+      (description_a29G :: String)
+      (f_a29H :: a_a5Ia)
+      (s_a7XI
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime4
+             @ ()
+             (base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime2
+              `cast` (<GHC.Ptr.Ptr
+                         base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec>_R
+                      ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                      :: (GHC.Ptr.Ptr
+                            base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                          -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                  ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                () #))
+                         ~R# (GHC.Ptr.Ptr
+                                base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                              -> IO ())))
+             s_a7XI
+      of
+      { (# ipv_a7XU, ipv1_a7XV [Dmd=<L,U(A,U)>] #) ->
+      case ($dNFData_a5Ic
+            `cast` (Control.DeepSeq.N:NFData[0] <a_a5Ia>_N
+                    :: NFData a_a5Ia ~R# (a_a5Ia -> ())))
+             f_a29H
+      of
+      { () ->
+      case base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime4
+             @ ()
+             (base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.getCPUTime2
+              `cast` (<GHC.Ptr.Ptr
+                         base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec>_R
+                      ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                      :: (GHC.Ptr.Ptr
+                            base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                          -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                          -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                  ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                () #))
+                         ~R# (GHC.Ptr.Ptr
+                                base-4.13.0.0:System.CPUTime.Posix.ClockGetTime.Timespec
+                              -> IO ())))
+             ipv_a7XU
+      of
+      { (# ipv_X826, ipv1_X828 [Dmd=<L,U(A,U)>] #) ->
+      let {
+        duration_s8dg :: Integer
+        [LclId]
+        duration_s8dg
+          = case ipv1_X828 of { (ds1_a7XZ [Dmd=<L,A>], y_a7Y0 [Dmd=<S,U>]) ->
+            case ipv1_a7XV of { (ds1_X82p [Dmd=<L,A>], y_X82r [Dmd=<S,U>]) ->
+            integer-gmp-1.0.2.0:GHC.Integer.Type.minusInteger y_a7Y0 y_X82r
+            }
+            } } in
+      ((GHC.IO.Handle.Text.hPutStr'
+          GHC.IO.Handle.FD.stdout
+          (ghc-prim-0.6.1:GHC.Types.:
+             @ Char
+             GHC.Show.$fShow(,)3
+             (GHC.Show.showLitString
+                (++
+                   @ Char
+                   description_a29G
+                   (case GHC.Show.$w$cshowsPrec4
+                           0#
+                           (integer-gmp-1.0.2.0:GHC.Integer.Type.divInteger
+                              duration_s8dg lvl_s8h4)
+                           (ghc-prim-0.6.1:GHC.Types.[] @ Char)
+                    of
+                    { (# ww3_a7YH, ww4_a7YI #) ->
+                    GHC.Base.++_$s++
+                      @ Char
+                      (ghc-prim-0.6.1:GHC.CString.unpackAppendCString#
+                         lvl_s8h2
+                         (case GHC.Show.$w$cshowsPrec4
+                                 0# duration_s8dg (ghc-prim-0.6.1:GHC.Types.[] @ Char)
+                          of
+                          { (# ww3_X80v, ww4_X80x #) ->
+                          GHC.Base.++_$s++ @ Char lvl_s8C0 ww3_X80v ww4_X80x
+                          }))
+                      ww3_a7YH
+                      ww4_a7YI
+                    }))
+                GHC.Show.$fShow[]1))
+          ghc-prim-0.6.1:GHC.Types.True)
+       `cast` (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R
+               :: IO ()
+                  ~R# (ghc-prim-0.6.1:GHC.Prim.State#
+                         ghc-prim-0.6.1:GHC.Prim.RealWorld
+                       -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                               ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                             () #))))
+        ipv_X826
+      }
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 13, joins: 0/0}
+measure :: forall a. NFData a => String -> a -> IO ()
+[LclIdX,
+ Arity=4,
+ Str=<L,1*C1(H)><L,1*U><L,U><L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= measure_s80g
+               `cast` (forall (a :: <*>_N).
+                       <NFData a>_R
+                       ->_R <String>_R
+                       ->_R <a>_R
+                       ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                       :: (forall a.
+                           NFData a
+                           -> String
+                           -> a
+                           -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                           -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                   ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                 () #))
+                          ~R# (forall a. NFData a -> String -> a -> IO ()))}]
+measure
+  = measure_s80g
+    `cast` (forall (a :: <*>_N).
+            <NFData a>_R
+            ->_R <String>_R
+            ->_R <a>_R
+            ->_R Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+            :: (forall a.
+                NFData a
+                -> String
+                -> a
+                -> ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+                -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                        ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                      () #))
+               ~R# (forall a. NFData a -> String -> a -> IO ()))
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+w1_s8r3 :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+w1_s8r3 = "foo"#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+w1_a8nu :: [Char]
+[LclId]
+w1_a8nu = ghc-prim-0.6.1:GHC.CString.unpackCString# w1_s8r3
+
+Rec {
+-- RHS size: {terms: 12, types: 4, coercions: 0, joins: 0/0}
+$wrep_s8yd [InlPrag=NOUSERINLINE[2], Occ=LoopBreaker]
+  :: ghc-prim-0.6.1:GHC.Prim.Word# -> [Char]
+[LclId, Arity=1, Str=<S,1*U>]
+$wrep_s8yd
+  = \ (ww_s8yb :: ghc-prim-0.6.1:GHC.Prim.Word#) ->
+      case ww_s8yb of wild_X1a {
+        __DEFAULT ->
+          ++
+            @ Char
+            w1_a8nu
+            ($wrep_s8yd (ghc-prim-0.6.1:GHC.Prim.minusWord# wild_X1a 1##));
+        0## -> ghc-prim-0.6.1:GHC.Types.[] @ Char
+      }
+end Rec }
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+testStimes :: String
+[LclIdX]
+testStimes = $wrep_s8yd 1000000##
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8C4 :: Integer
+[LclId]
+lvl_s8C4 = 3
+
+-- RHS size: {terms: 3, types: 0, coercions: 0, joins: 0/0}
+testIntegralPower :: Integer
+[LclIdX]
+testIntegralPower = $wf_s8xl lvl_s8C4 1000000##
+
+-- RHS size: {terms: 7, types: 1, coercions: 0, joins: 0/0}
+testFractionalPower :: Double
+[LclIdX]
+testFractionalPower
+  = case $wf_s8xS 5.0## 441## of ww_s8xR { __DEFAULT ->
+    ghc-prim-0.6.1:GHC.Types.D# ww_s8xR
+    }
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8Cd :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+lvl_s8Cd = "integral power : "#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl_s8Ce :: [Char]
+[LclId]
+lvl_s8Ce = ghc-prim-0.6.1:GHC.CString.unpackCString# lvl_s8Cd
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8Cb :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+lvl_s8Cb = "fractional power 3 : "#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl_s8Cc :: [Char]
+[LclId]
+lvl_s8Cc = ghc-prim-0.6.1:GHC.CString.unpackCString# lvl_s8Cb
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8C9 :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+lvl_s8C9 = "fractional power 2 : "#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl_s8Ca :: [Char]
+[LclId]
+lvl_s8Ca = ghc-prim-0.6.1:GHC.CString.unpackCString# lvl_s8C9
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8C7 :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+lvl_s8C7 = "fractional power 1 : "#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl_s8C8 :: [Char]
+[LclId]
+lvl_s8C8 = ghc-prim-0.6.1:GHC.CString.unpackCString# lvl_s8C7
+
+-- RHS size: {terms: 1, types: 0, coercions: 0, joins: 0/0}
+lvl_s8C5 :: ghc-prim-0.6.1:GHC.Prim.Addr#
+[LclId]
+lvl_s8C5 = "stimes : "#
+
+-- RHS size: {terms: 2, types: 0, coercions: 0, joins: 0/0}
+lvl_s8C6 :: [Char]
+[LclId]
+lvl_s8C6 = ghc-prim-0.6.1:GHC.CString.unpackCString# lvl_s8C5
+
+-- RHS size: {terms: 29, types: 46, coercions: 0, joins: 0/0}
+main_s82n
+  :: ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId, Arity=1, Str=<L,U>]
+main_s82n
+  = \ (s_a81C
+         :: ghc-prim-0.6.1:GHC.Prim.State#
+              ghc-prim-0.6.1:GHC.Prim.RealWorld) ->
+      case $smeasure_s8f6 lvl_s8C6 testStimes s_a81C of
+      { (# ipv_a81F, ipv1_a81G [Dmd=<L,A>] #) ->
+      case $smeasure_s8do lvl_s8C8 testFractionalPower ipv_a81F of
+      { (# ipv_X827, ipv1_X829 [Dmd=<L,A>] #) ->
+      case $smeasure_s8do lvl_s8Ca testFractionalPower ipv_X827 of
+      { (# ipv_X82c, ipv1_X82e [Dmd=<L,A>] #) ->
+      case $smeasure_s8do lvl_s8Cc testFractionalPower ipv_X82c of
+      { (# ipv_X82h, ipv1_X82j [Dmd=<L,A>] #) ->
+      $smeasure_s8dk lvl_s8Ce testIntegralPower ipv_X82h
+      }
+      }
+      }
+      }
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+main :: IO ()
+[LclIdX,
+ Arity=1,
+ Str=<L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= main_s82n
+               `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                       :: (ghc-prim-0.6.1:GHC.Prim.State#
+                             ghc-prim-0.6.1:GHC.Prim.RealWorld
+                           -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                   ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                 () #))
+                          ~R# IO ())}]
+main
+  = main_s82n
+    `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+            :: (ghc-prim-0.6.1:GHC.Prim.State#
+                  ghc-prim-0.6.1:GHC.Prim.RealWorld
+                -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                        ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                      () #))
+               ~R# IO ())
+
+-- RHS size: {terms: 2, types: 1, coercions: 3, joins: 0/0}
+main_s8cX
+  :: ghc-prim-0.6.1:GHC.Prim.State# ghc-prim-0.6.1:GHC.Prim.RealWorld
+     -> (# ghc-prim-0.6.1:GHC.Prim.State#
+             ghc-prim-0.6.1:GHC.Prim.RealWorld,
+           () #)
+[LclId,
+ Arity=1,
+ Str=<L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=False)
+         Tmpl= GHC.TopHandler.runMainIO1
+                 @ ()
+                 (main_s82n
+                  `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                          :: (ghc-prim-0.6.1:GHC.Prim.State#
+                                ghc-prim-0.6.1:GHC.Prim.RealWorld
+                              -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                      ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                    () #))
+                             ~R# IO ()))}]
+main_s8cX
+  = GHC.TopHandler.runMainIO1
+      @ ()
+      (main_s82n
+       `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+               :: (ghc-prim-0.6.1:GHC.Prim.State#
+                     ghc-prim-0.6.1:GHC.Prim.RealWorld
+                   -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                           ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                         () #))
+                  ~R# IO ()))
+
+-- RHS size: {terms: 1, types: 0, coercions: 3, joins: 0/0}
+:Main.main :: IO ()
+[LclIdX,
+ Arity=1,
+ Str=<L,U>,
+ Unf=Unf{Src=InlineStable, TopLvl=True, Value=True, ConLike=True,
+         WorkFree=True, Expandable=True,
+         Guidance=ALWAYS_IF(arity=0,unsat_ok=True,boring_ok=True)
+         Tmpl= main_s8cX
+               `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+                       :: (ghc-prim-0.6.1:GHC.Prim.State#
+                             ghc-prim-0.6.1:GHC.Prim.RealWorld
+                           -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                                   ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                                 () #))
+                          ~R# IO ())}]
+:Main.main
+  = main_s8cX
+    `cast` (Sym (ghc-prim-0.6.1:GHC.Types.N:IO[0] <()>_R)
+            :: (ghc-prim-0.6.1:GHC.Prim.State#
+                  ghc-prim-0.6.1:GHC.Prim.RealWorld
+                -> (# ghc-prim-0.6.1:GHC.Prim.State#
+                        ghc-prim-0.6.1:GHC.Prim.RealWorld,
+                      () #))
+               ~R# IO ())
+
+
+------ Local rules for imported ids --------
+"SPEC/Main even @ Word"
+    forall ($dIntegral_s8el :: Integral Word).
+      even @ Word $dIntegral_s8el
+      = $seven_s8eu
+"SPEC/Main ^ @ Double @ Word" [1]
+    forall ($dNum_s8dG :: Num Double)
+           ($dIntegral_s8dH :: Integral Word).
+      ^ @ Double @ Word $dNum_s8dG $dIntegral_s8dH
+      = $s^_s8eh
+"SPEC/Main ^^ @ Double @ Word" [1]
+    forall ($dFractional_s8dv :: Fractional Double)
+           ($dIntegral_s8dw :: Integral Word).
+      ^^ @ Double @ Word $dFractional_s8dv $dIntegral_s8dw
+      = $s^^_s8f4
+"SPEC/Main ^ @ Integer @ Word" [1]
+    forall ($dNum_s8ex :: Num Integer)
+           ($dIntegral_s8ey :: Integral Word).
+      ^ @ Integer @ Word $dNum_s8ex $dIntegral_s8ey
+      = $s^_s8f5
+
