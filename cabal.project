@@ -1,0 +1,9 @@
+packages: *.cabal
+-- with-compiler: /home/sven/src/ghc/_build/stage1/bin/ghc
+-- debug-info: True
+-- executable-stripping: False
+-- library-stripping: False
+-- shared: False
+-- executable-dynamic: False
+-- static: True
+-- executable-static: True

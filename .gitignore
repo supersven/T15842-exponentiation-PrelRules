@@ -1,0 +1,9 @@
+# -*- mode: gitignore; -*-
+*~
+.#*
+dist-newstyle
+~cabal.project.local
+CHANGELOG.md
+cabal.project.local
+.ghc.environment.*
+*.dump-*
